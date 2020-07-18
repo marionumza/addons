@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="education_home_page_1" model="ir.ui.view">
+        <field name="name">Education</field>
+        <field name="type">qweb</field>
+        <field name="key">website.education_home_page_1</field>
+        <field name="mode">primary</field>
+        <field name="active">True</field>
+        <field name="arch" type="xml">
+            <t t-name="website.education_home_page_1">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty">
+                        <div id="myCarousel1554529196388" class="s_carousel s_carousel_default carousel slide"
+                             data-interval="10000">
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel1554529196388" data-slide-to="0" class="active"/>
+                                <li data-target="#myCarousel1554529196388" data-slide-to="1"/>
+                                <li data-target="#myCarousel1554529196388" data-slide-to="2"/>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item oe_custom_bg oe_img_bg pt152 pb152 active"
+                                     style="background-image: url(&quot;/caitlin_theme/static/src/img/2-4.jpg&quot;);"
+                                     data-name="Slide">
+                                    <div class="container">
+                                        <div class="row content">
+                                            <div class="carousel-content col-lg-7 offset-md-1 mt64">
+                                                <div class="s_title pb8" data-name="Title">
+                                                    <h2 class="s_title_default">
+                                                        <font style="font-size: 62px;"
+                                                              class="o_default_snippet_text text-white">
+                                                            Explore Our Brilliant Graduates
+                                                        </font>
+                                                    </h2>
+                                                </div>
+                                                <p class="lead o_default_snippet_text text-white">Lorem Ipsum is simply
+                                                    dummy text of the printing and typesetting industry.
+                                                    <br/>
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry.
+                                                </p>
+                                                <div class="s_btn text-left pt16 pb16" data-name="Buttons">
+                                                    <a href="/aboutus"
+                                                       class="btn btn-secondary flat o_default_snippet_text">About us
+                                                    </a>
+                                                    <a href="/contactus"
+                                                       class="btn btn-primary flat o_default_snippet_text">Contact us
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item oe_custom_bg oe_img_bg pt96 pb96"
+                                     style="background-image: url(&quot;/caitlin_theme/static/src/img/3-3.jpg&quot;);"
+                                     data-name="Slide">
+                                    <div class="container">
+                                        <div class="row content">
+                                            <div class="carousel-content col-lg-8 offset-lg-2 bg-black-50 text-center pt48 pb40" style="background-color: rgba(0, 0, 0, 0.5) !important;color: #FFFFFF;">
+                                                <h2 style="font-size: 62px;" class="o_default_snippet_text">Join The
+                                                    Bigest Comunity Of Education
+                                                </h2>
+                                                <div class="s_hr pt8 pb32">
+                                                    <hr class="s_hr_5px s_hr_dotted border-600 w-25 border-epsilon mx-auto text-center"/>
+                                                </div>
+                                                <p class="lead o_default_snippet_text">Storytelling is powerful.
+                                                    <br/>
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry.
+                                                </p>
+                                                <div class="s_btn text-center pt16 pb16" data-name="Buttons">
+                                                    <a href="/"
+                                                       class="btn btn-epsilon rounded-circle o_default_snippet_text">
+                                                        Start your journey
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item oe_custom_bg oe_img_bg pt128 pb128"
+                                     style="background-image: url(&quot;/caitlin_theme/static/src/img/1-2.jpg&quot;);"
+                                     data-name="Slide">
+                                    <div class="container">
+                                        <div class="row content">
+                                            <div class="carousel-content col-lg-6 offset-lg-6">
+                                                <h2>
+                                                    <font style="font-size: 62px;background-color: rgba(86, 82, 82, 0.48);color: white;font-style: italic;font-weight: 600;"
+                                                          class="o_default_snippet_text">Learn From Best Online Training
+                                                        Course
+                                                    </font>
+                                                </h2>
+                                                <h4>
+                                                    <font style="background-color: rgb(255, 255, 255);"
+                                                          class="o_default_snippet_text">Lorem Ipsum is simply dummy
+                                                        text of the printing and typesetting industry.
+                                                    </font>
+                                                </h4>
+                                                <p class="mt24 o_default_snippet_text">Lorem Ipsum is simply dummy text
+                                                    of the printing and typesetting industry. the printing and
+                                                    typesetting industry.
+                                                </p>
+                                                <div class="s_share text-left pt16 pb16">
+                                                    <a href="#"
+                                                       class="s_share_facebook" target="_blank">
+                                                        <i class="fa fa-1x fa-facebook rounded shadow-sm"/>
+                                                    </a>
+                                                    <a href="@"
+                                                       class="s_share_twitter" target="_blank">
+                                                        <i class="fa fa-1x fa-twitter rounded shadow-sm"/>
+                                                    </a>
+                                                    <a href="@"
+                                                       class="s_share_linkedin" target="_blank">
+                                                        <i class="fa fa-1x fa-linkedin rounded shadow-sm"/>
+                                                    </a>
+                                                    <a href="@"
+                                                       class="s_share_google" target="_blank">
+                                                        <i class="fa fa-1x fa-google-plus rounded shadow-sm"/>
+                                                    </a>
+                                                    <a href="@"
+                                                       class="s_share_email">
+                                                        <i class="fa fa-1x fa-envelope rounded shadow-sm"/>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-control-prev" data-target="#myCarousel1554529196388" data-slide="prev"
+                                 role="img" aria-label="Previous" title="Previous">
+                                <span class="carousel-control-prev-icon"/>
+                                <span class="sr-only o_default_snippet_text">Previous</span>
+                            </div>
+                            <div class="carousel-control-next" data-target="#myCarousel1554529196388" data-slide="next"
+                                 role="img" aria-label="Next" title="Next">
+                                <span class="carousel-control-next-icon"/>
+                                <span class="sr-only o_default_snippet_text">Next</span>
+                            </div>
+                        </div>
+                        <section class="about-area-education mt64 mb64">
+                            <div class="container">
+                                <div class="about-info row">
+                                    <div class="col-md-6 thumb">
+                                        <img src="/caitlin_theme/static/src/img/about.jpg"
+                                             alt="Thumb" class="img img-fluid"/>
+                                    </div>
+                                    <div class="col-md-6 info">
+                                        <h5>Introduction</h5>
+                                        <h2>Welcome to the biggest online learning source of Eduka</h2>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </p>
+                                        <a href="#" class="btn btn-dark btn-lg ">Read More</a>
+                                    </div>
+                                </div>
+
+                                <div class="seperator row">
+                                    <span class="border-b"></span>
+                                </div>
+                                <div class="our-features row">
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="item mariner">
+                                            <div class="icon">
+                                                <i class="pe-7s-hourglass" style="color: #307ad5;"></i>
+                                            </div>
+                                            <div class="info">
+                                                <h4>Expert faculty</h4>
+                                                <a href="#">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="item mariner">
+                                            <div class="icon">
+                                                <i class="pe-7s-piggy" style="color: #1ec1d9;"></i>
+                                            </div>
+                                            <div class="info">
+                                                <h4>Online learning</h4>
+                                                <a href="#">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4">
+                                        <div class="item mariner">
+                                            <div class="icon">
+                                                <i class="pe-7s-shield" style="color: #10c45c;"></i>
+                                            </div>
+                                            <div class="info">
+                                                <h4>Scholarship</h4>
+                                                <a href="#">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="about_top_wrapper mt48 mb48 d-none d-md-block">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-5">
+                                        <div class="title">
+                                            <h2>Take The First Step To Learn With Us.</h2>
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry. Lorem Ipsum is simply dummy text of the printing
+                                                and typesetting industry.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12 col-md-12 col-lg-7 ml-auto p-0">
+                                        <div class="banner_learn">
+                                            <img src="/caitlin_theme/static/src/img/learnstep.jpg" alt=""
+                                                 class="img-fluid"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items_shape"></div>
+                            <div class="story_about">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-7 col-lg-7">
+                                            <div class="story_banner">
+                                                <img src="/caitlin_theme/static/src/img/about_us.png" alt=""
+                                                     class="img-fluid"/>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6 col-md-5 col-lg-5">
+                                            <div class="about_story_title">
+                                                <h2>The Srory Of Our Eduwais.</h2>
+                                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                    industry. the printing and typesetting industry.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="site-heading text-center">
+                                        <div class="col-md-8 offset-md-2">
+                                            <h2>Top Categories</h2>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum is simply dummy text of the printing and
+                                                typesetting industry.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="top-cat-items row">
+                                        <div class="col-md-3 col-sm-6 equal-height" style="height: 178px;">
+                                            <div class="item"
+                                                 style="background-image: url(/caitlin_theme/static/src/img/1-3.jpg);">
+                                                <a href="#">
+                                                    <i class="pe-7s-cash"></i>
+                                                    <div class="info">
+                                                        <h4>software engineering</h4>
+                                                        <span>(1,226) Topics</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6 equal-height" style="height: 178px;">
+                                            <div class="item"
+                                                 style="background-image: url(/caitlin_theme/static/src/img/2-5.jpg);">
+                                                <a href="#">
+                                                    <i class="pe-7s-id"></i>
+                                                    <div class="info">
+                                                        <h4>Interactive Programming</h4>
+                                                        <span>(2,366) Topics</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6 equal-height" style="height: 178px;">
+                                            <div class="item"
+                                                 style="background-image: url(/caitlin_theme/static/src/img/3-4.jpg);">
+                                                <a href="#">
+                                                    <i class="pe-7s-up-arrow"></i>
+                                                    <div class="info">
+                                                        <h4>Quantum Mechanics</h4>
+                                                        <span>(766) Topics</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6 equal-height" style="height: 178px;">
+                                            <div class="item"
+                                                 style="background-image: url(/caitlin_theme/static/src/img/4-4.jpg);">
+                                                <a href="#">
+                                                    <i class="pe-7s-safe"></i>
+                                                    <div class="info">
+                                                        <h4>Preventing Dementia</h4>
+                                                        <span>(4,500) Topics</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6 equal-height" style="height: 178px;">
+                                            <div class="item"
+                                                 style="background-image: url(/caitlin_theme/static/src/img/5-4.jpg);">
+                                                <a href="#">
+                                                    <i class="pe-7s-star"></i>
+                                                    <div class="info">
+                                                        <h4>Hidden Potential</h4>
+                                                        <span>(975) Topics</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6 equal-height" style="height: 178px;">
+                                            <div class="item"
+                                                 style="background-image: url(/caitlin_theme/static/src/img/6-3.jpg);">
+                                                <a href="#">
+                                                    <i class="pe-7s-print"></i>
+                                                    <div class="info">
+                                                        <h4>Introduction Programming</h4>
+                                                        <span>(3,340) Topics</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6 equal-height" style="height: 178px;">
+                                            <div class="item"
+                                                 style="background-image: url(/caitlin_theme/static/src/img/7-2.jpg);">
+                                                <a href="#">
+                                                    <i class="pe-7s-pen"></i>
+                                                    <div class="info">
+                                                        <h4>Machine Learning</h4>
+                                                        <span>(7,800) Topics</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6 equal-height" style="height: 178px;">
+                                            <div class="item"
+                                                 style="background-image: url(/caitlin_theme/static/src/img/8-2.jpg);">
+                                                <a href="#">
+                                                    <i class="pe-7s-mouse"></i>
+                                                    <div class="info">
+                                                        <h4>Maintaining a Mindful</h4>
+                                                        <span>(24,80) Topics</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="counter_1 mt64 mb64 state_counter_bg"
+                                 style="background-image: url(&quot;/caitlin_theme/static/src/img/2-4.jpg&quot;);">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 state_text">
+                                        <div class="row">
+                                            <div class="col-md-3 pad0 text-center">
+                                                <section class="state-counter counter red">
+                                                    <div class="counter-content count_to">
+                                                        <div class="counter-icon fa fa-rocket"></div>
+                                                        <div class="odometer" contentEditable="False" data-number="987"
+                                                             data-duration="3000"/>
+                                                    </div>
+                                                    <h3 class="title">NATIONAL AWARDS</h3>
+                                                </section>
+                                            </div>
+                                            <div class="col-md-3 pad0 text-center">
+                                                <section class="state-counter counter blue">
+                                                    <div class="counter-content count_to">
+                                                        <div class="counter-icon fa fa-briefcase"></div>
+                                                        <div class="odometer" contentEditable="False" data-number="678"
+                                                             data-duration="3000"/>
+
+                                                    </div>
+                                                    <h3 class="title">BEST TEACHERS
+                                                    </h3>
+                                                </section>
+                                            </div>
+                                            <div class="col-md-3 pad0 text-center">
+                                                <section class="state-counter counter">
+                                                    <div class="counter-content count_to">
+                                                        <div class="counter-icon fa fa-globe"></div>
+                                                        <div class="odometer counter-value" contentEditable="False"
+                                                             data-number="520"
+                                                             data-duration="3000"/>
+                                                    </div>
+                                                    <h3 class="title">STUDENTS ENROLLED
+                                                    </h3>
+                                                </section>
+                                            </div>
+                                            <div class="col-md-3 pad0 text-center">
+                                                <section class="state-counter counter purple">
+                                                    <div class="counter-content count_to">
+                                                        <div class="counter-icon fa fa-mobile"></div>
+                                                        <div class="odometer" contentEditable="False" data-number="540"
+                                                             data-duration="3000"/>
+
+                                                    </div>
+                                                    <h3 class="title">NATIONAL AWARDSCOURCES
+                                                    </h3>
+                                                </section>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="events-section">
+                            <div class="container">
+                                <div class="event-sec-title light text-center">
+                                    <span class="title">Upcoming Events</span>
+                                    <h2>Join Our Events</h2>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Event Block -->
+                                    <div class="event-block col-xl-6 col-md-12 col-sm-12 wow fadeInUp animated"
+                                         style="visibility: visible; animation-name: fadeInUp;">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+                                                <figure class="image">
+                                                    <img src="/caitlin_theme/static/src/img/event-1.jpg" alt=""/>
+                                                </figure>
+                                            </div>
+                                            <div class="content-box">
+                                                <div class="date">5 March 2019</div>
+                                                <h4>
+                                                    <a href="#">Work together in summer</a>
+                                                </h4>
+                                                <ul class="event-info">
+                                                    <li>
+                                                        <span>Time:</span>
+                                                        9:00-11:00
+                                                    </li>
+                                                    <li>
+                                                        <span>Location:</span>
+                                                        Clifton
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Event Block -->
+                                    <div class="event-block col-xl-6 col-md-12 col-sm-12 wow fadeInUp animated"
+                                         data-wow-delay="400ms"
+                                         style="visibility: visible; animation-delay: 400ms; animation-name: fadeInUp;">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+                                                <figure class="image">
+                                                    <img src="/caitlin_theme/static/src/img/event-2.jpg" alt=""/>
+                                                </figure>
+                                            </div>
+                                            <div class="content-box">
+                                                <div class="date">10 March 2019</div>
+                                                <h4>
+                                                    <a href="#">Work together in summer</a>
+                                                </h4>
+                                                <ul class="event-info">
+                                                    <li>
+                                                        <span>Time:</span>
+                                                        9:00-11:00
+                                                    </li>
+                                                    <li>
+                                                        <span>Location:</span>
+                                                        Clifton
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Event Block -->
+                                    <div class="event-block col-xl-6 col-md-12 col-sm-12 wow fadeInUp animated"
+                                         style="visibility: visible; animation-name: fadeInUp;">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+                                                <figure class="image">
+                                                    <img src="/caitlin_theme/static/src/img/event-3.jpg" alt=""/>
+                                                </figure>
+                                            </div>
+                                            <div class="content-box">
+                                                <div class="date">18 March 2019</div>
+                                                <h4>
+                                                    <a href="#">Work together in summer</a>
+                                                </h4>
+                                                <ul class="event-info">
+                                                    <li>
+                                                        <span>Time:</span>
+                                                        9:00-11:00
+                                                    </li>
+                                                    <li>
+                                                        <span>Location:</span>
+                                                        Clifton
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Event Block -->
+                                    <div class="event-block col-xl-6 col-md-12 col-sm-12 wow fadeInUp animated"
+                                         data-wow-delay="400ms"
+                                         style="visibility: visible; animation-delay: 400ms; animation-name: fadeInUp;">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+                                                <figure class="image">
+                                                    <img src="/caitlin_theme/static/src/img/event-4.jpg" alt=""/>
+                                                </figure>
+                                            </div>
+                                            <div class="content-box">
+                                                <div class="date">27 March 2019</div>
+                                                <h4>
+                                                    <a href="#">Work together in summer</a>
+                                                </h4>
+                                                <ul class="event-info">
+                                                    <li>
+                                                        <span>Time:</span>
+                                                        9:00-11:00
+                                                    </li>
+                                                    <li>
+                                                        <span>Location:</span>
+                                                        Clifton
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="team-section">
+                            <div class="container">
+                                <div class="event-sec-title text-center team-title">
+                                    <div class="title">Expert People</div>
+                                    <h2>Our Teachers</h2>
+                                </div>
+
+                                <div class="row">
+                                    <!-- Team Block -->
+                                    <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp animated"
+                                         style="visibility: visible; animation-name: fadeInUp;">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+                                                <figure class="image">
+                                                    <img src="/caitlin_theme/static/src/img/team-1.jpg" alt=""/>
+                                                </figure>
+                                                <div class="overlay-box">
+                                                    <ul class="social-icon-colored">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-facebook-f"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-twitter"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-youtube"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="caption-box">
+                                                <h6 class="name">
+                                                    <a href="#">Jesscia Brown</a>
+                                                </h6>
+                                                <span class="designation">Teacher</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Team Block -->
+                                    <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp animated"
+                                         data-wow-delay="400ms"
+                                         style="visibility: visible; animation-delay: 400ms; animation-name: fadeInUp;">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+                                                <figure class="image">
+                                                    <img src="/caitlin_theme/static/src/img/team-2.jpg" alt=""/>
+                                                </figure>
+                                                <div class="overlay-box">
+                                                    <ul class="social-icon-colored">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-facebook-f"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-twitter"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-youtube"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="caption-box">
+                                                <h6 class="name">
+                                                    <a href="#">Sarah Albert</a>
+                                                </h6>
+                                                <span class="designation">Teacher</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Team Block -->
+                                    <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp animated"
+                                         data-wow-delay="800ms"
+                                         style="visibility: visible; animation-delay: 800ms; animation-name: fadeInUp;">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+                                                <figure class="image">
+                                                    <img src="/caitlin_theme/static/src/img/team-3.jpg" alt=""/>
+                                                </figure>
+                                                <div class="overlay-box">
+                                                    <ul class="social-icon-colored">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-facebook-f"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-twitter"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-youtube"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="caption-box">
+                                                <h6 class="name">
+                                                    <a href="#">Christine Eve</a>
+                                                </h6>
+                                                <span class="designation">Teacher</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Team Block -->
+                                    <div class="team-block col-lg-3 col-md-6 col-sm-12 wow fadeInUp animated"
+                                         data-wow-delay="1200ms"
+                                         style="visibility: visible; animation-delay: 1200ms; animation-name: fadeInUp;">
+                                        <div class="inner-box">
+                                            <div class="image-box">
+                                                <figure class="image">
+                                                    <img src="/caitlin_theme/static/src/img/team-4.jpg" alt=""/>
+                                                </figure>
+                                                <div class="overlay-box">
+                                                    <ul class="social-icon-colored">
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-facebook-f"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-twitter"></span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <span class="fa fa-youtube"></span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="caption-box">
+                                                <h6 class="name">
+                                                    <a href="#">Susan Hardson</a>
+                                                </h6>
+                                                <span class="designation">Teacher</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="mt64 mb64 testimonial_5 bg-gray-lighter">
+                            <div class="container">
+                                <div class="row mt64 mb64 ">
+                                    <div class="offset-md-2 col-md-8 ">
+                                        <div id="testimonial-slider-5" class="owl-carousel">
+                                            <div class="testimonial">
+                                                <p class="description">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                                                    molestie,
+                                                    justo nec convallis sollicitudin, sapien lorem dictum lacus, non
+                                                    consequat
+                                                    odio ipsum nec est. Sed mattis egestas elementum. Nulla facilisi.
+                                                    Quisque
+                                                    placerat risus ac nunc ornare tincidunt. Sed quis faucibus nunc.
+                                                    Pellentesque accumsan arcu mi, eget venenatis mauris.
+                                                </p>
+                                                <h3 class="title">williamson</h3>
+                                                <span class="post">Web Developer</span>
+                                            </div>
+
+                                            <div class="testimonial">
+                                                <p class="description">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                                                    molestie,
+                                                    justo nec convallis sollicitudin, sapien lorem dictum lacus, non
+                                                    consequat
+                                                    odio ipsum nec est. Sed mattis egestas elementum. Nulla facilisi.
+                                                    Quisque
+                                                    placerat risus ac nunc ornare tincidunt. Sed quis faucibus nunc.
+                                                    Pellentesque accumsan arcu mi, eget venenatis mauris.
+                                                </p>
+                                                <h3 class="title">Kristina</h3>
+                                                <span class="post">Web Designer</span>
+                                            </div>
+
+                                            <div class="testimonial">
+                                                <p class="description">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+                                                    molestie,
+                                                    justo nec convallis sollicitudin, sapien lorem dictum lacus, non
+                                                    consequat
+                                                    odio ipsum nec est. Sed mattis egestas elementum. Nulla facilisi.
+                                                    Quisque
+                                                    placerat risus ac nunc ornare tincidunt. Sed quis faucibus nunc.
+                                                    Pellentesque accumsan arcu mi, eget venenatis mauris.
+                                                </p>
+                                                <h3 class="title">Miranda Joy</h3>
+                                                <span class="post">Web Developer</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+    <record id="education_home_page_menu" model="website.page">
+        <field name="name">Education</field>
+        <field name="url">/education</field>
+        <field name="view_id" ref="caitlin_theme.education_home_page_1"/>
+        <field name="website_indexed">True</field>
+        <field name="website_published">True</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+</odoo>

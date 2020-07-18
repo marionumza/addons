@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="aboutus_inherit"
+              inherit_id="website.aboutus"
+              name="aboutus">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap">
+                <div class="oe_structure">
+                    <!-- Page Title START -->
+                    <section class="page-title bg-200">
+                        <div class="container">
+                            <div class="box">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="/">
+                                            <i class="fa fa-home"/>
+                                        </a>
+                                    </li>
+                                    <li class="breadcrumb-item">
+                                        <a class="text-muted">About Us</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Page Title END -->
+                    <section class="about-us pt64 pb64">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="image">
+                                        <img src="/caitlin_theme/static/src/img/about_1.jpg"
+                                             alt="" class="img img-fluid"/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="text-block-one">
+                                        <div class="title-top">Get your business plan</div>
+                                        <div class="title">
+                                            <h2>
+                                                <span>Lorem Ipsum</span>
+                                                is simply dummy text of the printing and typesetting
+                                                industry.
+                                            </h2>
+                                        </div>
+                                        <div class="text-p">
+                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry. Lorem Ipsum has been the industry's standard dummy text
+                                                ever since the 1500s, when an unknown printer took a galley of type
+                                                and scrambled it to make a type specimen book. It has survived not
+                                                only five centuries, but also the leap into electronic typesetting,
+                                                remaining essentially unchanged.
+                                            </p>
+                                        </div>
+                                        <ul class="list-inline list in-block">
+                                            <li>Lorem Ipsum is simply dummy text of the.
+                                            </li>
+                                            <li>Lorem Ipsum is simply dummy text of the printing
+                                                industry.
+                                            </li>
+                                            <li>Lorem Ipsum is simply dummy and typesetting
+                                                industry.
+                                            </li>
+                                            <li>Lorem Ipsum is simply dummy the printing and typesetting
+                                                industry.
+                                            </li>
+                                            <li>Lorem Ipsum is simply dummy and typesetting
+                                                industry.
+                                            </li>
+                                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                                industry.
+                                            </li>
+                                        </ul>
+                                        <div class="link mt-5">
+                                            <a href="/aboutus" class="btn btn-primary btn-lg">Read more</a>
+                                        </div>
+                                    </div>
+                                    <!-- end -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="counter_2 state_counter_bg">
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="counter state-counter">
+                                        <svg x="0" y="0" width="200px" height="200px" viewBox="0 0 200 200">
+                                            <ellipse id="XMLID_18_" fill="#fff" cx="98.989" cy="103.608" rx="98.989"
+                                                     ry="96.392"/>
+                                            <path id="XMLID_61_" fill="#8a3b97" d="M98.89,200c35.826,0,67.204-18.533,84.58-46.289c-1.611,1.152-28.674,27.49-84.408,23.651
+                                c-28.365-1.955-38.415,5.755-41.691,13.769C69.999,196.82,84.062,200,98.89,200z"/>
+                                            <path id="XMLID_20_" fill="#8a3b97" d="M64.005,13.934c0-0.004,0.001-0.012,0.001-0.012c-2.463-1.004-3.301-2.504-3.455-3.89
+                                c-0.214-1.946,1.532-4.378,3.422-5.044C74.387,1.325,80.77,8.873,80.77,8.873l2.75-0.399c-5.414-6.275-11.986-7.284-17.383-6.442
+                                c-3.817,0.595-7.303,2.39-10.208,4.875c-4.445,3.803-7.88,3.155-7.88,3.155l-0.04,0.058c-0.754-0.038-1.512-0.058-2.276-0.058
+                                c-24.297,0-43.995,19.181-43.995,42.841c0,11.581,4.728,22.083,12.396,29.792l-0.014,0.002c6.883,6.682,5.943,13.461,5.943,13.461
+                                l0,0c-5.148,35.39-9.305,96.435,25.072,88.367l-1.022-0.664c0,0-30.975,4.986-18.011-80.804c0.527-2.658,2.715-9.368,11.222-8.104
+                                c0.167,0.031,0.335,0.057,0.502,0.087c0.223,0.041,0.442,0.076,0.673,0.127c0.718,0.157,1.326,0.233,1.841,0.244
+                                c1.769,0.21,3.566,0.333,5.392,0.333c24.298,0,43.996-19.181,43.996-42.841C89.727,35.593,79.179,20.692,64.005,13.934z"/>
+                                        </svg>
+                                        <div class="counter-icon fa fa-globe"/>
+                                        <div class="counter-content count_to">
+                                            <div class="odometer" contentEditable="False" data-number="540"
+                                                 data-duration="3000"/>
+                                            <h3 class="title">Web Design</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="counter red state-counter">
+                                        <svg x="0" y="0" width="200px" height="200px" viewBox="0 0 200 200">
+                                            <ellipse id="XMLID_18_" fill="#fff" cx="98.989" cy="103.608" rx="98.989"
+                                                     ry="96.392"/>
+                                            <path id="XMLID_61_" fill="#d7292a" d="M98.89,200c35.826,0,67.204-18.533,84.58-46.289c-1.611,1.152-28.674,27.49-84.408,23.651
+                                c-28.365-1.955-38.415,5.755-41.691,13.769C69.999,196.82,84.062,200,98.89,200z"/>
+                                            <path id="XMLID_20_" fill="#d7292a" d="M64.005,13.934c0-0.004,0.001-0.012,0.001-0.012c-2.463-1.004-3.301-2.504-3.455-3.89
+                                c-0.214-1.946,1.532-4.378,3.422-5.044C74.387,1.325,80.77,8.873,80.77,8.873l2.75-0.399c-5.414-6.275-11.986-7.284-17.383-6.442
+                                c-3.817,0.595-7.303,2.39-10.208,4.875c-4.445,3.803-7.88,3.155-7.88,3.155l-0.04,0.058c-0.754-0.038-1.512-0.058-2.276-0.058
+                                c-24.297,0-43.995,19.181-43.995,42.841c0,11.581,4.728,22.083,12.396,29.792l-0.014,0.002c6.883,6.682,5.943,13.461,5.943,13.461
+                                l0,0c-5.148,35.39-9.305,96.435,25.072,88.367l-1.022-0.664c0,0-30.975,4.986-18.011-80.804c0.527-2.658,2.715-9.368,11.222-8.104
+                                c0.167,0.031,0.335,0.057,0.502,0.087c0.223,0.041,0.442,0.076,0.673,0.127c0.718,0.157,1.326,0.233,1.841,0.244
+                                c1.769,0.21,3.566,0.333,5.392,0.333c24.298,0,43.996-19.181,43.996-42.841C89.727,35.593,79.179,20.692,64.005,13.934z"/>
+                                        </svg>
+                                        <div class="counter-icon fa fa-rocket"/>
+                                        <div class="counter-content count_to">
+                                            <div class="odometer" contentEditable="False" data-number="987"
+                                                 data-duration="3000"/>
+
+                                            <h3 class="title">Web Development</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="counter green state-counter">
+                                        <svg x="0" y="0" width="200px" height="200px" viewBox="0 0 200 200">
+                                            <ellipse id="XMLID_18_" fill="#fff" cx="98.989" cy="103.608" rx="98.989"
+                                                     ry="96.392"/>
+                                            <path id="XMLID_61_" fill="#0baa98" d="M98.89,200c35.826,0,67.204-18.533,84.58-46.289c-1.611,1.152-28.674,27.49-84.408,23.651
+                                c-28.365-1.955-38.415,5.755-41.691,13.769C69.999,196.82,84.062,200,98.89,200z"/>
+                                            <path id="XMLID_20_" fill="#0baa98" d="M64.005,13.934c0-0.004,0.001-0.012,0.001-0.012c-2.463-1.004-3.301-2.504-3.455-3.89
+                                c-0.214-1.946,1.532-4.378,3.422-5.044C74.387,1.325,80.77,8.873,80.77,8.873l2.75-0.399c-5.414-6.275-11.986-7.284-17.383-6.442
+                                c-3.817,0.595-7.303,2.39-10.208,4.875c-4.445,3.803-7.88,3.155-7.88,3.155l-0.04,0.058c-0.754-0.038-1.512-0.058-2.276-0.058
+                                c-24.297,0-43.995,19.181-43.995,42.841c0,11.581,4.728,22.083,12.396,29.792l-0.014,0.002c6.883,6.682,5.943,13.461,5.943,13.461
+                                l0,0c-5.148,35.39-9.305,96.435,25.072,88.367l-1.022-0.664c0,0-30.975,4.986-18.011-80.804c0.527-2.658,2.715-9.368,11.222-8.104
+                                c0.167,0.031,0.335,0.057,0.502,0.087c0.223,0.041,0.442,0.076,0.673,0.127c0.718,0.157,1.326,0.233,1.841,0.244
+                                c1.769,0.21,3.566,0.333,5.392,0.333c24.298,0,43.996-19.181,43.996-42.841C89.727,35.593,79.179,20.692,64.005,13.934z"/>
+                                        </svg>
+                                        <div class="counter-icon fa fa-briefcase"/>
+                                        <div class="counter-content count_to">
+                                            <div class="odometer" contentEditable="False" data-number="678"
+                                                 data-duration="3000"/>
+
+                                            <h3 class="title">Brand Building</h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="counter orange state-counter">
+                                        <svg x="0" y="0" width="200px" height="200px" viewBox="0 0 200 200">
+                                            <ellipse id="XMLID_18_" fill="#fff" cx="98.989" cy="103.608" rx="98.989"
+                                                     ry="96.392"/>
+                                            <path id="XMLID_61_" fill="#f48529" d="M98.89,200c35.826,0,67.204-18.533,84.58-46.289c-1.611,1.152-28.674,27.49-84.408,23.651
+                                c-28.365-1.955-38.415,5.755-41.691,13.769C69.999,196.82,84.062,200,98.89,200z"/>
+                                            <path id="XMLID_20_" fill="#f48529" d="M64.005,13.934c0-0.004,0.001-0.012,0.001-0.012c-2.463-1.004-3.301-2.504-3.455-3.89
+                                c-0.214-1.946,1.532-4.378,3.422-5.044C74.387,1.325,80.77,8.873,80.77,8.873l2.75-0.399c-5.414-6.275-11.986-7.284-17.383-6.442
+                                c-3.817,0.595-7.303,2.39-10.208,4.875c-4.445,3.803-7.88,3.155-7.88,3.155l-0.04,0.058c-0.754-0.038-1.512-0.058-2.276-0.058
+                                c-24.297,0-43.995,19.181-43.995,42.841c0,11.581,4.728,22.083,12.396,29.792l-0.014,0.002c6.883,6.682,5.943,13.461,5.943,13.461
+                                l0,0c-5.148,35.39-9.305,96.435,25.072,88.367l-1.022-0.664c0,0-30.975,4.986-18.011-80.804c0.527-2.658,2.715-9.368,11.222-8.104
+                                c0.167,0.031,0.335,0.057,0.502,0.087c0.223,0.041,0.442,0.076,0.673,0.127c0.718,0.157,1.326,0.233,1.841,0.244
+                                c1.769,0.21,3.566,0.333,5.392,0.333c24.298,0,43.996-19.181,43.996-42.841C89.727,35.593,79.179,20.692,64.005,13.934z"/>
+                                        </svg>
+                                        <div class="counter-icon fa fa-mobile"/>
+                                        <div class="counter-content count_to">
+                                            <div class="odometer counter-value" contentEditable="False"
+                                                 data-number="3000"
+                                                 data-duration="3000"/>
+                                            <h3 class="title">Responsive Design</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="our_team_4 mt64 mb64">
+                        <div class="container">
+                            <div class="sec-title text-center pt-2">
+                                <h2>Our Team</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="our-team">
+                                        <img src="/tecspek_customize_theme/static/src/img/img-11.jpg"/>
+                                        <div class="team-content">
+                                            <h3 class="title">Williamson</h3>
+                                            <span class="post">web developer</span>
+                                            <ul class="social">
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-google-plus"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-linkedin"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="our-team">
+                                        <img src="/tecspek_customize_theme/static/src/img/img-22.jpg"/>
+                                        <div class="team-content">
+                                            <h3 class="title">kristina</h3>
+                                            <span class="post">Web Designer</span>
+                                            <ul class="social">
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-google-plus"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-linkedin"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="our-team">
+                                        <img src="/tecspek_customize_theme/static/src/img/img-33.jpg"/>
+                                        <div class="team-content">
+                                            <h3 class="title">Steve Thomas</h3>
+                                            <span class="post">web developer</span>
+                                            <ul class="social">
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-google-plus"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-linkedin"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="our-team">
+                                        <img src="/tecspek_customize_theme/static/src/img/img-44.jpg"/>
+                                        <div class="team-content">
+                                            <h3 class="title">Miranda joy</h3>
+                                            <span class="post">Web Designer</span>
+                                            <ul class="social">
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-google-plus"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fa fa-linkedin"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="whychoose-us" style="background-color: #f7f7f7;">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image">
+                                        <img src="/caitlin_theme/static/src/img/why-choose (1).jpg"
+                                             alt=""/>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="outer-box sp-three pl-40 pt88 pl-5">
+                                        <div class="sec-title text-center">
+                                            <h2>Why Choose Us</h2>
+                                        </div>
+
+                                        <!-- services three -->
+                                        <div class="services-block-three">
+                                            <div class="inner">
+                                                <div class="icon-box theme_color">
+                                                    <span class="fa fa-rocket"></span>
+                                                </div>
+                                                <h3>
+                                                    <a href="#">Fast Approval</a>
+                                                </h3>
+                                                <div class="text">The process of improving measure of enterpprise's
+                                                    success Business growth can be a achieved expound.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- services three -->
+                                        <div class="services-block-three">
+                                            <div class="inner">
+                                                <div class="icon-box theme_color">
+                                                    <span class="fa fa-user"></span>
+                                                </div>
+                                                <h3>
+                                                    <a href="#">Professional Advisor</a>
+                                                </h3>
+                                                <div class="text">The process of improving measure of enterpprise's
+                                                    success Business growth can be a achieved expound.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- services three -->
+                                        <div class="services-block-three">
+                                            <div class="inner">
+                                                <div class="icon-box theme_color">
+                                                    <span class="fa fa-home"></span>
+                                                </div>
+                                                <h3>
+                                                    <a href="#">Free Documentation</a>
+                                                </h3>
+                                                <div class="text">The process of improving measure of enterpprise's
+                                                    success Business growth can be a achieved expound.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="testimonial_2 gradient-bg">
+                        <div class="container">
+                            <div class="sec-title text-center pt-2">
+                                <h2 class="text-white">Testimonial</h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="testimonial-slider-2" class="owl-carousel">
+                                        <div class="testimonial">
+                                            <div class="description">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                                                    ipsum
+                                                    augue, lacinia vel arcu condimentum, dictum tristique sem. Nam
+                                                    enim
+                                                    neque, mattis ut fermentum vitae, venenatis id tortor. Sed
+                                                    consectetur
+                                                    tortor ut arcu pharetra faucibus. In tristique sollicitudin mi
+                                                    ac
+                                                    congue. Praesent efficitur feugiat nisl, nec facilisis leo
+                                                    sollicitudin
+                                                    sed. Integer egestas porttitor massa, ut dapibus sapien feugiat
+                                                    eget.
+                                                    Nam.
+                                                </p>
+                                            </div>
+                                            <div class="testimonial-review">
+                                                <img src="/tecspek_customize_theme/static/src/img/t_img-1.jpg"
+                                                     alt=""/>
+                                                <h3 class="testimonial-title text-white">
+                                                    williamson
+                                                    <small>Web Developer</small>
+                                                </h3>
+                                                <ul class="rating">
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial">
+                                            <div class="description">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                                                    ipsum
+                                                    augue, lacinia vel arcu condimentum, dictum tristique sem. Nam
+                                                    enim
+                                                    neque, mattis ut fermentum vitae, venenatis id tortor. Sed
+                                                    consectetur
+                                                    tortor ut arcu pharetra faucibus. In tristique sollicitudin mi
+                                                    ac
+                                                    congue. Praesent efficitur feugiat nisl, nec facilisis leo
+                                                    sollicitudin
+                                                    sed. Integer egestas porttitor massa, ut dapibus sapien feugiat
+                                                    eget.
+                                                    Nam.
+                                                </p>
+                                            </div>
+                                            <div class="testimonial-review">
+                                                <img src="/tecspek_customize_theme/static/src/img/t_img-2.jpg"
+                                                     alt=""/>
+                                                <h3 class="testimonial-title text-white">
+                                                    kristiana
+                                                    <small>Web Desginer</small>
+                                                </h3>
+                                                <ul class="rating">
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="testimonial">
+                                            <div class="description">
+                                                <p>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                                                    ipsum
+                                                    augue, lacinia vel arcu condimentum, dictum tristique sem. Nam
+                                                    enim
+                                                    neque, mattis ut fermentum vitae, venenatis id tortor. Sed
+                                                    consectetur
+                                                    tortor ut arcu pharetra faucibus. In tristique sollicitudin mi
+                                                    ac
+                                                    congue. Praesent efficitur feugiat nisl, nec facilisis leo
+                                                    sollicitudin
+                                                    sed. Integer egestas porttitor massa, ut dapibus sapien feugiat
+                                                    eget.
+                                                    Nam.
+                                                </p>
+                                            </div>
+                                            <div class="testimonial-review">
+                                                <img src="/tecspek_customize_theme/static/src/img/t_img-1.jpg"
+                                                     alt=""/>
+                                                <h3 class="testimonial-title text-white">
+                                                    williamson
+                                                    <small>Web Developer</small>
+                                                </h3>
+                                                <ul class="rating">
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star"></i>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fa fa-star-half-o"></i>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+
+</odoo>

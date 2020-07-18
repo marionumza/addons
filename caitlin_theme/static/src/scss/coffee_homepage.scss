@@ -1,0 +1,148 @@
+.edgtf-lighter-effect path {
+    fill: #fff;
+}
+
+.edgtf-lighter-effect-top {
+    position: absolute;
+    top: -26px;
+}
+
+.edgtf-section-subtitle {
+    font-family: Merriweather, serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 27px;
+    letter-spacing: 0;
+    color: #c7a17a;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 65px;
+}
+
+.edgtf-section-h2 {
+    color: #30271c;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+    line-height: 1.14286em;
+    font-family: Merriweather, serif;
+}
+
+.edgtf-separator {
+    width: 120px;
+    border-bottom-width: 2px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    border-bottom: 2px solid #c7a17a;
+    margin: 5px 0;
+}
+
+.edgtf-item.edgtf-item-left .edgtf-item-content {
+    padding-right: 30px;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.edgtf-item-custom-icon {
+    display: table-cell;
+}
+
+.edgtf-item.edgtf-item-right .edgtf-item-content {
+    padding-left: 30px;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.edgtf-showcase-title {
+    font-size: 19px;
+    line-height: 1.31579em;
+    color: #30271c;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: Merriweather, serif;
+}
+
+.edgtf-item .edgtf-item-content .edgtf-showcase-text-holder .edgtf-showcase-text {
+    margin: 7px 0 44px;
+}
+
+.edgtf-cafe-menu-list .edgtf-cml-title-holder {
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    padding-right: 5px;
+}
+
+.edgtf-cafe-menu-list .edgtf-cml-line {
+    height: 3px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    display: table-cell;
+    width: 98%;
+    z-index: 1;
+    position: relative;
+    bottom: 14px;
+}
+
+.edgtf-cafe-menu-list .edgtf-cml-price-holder {
+    display: table-cell;
+    width: 1%;
+    padding-left: 7px;
+    white-space: nowrap;
+}
+
+.edgtf-cafe-menu-list .edgtf-cml-bottom-holder {
+    position: relative;
+    top: 5px;
+}
+
+.edgtf-cafe-menu-list .edgtf-cml-description-holder {
+    color: #c7a17a;
+    float: left;
+    width: 70%;
+    line-height: 1.2em;
+}
+
+.edgtf-cml-holder {
+    list-style-type: none;
+}
+
+.edgtf-cml-title {
+    font-size: 22px;
+    letter-spacing: .5px;
+    line-height: 1.22727em;
+    font-family: Oswald, sans-serif;
+    color: #30271c;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.edgtf-cafe-menu-list ul li {
+    margin-bottom: 25px;
+}
+.edgtf-cafe-menu-list .edgtf-cml-label-holder {
+    float: right;
+    position: relative;
+    width: 30%;
+    text-align: right;
+}
+.edgtf-cafe-menu-list .edgtf-cml-label-holder .edgtf-cml-label {
+    background-color: #c7a17a;
+    color: #30271c;
+    font-family: Merriweather,serif;
+    font-style: italic;
+    padding: 3px 13px;
+    text-align: center;
+}
+.edgtf-elements-holder-item {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 16% 15% 12% 12%;
+}

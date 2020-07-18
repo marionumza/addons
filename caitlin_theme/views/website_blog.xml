@@ -1,0 +1,55 @@
+<odoo>
+    <template id="blog_post_short_inherit" inherit_id="website_blog.blog_post_short" name="Blog Posts">
+        <xpath expr="//section[hasclass('mb0')]" position="replace">
+            <section class="page-title bg-200">
+                <div class="container">
+                    <div class="box">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="/">
+                                    <i class="fa fa-home"/>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a class="text-muted"><t t-esc="blog.name"/></a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+<!--
+            <section class="s_cover parallax s_parallax_is_fixed bg-black-75 pt96 pb96 mb-5"
+                     data-scroll-background-ratio="1" style="background-image: none;">
+                <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                      style="background-image: url('/website_root/static/src/img/business.jpg'); background-position: 50% 0;"/>
+                <div class="container">
+                    <div class="col-12 text-center">
+                        <h1 class="service-title" t-field="blog.name"/>
+                        <h3 t-field="blog.subtitle"/>
+                        <ul class="position-relative list-inline">
+                            <li class="d-inline-block">
+                                <a href="/" class="text-white">
+                                    <i class="fa fa-home text-white"/>
+                                </a>
+                            </li>
+                            <li class="d-inline-block">
+                                <a href="/services" class="text-muted">/ Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+-->
+        </xpath>
+        <xpath expr="//div[@id='main_column']//h2[@t-field='blog_post.name']" position="replace"/>
+        <xpath expr="//div[@id='main_column']//div[hasclass('text-muted')]" position="attributes">
+            <attribute name="class">bg-200 p-4 text-muted</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('o_blog_post_teaser')]" position="before">
+            <a t-attf-href="/blog/#{ slug(blog_post.blog_id) }/post/#{ slug(blog_post) }">
+                <h2 t-field="blog_post.name" class="mb4 o_blog_post_title">Untitled Post</h2>
+            </a>
+        </xpath>
+    </template>
+</odoo>

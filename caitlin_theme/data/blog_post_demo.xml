@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <data noupdate="1">
+        <!-- POSTS -->
+        <record id="blog_post_1" model="blog.post">
+            <field name="name">Lorem ipsum dolor sit amet</field>
+            <field name="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,...</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('website_blog.blog_tag_1')])]"/>
+            <field name="website_published" eval="True"/>
+            <field name="website_meta_keywords">Trending, E-commerce</field>
+            <field name="website_meta_description">Trending For 2015</field>
+            <field name="cover_properties">{"background-image": "url(/caitlin_theme/static/src/img/news-4-600x312.jpg)", "opacity":
+                "1.0", "resize_class": "cover cover_full"}
+            </field>
+            <field name="content"><![CDATA[
+                <section class="readable">
+                        <div class="container">
+                        <div class="row">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean amanda ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis amanda. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, amanda eget bibendum sodales, augue velit cursus nunc,</p>
+                        </div>
+                    </div>
+                </section>
+                ]]>
+            </field>
+        </record>
+
+        <record id="blog_post_2" model="blog.post">
+            <field name="name">Lorem ipsum dolor sit amet</field>
+            <field name="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,...</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('website_blog.blog_tag_1')])]"/>
+            <field name="website_published" eval="True"/>
+            <field name="website_meta_keywords">Fashion, E-commerce</field>
+            <field name="website_meta_description">>Men's Fashion</field>
+            <field name="cover_properties">{"background-image": "url(/caitlin_theme/static/src/img/news-5-600x312.jpg)", "opacity":
+                "1.0", "resize_class": "cover cover_full"}
+            </field>
+            <field name="content"><![CDATA[
+                <section class="readable">
+                        <div class="container">
+                        <div class="row">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean amanda ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis amanda. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, amanda eget bibendum sodales, augue velit cursus nunc,</p>
+                        </div>
+                    </div>
+                </section>
+
+                ]]>
+            </field>
+        </record>
+
+
+        <record id="blog_post_3" model="blog.post">
+            <field name="name">Lorem ipsum dolor sit amet</field>
+            <field name="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,...</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('website_blog.blog_tag_1')])]"/>
+            <field name="website_published" eval="True"/>
+            <field name="website_meta_keywords">Life Style, E-commerce</field>
+            <field name="website_meta_description">Life Style Products</field>
+            <field name="cover_properties">{"background-image": "url(/caitlin_theme/static/src/img/news-6-600x312.jpg)", "opacity":
+                "1.0", "resize_class": "cover cover_full"}
+            </field>
+            <field name="content"><![CDATA[
+                    <section class="readable">
+                            <div class="container">
+                            <div class="row">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean amanda ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis amanda. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, amanda eget bibendum sodales, augue velit cursus nunc,</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    ]]>
+            </field>
+        </record>
+
+
+        <record id="blog_post_4" model="blog.post">
+            <field name="name">Lorem ipsum dolor sit amet</field>
+            <field name="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,...</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('website_blog.blog_tag_1')])]"/>
+            <field name="website_published" eval="True"/>
+            <field name="website_meta_keywords">Lorem ipsum, E-commerce</field>
+            <field name="website_meta_description">Lorem ipsum</field>
+            <field name="cover_properties">{"background-image": "url(/caitlin_theme/static/src/img/news-7-600x312.jpg)", "opacity":
+                "1.0", "resize_class": "cover cover_full"}
+            </field>
+            <field name="content"><![CDATA[
+                <section class="readable">
+                        <div class="container">
+                        <div class="row">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean amanda ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis amanda. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, amanda eget bibendum sodales, augue velit cursus nunc,</p>
+                        </div>
+                    </div>
+                </section>
+
+                ]]>
+            </field>
+        </record>
+        <record id="blog_post_5" model="blog.post">
+            <field name="name">Lorem ipsum dolor sit amet</field>
+            <field name="subtitle">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,...</field>
+            <field name="blog_id" ref="website_blog.blog_blog_1"/>
+            <field name="tag_ids" eval="[(6, 0, [ref('website_blog.blog_tag_1')])]"/>
+            <field name="website_published" eval="True"/>
+            <field name="website_meta_keywords">Lorem ipsum, E-commerce</field>
+            <field name="website_meta_description">Lorem ipsum</field>
+            <field name="cover_properties">{"background-image": "url(/caitlin_theme/static/src/img/news-4-600x312.jpg)", "opacity":
+                "1.0", "resize_class": "cover cover_full"}
+            </field>
+            <field name="content"><![CDATA[
+                <section class="readable">
+                        <div class="container">
+                        <div class="row">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean amanda ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis amanda. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, amanda eget bibendum sodales, augue velit cursus nunc,</p>
+                        </div>
+                    </div>
+                </section>
+
+                ]]>
+            </field>
+        </record>
+    </data>
+
+</odoo>

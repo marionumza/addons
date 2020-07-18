@@ -1,0 +1,29 @@
+//#26bdef
+/*
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+    background-color: transparent !important;
+    color: $-alpha !important;
+}
+*/
+
+$-alpha: map-get($o-user-theme-color-palette, 'alpha');
+@if ($-alpha) {
+    $o-user-theme-color-palette: map-merge((
+            beta: lighten(desaturate($-alpha, 60%), 30%),
+            gamma: desaturate(adjust-hue($-alpha, -45deg), 10%),
+            delta: desaturate(adjust-hue($-alpha, 45deg), 10%),
+            epsilon: desaturate(adjust-hue($-alpha, 180deg), 10%),
+    ), o-map-omit($o-user-theme-color-palette));
+} @else {
+    $-alpha: #26bdef;
+}
+
+/* -------------------------------------------------------------
+ screen width more than 1200px
+---------------------------------------------------------------- */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1240px;
+    }
+}

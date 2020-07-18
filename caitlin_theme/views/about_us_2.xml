@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="about_us_2" model="ir.ui.view">
+        <field name="name">About Us 1</field>
+        <field name="type">qweb</field>
+        <field name="key">website.about_us_2</field>
+        <field name="mode">primary</field>
+        <field name="active">True</field>
+        <field name="arch" type="xml">
+            <t t-name="website.about_us_2">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty">
+                        <section class="page-title bg-200">
+                            <div class="container">
+                                <div class="box">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="/">
+                                                <i class="fa fa-home"/>
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a class="text-muted">About Us</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="about-area-education mt64 mb64">
+                            <div class="container">
+                                <div class="about-info row">
+                                    <div class="col-md-6 thumb">
+                                        <img src="/caitlin_theme/static/src/img/home-8-masonry-gall-1.jpg"
+                                             class="img img-fluid"/>
+                                    </div>
+                                    <div class="col-md-6 info">
+                                        <h5>Coffee Shop</h5>
+                                        <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        </h2>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s, when an unknown printer took a galley of type and scrambled it to
+                                            make a type specimen book. It has survived not only five centuries, but also
+                                            the leap into electronic typesetting, remaining essentially unchanged.
+                                        </p>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s, when an unknown printer took a galley of type and scrambled it to
+                                            make a type specimen book. It has survived not only five centuries, but also
+                                            the leap into electronic typesetting, remaining essentially unchanged.
+                                        </p>
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                            Lorem Ipsum has been the industry's standard dummy text ever since the
+                                            1500s, when an unknown printer took a galley of type and scrambled it to
+                                            make a type specimen book. It has survived not only five centuries, but also
+                                            the leap into electronic typesetting, remaining essentially unchanged.
+                                        </p>
+                                        <a href="#" class="btn btn-dark btn-lg ">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="position-relative">
+
+                            <div class="container">
+                                <div class="row">
+                                    <p class="edgtf-section-subtitle">
+                                        What Happens Here
+                                    </p>
+                                    <h2 class="edgtf-section-h2">Coffee Build your base.</h2>
+                                    <div class="w-100 text-center mt-4 mb-4">
+                                        <div class="edgtf-separator"/>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section class="mt48">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="edgtf-item-image col-md-4 col-12 order-1" style="margin-top:5px;">
+                                        <img width="365" height="447"
+                                             src="/caitlin_theme/static/src/img/Grid-home-item-show-img.jpg"
+                                             class="img-fluid img" alt="a"
+                                             srcset="/caitlin_theme/static/src/img/Grid-home-item-show-img.jpg 365w, /caitlin_theme/static/src/img/Grid-home-item-show-img-245x300.jpg 245w"
+                                             sizes="(max-width: 365px) 100vw, 365px"/>
+                                    </div>
+                                    <div class="col-md-4 col-12 text-right">
+                                        <div class="edgtf-item edgtf-item-left">
+                                            <div class="edgtf-item-content">
+                                                <div class="edgtf-showcase-title-holder">
+                                                    <a href="" target="_blank">
+                                                        <h4 class="edgtf-showcase-title">Croissant</h4>
+                                                    </a>
+                                                </div>
+                                                <div class="edgtf-showcase-text-holder">
+                                                    <p class="edgtf-showcase-text">Alienum phaedrum torquatos nec
+                                                        eu, vis detraxit periculis ex, nihil expetelis in mei.
+                                                        Meianpe icula euripidis,partem.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="edgtf-item-custom-icon">
+                                                <img width="170" height="185"
+                                                     src="/caitlin_theme/static/src/img/Item-showcase-icon-1.png"
+                                                     class="img-fluid img" alt="a"/>
+                                            </div>
+                                        </div>
+                                        <div class="edgtf-item edgtf-item-left">
+                                            <div class="edgtf-item-content">
+                                                <div class="edgtf-showcase-title-holder">
+                                                    <a href="" target="_blank">
+                                                        <h4 class="edgtf-showcase-title">French toast</h4>
+                                                    </a>
+                                                </div>
+                                                <div class="edgtf-showcase-text-holder">
+                                                    <p class="edgtf-showcase-text">Alienum phaedrum torquatos nec
+                                                        eu, vis detraxit periculis ex, nihil expetelis in mei.
+                                                        Meianpe icula euripidis,partem.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="edgtf-item-custom-icon">
+                                                <img width="170" height="185"
+                                                     src="/caitlin_theme/static/src/img/Item-showcase-icon-2.png"
+                                                     class="img-fluid img" alt="a"/>
+                                            </div>
+                                        </div>
+                                        <div class="edgtf-item edgtf-item-left">
+                                            <div class="edgtf-item-content">
+                                                <div class="edgtf-showcase-title-holder">
+                                                    <a href="" target="_blank">
+                                                        <h4 class="edgtf-showcase-title">Pancakes</h4>
+                                                    </a>
+                                                </div>
+                                                <div class="edgtf-showcase-text-holder">
+                                                    <p class="edgtf-showcase-text">Alienum phaedrum torquatos nec
+                                                        eu, vis detraxit periculis ex, nihil expetelis in mei.
+                                                        Meianpe icula euripidis,partem.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="edgtf-item-custom-icon">
+                                                <img width="170" height="185"
+                                                     src="/caitlin_theme/static/src/img/Item-showcase-icon-3.png"
+                                                     class="img-fluid img" alt="a"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-12 edgtf-holder-right order-1">
+                                        <div class="edgtf-item edgtf-item-right">
+                                            <div class="edgtf-item-custom-icon">
+                                                <img width="170" height="185"
+                                                     src="/caitlin_theme/static/src/img/Item-showcase-icon-4.png"
+                                                     class="img-fluid img" alt="a"/>
+                                            </div>
+                                            <div class="edgtf-item-content">
+                                                <div class="edgtf-showcase-title-holder">
+                                                    <a href="" target="_blank">
+                                                        <h4 class="edgtf-showcase-title">Turkish coffee</h4>
+                                                    </a>
+                                                </div>
+                                                <div class="edgtf-showcase-text-holder">
+                                                    <p class="edgtf-showcase-text">Alienum phaedrum torquatos nec
+                                                        eu, vis detraxit periculis ex, nihil expetelis in mei.
+                                                        Meianpe icula euripidis,partem.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="edgtf-item edgtf-item-right">
+                                            <div class="edgtf-item-custom-icon">
+                                                <img width="170" height="185"
+                                                     src="/caitlin_theme/static/src/img/Item-showcase-icon-5.png"
+                                                     class="img-fluid img" alt="a"/>
+                                            </div>
+                                            <div class="edgtf-item-content">
+                                                <div class="edgtf-showcase-title-holder">
+                                                    <a href="" target="_blank">
+                                                        <h4 class="edgtf-showcase-title">Coffee to go</h4>
+                                                    </a>
+                                                </div>
+                                                <div class="edgtf-showcase-text-holder">
+                                                    <p class="edgtf-showcase-text">Alienum phaedrum torquatos nec
+                                                        eu, vis detraxit periculis ex, nihil expetelis in mei.
+                                                        Meianpe icula euripidis,partem.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="edgtf-item edgtf-item-right">
+                                            <div class="edgtf-item-custom-icon">
+                                                <img width="170" height="185"
+                                                     src="/caitlin_theme/static/src/img/Item-showcase-icon-6.png"
+                                                     class="img-fluid img" alt="a"/>
+                                            </div>
+                                            <div class="edgtf-item-content">
+                                                <div class="edgtf-showcase-title-holder">
+                                                    <a href="" target="_blank">
+                                                        <h4 class="edgtf-showcase-title">Morning coffee</h4>
+                                                    </a>
+                                                </div>
+                                                <div class="edgtf-showcase-text-holder">
+                                                    <p class="edgtf-showcase-text">Alienum phaedrum torquatos nec
+                                                        eu, vis detraxit periculis ex, nihil expetelis in mei.
+                                                        Meianpe icula euripidis,partem.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="mt48 mb48">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4 p-0">
+                                        <div class="edgtf-elements-holder-item"
+                                             style="background-image: url(/caitlin_theme/static/src/img/home-8-image-1.jpg)">
+                                            <h3 class="edgtf-cml-title">
+                                                <span style="color: #ffffff;">brewing guide</span>
+                                            </h3>
+                                            <p class="mt-4">
+                                                <span style="color: #ffffff;">Alienum phaedrum torquatos nec eu, vis
+                                                    detraxit periculis ex, nihil expetendis in mei. Meianpericula
+                                                    euripidis,partem.
+                                                </span>
+                                            </p>
+                                            <a class="mt-4 mb-4" href="#"
+                                               style="color: #ffffff; font-size: 12px;text-transform: uppercase;">
+                                                <span class="edgtf-btn-text">read more</span>
+                                                <span class="pe-7s-angle-right"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 p-0">
+                                        <div class="edgtf-elements-holder-item"
+                                             style="background-color: #eae7de;">
+                                            <h3 class="edgtf-cml-title">
+                                                <span style="color: #30271c;">brewing guide</span>
+                                            </h3>
+                                            <p class="mt-4">
+                                                <span style="color: #30271c;">Alienum phaedrum torquatos nec eu, vis
+                                                    detraxit periculis ex, nihil expetendis in mei. Meianpericula
+                                                    euripidis,partem.
+                                                </span>
+                                            </p>
+                                            <a class="mt-4 mb-4" href="#"
+                                               style="color: #30271c; font-size: 12px;text-transform: uppercase;">
+                                                <span class="edgtf-btn-text">read more</span>
+                                                <span class="pe-7s-angle-right"/>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-4"
+                                         style="background-image: url(/caitlin_theme/static/src/img/home-8-image-2.jpg);">
+                                        <div class="edgtf-elements-holder-item"/>
+                                    </div>
+                                    <div class="col-md-4 p-0">
+                                        <div class="edgtf-elements-holder-item"
+                                             style="background-color: #eae7de;">
+                                            <h3 class="edgtf-cml-title">
+                                                <span style="color: #30271c;">brewing guide</span>
+                                            </h3>
+                                            <p class="mt-4">
+                                                <span style="color: #30271c;">Alienum phaedrum torquatos nec eu, vis
+                                                    detraxit periculis ex, nihil expetendis in mei. Meianpericula
+                                                    euripidis,partem.
+                                                </span>
+                                            </p>
+                                            <a class="mt-4 mb-4" href="#"
+                                               style="color: #30271c; font-size: 12px;text-transform: uppercase;">
+                                                <span class="edgtf-btn-text">read more</span>
+                                                <span class="pe-7s-angle-right"/>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-4"
+                                         style="    background-image: url(/caitlin_theme/static/src/img/home-8-image-4.jpg);">
+                                        <div class="edgtf-elements-holder-item"/>
+                                    </div>
+
+                                    <div class="col-md-4 p-0">
+                                        <div class="edgtf-elements-holder-item"
+                                             style="background-image: url(/caitlin_theme/static/src/img/home-8-image-5.jpg);">
+                                            <h3 class="edgtf-cml-title">
+                                                <span style="color: #ffffff;">brewing guide</span>
+                                            </h3>
+                                            <p class="mt-4">
+                                                <span style="color: #ffffff;">Alienum phaedrum torquatos nec eu, vis
+                                                    detraxit periculis ex, nihil expetendis in mei. Meianpericula
+                                                    euripidis,partem.
+                                                </span>
+                                            </p>
+                                            <a class="mt-4 mb-4" href="#"
+                                               style="color: #ffffff; font-size: 12px;text-transform: uppercase;">
+                                                <span class="edgtf-btn-text">read more</span>
+                                                <span class="pe-7s-angle-right"/>
+                                            </a>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+    <record id="about_us_2_menu_page" model="website.page">
+        <field name="name">About Us 2</field>
+        <field name="url">/aboutus-2</field>
+        <field name="view_id" ref="caitlin_theme.about_us_2"/>
+        <field name="website_indexed">True</field>
+        <field name="website_published">True</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,962 @@
+<odoo>
+    <template id="s_corporate_homepage" name="Corporate Homepage">
+        <div id="myCarousel1549116735215" class="s_carousel s_carousel_default carousel slide"
+             data-interval="10000">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel1549116735215" data-slide-to="0" class="active"/>
+                <li data-target="#myCarousel1549116735215" data-slide-to="1"/>
+                <li data-target="#myCarousel1549116735215" data-slide-to="2"/>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item oe_custom_bg oe_img_bg pt152 pb152 active"
+                     style="background-image: url(&quot;/caitlin_theme/static/src/img/slide-thinking.jpg&quot;);background-position: center;"
+                     data-name="Slide">
+                    <div class="container">
+                        <div class="row content">
+                            <div class="carousel-content col-lg-7 offset-md-1">
+                                <div class="s_title pb8" data-name="Title">
+                                    <h2 class="s_title_default">
+                                        <font style="font-size: 62px;"
+                                              class="o_default_snippet_text text-white">
+                                            Slide Title
+                                        </font>
+                                    </h2>
+                                </div>
+                                <p class="lead o_default_snippet_text text-white">Use this snippet to
+                                    presents your
+                                    content in a slideshow-like format.
+                                    <br/>
+                                    Don't write about products or services here, write about solutions.
+                                </p>
+                                <div class="s_btn text-left pt16 pb16" data-name="Buttons">
+                                    <a href="/aboutus"
+                                       class="btn btn-secondary flat o_default_snippet_text">About us
+                                    </a>
+                                    <a href="/contactus"
+                                       class="btn btn-primary flat o_default_snippet_text">Contact us
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item oe_custom_bg oe_img_bg pt152 pb152"
+                     style="background-image: url(&quot;/caitlin_theme/static/src/img/image-2.jpg&quot;);"
+                     data-name="Slide">
+                    <div class="container">
+                        <div class="row content">
+                            <div class="carousel-content col-lg-7 offset-md-1">
+                                <div class="s_title pb8" data-name="Title">
+                                    <h2 class="s_title_default">
+                                        <font style="font-size: 62px;" class="o_default_snippet_text">
+                                            Slide Title
+                                        </font>
+                                    </h2>
+                                </div>
+                                <p class="lead o_default_snippet_text">Use this snippet to presents your
+                                    content in a slideshow-like format.
+                                    <br/>
+                                    Don't write about products or services here, write about solutions.
+                                </p>
+                                <div class="s_btn text-left pt16 pb16" data-name="Buttons">
+                                    <a href="/aboutus"
+                                       class="btn btn-secondary flat o_default_snippet_text">About us
+                                    </a>
+                                    <a href="/contactus"
+                                       class="btn btn-primary flat o_default_snippet_text">Contact us
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item oe_custom_bg oe_img_bg pt152 pb152"
+                     style="background-image: url(&quot;/caitlin_theme/static/src/img/image-3.jpg&quot;);"
+                     data-name="Slide">
+                    <div class="container">
+                        <div class="row content">
+                            <div class="carousel-content col-lg-7 offset-md-1">
+                                <div class="s_title pb8" data-name="Title">
+                                    <h2 class="s_title_default">
+                                        <font style="font-size: 62px;" class="o_default_snippet_text">
+                                            Slide Title
+                                        </font>
+                                    </h2>
+                                </div>
+                                <p class="lead o_default_snippet_text">Lorem Ipsum is simply dummy text
+                                    of the printing and typesetting industry.
+                                    <br/>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry.
+                                </p>
+                                <div class="s_btn text-left pt16 pb16" data-name="Buttons">
+                                    <a href="/aboutus"
+                                       class="btn btn-secondary flat o_default_snippet_text">About us
+                                    </a>
+                                    <a href="/contactus"
+                                       class="btn btn-primary flat o_default_snippet_text">Contact us
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-control-prev" data-target="#myCarousel1549116735215" data-slide="prev"
+                 role="img" aria-label="Previous" title="Previous">
+                <span class="carousel-control-prev-icon"/>
+                <span class="sr-only o_default_snippet_text">Previous</span>
+            </div>
+            <div class="carousel-control-next" data-target="#myCarousel1549116735215" data-slide="next"
+                 role="img" aria-label="Next" title="Next">
+                <span class="carousel-control-next-icon"/>
+                <span class="sr-only o_default_snippet_text">Next</span>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="sec-title text-center pt-5">
+                    <h2>Why Choose Us</h2>
+                </div>
+                <div class="row">
+                    <div class="services-block-ten col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img width="370" height="250"
+                                     src="http://wp3.commonsupport.com/newwp/quincy/wp-content/uploads/2018/05/welcome-1.jpg"
+                                     class="img img-fluid"/>
+                                <div class="read-more">
+                                    <a href="http://wp3.commonsupport.com/newwp/quincy/organization/">
+                                        <span class="fa fa-link"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <div class="upper-box">
+                                    <h3>
+                                        <a href="#">
+                                            Corporate Services
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="text">Lorem Ipsum is simply dummy text of the printing and
+                                    typesetting industry. the printing and typesetting industry.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
+                    <div class="services-block-ten col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img width="370" height="250"
+                                     src="http://wp3.commonsupport.com/newwp/quincy/wp-content/uploads/2018/05/welcome-2.jpg"
+                                     class="img img-fluid"/>
+                                <div class="read-more">
+                                    <a href="#">
+                                        <span class="fa fa-link"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <div class="upper-box">
+                                    <h3>
+                                        <a href="#">
+                                            Financial Planing
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="text">Lorem Ipsum is simply dummy Lorem Ipsum is simply
+                                    dummy text of the printing and typesetting industry.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
+                    <div class="services-block-ten col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="inner-box">
+                            <div class="image">
+                                <img width="370" height="250"
+                                     src="http://wp3.commonsupport.com/newwp/quincy/wp-content/uploads/2018/05/welcome-3.jpg"
+                                     class="img img-fluid"/>
+                                <div class="read-more">
+                                    <a href="#">
+                                        <span class="fa fa-link"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="lower-content">
+                                <div class="upper-box">
+                                    <h3>
+                                        <a href="#">
+                                            Business Consulting
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="text">Lorem Ipsum is simply dummy text of the printing and
+                                    typesetting industry. of the printing and typesetting industry.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
+                </div>
+            </div>
+        </section>
+        <section class="our-services bg-100 pt-5">
+            <div class="container">
+                <div class="sec-title text-center">
+                    <h2>Our Services</h2>
+                </div>
+
+                <div class="row">
+                    <div class="services-block-two col-md-4 col-sm-12 col-xs-12">
+                        <div class="inner-box hvr-float-shadow">
+                            <div class="icon-box">
+                                <span class="pe-7s-bell"></span>
+                            </div>
+                            <h5>
+                                <a href="/financial-analysis">
+                                    Financial Analysis
+                                </a>
+                            </h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry.
+                            </p>
+                            <div class="link">
+                                <a href="/financial-analysis"
+                                   class="read-more">Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-block-two col-md-4 col-sm-12 col-xs-12">
+                        <div class="inner-box hvr-float-shadow">
+                            <div class="icon-box">
+                                <span class="pe-7s-alarm"></span>
+                            </div>
+                            <h5>
+                                <a href="/marketing-plan">
+                                    Marketing Plan
+                                </a>
+                            </h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry.
+                            </p>
+                            <div class="link">
+                                <a href="/marketing-plan"
+                                   class="read-more">Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-block-two col-md-4 col-sm-12 col-xs-12">
+                        <div class="inner-box hvr-float-shadow">
+                            <div class="icon-box">
+                                <span class="pe-7s-config"></span>
+                            </div>
+                            <h5>
+                                <a href="/financial-analysis">
+                                    Organization
+                                </a>
+                            </h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry.
+                            </p>
+                            <div class="link">
+                                <a href="/financial-analysis"
+                                   class="read-more">Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-block-two col-md-4 col-sm-12 col-xs-12">
+                        <div class="inner-box hvr-float-shadow">
+                            <div class="icon-box">
+                                <span class="pe-7s-drawer"></span>
+                            </div>
+                            <h5>
+                                <a href="/marketing-plan">
+                                    Business Growth
+                                </a>
+                            </h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry.
+                            </p>
+                            <div class="link">
+                                <a href="/marketing-plan"
+                                   class="read-more">Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-block-two col-md-4 col-sm-12 col-xs-12">
+                        <div class="inner-box hvr-float-shadow">
+                            <div class="icon-box">
+                                <span class="pe-7s-global"></span>
+                            </div>
+                            <h5>
+                                <a href="/financial-analysis">
+                                    Advanced Analytics
+                                </a>
+                            </h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry.
+                            </p>
+                            <div class="link">
+                                <a href="/financial-analysis"
+                                   class="read-more">Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-block-two col-md-4 col-sm-12 col-xs-12">
+                        <div class="inner-box hvr-float-shadow">
+                            <div class="icon-box">
+                                <span class="pe-7s-expand1"></span>
+                            </div>
+                            <h5>
+                                <a href="/marketing-plan">
+                                    Performance
+                                </a>
+                            </h5>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry.
+                            </p>
+                            <div class="link">
+                                <a href="/marketing-plan"
+                                   class="read-more">Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end -->
+                </div>
+            </div>
+        </section>
+        <section class="s_cover parallax s_parallax_is_fixed bg-black-50 pt96 pb96"
+                 data-scroll-background-ratio="1" style="background-image: none;background-color: rgba(0, 0, 0, 0.5) !important;color: #FFFFFF;">
+            <span class="s_parallax_bg oe_img_bg oe_custom_bg"
+                  style="background-image: url('/caitlin_theme/static/src/img/1.jpg'); background-position: 50% 0;"/>
+            <div class="container">
+                <div class="row s_nb_column_fixed">
+                    <div class="col-lg-12 s_title" data-name="Title">
+                        <h1 class="s_title_thin o_default_snippet_text"
+                            style="font-size: 62px; text-align: center;">Catchy Headline
+                        </h1>
+                    </div>
+                    <div class="col-lg-12 s_text pt16 pb16" data-name="Text">
+                        <p class="lead o_default_snippet_text" style="text-align: center;">Lorem Ipsum
+                            is simply dummy text of the printing and typesetting industry.
+                            <br/>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                    </div>
+                    <div class="col-lg-12 s_btn text-center pt16 pb16" data-name="Buttons">
+                        <a href="/aboutus" class="btn btn-delta rounded-circle o_default_snippet_text">
+                            About us
+                        </a>
+                        <a href="/contactus"
+                           class="btn btn-primary rounded-circle o_default_snippet_text">Contact us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-us pt64 pb64">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="image">
+                            <img src="http://wp3.commonsupport.com/newwp/quincy/wp-content/uploads/2018/05/about.jpg"
+                                 alt="" class="img img-fluid"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="text-block-one">
+                            <div class="title-top">Get your business plan</div>
+                            <div class="title">
+                                <h2>
+                                    <span>Lorem Ipsum</span>
+                                    is simply dummy text of the printing and typesetting
+                                    industry.
+                                </h2>
+                            </div>
+                            <div class="text-p">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the industry's standard dummy text
+                                    ever since the 1500s, when an unknown printer took a galley of type
+                                    and scrambled it to make a type specimen book. It has survived not
+                                    only five centuries, but also the leap into electronic typesetting,
+                                    remaining essentially unchanged.
+                                </p>
+                            </div>
+                            <ul class="list-inline list in-block">
+                                <li>Lorem Ipsum is simply dummy text of the.
+                                </li>
+                                <li>Lorem Ipsum is simply dummy text of the printing
+                                    industry.
+                                </li>
+                                <li>Lorem Ipsum is simply dummy and typesetting
+                                    industry.
+                                </li>
+                                <li>Lorem Ipsum is simply dummy the printing and typesetting
+                                    industry.
+                                </li>
+                                <li>Lorem Ipsum is simply dummy and typesetting
+                                    industry.
+                                </li>
+                                <li>Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry.
+                                </li>
+                            </ul>
+                            <div class="link mt-5">
+                                <a href="/aboutus" class="btn btn-primary btn-lg">Read more</a>
+                            </div>
+                        </div>
+                        <!-- end -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="whychoose-us" style="background-color: #f7f7f7;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="image">
+                            <img src="/caitlin_theme/static/src/img/why-choose.jpg"
+                                 alt="" class="img img-fluid"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="outer-box sp-three pl-40 pt88 pl-5">
+                            <div class="sec-title text-center">
+                                <h2>Why Choose Us</h2>
+                            </div>
+
+                            <!-- services three -->
+                            <div class="services-block-three">
+                                <div class="inner">
+                                    <div class="icon-box theme_color">
+                                        <span class="fa fa-rocket"></span>
+                                    </div>
+                                    <h3>
+                                        <a href="#">Fast Approval</a>
+                                    </h3>
+                                    <div class="text">Lorem Ipsum is simply dummy text of the printing
+                                        and typesetting industry.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- services three -->
+                            <div class="services-block-three">
+                                <div class="inner">
+                                    <div class="icon-box theme_color">
+                                        <span class="fa fa-user"></span>
+                                    </div>
+                                    <h3>
+                                        <a href="#">Professional Advisor</a>
+                                    </h3>
+                                    <div class="text">Lorem Ipsum is simply dummy text of the printing
+                                        and typesetting industry.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- services three -->
+                            <div class="services-block-three">
+                                <div class="inner">
+                                    <div class="icon-box theme_color">
+                                        <span class="fa fa-home"></span>
+                                    </div>
+                                    <h3>
+                                        <a href="#">Free Documentation</a>
+                                    </h3>
+                                    <div class="text">Lorem Ipsum is simply dummy text of the printing
+                                        and typesetting industry.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="our_team_4 mt64 mb64">
+            <div class="container">
+                <div class="sec-title text-center pt-2">
+                    <h2>Our Team</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <img src="/tecspek_customize_theme/static/src/img/img-11.jpg"/>
+                            <div class="team-content">
+                                <h3 class="title">Williamson</h3>
+                                <span class="post">web developer</span>
+                                <ul class="social">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <img src="/tecspek_customize_theme/static/src/img/img-22.jpg"/>
+                            <div class="team-content">
+                                <h3 class="title">kristina</h3>
+                                <span class="post">Web Designer</span>
+                                <ul class="social">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <img src="/tecspek_customize_theme/static/src/img/img-33.jpg"/>
+                            <div class="team-content">
+                                <h3 class="title">Steve Thomas</h3>
+                                <span class="post">web developer</span>
+                                <ul class="social">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="our-team">
+                            <img src="/tecspek_customize_theme/static/src/img/img-44.jpg"/>
+                            <div class="team-content">
+                                <h3 class="title">Miranda joy</h3>
+                                <span class="post">Web Designer</span>
+                                <ul class="social">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-google-plus"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="testimonial_2 gradient-bg">
+            <div class="container">
+                <div class="sec-title text-center pt-2">
+                    <h2 class="text-white">Testimonial</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="testimonial-slider-2" class="owl-carousel">
+                            <div class="testimonial">
+                                <div class="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                                        ipsum
+                                        augue, lacinia vel arcu condimentum, dictum tristique sem. Nam
+                                        enim
+                                        neque, mattis ut fermentum vitae, venenatis id tortor. Sed
+                                        consectetur
+                                        tortor ut arcu pharetra faucibus. In tristique sollicitudin mi
+                                        ac
+                                        congue. Praesent efficitur feugiat nisl, nec facilisis leo
+                                        sollicitudin
+                                        sed. Integer egestas porttitor massa, ut dapibus sapien feugiat
+                                        eget.
+                                        Nam.
+                                    </p>
+                                </div>
+                                <div class="testimonial-review">
+                                    <img src="/tecspek_customize_theme/static/src/img/t_img-1.jpg"
+                                         alt=""/>
+                                    <h3 class="testimonial-title text-white">
+                                        williamson
+                                        <small>Web Developer</small>
+                                    </h3>
+                                    <ul class="rating">
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <div class="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                                        ipsum
+                                        augue, lacinia vel arcu condimentum, dictum tristique sem. Nam
+                                        enim
+                                        neque, mattis ut fermentum vitae, venenatis id tortor. Sed
+                                        consectetur
+                                        tortor ut arcu pharetra faucibus. In tristique sollicitudin mi
+                                        ac
+                                        congue. Praesent efficitur feugiat nisl, nec facilisis leo
+                                        sollicitudin
+                                        sed. Integer egestas porttitor massa, ut dapibus sapien feugiat
+                                        eget.
+                                        Nam.
+                                    </p>
+                                </div>
+                                <div class="testimonial-review">
+                                    <img src="/tecspek_customize_theme/static/src/img/t_img-2.jpg"
+                                         alt=""/>
+                                    <h3 class="testimonial-title text-white">
+                                        kristiana
+                                        <small>Web Desginer</small>
+                                    </h3>
+                                    <ul class="rating">
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="testimonial">
+                                <div class="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                                        ipsum
+                                        augue, lacinia vel arcu condimentum, dictum tristique sem. Nam
+                                        enim
+                                        neque, mattis ut fermentum vitae, venenatis id tortor. Sed
+                                        consectetur
+                                        tortor ut arcu pharetra faucibus. In tristique sollicitudin mi
+                                        ac
+                                        congue. Praesent efficitur feugiat nisl, nec facilisis leo
+                                        sollicitudin
+                                        sed. Integer egestas porttitor massa, ut dapibus sapien feugiat
+                                        eget.
+                                        Nam.
+                                    </p>
+                                </div>
+                                <div class="testimonial-review">
+                                    <img src="/tecspek_customize_theme/static/src/img/t_img-1.jpg"
+                                         alt=""/>
+                                    <h3 class="testimonial-title text-white">
+                                        williamson
+                                        <small>Web Developer</small>
+                                    </h3>
+                                    <ul class="rating">
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star-half-o"></i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="price_table_1 mt64 mb64">
+            <div class="container">
+                <div class="sec-title text-center pt-2">
+                    <h2>Price Table</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="pricingTable">
+                            <div class="pricingTable-header">
+                                <span class="heading">
+                                    <h3>Standard</h3>
+                                    <span class="subtitle">Lorem ipsum dolor</span>
+                                </span>
+                                <span class="price-value">
+                                    <i class="fa fa-usd"></i>
+                                    <span>10</span>
+                                    <span class="mo">year</span>
+                                </span>
+                            </div>
+
+                            <div class="pricingContent">
+                                <ul>
+                                    <li>
+                                        <b>50GB</b>
+                                        Disk Space
+                                    </li>
+                                    <li>
+                                        <b>50</b>
+                                        Email Accounts
+                                    </li>
+                                    <li>
+                                        <b>50GB</b>
+                                        Monthly Bandwidth
+                                    </li>
+                                    <li>
+                                        <b>50</b>
+                                        Domains
+                                    </li>
+                                    <li>
+                                        <b>Unlimited</b>
+                                        Subdomains
+                                    </li>
+                                </ul>
+                            </div><!-- /  CONTENT BOX-->
+
+                            <div class="pricingTable-sign-up">
+                                <a href="#" class="btn btn-block btn-default">sign up</a>
+                            </div><!-- BUTTON BOX-->
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="pricingTable">
+                            <div class="pricingTable-header">
+                                <span class="heading">
+                                    <h3>Business</h3>
+                                    <span class="subtitle">Lorem ipsum dolor</span>
+                                </span>
+                                <span class="price-value">
+                                    <i class="fa fa-usd"></i>
+                                    <span>20</span>
+                                    <span class="mo">year</span>
+                                </span>
+                            </div>
+
+                            <div class="pricingContent">
+                                <ul>
+                                    <li>
+                                        <b>50GB</b>
+                                        Disk Space
+                                    </li>
+                                    <li>
+                                        <b>50</b>
+                                        Email Accounts
+                                    </li>
+                                    <li>
+                                        <b>50GB</b>
+                                        Monthly Bandwidth
+                                    </li>
+                                    <li>
+                                        <b>50</b>
+                                        Domains
+                                    </li>
+                                    <li>
+                                        <b>Unlimited</b>
+                                        Subdomains
+                                    </li>
+                                </ul>
+                            </div><!-- /  CONTENT BOX-->
+
+                            <div class="pricingTable-sign-up">
+                                <a href="#" class="btn btn-block btn-default">sign up</a>
+                            </div><!-- BUTTON BOX-->
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="pricingTable">
+                            <div class="pricingTable-header">
+                                <span class="heading">
+                                    <h3>Premium</h3>
+                                    <span class="subtitle">Lorem ipsum dolor</span>
+                                </span>
+                                <span class="price-value">
+                                    <i class="fa fa-usd"></i>
+                                    <span>30</span>
+                                    <span class="mo">year</span>
+                                </span>
+                            </div>
+
+                            <div class="pricingContent">
+                                <ul>
+                                    <li>
+                                        <b>50GB</b>
+                                        Disk Space
+                                    </li>
+                                    <li>
+                                        <b>50</b>
+                                        Email Accounts
+                                    </li>
+                                    <li>
+                                        <b>50GB</b>
+                                        Monthly Bandwidth
+                                    </li>
+                                    <li>
+                                        <b>50</b>
+                                        Domains
+                                    </li>
+                                    <li>
+                                        <b>Unlimited</b>
+                                        Subdomains
+                                    </li>
+                                </ul>
+                            </div><!-- /  CONTENT BOX-->
+
+                            <div class="pricingTable-sign-up">
+                                <a href="#" class="btn btn-block btn-default">sign up</a>
+                            </div><!-- BUTTON BOX-->
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="pricingTable">
+                            <div class="pricingTable-header">
+                                <span class="heading">
+                                    <h3>Extra</h3>
+                                    <span class="subtitle">Lorem ipsum dolor</span>
+                                </span>
+                                <span class="price-value">
+                                    <i class="fa fa-usd"></i>
+                                    <span>40</span>
+                                    <span class="mo">year</span>
+                                </span>
+                            </div>
+
+                            <div class="pricingContent">
+                                <ul>
+                                    <li>
+                                        <b>50GB</b>
+                                        Disk Space
+                                    </li>
+                                    <li>
+                                        <b>50</b>
+                                        Email Accounts
+                                    </li>
+                                    <li>
+                                        <b>50GB</b>
+                                        Monthly Bandwidth
+                                    </li>
+                                    <li>
+                                        <b>50</b>
+                                        Domains
+                                    </li>
+                                    <li>
+                                        <b>Unlimited</b>
+                                        Subdomains
+                                    </li>
+                                </ul>
+                            </div><!-- /  CONTENT BOX-->
+
+                            <div class="pricingTable-sign-up">
+                                <a href="#" class="btn btn-block btn-default">sign up</a>
+                            </div><!-- BUTTON BOX-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="oe_structure oe_empty"/>
+        <section class="s_blog_carousel pt64 pb64 from_blog bg-200 mb-5">
+            <div class="container">
+                <t t-call="caitlin_theme.blog_slider_content"/>
+            </div>
+        </section>
+    </template>
+</odoo>

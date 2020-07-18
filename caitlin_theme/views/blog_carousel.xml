@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template name="blog Slider" id="blog_slider_content">
+        <div class="sec-title text-center pt-2">
+            <h2>Our Blog</h2>
+        </div>
+        <t t-set="blog_obj" t-value="website.get_blogs() if website else None"/>
+        <div class="owl-carousel as_our_blog">
+            <t t-foreach="blog_obj" t-as="blog_obj">
+                <div class="item blog-single " style="margin-right:20px;">
+                    <t t-foreach="blog_obj" t-as="blog">
+                        <div class="post-thumb">
+                            <a t-att-href="'/blog/%s/post/%s' % (blog.blog_id.id, blog.id)">
+                                <div class="carousel_blog_image"
+                                     t-attf-style="background-image: #{json.loads(blog.cover_properties).get('background-image', 'none')};  -webkit-background-size: cover; min-height:222px; opacity:1}"/>
+                            </a>
+                            <div class="blog-info blog_content">
+                                <a t-att-href="'/blog/%s/post/%s' % (blog.blog_id.id, blog.id)">
+                                    <h4 t-field="blog.name"/>
+                                </a>
+                                <div class="blog_subtitle">
+                                    <p t-field="blog.subtitle"/>
+                                </div>
+                                <div class="blog-meta">
+                                    <span class="blog-date">
+                                        <i class="fa fa-calendar"/>
+                                        <span t-field="blog.create_date"
+                                              t-field-options='{"format": "MMMM d, yyyy"}'/>
+                                    </span>
+                                    <span class="blog-comment">
+                                        <i class="fa fa-user"/>
+                                        <span t-field="blog.author_id"/>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </div>
+    </template>
+    <template id="website_blog.index" name="Blog Navigation">
+        <t t-call="website.layout">
+            <div id="wrap" class="js_blog website_blog">
+                <div class="container">
+                    <t t-raw="0"/>
+                </div>
+            </div>
+        </t>
+    </template>
+
+</odoo>

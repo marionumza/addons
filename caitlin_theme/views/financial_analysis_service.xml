@@ -1,0 +1,267 @@
+<odoo>
+    <record id="sirvice_single_page" model="ir.ui.view">
+        <field name="name">Services</field>
+        <field name="type">qweb</field>
+        <field name="key">website.sirvice_single_page</field>
+        <field name="mode">primary</field>
+        <field name="active">True</field>
+        <field name="arch" type="xml">
+            <t t-name="website.sirvice_single_page">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty">
+                        <section class="page-title bg-200">
+                            <div class="container">
+                                <div class="box">
+                                    <ol class="breadcrumb mb-0">
+                                        <li class="breadcrumb-item">
+                                            <a href="/">
+                                                <i class="fa fa-home"/>
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a class="">Services</a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a class="text-muted">Financial Analysis</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="mt-5">
+
+
+                            <!-- Service Single START -->
+                            <div class="section-block">
+                                <div class="container">
+                                    <div class="row">
+                                        <!-- Left Side START -->
+                                        <div class="col-md-3 col-sm-4 col-12">
+                                            <div class="services-single-left-box">
+
+                                                <!-- Vertical Menu START -->
+                                                <div class="services-single-left-heading">
+                                                    <h4>All Services</h4>
+                                                </div>
+                                                <div class="services-single-menu mt32">
+                                                    <ul class="list-inline">
+                                                        <li class="services-active">
+                                                            <a href="/financial-analysis">Financial Analysis</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/marketing-plan">Marketing Plan</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/financial-analysis">Organization Planing</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/marketing-plan">Business Growth</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/financial-analysis">Advanced Analytics</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/marketing-plan">Performance</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <!-- Vertical Menu END -->
+
+                                                <div class="services-single-left-heading mt48">
+                                                    <h4>Need Help ?</h4>
+                                                </div>
+                                                <ul class="primary-list mt32 list-inline">
+                                                    <li><i class="fa fa-globe"></i>Street Sheram 1133/141 9007
+                                                    </li>
+                                                    <li><i class="fa fa-phone"></i>(+123) 123-456-789
+                                                    </li>
+                                                    <li><i class="fa fa-envelope-open"></i>help.tecspek@gmail.com
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                        <!-- Left Side END -->
+
+                                        <!-- Right Side START -->
+                                        <div class="col-md-9 col-sm-8 col-12">
+                                            <div class="services-single-right">
+                                                <img src="/caitlin_theme/static/src/img/service-2.jpg" class="rounded-border img img-fluid"
+                                                     alt="img"/>
+                                                <div class="text-content-big mt24">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                                        eiusmod
+                                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                        minim veniam,
+                                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                        commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                                        velit esse
+                                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                                        cupidatat non
+                                                        proident, sunt in culpa qui officia deserunt mollit anim id est
+                                                        laborum.
+                                                    </p>
+                                                </div>
+
+                                                <div class="row mt32">
+                                                    <div class="col-md-6 col-sm-6 col-12">
+                                                        <div class="pr-15-md">
+                                                            <div class="section-single-heading">
+                                                                <h4>Financial Planning Strategies</h4>
+                                                            </div>
+                                                            <ul class="primary-list mt-35">
+                                                                <li><i class="fa fa-check"></i>Foreclosure consultant
+                                                                    Human resource consulting
+                                                                </li>
+                                                                <li><i class="fa fa-check"></i>Employment consultant
+                                                                    Environmental consultant
+                                                                </li>
+                                                                <li><i class="fa fa-check"></i>Immigration consultant,
+                                                                    Information consulting
+                                                                </li>
+                                                                <li><i class="fa fa-check"></i>Consultant pharmacist
+                                                                    Creative consultant
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-6 col-12">
+                                                        <div class="section-single-heading">
+                                                            <h4>Analyze Your Business</h4>
+                                                        </div>
+                                                        <!-- Pie Chart START -->
+                                                        <canvas id="chart-area" class="chartjs-render-monitor"></canvas>
+                                                        <!-- Pie Chart END -->
+                                                    </div>
+                                                </div>
+
+                                                <!-- Accordions START -->
+                                                <div class="panel-group mt24" id="accordion" role="tablist"
+                                                     aria-multiselectable="true">
+
+                                                    <div class="panel panel-default accordion">
+                                                        <div class="panel-heading accordion-heading" role="tab"
+                                                             id="headingOne">
+                                                            <h4 class="panel-title accordion-title">
+                                                                <a role="button" data-toggle="collapse"
+                                                                   data-parent="#accordion" href="#collapseOne"
+                                                                   aria-expanded="true" aria-controls="collapseOne">
+                                                                    Where can I get access to Capital IQ?
+                                                                </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseOne" class="panel-collapse collapse in show"
+                                                             role="tabpanel" aria-labelledby="headingOne">
+                                                            <div class="panel-body accordion-body">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua. Ut enim ad minim.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="panel panel-default accordion">
+                                                        <div class="panel-heading accordion-heading" role="tab"
+                                                             id="headingTwo">
+                                                            <h4 class="panel-title accordion-title">
+                                                                <a class="collapsed" role="button"
+                                                                   data-toggle="collapse" data-parent="#accordion"
+                                                                   href="#collapseTwo" aria-expanded="false"
+                                                                   aria-controls="collapseTwo">
+                                                                    Where can I find market research reports?
+                                                                </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseTwo" class="panel-collapse collapse"
+                                                             role="tabpanel" aria-labelledby="headingTwo">
+                                                            <div class="panel-body accordion-body">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                                exercitation ullamco laboris nisi ut aliquip ex ea
+                                                                commodo consequat.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="panel panel-default accordion">
+                                                        <div class="panel-heading accordion-heading" role="tab"
+                                                             id="headingThree">
+                                                            <h4 class="panel-title accordion-title">
+                                                                <a class="collapsed" role="button"
+                                                                   data-toggle="collapse" data-parent="#accordion"
+                                                                   href="#collapseThree" aria-expanded="false"
+                                                                   aria-controls="collapseThree">
+                                                                    How do I get access to case studies?
+                                                                </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseThree" class="panel-collapse collapse"
+                                                             role="tabpanel" aria-labelledby="headingThree">
+                                                            <div class="panel-body accordion-body">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                                                sed do eiusmod tempor incididunt ut labore et dolore
+                                                                magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                                                exercitation ullamco laboris nisi ut aliquip ex ea
+                                                                commodo consequat.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Accordions END -->
+
+                                                <!-- Download Button START -->
+                                                <a href="#">
+                                                    <div class="download-file-button clearfix">
+                                                        <h5>Download Our Services file
+                                                            <span>(zip)</span>
+                                                        </h5>
+                                                        <i class="fa fa-file-word-o"></i>
+                                                    </div>
+                                                </a>
+                                                <!-- Download Button END -->
+
+                                                <div class="section-single-heading mt48">
+                                                    <h4>About Our Company</h4>
+                                                </div>
+                                                <div class="text-content-big mt16 mb48">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                                                        eiusmod
+                                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                                                        minim veniam,
+                                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                                        commodo
+                                                        consequat. Duis aute irure dolor in reprehenderit in voluptate
+                                                        velit esse
+                                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                                                        cupidatat non
+                                                        proident, sunt in culpa qui officia deserunt mollit anim id est
+                                                        laborum.
+                                                    </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <!-- Right Side END -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Service Single END -->
+                        </section>
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+
+    <record id="sirvice_single_menu" model="website.page">
+        <field name="name">Services</field>
+        <field name="url">/financial-analysis</field>
+        <field name="view_id" ref="caitlin_theme.sirvice_single_page"/>
+        <field name="website_indexed">True</field>
+        <field name="website_published">True</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+</odoo>

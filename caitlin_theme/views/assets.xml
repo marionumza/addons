@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- ==================================== LESS ================================= -->
+    <template id="demo_frontend_style" name="Theme Shop style"
+              inherit_id="website.assets_frontend" active="True">
+        <xpath expr="." position="inside">
+            <link href="/caitlin_theme/static/src/scss/homepage.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/stroke/pe-icon-7-stroke.css"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/footer.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/all_theme.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/blog.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/about_us.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/service_single.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/coffee_homepage.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/medical_homepage.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/education_homepage.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/organic_vegetable_homepage.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/contact_us_1.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/contact_us_2.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/contact_us_3.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="/caitlin_theme/static/src/scss/menu.scss"
+                  type="text/scss" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css?family=Merriweather:400,400i,700"
+                  rel="stylesheet"/>
+            <script type="text/javascript"
+                    src="/caitlin_theme/static/src/js/theme_common.js"/>
+            <script type="text/javascript"
+                    src="/caitlin_theme/static/src/js/nicescroll.js"/>
+            <script type="text/javascript"
+                    src="/caitlin_theme/static/src/js/Chart.bundle.js"/>
+            <script type="text/javascript"
+                    src="/caitlin_theme/static/src/js/utils.js"/>
+        </xpath>
+    </template>
+    <!-- Snippets & Thumbnails -->
+    <template id="snippet_place" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_feature']/div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="caitlin_theme.s_coffee_homepage"
+               t-thumbnail="/caitlin_theme/static/src/img/icon.png"/>
+            <t t-snippet="caitlin_theme.s_corporate_homepage"
+               t-thumbnail="/caitlin_theme/static/src/img/icon.png"/>
+            <t t-snippet="caitlin_theme.s_education_homepage"
+               t-thumbnail="/caitlin_theme/static/src/img/icon.png"/>
+            <t t-snippet="caitlin_theme.s_medical_homepage"
+               t-thumbnail="/caitlin_theme/static/src/img/icon.png"/>
+            <t t-snippet="caitlin_theme.s_organic_vegetable_homepage"
+               t-thumbnail="/caitlin_theme/static/src/img/icon.png"/>
+
+        </xpath>
+    </template>
+
+    <template id="web_layout_inherit" inherit_id="web.layout">
+        <xpath expr="//body" position="before">
+            <div class="loadding-page">
+                <div class="loader">
+                    <div class="loader__bar"></div>
+                    <div class="loader__bar"></div>
+                    <div class="loader__bar"></div>
+                    <div class="loader__bar"></div>
+                    <div class="loader__bar"></div>
+                    <div class="loader__ball"></div>
+                </div>
+            </div>
+            <script language="javascript" type="text/javascript">
+                $(window).on('load', function() {
+                $('.loader').fadeOut();
+                $('.loadding-page').delay(350).fadeOut('slow');
+                $('body').delay(350).css({'overflow':'visible'});
+                })
+            </script>
+        </xpath>
+    </template>
+
+    <template id="header_1" name="header_1"
+              inherit_id="website.assets_frontend" active="True">
+        <xpath expr="." position="inside">
+            <link href="/caitlin_theme/static/src/scss/mid_header_1.scss"
+                  rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="header_2" name="header_2"
+              inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/caitlin_theme/static/src/scss/mid_header_2.scss"
+                  rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="header_3" name="header_3"
+              inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/caitlin_theme/static/src/scss/mid_header_3.scss"
+                  rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="header_4" name="header_3"
+              inherit_id="website.assets_frontend" active="False">
+        <xpath expr="." position="inside">
+            <link href="/caitlin_theme/static/src/scss/mid_header_4.scss"
+                  rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+
+</odoo>

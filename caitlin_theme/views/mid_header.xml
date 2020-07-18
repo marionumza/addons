@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="nav_top_header" inherit_id="website.layout">
+        <xpath expr="//header//nav"
+               position="before">
+            <section class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-6 text-center text-md-left mt-2 mb-2 mt-md-0 mb-md-0">
+                            <span>Welcome to Tecspek Business company</span>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <p class="text-md-right mb-0 social_icon_header text-center">
+                                <a t-if="website.social_facebook" t-att-href="website.social_facebook"
+                                   class="btn btn-sm btn-link">
+                                    <i class="fa fa-2x fa-facebook-square"/>
+                                </a>
+                                <a t-if="website.social_twitter" t-att-href="website.social_twitter"
+                                   class="btn btn-sm btn-link">
+                                    <i class="fa fa-2x fa-twitter"/>
+                                </a>
+                                <a t-if="website.social_linkedin" t-att-href="website.social_linkedin"
+                                   class="btn btn-sm btn-link">
+                                    <i class="fa fa-2x fa-linkedin"/>
+                                </a>
+                                <a t-if="website.social_youtube" t-att-href="website.social_youtube"
+                                   class="btn btn-sm btn-link">
+                                    <i class="fa fa-2x fa-youtube-play"/>
+                                </a>
+                                <a t-if="website.social_googleplus" t-att-href="website.social_googleplus"
+                                   class="btn btn-sm btn-link" rel="publisher">
+                                    <i class="fa fa-2x fa-google-plus-square"/>
+                                </a>
+                                <a t-if="website.social_github" t-att-href="website.social_github"
+                                   class="btn btn-sm btn-link">
+                                    <i class="fa fa-2x fa-github"/>
+                                </a>
+                                <a t-if="website.social_instagram" t-att-href="website.social_instagram"
+                                   class="btn btn-sm btn-link">
+                                    <i class="fa fa-2x fa-instagram"/>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="header-info">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-12 text-center text-md-left">
+                            <a href="/" class="logo">
+                                <img src="/logo.png" t-att-alt="'Logo of %s' % res_company.name"
+                                     t-att-title="res_company.name"/>
+                            </a>
+                        </div>
+                        <div class="col-md-8 col-11 offset-1 offset-md-0 header-contact-info">
+                            <ul class="d-inline-block list-inline w-100">
+                                <li class="mt-3 mb-3 mt-md-0 mb-md-0">
+                                    <div class="iocn-holder">
+                                        <span class="pe-7s-map-marker"></span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <h6>1725 Slough Ave.</h6>
+                                        <p>United States, 18540</p>
+                                    </div>
+                                </li>
+                                <li class="mt-3 mb-3 mt-md-0 mb-md-0">
+                                    <div class="iocn-holder">
+                                        <span class="pe-7s-headphones"></span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <h6>help.tecspek@gmail.com</h6>
+                                        <p>1234-456-7890</p>
+                                    </div>
+                                </li>
+                                <li class="mt-3 mb-3 mt-md-0 mb-md-0">
+                                    <div class="iocn-holder">
+                                        <span class="pe-7s-clock"></span>
+                                    </div>
+                                    <div class="text-holder">
+                                        <h6>Mon - Sat 9.00 - 19.00</h6>
+                                        <a href="#">
+                                            <p>Sunday closed</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </xpath>
+    </template>
+    <template id="website.affix_top_menu" inherit_id="website.layout" customize_show="False" name="Affix Top Menu"
+              active="False">
+        <xpath expr="//header" position="attributes">
+            <attribute name="t-attf-class" add="#{'o_affix_enabled'}" separator=" "/>
+        </xpath>
+    </template>
+    <template id="website.layout_logo_show" inherit_id="website.layout" customize_show="False"  active="True" name="Show Logo">
+        <xpath expr="//header//a[hasclass('navbar-brand')]" position="replace">
+            <a href="/" class="navbar-brand logo theme_logo">
+                <span t-field="res_company.logo" t-options="{'widget': 'image'}" role="img"
+                      t-att-aria-label="'Logo of %s' % res_company.name" t-att-title="res_company.name"/>
+            </a>
+        </xpath>
+    </template>
+
+
+</odoo>

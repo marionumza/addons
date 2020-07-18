@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="contact_us_3" model="ir.ui.view">
+        <field name="name">Contact Us 3</field>
+        <field name="type">qweb</field>
+        <field name="key">website.contact_us_3</field>
+        <field name="mode">primary</field>
+        <field name="active">True</field>
+        <field name="arch" type="xml">
+            <t t-name="website.contact_us_3">
+                <t t-call="website.layout">
+                    <div id="wrap" class="oe_structure oe_empty">
+                        <section class="page-title bg-200">
+                            <div class="container">
+                                <div class="box">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="/">
+                                                <i class="fa fa-home"/>
+                                            </a>
+                                        </li>
+                                        <li class="breadcrumb-item">
+                                            <a class="text-muted">Contact Us</a>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="contact_us_3 mt64 mb64">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-4 col-12">
+                                        <div class="block-contact mt32">
+                                            <h3>Contact Us</h3>
+                                            <p class="d-none d-lg-block">Lorem Ipsum is simply dummy text of the
+                                                printing and
+                                                typesetting industry.
+                                                Lorem Ipsum has been the industry's standard dummy text ever since the
+                                                1500s, when an unknown printer took a galley of type and scrambled it to
+                                                make a type specimen book. It has survived not only five centuries it to
+                                                make a type specimen book. It has survived not only five centuries
+                                            </p>
+                                            <div class="div_details p-2">
+                                                <h4>
+                                                    <i class="fa fa-fax"></i>
+                                                    Address
+                                                </h4>
+                                                <span t-field="res_company.street"/>
+                                                <span t-field="res_company.city"/>
+                                                <span t-field="res_company.state_id.name"/>
+                                                <span t-field="res_company.zip"/>
+                                                <span t-field="res_company.country_id.name"/>
+                                            </div>
+                                            <div class="div_details p-2">
+                                                <h4>
+                                                    <i class="fa fa-envelope-o"></i>
+                                                    Email Address
+                                                </h4>
+                                                <p>
+                                                    <a t-attf-href="mailto:#{res_company.email}">
+                                                        <t t-esc="res_company.email"/>
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <div class="light clearfix mt-32">
+                                                <ul class="social-icon-three list-inline">
+                                                    <li t-if="website.social_facebook">
+                                                        <a t-att-href="website.social_facebook" target="_blank">
+                                                            <span class="fa fa-facebook"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li t-if="website.social_twitter">
+                                                        <a t-att-href="website.social_twitter" target="_blank">
+                                                            <span class="fa fa-twitter"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li t-if="website.social_linkedin">
+                                                        <a t-att-href="website.social_linkedin" target="_blank">
+                                                            <span class="fa fa-linkedin"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li t-if="website.social_instagram">
+                                                        <a t-att-href="website.social_instagram" target="_blank">
+                                                            <span class="fa fa-instagram"></span>
+                                                        </a>
+                                                    </li>
+                                                    <li t-if="website.social_youtube">
+                                                        <a t-att-href="website.social_youtube" target="_blank">
+                                                            <span class="fa fa-youtube"></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-4 col-12 contact_bg_img">
+                                        <div class="contact-time">
+                                            <h4 class="header">Opening Hours</h4>
+                                            <div class="wpb_wrapper">
+                                                <p class="text-left">
+                                                    <span class="text-large text-white">
+                                                        <strong>Monday:</strong>
+                                                        9:00 – 19:00
+                                                        <br/>
+                                                        <strong>Tuesday:</strong>
+                                                        9:00 – 19:00
+                                                        <br/>
+                                                        <strong>Wednesday:</strong>
+                                                        9:00 – 19:00
+                                                        <br/>
+                                                        <strong>Thursday:</strong>
+                                                        9:00 – 19:00
+                                                        <br/>
+                                                        <strong>Friday:</strong>
+                                                        9:00 – 19:00
+                                                        <br/>
+                                                        <strong>Saturday:</strong>
+                                                        11:00 – 16:00
+                                                        <br/>
+                                                        <strong>Sunday:</strong>
+                                                        CLOSED
+                                                    </span>
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-4 col-12">
+                                        <div class="contact_us_theme mt-5">
+                                            <form action="/website_form/"
+                                                  method="post"
+                                                  data-model_name="crm.lead"
+                                                  data-success_page="/contactus-thank-you"
+                                                  class="s_website_form"
+                                                  enctype="multipart/form-data">
+                                                <div class="col-md-12">
+                                                    <div class="section">
+                                                        <label class="field prepend-icon width-100">
+                                                            <span class="wpcf7-form-control-wrap name">
+                                                                <input type="text"
+                                                                       name="contact_name"
+                                                                       value=""
+                                                                       size="40"
+                                                                       class="inputbox wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                       aria-required="true"
+                                                                       aria-invalid="false"
+                                                                       t-att-value="request.params.get('contact_name', '')"
+                                                                       placeholder="Enter Name"/>
+                                                            </span>
+                                                            <span class="field-icon">
+                                                                <i class="fa fa-user"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="section colm colm6">
+                                                        <label class="field prepend-icon width-100">
+                                                            <span class="wpcf7-form-control-wrap tel">
+                                                                <input type="tel"
+                                                                       name="phone"
+                                                                       value=""
+                                                                       size="40"
+                                                                       class="inputbox wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel"
+                                                                       aria-required="true"
+                                                                       aria-invalid="false"
+                                                                       t-att-value="request.params.get('phone', '')"
+                                                                       placeholder="Telephone"/>
+                                                            </span>
+                                                            <span class="field-icon">
+                                                                <i class="fa fa-phone-square"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="section">
+                                                        <label class="field prepend-icon width-100">
+                                                            <span class="wpcf7-form-control-wrap email">
+                                                                <input type="email"
+                                                                       name="email_from"
+                                                                       value=""
+                                                                       size="40"
+                                                                       class="inputbox wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email"
+                                                                       aria-required="true"
+                                                                       aria-invalid="false"
+                                                                       t-att-value="request.params.get('email_from', '')"
+                                                                       placeholder="Email address"/>
+                                                            </span>
+                                                            <span class="field-icon">
+                                                                <i class="fa fa-envelope"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="section">
+                                                        <label class="field prepend-icon width-100">
+                                                            <span class="wpcf7-form-control-wrap subject">
+                                                                <input type="text"
+                                                                       name="name"
+                                                                       value=""
+                                                                       size="40"
+                                                                       class="inputbox wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                       aria-required="true"
+                                                                       aria-invalid="false"
+                                                                       t-att-value="request.params.get('name', '')"
+                                                                       placeholder="Enter subject"/>
+                                                            </span>
+                                                            <span class="field-icon">
+                                                                <i class="fa fa-lightbulb-o"></i>
+                                                            </span>
+                                                        </label>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-12 textarea">
+                                                    <div class="section">
+                                                        <label class="field prepend-icon width-100">
+                                                            <span class="wpcf7-form-control-wrap textarea-466">
+                                                                <textarea
+                                                                        name="description"
+                                                                        cols="40"
+                                                                        rows="10"
+                                                                        class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required"
+                                                                        aria-required="true"
+                                                                        aria-invalid="false"
+                                                                        placeholder="Enter message">
+                                                                    <!--<t t-esc="request.params.get('description', '')"/>-->
+                                                                </textarea>
+                                                            </span>
+                                                            <span class="field-icon">
+                                                                <i class="fa fa-comments"></i>
+                                                            </span>
+                                                            <span class="input-hint">
+                                                                <strong>
+                                                                    Hint:
+                                                                </strong>
+                                                                Please
+                                                                enter
+                                                                between
+                                                                80
+                                                                -
+                                                                300
+                                                                characters.
+                                                            </span>
+                                                        </label>
+                                                        <br/>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group form-field o_website_form_required_custom">
+                                                    <div class="col-md-12 col-sm-8 mb24">
+                                                        <span class="o_website_form_recaptcha"/>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-3 submit-form">
+                                                    <input type="button"
+                                                           value="Submit"
+                                                           name="Submit"
+                                                           style="font-size: 20px;font-weight: bold;border-radius: 0;text-transform: uppercase;width: unset;"
+                                                           class="btnEnvoyer btn btn-primary btn-lg greenBtn o_website_form_send"/>
+                                                    <span id="o_website_form_result"></span>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </t>
+            </t>
+        </field>
+    </record>
+    <record id="contact_us_3_menu_page" model="website.page">
+        <field name="name">Contact Us 3</field>
+        <field name="url">/contactus-3</field>
+        <field name="view_id" ref="caitlin_theme.contact_us_3"/>
+        <field name="website_indexed">True</field>
+        <field name="website_published">True</field>
+        <field name="website_id" ref="website.default_website"/>
+    </record>
+
+</odoo>
