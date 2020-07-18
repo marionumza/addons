@@ -18,8 +18,8 @@
 #
 ##############################################################################
 {
-    'name': 'Product Pack' (No Migrado),
-    'version': '11.0.1.5.0',
+    'name': 'Product Pack (No Migrado)',
+    'version': '12.0.1.5.0',
     'category': 'Product',
     'sequence': 14,
     'summary': '',
