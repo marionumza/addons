@@ -18,9 +18,9 @@
 #
 ##############################################################################
 {
-    'name': 'Product Pack (No Migrado)',
+    'name': 'Product Pack POS for IngAdhoc (No Migrado)',
     'version': '12.0.1.5.0',
-    'category': 'Product',
+    'category': 'Point of Sale',
     'sequence': 14,
     'summary': '',
     'author': 'NaN·tic, ADHOC SA',
@@ -28,20 +28,7 @@
     'images': [
     ],
     'depends': [
-        'sale',
-    ],
-    'data': [
-        'security/ir.model.access.csv',
-        'views/product_pack_line_views.xml',
-        'views/product_product_views.xml',
-        'views/product_template_views.xml',
-        'views/sale_order_line_pack_line_views.xml',
-        'views/sale_order_line_views.xml',
-        'views/sale_order_views.xml',
-    ],
-    'demo': [
-        'demo/product_product_demo.xml',
-        'demo/product_pack_line_demo.xml',
+        'product_pack', 'point_of_sale',
     ],
     'installable': True,
     'auto_install': False,
