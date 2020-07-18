@@ -1,6 +1,5 @@
-from openerp import models, fields, api
-from openerp.osv import osv
-from openerp.tools.translate import _
+from odoo import fields, models, api
+import odoo.addons.decimal_precision as dp
 
 
 class pos_order(models.Model):
