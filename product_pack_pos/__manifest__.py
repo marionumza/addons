@@ -5,7 +5,7 @@
 This module is extension for INGADHOC's module product_pack that will
 Process product_pack pickings from POS sales.
      """,
-    'version': '8.0.0.1',
+    'version': '12.0.0.1',
     'category': 'Point of Sale',
     'author': 'DVIT.me',
     'website': 'http://dvit.me',
