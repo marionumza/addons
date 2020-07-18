@@ -1,6 +1,6 @@
-from odoo import models, fields, api
-from odoo.osv import osv
-from odoo.tools.translate import _
+from openerp import models, fields, api
+from openerp.osv import osv
+from openerp.tools.translate import _
 
 
 class pos_order(models.Model):
