@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript"
+                        src="/odoo_mo_top_salesperson/static/src/js/top_salesperson.js"></script>
+
+            </xpath>
+        </template>
+    </data>
+</odoo>

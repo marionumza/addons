@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <!--Template for vertical type reports-->
+    <t t-name="report_top_salesperson">
+        <style>.o_control_panel{display: none;}</style>
+        <div class="main_report" >
+            <div class="report_header" style="padding: 10px;background-color: #eee;">
+                <div class="text-center">
+                    <h2>
+                        Top Salesperson
+                    </h2>
+                </div>
+            </div>
+            <table class="table table-sm o_main_table">
+                <thead>
+                    <tr>
+                        <th  class="text-center">No</th>
+                        <th  class="text-center">Salesperson</th>
+                        <th class="text-center">Amount</th>
+                    </tr>
+                </thead>
+                <tbody class="sale_tbody">
+                    <tr t-foreach="lines" t-as="line">
+                        <td class="text-center categ" t-att-data-id="line['user_id']">
+                            <span t-esc="line_index+1" t-att-data-id="line['user_id']"/>
+                        </td>
+                        <td class="text-center categ" t-att-data-id="line['user_id']">
+                            <span t-esc="line['salesperson_name']" t-att-data-id="line['user_id']"/>
+                        </td>
+                        <td class="text-center categ" t-att-data-id="line['user_id']">
+                            <span t-esc="line['amount']" t-att-data-id="line['user_id']"/>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </t>
+
+
+</templates>

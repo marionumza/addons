@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <report
+                id="odoo_mo_top_salesperson_action"
+                model="odoo_mo.top_salesperson"
+                report_type="qweb-pdf"
+                string="Top Salesperson"
+                name="odoo_mo_top_salesperson.top_temp"
+                file="odoo_mo_top_salesperson.top_temp"
+        />
+
+         <report
+                id="odoo_mo_top_salesperson_action_xlsx"
+                model="odoo_mo.top_salesperson"
+                string="Top Salesperson"
+                report_type="xlsx"
+                name="odoo_mo_top_salesperson.xlsx"
+                file="odoo_mo_top_salesperson.xlsx"
+                attachment_use="False"
+        />
+
+
+    </data>
+</odoo>

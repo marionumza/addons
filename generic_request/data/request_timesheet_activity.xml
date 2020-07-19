@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="request_timesheet_activity_coding" model="request.timesheet.activity">
+        <field name="name">Coding</field>
+    </record>
+    <record id="request_timesheet_activity_analysis" model="request.timesheet.activity">
+        <field name="name">Analysis</field>
+    </record>
+    <record id="request_timesheet_activity_call" model="request.timesheet.activity">
+        <field name="name">Call</field>
+    </record>
+    <record id="request_timesheet_activity_meeting" model="request.timesheet.activity">
+        <field name="name">Meeting</field>
+    </record>
+</odoo>

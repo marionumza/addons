@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="odoo_mo_top_salesperson_form" model="ir.ui.view">
+            <field name="name">Top Salesperson</field>
+            <field name="model">odoo_mo.top_salesperson</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="no_of_salesperson"/>
+                                <field name="date_from"/>
+                                <field name="date_to"/>
+                            </group>
+                            <group>
+                                <field name="sales_orders" widget="many2many_tags" options="{'no_open': True, 'no_create': True}"/>
+                                <field name="salesperson" widget="many2many_tags" options="{'no_open': True, 'no_create': True}"/>
+                            </group>
+
+                        </group>
+
+                        <notebook>
+                            <page string="Data">
+                                <field name="lines">
+                                    <tree>
+                                        <field name="salesperson"/>
+                                        <field name="amount" sum="Total"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <footer>
+                        <button name="preview" type="object" string="Preview" class="oe_highlight"/>
+                        or
+                        <button name="dynamic_view" type="object" string="Dynamic Preview" class="oe_highlight"/>
+                        or
+                        <button name="print_pdf" type="object" string="Print Pdf" class="oe_highlight"/>
+                        or
+                        <button name="print_excel" type="object" string="Print Excel" class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel" class="oe_highlight"/>
+
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="odoo_mo_top_salesperson_action"
+                    name="Top Salesperson"
+                    res_model="odoo_mo.top_salesperson"
+                    view_mode="form"
+                    target="new"
+                    />
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="odoo_mo_top_salesperson_menu" name="Top Salesperson" parent="sale.menu_sale_report" action="odoo_mo_top_salesperson_action" sequence="3"/>
+
+
+    </data>
+</odoo>

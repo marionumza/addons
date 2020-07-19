@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <report
+                id="odoo_mo_top_customers_action"
+                model="odoo_mo.top_customers"
+                report_type="qweb-pdf"
+                string="Top Customers"
+                name="odoo_mo_top_customers.top_temp"
+                file="odoo_mo_top_customers.top_temp"
+        />
+
+         <report
+                id="odoo_mo_top_customers_action_xlsx"
+                model="odoo_mo.top_customers"
+                string="Top Customers"
+                report_type="xlsx"
+                name="odoo_mo_top_customers.xlsx"
+                file="odoo_mo_top_customers.xlsx"
+                attachment_use="False"
+        />
+
+
+    </data>
+</odoo>

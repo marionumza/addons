@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <report
+                id="pdf_reportid1"
+                model="odoo_mo.monthly_sales"
+                report_type="qweb-pdf"
+                string=" Monthly Sales "
+                name="odoo_mo_monthlysales.template_id1"
+                file="odoo_mo_monthlysales.template_id1"
+        />
+
+         <report
+                id="xls_reportid2"
+                model="odoo_mo.monthly_sales"
+                string=" Monthly Sales "
+                report_type="xlsx"
+                name="odoo_mo_monthlysales.xlsx"
+                file="odoo_mo_monthlysales.xlsx"
+                attachment_use="False"
+        />
+
+
+    </data>
+</odoo>

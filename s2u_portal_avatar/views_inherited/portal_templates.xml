@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_frontend" inherit_id="website.assets_frontend">
+       <xpath expr="." position="inside">
+           <script type="text/javascript" src="/s2u_portal_avatar/static/src/js/main.js"></script>
+       </xpath>
+    </template>
+
+    <template id="portal_layout" inherit_id="portal.portal_layout">
+        <xpath expr="//div[@t-field='user_id.partner_id']" position="replace">
+            <div t-field="user_id.partner_id" t-options='{"widget": "contact", "fields": ["avatar", "email", "phone", "address", "name"]}'/>
+        </xpath>
+    </template>
+
+    <template id="portal_my_details" inherit_id="portal.portal_my_details">
+        <xpath expr="//form" position="attributes">
+            <attribute name="enctype">multipart/form-data</attribute>
+        </xpath>
+        <xpath expr="//div[@class='col-lg-12']" position="after">
+            <div class="col-lg-12" id="s2u_portal_avatar">
+                <input type="file" class="d-none s2u_portal_avatar_upload" name="image_1920" accept="image/*"/>
+                <img class="mb-3 s2u_portal_avatar_img" t-att-src="website.image_url(partner, 'image_128')" style="object-fit: cover; border-radius: 50%; width: 128px; height: 128px;"/>
+                <div class="text-left">
+                    <a href="#" class="btn btn-primary s2u_portal_avatar_edit" aria-label="Edit">
+                        <i class="fa fa-pencil fa-1g float-sm-none float-md-left" title="Edit"></i>
+                    </a>
+                    <a href="#" title="Clear" aria-label="Clear" class="btn border-primary s2u_portal_avatar_clear">
+                        <i class="fa fa-trash-o float-sm-none float-md-right"></i>
+                    </a>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+</odoo>

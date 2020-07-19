@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!--##############
+        # Res.Company #
+        ##############-->
+
+    <!--## Form ##-->
+    <record id="prt_res_company_view_form" model="ir.ui.view">
+        <field name="name">prt.res.company.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <field name="email" position="after">
+                <field name="use_company_email"/>
+                <label for="add_company_from" attrs="{'invisible':[('use_company_email','=',False)]}"/>
+                <div class="o_row" attrs="{'invisible':[('use_company_email','=',False)]}">
+                    <field name="add_company_from"/>
+                    <span style="padding-right: 3px;"/>
+                    <field name="add_company_mode" attrs="{'required':[('use_company_email','!=',False)]}"/>
+                </div>
+                <field name="add_sender_reply_to"/>
+                <field name="email_joint"
+                       attrs="{'invisible':[('add_company_from','=',False), ('add_sender_reply_to','=',False)]}"/>
+            </field>
+        </field>
+    </record>
+</odoo>

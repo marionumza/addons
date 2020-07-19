@@ -1,0 +1,87 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* automatic_refs
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-13 17:51+0000\n"
+"PO-Revision-Date: 2020-03-13 17:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: automatic_refs
+#: model:ir.model.fields.selection,name:automatic_refs.selection__res_config_settings__partner_ref__1
+#: model:ir.model.fields.selection,name:automatic_refs.selection__res_config_settings__product_default_code__1
+msgid "Auto Increment"
+msgstr "Auto Incremento"
+
+#. module: automatic_refs
+#: model_terms:ir.ui.view,arch_db:automatic_refs.res_config_settings_view_form
+msgid "Choose the internal reference method"
+msgstr "Escolha um método para a referência interna"
+
+#. module: automatic_refs
+#: model:ir.model.fields,field_description:automatic_refs.field_product_product__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: automatic_refs
+#: model:ir.model,name:automatic_refs.model_res_config_settings
+msgid "Config Settings"
+msgstr "config configurações"
+
+#. module: automatic_refs
+#: model:ir.model,name:automatic_refs.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: automatic_refs
+#: model:ir.model.fields,field_description:automatic_refs.field_product_product__default_code
+#: model:ir.model.fields,field_description:automatic_refs.field_res_config_settings__product_default_code
+#: model_terms:ir.ui.view,arch_db:automatic_refs.res_config_settings_view_form
+msgid "Internal Reference"
+msgstr "Referência Interna"
+
+#. module: automatic_refs
+#: model:ir.model.fields.selection,name:automatic_refs.selection__res_config_settings__partner_ref__0
+#: model:ir.model.fields.selection,name:automatic_refs.selection__res_config_settings__product_default_code__0
+msgid "Manual"
+msgstr "Manual"
+
+#. module: automatic_refs
+#: model:ir.model.fields,field_description:automatic_refs.field_res_config_settings__partner_ref
+#: model_terms:ir.ui.view,arch_db:automatic_refs.res_config_settings_view_form
+msgid "Partner Reference"
+msgstr "Referência do Contacto"
+
+#. module: automatic_refs
+#: model_terms:ir.ui.view,arch_db:automatic_refs.res_config_settings_view_form
+msgid "Partners"
+msgstr "Contactos"
+
+#. module: automatic_refs
+#: model:ir.model,name:automatic_refs.model_product_product
+msgid "Product"
+msgstr "Artigo"
+
+#. module: automatic_refs
+#: model:ir.model.fields,field_description:automatic_refs.field_res_partner__ref
+#: model:ir.model.fields,field_description:automatic_refs.field_res_users__ref
+msgid "Reference"
+msgstr "Referência"
+
+#. module: automatic_refs
+#: model:ir.model.constraint,message:automatic_refs.constraint_product_product_code_uniq
+msgid "The default code of the product must be unique!"
+msgstr "A referência interna do artigo deve ser única!"
+
+#. module: automatic_refs
+#: model:ir.model.constraint,message:automatic_refs.constraint_res_partner_ref_uniq
+msgid "The partner reference must be unique!"
+msgstr "A referência interna do contacto deve ser única!"

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="assets_backend" name="Clock Assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/web_clock_user/static/src/js/widgets/clock.js"></script>
+            <link href="/web_clock_user/static/src/css/clock.css" rel="stylesheet"/>
+        </xpath>
+    </template>
+</odoo>

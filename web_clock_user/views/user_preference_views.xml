@@ -1,0 +1,13 @@
+<odoo>
+	<record model="ir.ui.view" id="view_users_form_simple_modif_clock">
+		<field name="name">Users</field>
+		<field name="model">res.users</field>
+		<field name="inherit_id" ref="base.view_users_form_simple_modif" />
+		<field name="arch" type="xml">
+			<field name="tz" position="after">
+				<field name="show_clock" readonly="0" />
+				<field name="show_clock_type" attrs="{'required': [('show_clock', '=', True)], 'invisible': [('show_clock', '=', False)]}" widget="radio" readonly="0" />
+			</field>
+		</field>
+	</record>
+</odoo>

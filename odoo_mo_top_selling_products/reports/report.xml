@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <report
+                id="odoo_mo_top_selling_products_action"
+                model="odoo_mo.top_selling_products"
+                report_type="qweb-pdf"
+                string="Top Selling Products"
+                name="odoo_mo_top_selling_products.top_temp"
+                file="odoo_mo_top_selling_products.top_temp"
+        />
+
+         <report
+                id="odoo_mo_top_selling_products_action_xlsx"
+                model="odoo_mo.odoo_mo_top_selling_products"
+                string="Top Selling Products"
+                report_type="xlsx"
+                name="odoo_mo_top_selling_products.xlsx"
+                file="odoo_mo_top_selling_products.xlsx"
+                attachment_use="False"
+        />
+
+
+    </data>
+</odoo>
