@@ -8,14 +8,14 @@ Info the *<span t-field="doc.company_id.name"/>*
 <br></br>
 <span>For *Client*: <t t-esc="doc.partner_id.name"/></span>
 <br></br><br></br>
-<span>*Hi Dear*</span>
+<span>*Hola Estimado/a*</span>
 <br></br>
 <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
-<span t-if="doc.state not in ['draft','sent']">Next, details of your Order # </span>
-<span t-if="doc.state in ['draft','sent']">Next, details of your Quotation, # </span>
+<span t-if="doc.state not in ['draft','sent']">A continuación, detalles de su pedido # </span>
+<span t-if="doc.state in ['draft','sent']">A continuación, detalles de su presupuesto, # </span>
 </t>
 <t t-if="env.context.get('proforma', False) or is_pro_forma">
-<span>Next, details of your Pro-Forma Invoice # </span>
+<span>A continuación, detalles de su Factura Pro-Forma #</span>
 </t>
 <span t-field="doc.name"/>
 <br></br>
@@ -26,12 +26,12 @@ Info the *<span t-field="doc.company_id.name"/>*
 <br></br>
 <span t-field="line.product_id"/>
 <br></br>
-*Qty:*<span t-field="line.product_uom_qty"/>
+*Cant.:*<span t-field="line.product_uom_qty"/>
 <br></br>
-*Total Price:*<span t-field="line.price_total"/>
+*Precio Total:*<span t-field="line.price_total"/>
 <t t-if="display_discount" >
 <br></br>
-*Discount*<span t-field="line.discount"/>
+*Desc.*<span t-field="line.discount"/>
 </t>
 <br/>
 -------------------------
@@ -46,22 +46,22 @@ Info the *<span t-field="doc.company_id.name"/>*
 <br/>
 <t t-if="doc.confirmation_date and doc.state not in ['draft','sent']">
 <br/>
-*Date Ordered:*
+*fecha del pedido:*
 <span t-esc="doc.confirmation_date.strftime('%m/%d/%Y')"/>
 </t>
 <t t-if="doc.date_order and doc.state in ['draft','sent']" ><br/>
-*Quotation Date:*
+*Fecha de cotización:*
 <span t-esc="doc.date_order.strftime('%m/%d/%Y')"/>
 </t>
 <t t-if="doc.user_id.name" >
 <br/>
-*Salesperson:* &#xA;
+*Vendedor/a:* &#xA;
 <span t-field="doc.user_id"/>
 </t>
 <br/>
-Please feel free to contact me through this channel if you have any questions. *Regards*
+No dude en ponerse en contacto conmigo a través de este canal si tiene alguna pregunta. *Saludos*
 <br/>
-*Note:* Remember that this message is informative, request your formal document
+*Nota:* Recuerde que este mensaje es informativo, solicite su documento formal
 <br/>
 <span t-field="doc.company_id.website"/>
 </t>
@@ -70,18 +70,18 @@ Please feel free to contact me through this channel if you have any questions. *
 <template id="template_quote_link">
 <t t-foreach="docs" t-as="doc">
 <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)" />
-Info the *<span t-field="doc.company_id.name"/>*
+Información del *<span t-field="doc.company_id.name"/>*
 <br></br>
 <span>For *Client*: <t t-esc="doc.partner_id.name"/></span>
 <br></br><br></br>
-<span>*Hi Dear*</span>
+<span>*Hola Estimado/a*</span>
 <br></br>
 <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
-<span t-if="doc.state not in ['draft','sent']">In the following link, details of your Order # </span>
-<span t-if="doc.state in ['draft','sent']">In the following link, details of your Quotation, # </span>
+<span t-if="doc.state not in ['draft','sent']">En el siguiente enlace, detalles de su pedido # </span>
+<span t-if="doc.state in ['draft','sent']">En el siguiente enlace, detalles de su presupuesto, # </span>
 </t>
 <t t-if="env.context.get('proforma', False) or is_pro_forma">
-<span>Next, details of your Pro-Forma Invoice # </span>
+<span>A continuación, detalles de su Factura Pro-Forma #</span>
 </t>
 <span t-field="doc.name"/>
 <br/>
@@ -92,17 +92,17 @@ Info the *<span t-field="doc.company_id.name"/>*
 ------------------
 <t t-if="doc.confirmation_date and doc.state not in ['draft','sent']">
 <br/>
-*Date Ordered:*
+*fecha del pedido:*
 <span t-esc="doc.confirmation_date.strftime('%m/%d/%Y')"/>
 </t>
 <t t-if="doc.date_order and doc.state in ['draft','sent']" >
  <br/>
-*Quotation Date:*
+*Fecha de cotización:*
 <span t-esc="doc.date_order.strftime('%m/%d/%Y')"/>
 </t>
 <t t-if="doc.user_id.name" >
 <br/>
-*Salesperson:* &#xA;
+*Vendedor/a:* &#xA;
 <span t-field="doc.user_id"/>
 </t>
 <br/>
