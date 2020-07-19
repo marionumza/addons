@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+	 <report string="Loan Paper"
+	   		model="account.loan"
+	 	 	name="pragtech_loan_advance.merge_letter"
+	 	  	id="letter_letter_info"
+	 	  	file="pragtech_loan_advance.merge_letter"
+	 	  	report_type="qweb-pdf"/> 
+	 	   	
+
+	 <report string="Loan Details"
+	   		model="account.loan"
+	 	 	name="pragtech_loan_advance.loan_info"
+	 	  	id="account_loan_id"
+	 	   	file="pragtech_loan_advance.loan_info"
+	 	   	report_type="qweb-pdf"/>
+	 	   	
+	 	   	
+	 	   	<record id="loan_report_paperformat" model="report.paperformat">
+			<field name="name">Loan paperformat</field> 
+			<field name="default" eval="True"/> 
+			<field name="format">A4</field> 
+			<field name="orientation">Landscape</field>
+			<field name="margin_top">40</field>
+			<field name="margin_bottom">20</field> 
+			<field name="margin_left">7</field> 
+			<field name="margin_right">7</field> 
+			<field name="header_line" eval="False"/> 
+			<field name="header_spacing">35</field> 
+			<field name="dpi">90</field> 
+			
+		</record>
+	 <report string="Payment Receipt"
+	   		model="payment.receipt.wizard"
+	 	 	name="pragtech_loan_advance.payment_receipt_report"
+	 	  	id="payment_receipt_id"
+	 	   	file="pragtech_loan_advance.payment_receipt_report"
+	 	   	report_type="qweb-pdf"
+	 	   	 paperformat="pragtech_loan_advance.loan_report_paperformat"
+	 	   	
+	 	   	/>
+	 	   	
+	 	   	
+	</data>
+</odoo>

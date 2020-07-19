@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<openerp>
+	<data noupdate="0">
+		<record id="loan_due_calculation_corn" model="ir.cron">
+			<field name="name">Loan Due Calculation</field>
+			<field name="active" eval="True" />
+			<field name="interval_number">1</field>
+			<field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+			<field name="model_id" ref="model_account_loan" />
+			<field name="state">code</field>
+			<field name="code">model.loan_due_cron()</field>
+			<field name="doall" eval="False" />
+		</record>
+
+		<record id="loan_late_fee_cron" model="ir.cron">
+			<field name="name">Loan Late Fee Calculation</field>
+			<field name="active" eval="True" />
+			<field name="interval_number">1</field>
+			<field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+			<field name="model_id" ref="model_account_loan" />
+			<field name="state">code</field>
+			<field name="code">model.loan_late_fees()</field>
+			<field name="doall" eval="False" />
+		</record>
+		
+		<record id="loan_classification_cron" model="ir.cron">
+			<field name="name">Loan Classifications Calculation</field>
+			<field name="active" eval="True" />
+			<field name="interval_number">1</field>
+			<field name="interval_type">days</field>
+			<field name="numbercall">-1</field>
+			<field name="model_id" ref="model_account_loan" />
+			<field name="state">code</field>
+			<field name="code">model.loan_classification_status()</field>
+			<field name="doall" eval="False" />
+		</record>
+	</data>
+</openerp>

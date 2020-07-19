@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<menuitem name="Reporting" id="menu_report_account_loan"
+			groups="pragtech_loan_advance.group_loan_user,pragtech_loan_advance.group_loan_manager"
+			sequence="9" parent="pragtech_loan_advance.main_root_loan" />
+
+
+		<menuitem name="Report Anaylsis" id="menu_report_analysis_loan"
+			action="pragtech_loan_advance.loan_report_all" sequence="1" parent="menu_report_account_loan" />
+
+		<menuitem name="Download Report" id="menu_generate_report"
+			action="action_wiz_download_report" sequence="2"
+			parent="menu_report_account_loan" />
+
+	</data>
+</odoo>

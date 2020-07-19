@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="loan_to_review" model="loan.stages">
+            <field name="name">To Review Application</field>
+            <field name="sequence">1</field>
+            <field name="fold">False</field>
+            <field name="state">draft</field>
+        </record>
+        
+        <record id="loan_to_due_diligence" model="loan.stages">
+            <field name="name">To Do Due Diligence</field>
+            <field name="sequence">2</field>
+            <field name="fold">False</field>
+            <field name="state">draft</field>
+        </record>
+        
+        <record id="loan_to_review_in_preinv" model="loan.stages">
+            <field name="name">To Review in Pre-investment meeting</field>
+            <field name="sequence">3</field>
+            <field name="fold">False</field>
+            <field name="state">draft</field>
+        </record>
+        
+        <record id="loan_to_review_in_invcommitee" model="loan.stages">
+            <field name="name">To Review in Investment Committee</field>
+            <field name="sequence">4</field>
+            <field name="fold">False</field>
+            <field name="state">draft</field>
+        </record>
+        
+        <record id="loan_to_prepare_sing_contract" model="loan.stages">
+            <field name="name">To Prepare and Sign Contract</field>
+            <field name="sequence">5</field>
+            <field name="fold">False</field>
+            <field name="state">draft</field>
+        </record>
+        
+        <record id="loan_to_perfect_collateral" model="loan.stages">
+            <field name="name">To Perfect/Value Collateral</field>
+            <field name="sequence">8</field>
+            <field name="fold">True</field>
+            <field name="state">apply</field>
+        </record>
+        
+        <record id="loan_to_register_collateral" model="loan.stages">
+            <field name="name">To Register Collateral</field>
+            <field name="sequence">9</field>
+            <field name="fold">True</field>
+            <field name="state">apply</field>
+        </record>
+        
+        <record id="loan_to_disburse_partial_full" model="loan.stages">
+            <field name="name">To Disburse (Partial/Full)</field>
+            <field name="sequence">10</field>
+            <field name="fold">True</field>
+            <field name="state">apply</field>
+        </record>
+        
+         <record id="loan_to_monitor_loan_repayment_period" model="loan.stages">
+            <field name="name">To Monitor Loan and Repayment Period</field>
+            <field name="sequence">11</field>
+            <field name="fold">True</field>
+            <field name="state">approved</field>
+        </record>
+        
+        <record id="loan_to_purse_legal_action" model="loan.stages">
+            <field name="name">To Purse Legal Action</field>
+            <field name="sequence">12</field>
+            <field name="fold">True</field>
+            <field name="state">approved</field>
+        </record>
+
+        <record id="loan_close_complete" model="loan.stages">
+            <field name="name">Loan Close Complete</field>
+            <field name="sequence">14</field>
+            <field name="fold">True</field>
+            <field name="state">done</field>
+        </record>
+        
+        <record id="loan_declined" model="loan.stages">
+            <field name="name">Declined</field>
+            <field name="sequence">15</field>
+            <field name="fold">True</field>
+            <field name="state">cancel</field>
+        </record>
+</data>
+</odoo>

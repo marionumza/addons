@@ -1,0 +1,86 @@
+<odoo>
+	<template id="portal_my_home_menu_loan" name="Portal layout : loan menu entries" inherit_id="portal.portal_breadcrumbs" priority="32">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'loan'" t-attf-class="breadcrumb-item #{'active ' if not invoice else ''}">
+                <a t-if="loan" t-attf-href="/my/loans?{{ keep_query() }}">Loans</a>
+                <t t-else="">Loan</t>
+            </li>
+            <li t-if="loan" class="breadcrumb-item active">
+                <t t-esc="loan.loan_id" t-if="loan.loan_id"/>
+                <t t-else=""><em>Draft</em></t>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="portal_my_home_loans" name="Portal My Home : loan entries" inherit_id="portal.portal_my_home" priority="30">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-if="loan_count" t-call="portal.portal_docs_entry">
+                <t t-set="title">Loans</t>
+                <t t-set="url" t-value="'/my/loans'"/>
+                <t t-set="count" t-value="loan_count"/>
+            </t>
+        </xpath>
+    </template>
+    
+    <template id="portal_my_loans" name="My Loans">
+    	<t t-call="portal.portal_layout">
+        <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+        <t t-call="portal.portal_searchbar">
+            <t t-set="title">Loans</t>
+        </t>
+        <t t-if="not loans">
+            <p>There are currently no loans for your account.</p>
+        </t>
+        <t t-if="loans" t-call="portal.portal_table">
+            <thead>
+                <tr class="active">
+                    <th>Loan Number</th>
+                    <th>Loan Type</th>
+                    <th>Applied Amount</th>
+                    <th>Sanctioned Amount</th>
+                    <th>Tenure(Months)</th>
+                    <th>Interest Rate(%)</th>
+                    <th>State of loan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <t t-foreach="loans" t-as="loan">
+                    <tr>
+                        <td>
+	                        <t t-esc="loan.loan_id" t-if="loan.loan_id"/>
+	                        <em t-else="">Draft</em>
+                        </td>
+                        <td><span t-field="loan.loan_type"/></td>
+                        <td><span t-esc="loan.req_amt" /></td>
+                        <td><span t-esc="loan.loan_amount" /></td>
+                        <td><span t-esc="loan.total_installment" /></td>
+                        <td><span t-esc="loan.interest_rate" /></td>
+                        <td class="tx_status">
+                            <t t-if="loan.state == 'draft'">
+                                <span class="badge badge-pill badge-info"><i aria-label="Review" title="Opened" role="img"></i><span class="d-none d-md-inline">Application Review</span></span>
+                            </t>
+                            <t t-if="loan.state == 'apply'">
+                                <span class="badge badge-pill badge-info"><i aria-label="Approved" title="Paid" role="img"></i><span class="d-none d-md-inline">Application Approved</span></span>
+                            </t>
+                            <t t-if="loan.state == 'partial'">
+                            	<span class="badge badge-pill badge-info"><i  aria-label="Partially Disbursed" title="Paid" role="img"></i><span class="d-none d-md-inline">Partially Disbursed</span></span>
+                            
+                            </t>
+                            <t t-if="loan.state == 'approved'">
+                                <span class="badge badge-pill badge-info"><i  aria-label="Disbursed" title="Disbursed" role="img"></i><span class="d-none d-md-inline">Disbursed</span></span>
+                            </t>
+                            <t t-if="loan.state == 'done'">
+                                <span class="badge badge-pill badge-info"><i  aria-label="Closed" title="Closed" role="img"></i><span class="d-none d-md-inline">Closed</span></span>
+                            </t>
+                            <t t-if="loan.state == 'cancel'">
+                                <span class="badge badge-pill badge-info"><i  aria-label="Declined" title="Declined" role="img"></i><span class="d-none d-md-inline">Declined</span></span>
+                            </t>
+                        </td>
+                    </tr>
+                </t>
+            </tbody>
+        </t> 
+      </t>
+    </template>
+</odoo>

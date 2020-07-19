@@ -1,0 +1,11 @@
+<odoo>
+	<data>
+
+		<report id="action_report_payment_receipt"
+			model="account.loan" string="Payment Receipt"
+			report_type="qweb-pdf"
+			name="pragtech_loan_advance.report_pragtech_payment_receipt"
+			file="pragtech_loan_advance.report_pragtech_payment_receipt" />
+
+	</data>
+</odoo>

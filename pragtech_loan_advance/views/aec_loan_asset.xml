@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+    <template id="assets_backend_states_id" name="Open Loan Stages" inherit_id="web.assets_backend">
+        <xpath expr=".">
+            <link rel="stylesheet" href="/pragtech_loan_advance/static/src/css/aec_loan_stages_layout.css"/>
+        </xpath>
+    </template>
+	</data>
+</odoo>

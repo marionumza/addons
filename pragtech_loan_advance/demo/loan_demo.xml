@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<odoo>
+	<data noupdate="0">
+
+		<!-- Resource: loan_installment_period -->
+
+		<!-- <record model="account.loan.dashboard" id="account_loan_dashboard_demo">
+			<field name="name">Loan Dashboard</field>
+			<field
+				name="Dashboards in Odoo are useful for visualization of data in a better way">1</field>
+		</record> -->
+
+		<!-- <record id="loan_period_installment_p1" model="pragtech_loan.installment.period">
+			<field name="name">1 Year</field>
+			<field name="period">12</field>
+		</record>
+		<record id="loan_period_installment_p2" model="pragtech_loan.installment.period">
+			<field name="name">2 Year</field>
+			<field name="period">24</field>
+
+		</record>
+		<record id="loan_period_installment_p3" model="pragtech_loan.installment.period">
+			<field name="name">3 Year</field>
+			<field name="period">36</field>
+		</record>
+		<record id="loan_period_installment_p4" model="pragtech_loan.installment.period">
+			<field name="name">4 Year</field>
+			<field name="period">48</field>
+		</record>
+		<record id="loan_period_installment_p5" model="pragtech_loan.installment.period">
+			<field name="name">5 Year</field>
+			<field name="period">60</field>
+		</record>
+		<record id="loan_period_installment_p6" model="pragtech_loan.installment.period">
+			<field name="name">6 Year</field>
+			<field name="period">72</field>
+		</record>
+		<record id="loan_period_installment_p7" model="pragtech_loan.installment.period">
+			<field name="name">7 Year</field>
+			<field name="period">84</field>
+		</record> -->
+	</data>
+</odoo>
