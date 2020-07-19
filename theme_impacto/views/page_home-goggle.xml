@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<record id="home-goggle" model="website.page">
+    <field name="name">Goggle Page</field>
+    <field name="website_published">True</field>
+    <field name="url">/home-goggle</field>
+    <field name="type">qweb</field>
+    <field name="key">theme_impacto.home_goggle</field>
+    <field name="arch" type="xml">
+	<t t-name="theme_impacto.home_goggle_template">
+		<t t-call="website.layout">
+<div class="page-wrapper oe_structure">
+   
+	<section class="as-animated-slider p-0">
+				<div id="banner-carousel-1" class="s_carousel s_carousel_default carousel slide banner indicators-right" data-ride="carousel" data-arrow="none" data-name="Slide">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#banner-carousel-1" data-slide-to="0" class="active"></li>
+                      <li data-target="#banner-carousel-1" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" style="background-image: url(/theme_impacto/static/src/img/google/banner-01.jpg); background-size: cover;" data-name="Slide">
+                        <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" >
+                          <div class="slider-text">
+                            <div class="container">
+								<div class="row">
+									  <div class="col-md-8">
+									 <div class="shop-banner p-0">
+                                <label class="shop-lable lable-theme size-md">Summer Collection</label>
+                                <h2 class="title-large text-uppercase">20% Off</h2>
+                                <h3 class="title-size-lg f-width-4">Inspiration 2016</h3><br />
+                                <a class="link link-lg f-width-8" href="#">Shop Now</a>
+                            </div></div>
+								</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item" style="background-image: url(/theme_impacto/static/src/img/google/banner-02.jpg); background-size: cover;" data-name="Slide">
+                        <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" >
+                          <div class="slider-text">
+                            <div class="container">
+								<div class="row">
+								<div class="col-md-8">
+									 <div class="shop-banner p-0">
+                                <label class="shop-lable lable-theme size-md">For a limited time only </label>
+                                <h2 class="title-large text-uppercase">40% Off</h2>
+                                <h3 class="title-size-lg f-width-4">Inspiration 2016</h3><br />
+                                <a class="link link-lg f-width-8" href="#">Shop Now</a>
+                            </div>
+								  </div>
+								</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+</section> 
+
+
+<section class="section-lg pb-5"><div class="container"><div class="row align-items-center">
+    <div class="col-md-6">
+        <img src="/theme_impacto/static/src/img/google/img1.jpg" class="img-fluid" alt="" />
+        <h4 class="mt-2">Sunglasses Collection</h4>
+    </div>
+    <div class="col-md-6">
+        <div class="shop-banner">
+            <div class="shop-banner-inner align-m">
+                <label class="shop-lable l-space-5 size-xs f-weight-600 text-uppercase lable-theme">Available on Store</label>
+                <h3 class="title-size-xs f-weight-700" style="line-height: 1.3em;">New Arrivals Available <br />On Store</h3>
+                <a class="link link-lg f-weight-800" href="#">Shop Now</a>
+            </div>
+        </div>
+    </div>
+</div></div></section>
+
+<section class="section-sm p-0"><div class="container"><div class="row">
+    <div class="col-md-6 order-md-2">
+        <img src="/theme_impacto/static/src/img/google/img2.jpg" class="img-fluid" alt="" />
+        <h4 class="mt-2">Sunglasses Collection</h4>
+    </div>
+    <div class="col-md-6 order-md-1"></div>
+</div></div></section>
+
+<section class="section-sm p-0 sale-section"><div class="container"><div class="row align-items-center">
+    <div class="col-md-6 box-top">
+        <img src="/theme_impacto/static/src/img/google/img3.jpg" class="img-fluid" alt="" />
+        <h4 class="mt-2">Classic Sunglasses Collection</h4>
+    </div>
+    <div class="col-md-6">
+        <div class="shop-banner">
+            <div class="shop-banner-inner align-m">
+                <label class="shop-lable l-space-5 size-xs f-weight-600 text-uppercase lable-theme">Available on Store</label>
+                <h3 class="title-size-md f-weight-700" style="line-height: 1.3em;">Up to 40% Off New Sunglasses</h3>
+                <a class="link link-lg f-weight-800" href="#">Shop Now</a>
+            </div>
+        </div>
+    </div>
+</div></div></section>
+
+<section class="section-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"><img class="img-fluid" src="/theme_impacto/static/src/img/google/bottom-banner.jpg" alt="" /></div>
+        </div>
+    </div>
+</section>
+
+<hr />
+
+ <section class="section-xs info-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="shop-info">
+                        <div class="info-icon" style="color: #f5435b;"><i class="fa fa-mobile"></i></div>
+                        <div class="info-text">
+                            <h5 class="title">Free Shipping</h5>
+                            <p>All Order Over 40$</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shop-info">
+                        <div class="info-icon" style="color: #eeba30;"><i class="fa fa-envelope-o"></i></div>
+                        <div class="info-text">
+                            <h5 class="title">Secure Payments</h5>
+                            <p>100% Secure Payments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shop-info">
+                        <div class="info-icon" style="color: #e66f47;"><i class="fa fa-clock-o"></i></div>
+                        <div class="info-text">
+                            <h5 class="title">Support Customer</h5>
+                            <p>Support 24 x 7</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="shop-info last">
+                        <div class="info-icon" style="color: #a5d2e4;"><i class="fa fa-refresh"></i></div>
+                        <div class="info-text">
+                            <h5 class="title">30 Days Returns</h5>
+                            <p>Exchange within 30 days</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</t>
+	</t>
+</field>
+</record>
+</odoo>
+
+

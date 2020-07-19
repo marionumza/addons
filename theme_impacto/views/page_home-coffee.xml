@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<record id="home_coffee" model="website.page">
+    <field name="name">Coffee Page</field>
+    <field name="website_published">True</field>
+    <field name="url">/home-coffee</field>
+    <field name="type">qweb</field>
+    <field name="key">theme_impacto.home_coffee</field>
+    <field name="arch" type="xml">
+			<t t-name="theme_impacto.home_coffee_template">
+				<t t-call="website.layout">
+					<div class="page-wrapper oe_structure">
+		<section class="banner dark-bg" style="background-image: url('/theme_impacto/static/src/img/coffee/banner-01.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed; height: 100vh;"><div class="container"><div class="row"><div class="col-md-10 offset-md-1">
+			  <div class="full-height-banner"><div class="banner-text text-center">
+				  <img class="img-fluid" style="" src="/theme_impacto/static/src/img/coffee/banner-text-img.png" alt="" />
+				  <a href="#" class="btn btn-default btn-outline mt-2">About Our Company</a>
+			  </div></div>
+		</div></div></div></section>
+
+		<section class="section-md" style="padding-bottom: 60px;"><div class="container"><div class="row">
+			  <div class="col-md-5">
+				  <div class="heading-block">
+					  <div class="sub-heading">Who we are</div>
+					  <h2>About Impecto Coffee</h2>
+				  </div>
+				  <p class="lead" style="line-height: 28px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore, nec eleifend sem convallis vitae.</p>
+				  <p>Sed sagittis sodales lobortis. Curabitur in eleifend turpis, id vehicula odio. Donec pulvinar tellus egetmagna aliquet ultricies. Praesent gravida hendrerit ex, nec eleifend sem convallis vitae.</p>
+				  <img class="img-fluid" style="" src="/theme_impacto/static/src/img/coffee/sign.png" alt="" />
+			  </div>
+			  <div class="col-md-7">
+				  <div class="row">
+					<div class="col-md-6"><div class="feature mb-4">
+						<div class="feature-icon"><img class="img-fluid" src="/theme_impacto/static/src/img/coffee/about-icon-1.png" alt="" /></div>
+						<div class="feature-info">
+							<h5 class="title">The best World sorts</h5>
+							<p>Sed faucibus odio dui, eget bibendum augue porta eu. Nulla facilisi. Sed pellentesque viverra metus.</p>
+						</div>
+					</div></div>
+					<div class="col-md-6"><div class="feature mb-4">
+						<div class="feature-icon"><img class="img-fluid" src="/theme_impacto/static/src/img/coffee/about-icon-2.png" alt="" /></div>
+						<div class="feature-info">
+							<h5 class="title">Many points of sale</h5>
+							<p>Sed faucibus odio dui, eget bibendum augue porta eu. Nulla facilisi. Sed pellentesque viverra metus.</p>
+						</div>
+					</div></div>
+				  </div>
+				  <div class="row">
+					<div class="col-md-6"><div class="feature mb-4">
+						<div class="feature-icon"><img class="img-fluid" src="/theme_impacto/static/src/img/coffee/about-icon-3.png" alt="" /></div>
+						<div class="feature-info">
+							<h5 class="title">Professional baristas</h5>
+							<p>Sed faucibus odio dui, eget bibendum augue porta eu. Nulla facilisi. Sed pellentesque viverra metus.</p>
+						</div>
+					</div></div>
+					<div class="col-md-6"><div class="feature mb-4">
+						<div class="feature-icon"><img class="img-fluid" src="/theme_impacto/static/src/img/coffee/about-icon-4.png" alt="" /></div>
+						<div class="feature-info">
+							<h5 class="title">24/7 fast delivery</h5>
+							<p>Sed faucibus odio dui, eget bibendum augue porta eu. Nulla facilisi. Sed pellentesque viverra metus.</p>
+						</div>
+					</div></div>
+				  </div>
+			  </div>
+		</div></div></section>
+
+		<section class="section-md dark-bg" style="background-image: url('/theme_impacto/static/src/img/coffee/section-bg-1.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center; background-attachment: fixed;"><div class="container">
+			  <div class="row">
+				<div class="col-md-8 text-center offset-md-2">
+				  <div class="heading-block">
+					<div class="sub-heading">OUR MENU</div>
+					<h2>Discover Menu</h2>
+				  </div>
+				  <p>Sed sagittis sodales lobortis. Curabitur in eleifend turpis, id vehicula odio. Donec pulvinar tellus egetmagna aliquet ultricies. nec eleifend sem convallis vitae.</p>
+				</div>
+			  </div>
+			  <div class="row mt-4">
+				<div class="col-md-6">
+				  <div class="menu-list ">
+					<div class="item-img"><img class="img-fluid" src="/theme_impacto/static/src/img/coffee/menu-item1.png" alt="" /></div>
+					<div class="item-left">
+					  <h5 class="title">Caffe Latte</h5>
+					  <div class="des">Layered with two fried eggs, roasted tomatoes, basil</div>
+					</div>
+					<div class="item-right theme-text">$25.0</div>
+				  </div>
+				  <div class="menu-list ">
+					<div class="item-img"><img class="img-fluid" src="/theme_impacto/static/src/img/coffee/menu-item3.png" alt="" /></div>
+					<div class="item-left">
+					  <h5 class="title">Caffe Mocha</h5>
+					  <div class="des">Layered with two fried eggs, roasted tomatoes, basil</div>
+					</div>
+					<div class="item-right theme-text">$15.0</div>
+				  </div>
+				  <div class="menu-list ">
+					<div class="item-img"><img class="img-fluid" src="/theme_impacto/static/src/img/coffee/menu-item5.png" alt="" /></div>
+					<div class="item-left">
+					  <h5 class="title">White Chocolate Mocha</h5>
+					  <div class="des">Layered with two fried eggs, roasted tomatoes, basil</div>
+					</div>
+					<div class="item-right theme-text">$10.0</div>
+				  </div>
+				</div>
+				<div class="col-md-6">
+				  <div class="menu-list ">
+					<div class="item-img"><img class="img-fluid" src="/theme_impacto/static/src/img/coffee/menu-item2.png" alt="" /></div>
+					<div class="item-left">
+					  <h5 class="title">Iced Carmael Latte</h5>
+					  <div class="des">Layered with two fried eggs, roasted tomatoes, basil</div>
+					</div>
+					<div class="item-right theme-text">$22.0</div>
+				  </div>
+				  <div class="menu-list ">
+					<div class="item-img"><img class="img-fluid" src="/theme_impacto/static/src/img/coffee/menu-item4.png" alt="" /></div>
+					<div class="item-left">
+					  <h5 class="title">Espresso Macchiato</h5>
+					  <div class="des">Layered with two fried eggs, roasted tomatoes, basil</div>
+					</div>
+					<div class="item-right theme-text">$25.0</div>
+				  </div>
+				  <div class="menu-list ">
+					<div class="item-img"><img class="img-fluid" src="/theme_impacto/static/src/img/coffee/menu-item6.png" alt="" /></div>
+					<div class="item-left">
+					  <h5 class="title">Caramel Macchiato</h5>
+					  <div class="des">Layered with two fried eggs, roasted tomatoes, basil</div>
+					</div>
+					<div class="item-right theme-text">$15.0</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="row mt-3"><div class="col-md-12 text-center"><a href="#" class="btn btn-default btn-outline">Explore Full Menu</a></div></div>
+		</div></section>
+
+		<section class="section-md bg-none-tablet" style="background-image: url('/theme_impacto/static/src/img/coffee/section-bg-3.jpg'); background-repeat: no-repeat; background-size: contain; background-position: right center;"><div class="container">
+			  <div class="row">
+				<div class="col-md-6">
+				  <div class="heading-block">
+					<div class="sub-heading">About Company</div>
+					<h2>Try The Best Coffee</h2>
+				  </div>
+				  <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+				  <ul class="list round mt-2 mb-2">
+					<li>We provide free initial consultation and support.</li>
+					<li>We work with some of the most successful businesses.</li>
+					<li>We have the professional designers team.</li>
+				  </ul>
+				  <a href="#" class="btn btn-default btn-outline">About Company</a>
+				</div>
+			  </div>
+		</div></section>
+
+		<section class="section-md dark-bg" style="background-image: url('/theme_impacto/static/src/img/coffee/section-bg-2.jpg'); background-position: center center;  background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+		  <div class="container">
+			<div class="row">
+			   <div class="col-md-6">
+				<div class="heading-block">
+				  <div class="sub-heading">Our clients say</div>
+				  <h2>Our Skills</h2>
+				</div>
+				 <p class="lead">We design, build and support websites and apps for clients worldwide. We make your business stand out.</p>
+			   </div>
+			  <div class="col-md-6">
+				<div class="row">
+				  <div class="col-md-6 mb-2">
+					<div class="counter brd-style text-center">
+					  <div class="counter-info ">
+						<span class="timer" data-to="700" data-speed="1000">700</span>
+						<label>Online Stores</label>
+					  </div>
+					</div>
+				  </div>
+				  <div class="col-md-6">
+					<div class="counter brd-style text-center">
+					  <div class="counter-info">
+						<span class="timer" data-to="250" data-speed="1000">250</span>
+						<label>Happy Buyers</label>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+		  </div>
+		  </div>
+		</section>
+
+		<section class="section-md"><div class="container">
+			  <div class="row">
+				<div class="col-sm-8 offset-sm-2  text-center">
+				  <div class="heading-block">
+					<div class="sub-heading">Special offers</div>
+					<h2>The Best Price Available</h2>
+				  </div>
+				  <p class="mb-3 leads">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt ut labore et dolore, Sed sagittis sodales lobortis, eleifend sem convallis vitae.</p>
+				</div>
+			  </div>
+			  <div class="row">
+				<div class="col-sm-4">
+				  <div class="pricing-table pricing-style2 basic">
+					<label>Basic</label>
+					<header>
+					  <h4 class="title">$20<span>/Per month</span></h4>
+					  <span>Sed do eiusmod</span>
+					</header>
+					<a href="#" class="btn btn-sm btn-default animated btn-outline full-radius">Book Now <i class="fa fa-cart-arrow-down"></i></a>
+					<div class="table-body table-icon"><ul>
+					  <li>Lorem Ipsum <i class="fa fa-check"></i></li>
+					  <li>Dolor sit Amet <i class="fa fa-check"></i></li>
+					  <li>Consectetur Adipisicing  <i class="fa fa-check"></i></li>
+					  <li>Eiusmod Tempor <i class="fa fa-check"></i></li>
+					  <li>incididunt ut labore <i class="fa fa-check"></i></li>
+					  <li>Lorem Ipsum <i class="fa fa-check"></i></li>
+					  <li>Dolor sit Amet <i class="fa fa-check"></i></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-sm-4">
+				<div class="pricing-table pricing-style2 standard">
+				  <label>Standard</label>
+				  <header>
+					<h4 class="title">$50<span>/Per month</span></h4>
+					<span>Sed do eiusmod</span>
+				  </header>
+				  <a href="#" class="btn btn-sm btn-default animated btn-outline full-radius">Book Now <i class="fa fa-cart-arrow-down"></i></a>
+				  <div class="table-body table-icon"><ul>
+					<li>Lorem Ipsum <i class="fa fa-check"></i></li>
+					<li>Dolor sit Amet <i class="fa fa-check"></i></li>
+					<li>Consectetur Adipisicing  <i class="fa fa-check"></i></li>
+					<li>Eiusmod Tempor <i class="fa fa-check"></i></li>
+					<li>incididunt ut labore <i class="fa fa-check"></i></li>
+					<li>Lorem Ipsum <i class="fa fa-check"></i></li>
+					<li>Dolor sit Amet <i class="fa fa-check"></i></li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+			<div class="col-sm-4">
+			  <div class="pricing-table pricing-style2 premium">
+				<label>Premium</label>
+				<header>
+				  <h4 class="title">$100<span>/Per month</span></h4>
+				  <span>Sed do eiusmod</span>
+				</header>
+				<a href="#" class="btn btn-sm btn-default animated btn-outline full-radius">Book Now <i class="fa fa-cart-arrow-down"></i></a>
+				<div class="table-body table-icon"><ul>
+				  <li>Lorem Ipsum <i class="fa fa-check"></i></li>
+				  <li>Dolor sit Amet <i class="fa fa-check"></i></li>
+				  <li>Consectetur Adipisicing  <i class="fa fa-check"></i></li>
+				  <li>Eiusmod Tempor <i class="fa fa-check"></i></li>
+				  <li>incididunt ut labore <i class="fa fa-check"></i></li>
+				  <li>Lorem Ipsum <i class="fa fa-check"></i></li>
+				  <li>Dolor sit Amet <i class="fa fa-check"></i></li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		</div></section>
+		   <script>
+		  $(window.document).ready(function(){
+			$("body").addClass("home-coffee");
+		  });
+		</script>
+		</div>
+				</t>
+			</t>
+	</field>
+</record>
+</odoo>

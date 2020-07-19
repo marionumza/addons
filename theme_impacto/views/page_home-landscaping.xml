@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<record id="home-landscaping" model="website.page">
+    <field name="name">landscaping Page</field>
+    <field name="website_published">True</field>
+    <field name="url">/home-landscaping</field>
+    <field name="type">qweb</field>
+    <field name="key">theme_impacto.home_landscaping</field>
+    <field name="arch" type="xml">
+	<t t-name="theme_impacto.home_landscaping_template">
+		<t t-call="website.layout">
+	<div class="page-wrapper oe_structure">
+<section id="banner-carousel-2" class="carousel slide banner indicators-right" data-ride="carousel" data-arrow="none">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#banner-carousel-2" data-slide-to="0" class="active"></li>
+    <li data-target="#banner-carousel-2" data-slide-to="1" class=""></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" style="background-image: url(/theme_impacto/static/src/img/landscaping/banner-1.jpg);">
+        <div class="slider-text">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 offset-md-2">
+                <h1 class="white-text title-large f-weight-600">Garden Based in NY</h1>
+                <p class="white-text letter-space-10 mb-2">Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore orem ipsum dolor s it amet, conse ctetur adipisicing elit.</p>
+                <a href="#" class="btn btn-default white mr-1">Read More</a>
+                <a href="#" class="btn btn-default btn-outline white">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" style="background-image: url(/theme_impacto/static/src/img/landscaping/banner-2.jpg);">
+        <div class="slider-text">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 offset-md-2">
+                <h1 class="white-text title-large f-weight-600">Garden Based in NY</h1>
+                <p class="white-text letter-space-10 mb-2">Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore orem ipsum dolor s it amet, conse ctetur adipisicing elit.</p>
+                <a href="#" class="btn btn-default white mr-1">Read More</a>
+                <a href="#" class="btn btn-default btn-outline white">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-md pt-0" style="margin-top: -60px;">
+    <div class="container box-shadow">
+      <div class="row no-gutter" style="background-image: url('/theme_impacto/static/src/img/landscaping/patten.png'); background-position: center top; padding-top: 18px;  background-repeat: repeat-x; position: relative; z-index: 9;">
+        <div class="col-md-3 white-bg">
+          <div class="feature pxy-4 text-center">
+            <div class="feature-icon"><img style="width: 90px;" src="/theme_impacto/static/src/img/landscaping/icon-1.png" alt="" /></div>
+            <div class="feature-info">
+              <h5 class="title">Gardens</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 white-bg">
+          <div class="feature pxy-4 text-center">
+            <div class="feature-icon"><img style="width: 90px;" src="/theme_impacto/static/src/img/landscaping/icon-2.png" alt=""/></div>
+            <div class="feature-info">
+              <h5 class="title">Urban</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 white-bg">
+          <div class="feature pxy-4 text-center">
+            <div class="feature-icon"><img style="width: 90px;" src="/theme_impacto/static/src/img/landscaping/icon-3.png" alt=""/></div>
+            <div class="feature-info">
+              <h5 class="title">Maintenance</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 white-bg">
+          <div class="feature pxy-4 text-center">
+            <div class="feature-icon"><img style="width: 90px;" src="/theme_impacto/static/src/img/landscaping/icon-4.png" alt="" /></div>
+            <div class="feature-info">
+              <h5 class="title">Events</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section-md pt-0" style="background-image: url('/theme_impacto/static/src/img/landscaping/about-bg.jpg'); background-size: cover; background-position: center center;">
+<div class="container">
+  <div class="row ">
+    <div class="col-md-6">
+      <div class="heading-block">
+        <h2 class="text-uppercase">About Our <span class="f-weight-300">Company</span></h2>
+      </div>
+      <p class="mb-2">We make websites are the number one ranked design, build and marketing team. We build and will make you more successful.</p>
+      <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="counter">
+              <div class="counter-info">
+                <span class="timer theme-text" data-to="50" data-speed="1000">50</span>
+                <h3 class="f-weight-400">Specialists</h3>
+                <label>In landscaping design</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="counter">
+              <div class="counter-info">
+                <span class="timer theme-text" data-to="35" data-speed="1000">35</span>
+                <h3 class="f-weight-400">Awards</h3>
+                <label>Winning Company</label>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <img class="img-fluid img-shadow" style="width: 100%" src="/theme_impacto/static/src/img/landscaping/about.jpg" alt=""/>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section-md grey-bg"><div class="container">
+    <div class="row">
+      <div class="col-md-8 text-center offset-md-2">
+        <div class="heading-block">
+          <h2>Our Incredible <span class="f-weight-300">Work</span></h2>
+        </div>
+        <p class="mb-4">We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="isotope columns-3 popup-gallery">
+          <div class="grid-item">
+            <div class="portfolio-item">
+              <img src="/theme_impacto/static/src/img/landscaping/gallery/1.jpg" alt="Design" />
+              <div class="portfolio-overlay">
+                <h4><a href="#">Somerset</a></h4>
+                <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+              </div>
+              <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/landscaping/gallery/1.jpg" ><i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="portfolio-item">
+              <img src="/theme_impacto/static/src/img/landscaping/gallery/2.jpg" alt="Design" />
+              <div class="portfolio-overlay">
+                <h4><a href="#">Wimbledon</a></h4>
+                <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+              </div>
+              <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/landscaping/gallery/2.jpg"><i class="fa fa-arrow-right" ></i></a>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="portfolio-item">
+              <img src="/theme_impacto/static/src/img/landscaping/gallery/3.jpg" alt="Design" />
+              <div class="portfolio-overlay">
+                <h4><a href="#">Holly</a></h4>
+                <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+              </div>
+              <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/landscaping/gallery/3.jpg" ><i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="portfolio-item">
+              <img src="/theme_impacto/static/src/img/landscaping/gallery/4.jpg" alt="Design" />
+              <div class="portfolio-overlay">
+                <h4><a href="#">Water</a></h4>
+                <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+              </div>
+              <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/landscaping/gallery/4.jpg" ><i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="portfolio-item">
+              <img src="/theme_impacto/static/src/img/landscaping/gallery/5.jpg" alt="Design" />
+              <div class="portfolio-overlay">
+                <h4><a href="#">Stefan</a></h4>
+                <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+              </div>
+              <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/landscaping/gallery/5.jpg" ><i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="portfolio-item">
+              <img src="/theme_impacto/static/src/img/landscaping/gallery/6.jpg" alt="Design" />
+              <div class="portfolio-overlay">
+                <h4><a href="#">Fairy</a></h4>
+                <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+              </div>
+              <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/gallery/gallery-6.jpg" ><i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div></section>             
+
+
+<section class="section-md"><div class="container">
+      <div class="row">
+        <div class="col-sm-8 offset-sm-2  text-center">
+          <div class="heading-block">
+            <h2>The Best Price <span class="f-weight-300">Available</span></h2>
+          </div>
+          <p class="mb-3 leads">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt ut labore et dolore, Sed sagittis sodales lobortis, eleifend sem convallis vitae.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="pricing-table pricing-style2 basic">
+            <label>Basic</label>
+            <header>
+              <h4 class="title">$20<span>/Per month</span></h4>
+              <span>Sed do eiusmod</span>
+            </header>
+            <a href="#" class="btn btn-sm btn-default animated btn-outline full-radius">Book Now <i class="fa fa-cart-arrow-down"></i></a>
+            <div class="table-body table-icon"><ul>
+              <li>Lorem Ipsum <i class="fa fa-check"></i></li>
+              <li>Dolor sit Amet <i class="fa fa-check"></i></li>
+              <li>Consectetur Adipisicing  <i class="fa fa-check"></i></li>
+              <li>Eiusmod Tempor <i class="fa fa-check"></i></li>
+              <li>incididunt ut labore <i class="fa fa-check"></i></li>
+              <li>Lorem Ipsum <i class="fa fa-check"></i></li>
+              <li>Dolor sit Amet <i class="fa fa-check"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="pricing-table pricing-style2 standard">
+          <label>Standard</label>
+          <header>
+            <h4 class="title">$50<span>/Per month</span></h4>
+            <span>Sed do eiusmod</span>
+          </header>
+          <a href="#" class="btn btn-sm btn-default animated btn-outline full-radius">Book Now <i class="fa fa-cart-arrow-down"></i></a>
+          <div class="table-body table-icon"><ul>
+            <li>Lorem Ipsum <i class="fa fa-check"></i></li>
+            <li>Dolor sit Amet <i class="fa fa-check"></i></li>
+            <li>Consectetur Adipisicing  <i class="fa fa-check"></i></li>
+            <li>Eiusmod Tempor <i class="fa fa-check"></i></li>
+            <li>incididunt ut labore <i class="fa fa-check"></i></li>
+            <li>Lorem Ipsum <i class="fa fa-check"></i></li>
+            <li>Dolor sit Amet <i class="fa fa-check"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="pricing-table pricing-style2 premium">
+        <label>Premium</label>
+        <header>
+          <h4 class="title">$100<span>/Per month</span></h4>
+          <span>Sed do eiusmod</span>
+        </header>
+        <a href="#" class="btn btn-sm btn-default animated btn-outline full-radius">Book Now <i class="fa fa-cart-arrow-down"></i></a>
+        <div class="table-body table-icon"><ul>
+          <li>Lorem Ipsum <i class="fa fa-check"></i></li>
+          <li>Dolor sit Amet <i class="fa fa-check"></i></li>
+          <li>Consectetur Adipisicing  <i class="fa fa-check"></i></li>
+          <li>Eiusmod Tempor <i class="fa fa-check"></i></li>
+          <li>incididunt ut labore <i class="fa fa-check"></i></li>
+          <li>Lorem Ipsum <i class="fa fa-check"></i></li>
+          <li>Dolor sit Amet <i class="fa fa-check"></i></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div></section>
+
+<section class="section-md dark-bg" style="background-image: url('/theme_impacto/static/src/img/landscaping/testimonia-bg.jpg'); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;"><div class="container">
+    <div class="row"><div class="col-md-8 offset-md-2 text-center mb-3">
+      <div class="heading-block" style="margin-bottom: 15px;">
+        <h2>Our <span class="f-weight-300">Testimonials</span></h2>
+        </div>
+        <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+      </div></div>
+    <div class="row">
+      <div class="col-md-12s">
+        <div id="testimonials" class="carousel slide inds-bottom dark-control" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#testimonials" data-slide-to="0" class="active"></li>
+            <li data-target="#testimonials" data-slide-to="1"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active"><div class="row">
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                       <img src="/theme_impacto/static/src/img/solar/image1.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                       <img src="/theme_impacto/static/src/img/solar/image2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                       <img src="/theme_impacto/static/src/img/solar/image3.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+            </div></div>
+            <div class="carousel-item"><div class="row">
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                       <img src="/theme_impacto/static/src/img/solar/image1.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                       <img src="/theme_impacto/static/src/img/solar/0image2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                       <img src="/theme_impacto/static/src/img/solar/image3.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div></section>
+</div>
+ <script>
+ $(window.document).ready(function(){
+    $("body").addClass("home-landscaping");
+  });
+</script>
+</t>
+	</t>
+</field>
+</record>
+</odoo>
+
+

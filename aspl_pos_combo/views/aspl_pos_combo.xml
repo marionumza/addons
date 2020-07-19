@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- vim:fdn=3:-->
+<odoo>
+    <data>
+
+        <template id="enlarge_image index" name="aspl_pos_combo assets" inherit_id="point_of_sale.index">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/aspl_pos_combo/static/src/js/pos.js"></script>
+                <link rel="stylesheet" href="/aspl_pos_combo/static/src/css/pos.css"/>
+            </xpath>
+        </template>
+
+        <template id="report_saledetails" inherit_id="point_of_sale.report_saledetails">
+            <xpath expr="//table" position="replace">
+                <table  class="table table-sm">
+                    <thead><tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price Unit</th>
+                    </tr></thead>
+                    <tbody>
+                    <tr t-foreach='products' t-as='line'>
+<!--                        <t t-if='line["is_combo"] == False and line["price_unit"] > 0'>-->
+                            <t t-set="internal_reference" t-value="line['code'] and '[%s] ' % line['code'] or ''" />
+                            <td><t t-esc="internal_reference" /><t t-esc="line['product_display_name']" /></td>
+                            <td>
+                                <t t-esc="line['quantity']" />
+                                <t t-if='line["uom"] != "Unit(s)"'>
+                                    <t t-esc='line["uom"]' />
+                                </t>
+                            </td>
+                            <td>
+                                <t t-esc='line["price_unit"]' />
+                            <t t-if='line["discount"] != 0'>
+                                Disc: <t t-esc='line["discount"]' />%
+                            </t>
+                            </td>
+<!--                        </t>-->
+                    </tr>
+                    </tbody>
+                </table>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

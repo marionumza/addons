@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="PosProduct">
+        <div class="box-pos-product-ticket" id="box-pos-product-ticket">
+            <t t-set="i" t-value="0"/>
+            <div t-foreach="orderlines" t-as="orderline" class="receipt-orderlines">
+                <t t-if="orderline.get_unit_display_price() > 0">
+                    <div t-foreach="_.range(orderline.get_quantity())" t-as="line">
+                        <div class='pos-product-ticket'>
+                            <div name="order_info">
+                                <div style="float:left;">
+                                    Date: <t t-esc="moment().format('L LT')"/> <br />
+                                    Receipt: <b><t t-esc="order.name"/></b><br />
+                                </div>
+                                <div style="float: right;font-size: 16px;font-weight: bold;">
+                                    <t t-set="i" t-value="i + 1"/>
+                                    <t t-esc="i"/>/<t t-esc="order.get_exac_total_item()"/>
+                                </div>
+                                <t t-if="receipt.header">
+                                    <div style='float:left;'>
+                                        <b><t t-esc="widget.pos.company.name"/></b>
+                                    </div>
+                                </t>
+                            </div>
+                            <div style="clear: both;height:5px;"></div>
+                            <div style="width:66%;display:inline-block;vertical-align:top;font-weight: bolder;font-size: 9px;">
+                                <t t-esc="orderline.get_product().display_name"/>
+                                <t t-if="orderline.get_discount() > 0">
+                                    <div class="pos-disc-font" style="font-size:7px">
+                                        Với chiết khấu <t t-esc="orderline.get_discount()"/>%
+                                    </div>
+                                </t>
+                                <t t-if="orderline.get_combo_prod_info()">
+                                    <t t-foreach="orderline.get_combo_prod_info()" t-as="prod_info">
+                                        <div class="pos-disc-font" style="font-size:8px;font-weight: normal;">
+                                            + <t t-esc="prod_info.product.display_name"/> x <t t-esc="prod_info.qty"/>
+<!--                                            <t t-if="prod_info.discount">-->
+<!--                                                <br/>-->
+<!--                                                <i style="font-size: 8px;font-weight: bold;">=> Với chiết khấu <t t-esc="prod_info.discount"/>%</i>-->
+<!--                                            </t>-->
+                                        </div>
+                                    </t>
+                                </t>
+                            </div>
+                            <div class="pos-right-align" style="width:30%;display:inline-block;vertical-align:top;font-weight: bolder;font-size: 11px;">
+                                <t t-esc="widget.format_currency(orderline.get_unit_display_price())"/>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            <br />
+            </div>
+        </div>
+    </t>
+
+    <!-- Extendet Widget OrderWidget search clas orderlines after add my divs.  -->
+    <t t-extend="OrderWidget">
+        <t t-jquery=".orderlines" t-operation="after">
+            <div t-attf-class="polines #{orderlines.length === 0 ? 'emp' : ''}">
+                  <div class='category'>
+                          <div class='total'> Empty  </div>
+                  </div>
+            </div>
+        </t>
+    </t>
+
+    <t t-extend="ReceiptScreenWidget">
+        <t t-jquery="div[class='button print']" t-operation="after">
+            <div class="button print_product">
+                <i class='fa fa-print'></i> Print product ticket
+            </div>
+        </t>
+        <t t-jquery="div[class='pos-receipt-container']" t-operation="after">
+            <div class="pos-product-container"></div>
+        </t>
+    </t>
+
+<!--    <t t-extend="BillScreenWidget">-->
+<!--        <t t-jquery="div[class*='print']" t-operation="after">-->
+<!--            <div class="button print_product">-->
+<!--                <i class='fa fa-print'></i> Print product ticket-->
+<!--            </div>-->
+<!--        </t>-->
+<!--        <t t-jquery="div[class*='pos-receipt-container']" t-operation="after">-->
+<!--            <div class="pos-product-container"></div>-->
+<!--        </t>-->
+<!--    </t>-->
+
+    <t t-extend="PosTicket" t-as="PosTicketCombo">
+        <t t-jquery="div[class*='pos-sale-ticket']" t-operation="replace">
+        <div class="pos-sale-ticket">
+            <div class="company_card">
+                <div class="company_info" style="text-align: center;">
+                    <span  class="company_name"><t t-esc="widget.pos.company.name"/></span><br /><br />
+                    <t t-if="receipt.header">
+                        <div>
+                            <t t-esc="receipt.header" />
+                        </div>
+                        <br />
+                    </t>
+<!--                    <t t-esc="widget.pos.company.street"/>,<t t-esc="widget.pos.company.street2"/>,<t t-esc="widget.pos.company.city"/><br />-->
+<!--                    <strong>Hotline:</strong> <t t-esc="widget.pos.company.phone || ''"/><br />-->
+                </div>
+                <div class="company_logo">
+<!--                    <img t-attf-src="/web/binary/company_logo?company={{ widget.pos.company.id }}" style="width:100%"/>-->
+                    <img t-att-src="'data:image/png;base64,' + (widget.pos.company.logo)" class="img-thumbnail" alt="" style="width: 100%;"/>
+                </div>
+            </div>
+
+
+            <div name="order_info">
+                <div class="title_order">HÓA ĐƠN THANH TOÁN</div>
+                Date: <t t-esc="moment().format('L LT')"/> <br />
+                Receipt: <t t-esc="order.name"/><br />
+                Cashier: <t t-esc="widget.pos.get_cashier().name"/>
+                <t t-set="client" t-value="order.get_client()"/>
+                    <t t-if="client">
+                        <br/>
+                        <t t-set="client" t-value="order.get_client()"/>
+                        Customer: <t t-esc="client['name']"/><br />
+                    </t>
+<!--                <t t-if="client and widget.pos.config.receipt_customer_vat">-->
+<!--                    <t t-set="client" t-value="order.get_client()"/>-->
+<!--                    Customer: <t t-esc="client['name']"/><br />-->
+<!--                    Phone (mobile): <t t-esc="client['phone'] || client['mobile'] || ''"/>-->
+<!--                </t>-->
+                <br />
+                <br />
+            </div>
+
+<!--            <div class='receipt-orderlines'>-->
+<!--                <div style="border-bottom:1px dashed;border-top:1px dashed;font-weight: bolder;">-->
+<!--                    <div style="display:inline-block;width: 50%;">TÊN HÀNG</div>-->
+<!--                    <div style="display:inline-block;width: 15%;text-align: center;">SL</div>-->
+<!--                    <div style="display:inline-block;width: 30%;text-align: right;">T.TIỀN</div>-->
+<!--                </div>-->
+<!--                <div t-foreach="orderlines" t-as="orderline">-->
+<!--                    <div style="width:50%;display:inline-block;vertical-align:top;font-weight: bolder;">-->
+<!--                        <t t-esc="orderline.get_product().display_name"/>-->
+<!--                         <t t-if="orderline.get_discount() > 0">-->
+<!--                            <div class="pos-disc-font">-->
+<!--                                Với chiết khấu <t t-esc="orderline.get_discount()"/>%-->
+<!--                            </div>-->
+<!--                        </t>-->
+<!--                    </div>-->
+<!--                    <div style="width:15%;display:inline-block;vertical-align:top;font-weight: bolder;text-align:center;">-->
+<!--                        <t t-esc="orderline.get_quantity()"/>-->
+<!--                    </div>-->
+<!--                    <div class="pos-right-align" style="width:30%;display:inline-block;vertical-align:top;font-weight: bolder;">-->
+<!--                        <t t-esc="widget.format_currency(orderline.get_display_price(),0)"/>-->
+<!--                    </div>-->
+<!--                    <t t-if="orderline.get_combo_prod_info()">-->
+<!--                        <t t-foreach="orderline.get_combo_prod_info()" t-as="prod_info">-->
+<!--                            <div class="pos-disc-font">-->
+<!--                                <div style="width:45%;display:inline-block;vertical-align:top;">-->
+<!--                                    + <t t-esc="prod_info.product.display_name"/></div>-->
+<!--                                <div style="width:25%;display:inline-block;vertical-align:top;">-->
+<!--                                    <t t-esc="prod_info.qty"/>-->
+<!--                                    x <t t-esc="widget.format_currency_no_symbol(prod_info.unit_price,0)"/>-->
+<!--&lt;!&ndash;                                    <t t-if="widget.pos.config.hide_uom">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span>Quantity</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </t>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <t t-if="!widget.pos.config.hide_uom">&ndash;&gt;-->
+<!--&lt;!&ndash;                                         <t t-if="prod_info.product.uom_id[0]">&ndash;&gt;-->
+<!--&lt;!&ndash;                                              <t t-esc="prod_info.product.uom_id[1]"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                         </t>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </t>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="pos-right-align" style="width:24%;display:inline-block;vertical-align:top;">-->
+<!--                                     <t t-esc="widget.format_currency(prod_info.price,0)"/>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </t>-->
+<!--                    </t>-->
+<!--                </div>-->
+<!--            </div>-->
+
+            <table class='receipt-orderlines'>
+                <colgroup>
+                    <col width='50%' />
+                    <col width='25%' />
+                    <col width='25%' />
+                </colgroup>
+                <tr class="border-dash-y">
+                    <td>TÊN HÀNG</td>
+                    <td style="text-align: center;">SL</td>
+                    <td style="text-align: right;">T.TIỀN</td>
+                </tr>
+                <t t-foreach="orderlines" t-as="orderline">
+                    <tr>
+                        <td class="text-bold">
+                            <t t-esc="orderline.get_product().display_name"/>
+                             <t t-if="orderline.get_discount() > 0">
+                                <div class="pos-disc-font">
+                                    Với chiết khấu <t t-esc="orderline.get_discount()"/>%
+                                </div>
+                            </t>
+                        </td>
+                        <td class="text-bold text-center">
+                            <t t-esc="orderline.get_quantity()"/>
+                        </td>
+                        <td class="pos-right-align text-bold text-right">
+                            <t t-esc="widget.format_currency(orderline.get_display_price(),0)"/>
+                        </td>
+                    </tr>
+                    <t t-if="orderline.get_combo_prod_info()">
+                        <t t-foreach="orderline.get_combo_prod_info()" t-as="prod_info">
+                            <tr class="pos-disc-font">
+                                <td>
+                                    + <t t-esc="prod_info.product.display_name"/>
+                                    <t t-if="prod_info.discount">
+                                        <br/>
+                                        <i style="font-size: 10px;font-weight: bold;">=>Với chiết khấu <t t-esc="prod_info.discount"/>%</i>
+                                    </t>
+                                </td>
+                                <td>
+                                    <t t-esc="prod_info.qty"/>
+                                    x <t t-esc="widget.format_currency_no_symbol(prod_info.unit_price,0)"/>
+    <!--                                    <t t-if="widget.pos.config.hide_uom">-->
+    <!--                                        <span>Quantity</span>-->
+    <!--                                    </t>-->
+    <!--                                    <t t-if="!widget.pos.config.hide_uom">-->
+    <!--                                         <t t-if="prod_info.product.uom_id[0]">-->
+    <!--                                              <t t-esc="prod_info.product.uom_id[1]"/>-->
+    <!--                                         </t>-->
+    <!--                                    </t>-->
+                                </td>
+                                <td class="text-right">
+                                     <t t-esc="widget.format_currency(prod_info.price,0)"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </t>
+                </t>
+            </table>
+
+            <br />
+            <table class='receipt-total'>
+                <tr>
+                    <td>Total Item:</td>
+                    <td class="pos-right-align">
+                        <t t-esc="order.get_total_item()"/>
+                    </td>
+                </tr>
+<!--                <tr>-->
+<!--                    <td>Subtotal:</td>-->
+<!--                    <td class="pos-right-align">-->
+<!--                        <t t-esc="widget.format_currency(order.get_total_without_tax(),0)"/>-->
+<!--                    </td>-->
+<!--                </tr>-->
+                <t t-foreach="order.get_tax_details()" t-as="taxdetail">
+                    <tr>
+                        <td><t t-esc="taxdetail.name" /></td>
+                        <td class="pos-right-align">
+                            <t t-esc="widget.format_currency(taxdetail.amount,0)" />
+                        </td>
+                    </tr>
+                </t>
+<!--                <tr>-->
+<!--                    <t t-if="order.get_total_discount() > 0">-->
+<!--                        <td>Discount:</td>-->
+<!--                        <td class="pos-right-align">-->
+<!--                            <t t-esc="widget.format_currency(order.get_total_discount(),0)"/>-->
+<!--                        </td>-->
+<!--                    </t>-->
+<!--                </tr>-->
+                <tr class="emph">
+                    <td>Total:</td>
+                    <td class="pos-right-align">
+                        <t t-esc="widget.format_currency(order.get_total_with_tax(),0)"/>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <table class='receipt-paymentlines'>
+                <t t-foreach="paymentlines" t-as="line">
+                  <tr>
+                      <td>
+                          <t t-esc="line.name"/>
+                      </td>
+                      <td class="pos-right-align">
+                          <t t-esc="widget.format_currency(line.get_amount(),0)"/>
+                      </td>
+                  </tr>
+                </t>
+            </table>
+            <br />
+            <table class='receipt-change'>
+                <tr><td>Change:</td><td class="pos-right-align">
+                    <t t-esc="widget.format_currency(order.get_change(),0)"/>
+                    </td></tr>
+            </table>
+            <t t-jquery="table.receipt-change" t-operation="after">
+                <t t-if="order.get_discount_price() and order.get_discount_price() > 0">
+                    <br />
+                    <div style='text-align:left'>
+                        <span>Giảm trên tổng HĐ: <b><t t-esc="widget.format_currency(order.get_discount_price(),0)"/></b></span>
+                    </div>
+                </t>
+            </t>
+            <t t-if="receipt.footer">
+                <br />
+                <div style='text-align:center'>
+                    <b><t t-esc="receipt.footer" /></b>
+                </div>
+            </t>
+        </div>
+        </t>
+
+    </t>
+
+    <t t-extend="Chrome">
+        <t t-jquery='.pos-logo' t-operation='replace'>
+            <img class="pos-logo" src="/web/binary/company_logo?company=1" />
+<!--            <img class="pos-logo" src="/aspl_pos_combo/static/src/img/logo.png" alt="Logo"/>-->
+        </t>
+    </t>
+
+    <t t-extend="Product">
+        <t t-jquery="span.price-tag" t-operation="after">
+            <t t-if="product.is_combo and widget.pos.config.enable_combo">
+                <div class="product_pack">
+                    Combo Pack
+                </div>
+            </t>
+        </t>
+    </t>
+
+    <t t-name="POSComboProductPopup">
+        <div class="modal-dialog">
+            <div class="popup popup-textinput pos_combo_product_popup">
+                <p class="title">Combo Product</p>
+                <div class="combo_product_container">
+                    <div class="sub_product_container">
+                        <div class="combo_product_header">
+                            <span>
+                                Required Products
+                            </span>
+                            <div class="collaps_div fix_products">
+                                <i class="fa fa-angle-up"></i>
+                            </div>
+                        </div>
+                        <div class="combo_header_body">
+                            <t t-if="widget.new_combo_products_details">
+	                            <t t-foreach="widget.new_combo_products_details" t-as="record">
+	                                <t t-if="record.require">
+	                                    <t t-foreach="record.product_details" t-as="product_detail">
+	                                        <t t-set="product" t-value="widget.pos.db.get_product_by_id(product_detail.product_id)"/>
+	                                        <span class='product product_content fix_product selected' t-att-data-product-id="product.id">
+	                                            <div class="product-img">
+	                                                <img t-att-src='widget.pos.gui.screen_instances.products.product_list_widget.get_product_image_url(product)' />
+	                                                <span class="product-qty">
+	                                                    <t t-esc="product_detail.used_time"/>
+	                                                </span>
+	                                                <div class="selected_product">
+	                                                    Selected
+	                                                </div>
+	                                            </div>
+	                                            <div class="product-name">
+	                                                <t t-esc="product.display_name" />
+	                                            </div>
+	                                        </span>
+	                                    </t>
+	                                </t>
+	                            </t>
+                            </t>
+                        </div>
+                        <div class="combo_product_header2">
+                            <span>
+                                Optional Products
+                            </span>
+                            <div class="collaps_div selective_products">
+                                <i class="fa fa-angle-up"></i>
+                            </div>
+                        </div>
+                        <div class="combo_header2_body">
+                            <t t-if="widget.new_combo_products_details">
+                                <t t-foreach="widget.new_combo_products_details" t-as="record">
+                                    <t t-if="!record.require">
+                                        <div class="category_data" t-att-categ-id="record.pos_category_id[0]">
+                                            <div class="categ_tile">
+                                                <div class="categ_name">
+                                                    <div>
+                                                        <t t-esc="record.pos_category_id[1]"/>
+                                                    </div>
+                                                    <div class="blinking" style="text-align:right;">
+                                                        <span style="padding-right: 10px;">
+                                                            Choose Any <t t-esc="record.no_of_items"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+					                            <div class="products_list" t-att-id="record.pos_category_id[0]">
+	                                                <t t-foreach="record.product_details" t-as="product_detail">
+	                                                    <t t-set="product" t-value="widget.pos.db.get_product_by_id(product_detail.product_id)"/>
+	                                                    <span t-att-class="product_detail.used_time > 0 ? 'product product_content selective_product selected' : 'product product_content selective_product'"
+	                                                          t-att-data-product-id="product.id" 
+	                                                          t-att-data-categ-id="record.pos_category_id[0]"
+	                                                          t-att-data-line-id="record.id"
+	                                                          t-att-title="product.display_name">
+	                                                        <div class="product-img">
+	                                                            <img t-att-src='widget.pos.gui.screen_instances.products.product_list_widget.get_product_image_url(product)' />
+                                                                <span class="product-qty">
+                                                                    <t t-esc="product_detail.used_time"/>
+                                                                </span>
+	                                                            <span class="product-remove">
+                                                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                                                </span>
+	                                                            <div class="selected_product">
+	                                                                Selected
+	                                                            </div>
+	                                                        </div>
+                                                            <div class="product-name">
+	                                                            <t t-esc="product.display_name"/>
+	                                                        </div>
+	                                                    </span>
+	                                                </t>
+	                                            </div>
+                                            </div>
+                                        </div>
+                                    </t>
+                                </t>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="button confirm">
+                        OK
+                    </div>
+                    <div class="button cancel">
+                        Cancel
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-extend="Orderline" t-as="OrderlineCombo">
+        <t t-jquery="span.product-name" t-operation="append">
+            <t t-if="widget.pos.config.edit_combo">
+                <t t-if="line.get_product().is_combo and line.get_product().product_combo_ids.length > 0 and widget.pos.config.enable_combo">
+                    <i class="fa fa-pencil-square combo-popup-icon" aria-hidden="true" style="cursor: pointer;color:green;"></i>
+                </t>
+            </t>
+        </t>
+        <t t-jquery="ul.info-list li:first" t-operation="append">
+            <t t-if="line.get_combo_prod_info()">
+                <li class="info">
+                    <t t-foreach="line.get_combo_prod_info()" t-as="prod_info">
+                        <div style="margin-left: 15px;">
+<!--                            &#8594;-->
+                            + <t t-esc="prod_info.product.display_name"/> : <t t-esc="prod_info.qty"/>
+                            x <t t-esc="widget.format_currency(prod_info.unit_price)"/>
+<!--                            <t t-if="widget.pos.config.hide_uom">-->
+<!--                                <span>Quantity</span>-->
+<!--                            </t>-->
+<!--                            <t t-if="!widget.pos.config.hide_uom">-->
+<!--                                <t t-if="prod_info.product.uom_id[0]">-->
+<!--                                     <t t-esc="prod_info.product.uom_id[1]"/>-->
+<!--                                </t>-->
+<!--                            </t>-->
+                            <t t-if="prod_info.discount">
+                                <br/>
+                                <i style="font-size: 14px;font-weight: bold;">=> Với chiết khấu <t t-esc="prod_info.discount"/>%</i>
+                            </t>
+                            <span class="price">
+                                 <t t-esc="widget.format_currency(prod_info.price)"/>
+                            </span>
+                        </div>
+                    </t>
+                </li>
+            </t>
+        </t>
+    </t>
+
+<!--    <t t-extend="PosTicket">-->
+<!--        <t t-jquery='table[class="receipt-orderlines"]' t-operation='replace'>-->
+<!--            <div class='receipt-orderlines'>-->
+<!--                <div t-foreach="orderlines" t-as="orderline">-->
+<!--                    <div style="width:50%;display:inline-block;vertical-align:top;">-->
+<!--                        <t t-esc="orderline.get_product().display_name"/>-->
+<!--                         <t t-if="orderline.get_discount() > 0">-->
+<!--                            <div class="pos-disc-font">-->
+<!--                                With a <t t-esc="orderline.get_discount()"/>% discount-->
+<!--                            </div>-->
+<!--                        </t>-->
+<!--                    </div>-->
+<!--                    <div class="pos-right-align" style="width:15%;display:inline-block;vertical-align:top;">-->
+<!--                        <t t-esc="orderline.get_quantity_str_with_unit()"/>-->
+<!--                    </div>-->
+<!--                    <div class="pos-right-align" style="width:30%;display:inline-block;vertical-align:top;">-->
+<!--                        <t t-esc="widget.format_currency(orderline.get_display_price())"/>-->
+<!--                    </div>-->
+<!--                    <t t-if="orderline.get_combo_prod_info()">-->
+<!--                        <t t-foreach="orderline.get_combo_prod_info()" t-as="prod_info">-->
+<!--                            <div class="pos-disc-font">-->
+<!--                                <div style="width:45%;display:inline-block;vertical-align:top;">-->
+<!--                                    + <t t-esc="prod_info.product.display_name"/></div>-->
+<!--                                <div style="width:25%;display:inline-block;vertical-align:top;">-->
+<!--                                    <t t-esc="prod_info.qty"/>-->
+<!--                                    x <t t-esc="widget.format_currency(prod_info.unit_price)"/>-->
+<!--&lt;!&ndash;                                    <t t-if="widget.pos.config.hide_uom">&ndash;&gt;-->
+<!--&lt;!&ndash;                                        <span>Quantity</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </t>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <t t-if="!widget.pos.config.hide_uom">&ndash;&gt;-->
+<!--&lt;!&ndash;                                         <t t-if="prod_info.product.uom_id[0]">&ndash;&gt;-->
+<!--&lt;!&ndash;                                              <t t-esc="prod_info.product.uom_id[1]"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                         </t>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    </t>&ndash;&gt;-->
+<!--                                </div>-->
+<!--                                <div class="pos-right-align" style="width:24%;display:inline-block;vertical-align:top;">-->
+<!--                                     <t t-esc="widget.format_currency(prod_info.price)"/>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </t>-->
+<!--                    </t>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </t>-->
+<!--    </t>-->
+
+    <t t-extend="XmlReceipt">
+        <t t-jquery="[t-if='!simple']" t-operation="after">
+            <t t-if="line.combo_prod_info">
+                <t t-foreach="line.combo_prod_info" t-as="combo_detail">
+                    <line indent='1'>
+		               <left>
+		                   <t t-esc="combo_detail.product.display_name"/>
+		                   <t t-esc="combo_detail.qty"/>
+                           <t t-if="!widget.pos.config.hide_uom">
+                                 <t t-if="combo_detail.product.uom_id[0]">
+                                      <t t-esc="combo_detail.product.uom_id[1]"/>
+                                 </t>
+                           </t>
+		               </left>
+	              </line>
+	          </t>
+            </t>
+        </t>
+    </t>
+
+    <t t-extend="OrderChangeReceipt">
+        <t t-jquery="[t-foreach='changes.cancelled']" t-operation="replace">
+            <t t-foreach="changes.cancelled" t-as="change">
+                <line>
+                    <left><value><t t-esc="change.qty" /></value></left>
+                    <right><t t-esc="change.name_wrapped[0]" /></right>
+                </line>
+                <t t-if="change.combo_info">
+                    <t t-foreach="change.combo_info" t-as="combo_detail">
+                        <line>
+                            <left><value><t t-esc="combo_detail.qty" /></value></left>
+                            <right><t t-esc="combo_detail.product.display_name" /></right>
+                        </line>
+                    </t>
+                </t>
+                <t t-call="NameWrapped"/>
+                <t t-if="change.note">
+                    <line>
+                        <left>NOTE</left>
+                        <right>...</right>
+                    </line>
+                    <div><span font='b' bold='off' line-ratio='0.4' indent='1' width='30'>--- <t t-esc="change.note" /></span></div>
+                    <line></line>
+                </t>
+                <div><span font='b' bold='off' line-ratio='0.4' indent='1'>
+                    ---------------------------------------------------------------
+                </span></div>
+            </t>
+        </t>
+        <t t-jquery="[t-foreach='changes.new']" t-operation="replace">
+            <t t-foreach="changes.new" t-as="change">
+                <line>
+                    <left><value><t t-esc="change.qty" /></value></left>
+                    <right><t t-esc="change.name_wrapped[0]" /></right>
+                </line>
+                <t t-if="change.combo_info">
+                    <t t-foreach="change.combo_info" t-as="combo_detail">
+                        <line>
+                            <left><value><t t-esc="combo_detail.qty" /></value></left>
+                            <right><t t-esc="combo_detail.product.display_name" /></right>
+                        </line>
+                    </t>
+                </t>
+                <t t-call="NameWrapped"/>
+                <t t-if="change.note">
+                    <line>
+                        <left>NOTE</left>
+                        <right>...</right>
+                    </line>
+                    <div><span font='b' bold='off' line-ratio='0.4' indent='1' width='30'>--- <t t-esc="change.note" /></span></div>
+                    <line></line>
+                </t>
+                <div><span font='b' bold='off' line-ratio='0.4' indent='1'>
+                    ---------------------------------------------------------------
+                </span></div>
+            </t>
+        </t>
+    </t>
+
+   <t t-extend="BillReceipt">
+        <t t-jquery="[t-if='!simple']" t-operation="after">
+            <t t-if="line.combo_prod_info">
+                <t t-foreach="line.combo_prod_info" t-as="combo_detail">
+                    <line indent='1'>
+		               <left>
+		                   <t t-esc="combo_detail.product.display_name"/>
+		                   <t t-esc="combo_detail.qty"/>
+                           <t t-if="!widget.pos.config.hide_uom">
+                                 <t t-if="combo_detail.product.uom_id[0]">
+                                      <t t-esc="combo_detail.product.uom_id[1]"/>
+                                 </t>
+                           </t>
+		               </left>
+	              </line>
+	          </t>
+            </t>
+        </t>
+    </t>
+
+</templates>

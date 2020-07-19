@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<record id="home-transport" model="website.page">
+    <field name="name">Transport Page</field>
+    <field name="website_published">True</field>
+    <field name="url">/home-transport</field>
+    <field name="type">qweb</field>
+    <field name="key">theme_impacto.home-transport</field>
+    <field name="arch" type="xml">
+	<t t-name="theme_impacto.home_architecture_template">
+		<t t-call="website.layout">
+		<div class="page-wrapper oe_structure">
+
+
+<section class="as-animated-slider">
+				<div id="banner-carousel-1" class="s_carousel s_carousel_default carousel slide banner indicators-right" data-ride="carousel" data-arrow="none" data-name="Slide">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#banner-carousel-1" data-slide-to="0" class="active"></li>
+                      <li data-target="#banner-carousel-1" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" style="background-image: url(/theme_impacto/static/src/img/transport/banner-01.jpg);" data-name="Slide">
+                        <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" >
+                          <div class="slider-text">
+                            <div class="container">
+								<div class="row">
+									<div class="col-md-6 offset-md-6">
+													<h1 class="text-uppercase white-text title-large f-weight-600">The Expert's in Transport</h1>
+													<p class="white-text letter-space-10 mb-2">Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore orem ipsum dolor s it amet, conse ctetur adipisicing elit.</p>
+													<a href="#" class="btn btn-default no-radius mt-1">Read More</a>
+												  </div>								</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item" style="background-image: url(/theme_impacto/static/src/img/transport/banner-02.jpg);" data-name="Slide">
+                        <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" >
+                          <div class="slider-text">
+                            <div class="container">
+								<div class="row">
+								  <div class="col-md-6">
+									<h1 class="text-uppercase white-text title-large f-weight-600">The Expert's in Transport</h1>
+									<p class="white-text letter-space-10 mb-2">Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore orem ipsum dolor s it amet, conse ctetur adipisicing elit.</p>
+									<a href="#" class="btn btn-default no-radius mt-1">Read More</a>
+								  </div>
+								</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+</section>
+				              
+
+<section class="section-md" style="padding-bottom: 60px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 pr-6">
+          <div class="heading-block">
+            <h2 class="text-uppercase title-divider mb-4">About Our Logistic</h2>
+          </div>
+          <p>Sed sagittis sodales lobortis. Curabitur in eleifend turpis, id vehicula odio. Donec pulvinar tellus egetmagna aliquet ultricies. Praesent gravida hendrerit ex, consectetur adipiscing elit, nec eleifend sem convallis vitae.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore, nec eleifend sem convallis vitae. We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+          <a href="#" class="btn text-link mt-2 mb-3">About Company</a>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="image-left"><img class="img-fluid image-hover" style="width: 100%" src="/theme_impacto/static/src/img/transport/about-img1.jpg" alt="" /></div>
+          <div class="image-right"><img class="img-fluid image-hover" style="width: 100%" src="/theme_impacto/static/src/img/transport/about-img2.jpg" alt="" />
+        </div></div>
+      </div>
+    </div>
+</section>
+
+<section class="section-md grey-bg" style="background-image:url('/theme_impacto/static/src/img/transport/section-bg.png'); background-repeat: no-repeat; background-position: center center; background-size: cover;"><div class="container">
+      <div class="row"><div class="col-md-8 offset-md-2 text-center mb-3">
+      <div class="heading-block" style="margin-bottom: 15px;">
+        <h2 class="text-uppercase title-divider mb-4">Our Transportation Services</h2>
+        </div>
+        <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+      </div></div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="photobox radius-4 o-hidden mb-2">
+            <div class="photobox-img">
+              <img src="/theme_impacto/static/src/img/transport/img-01.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="photobox-content pxy-3">
+              <h4 class="text-uppercase title-divider sm-divider mb-3">Road Freight</h4>
+              <p class="mb-0">Sed sagittis sodales lobortis. Curabitur in eleifend turpis, id vehicula odio. Donec pulvinar tellus egetmagna.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photobox radius-4 o-hidden mb-2">
+            <div class="photobox-img">
+              <img src="/theme_impacto/static/src/img/transport/img-02.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="photobox-content pxy-3">
+              <h4 class="text-uppercase title-divider sm-divider mb-3">Sea Freight</h4>
+              <p class="mb-0">Sed sagittis sodales lobortis. Curabitur in eleifend turpis, id vehicula odio. Donec pulvinar tellus egetmagna.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photobox radius-4 o-hidden mb-2">
+            <div class="photobox-img">
+              <img src="/theme_impacto/static/src/img/transport/img-03.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="photobox-content pxy-3">
+              <h4 class="text-uppercase title-divider sm-divider mb-3">Air Freight</h4>
+              <p class="mb-0">Sed sagittis sodales lobortis. Curabitur in eleifend turpis, id vehicula odio. Donec pulvinar tellus egetmagna.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+</div></section>
+
+<section class="section-md dark-bg" style="background: url('/theme_impacto/static/src/img/transport/section-bg.jpg') no-repeat 0 0; background-size: cover; padding-bottom: 150px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2  text-center">
+          <div class="heading-block mt-1">
+              <h2 class="text-uppercase title-divider mb-4">Your Total Transportation Services</h2>
+          </div>
+          <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section>
+    <div class="container box-top">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="video-section">
+            <a class="video popup-vimeo" title="Vimeo" href="https://vimeo.com/121153916"><img src="/theme_impacto/static/src/img/transport/video2.png" alt=""/></a>
+            <img src="/theme_impacto/static/src/img/transport/video-bg-img.jpg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section-md">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="heading-block">
+            <h2 class="text-uppercase title-divider mb-4">Why Choose Marvis ?</h2>
+          </div>
+          <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+          <div class="row mt-4">
+              <div class="col-md-6">
+                <ul class="list arrow ">
+                  <li>Our 30 years of experience</li>
+                  <li>Door to Door world wide</li>
+                  <li>Time and Day definite</li>
+                  <li>Fully personallsed services</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="list arrow ">
+                  <li>Our 30 years of experience</li>
+                  <li>Door to Door world wide</li>
+                  <li>Time and Day definite</li>
+                  <li>Fully personallsed services</li>
+                </ul>
+              </div>
+            </div>
+            <a href="#" class="btn btn-default btn-outline no-radius mt-3">About Company</a>
+        </div>
+        <br/>
+        <div class="col-md-6">
+          <img class="img-fluid img-shadow" style="width: 100%" src="/theme_impacto/static/src/img/transport/why-choose-img.jpg" alt=""/>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section-md grey-bg pos-r"><div class="container">
+    <div class="row"><div class="col-md-8 offset-md-2 text-center mb-3">
+      <div class="heading-block" style="margin-bottom: 15px;">
+        <h2 class="text-uppercase title-divider mb-4">Happy Customers Said</h2>
+        </div>
+        <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+      </div></div>
+    <div class="row">
+      <div class="col-md-12s">
+        <div id="testimonials" class="carousel slide inds-bottom dark-control" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#testimonials" data-slide-to="0" class="active"></li>
+            <li data-target="#testimonials" data-slide-to="1"></li>
+            <li data-target="#testimonials" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active"><div class="row">
+              <div class="col-md-6">
+                <div class="testimonials style-new-1">
+                  <div class="author-wrap">
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/transport/image1.jpg" alt=""/>
+                    </div>
+                    <div class="author-info">
+                      <span class="author-name">Nicole Jones</span>
+                      <label>Web Developer</label>
+                      <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live the coast of the Semantics,a large language ocean.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="testimonials style-new-1">
+                  <div class="author-wrap">
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/transport/image2.jpg" alt=""/>
+                    </div>
+                    <div class="author-info">
+                      <span class="author-name">John Doe</span>
+                      <label>Web Designer</label>
+                      <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live the coast of the Semantics,a large language ocean.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="carousel-item"><div class="row">
+              <div class="col-md-6">
+                <div class="testimonials style-new-1">
+                  <div class="author-wrap">
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/transport/image1.jpg" alt=""/>
+                    </div>
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                      <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live the coast of the Semantics,a large language ocean.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="testimonials style-new-1">
+                  <div class="author-wrap">
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/transport/image2.jpg" alt=""/>
+                    </div>
+                    <div class="author-info">
+                      <span class="author-name">Nicole Jones</span>
+                      <label>HR</label>
+                      <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live the coast of the Semantics,a large language ocean.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+            <div class="carousel-item"><div class="row">
+              <div class="col-md-6">
+                <div class="testimonials style-new-1">
+                  <div class="author-wrap">
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/transport/image1.jpg" alt=""/>
+                    </div>
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                      <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live the coast of the Semantics,a large language ocean.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="testimonials style-new-1">
+                  <div class="author-wrap">
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/transport/image2.jpg" alt=""/>
+                    </div>
+                    <div class="author-info">
+                      <span class="author-name">Nicole Jones</span>
+                      <label>Compant CEO</label>
+                      <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live the coast of the Semantics,a large language ocean.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div></section>
+   <script>
+  $(window.document).ready(function(){
+    $("body").addClass("transport-page");
+  });
+</script>
+</div>	
+	</t>
+	</t>
+	</field>
+</record>
+</odoo>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<record id="home-fashion" model="website.page">
+    <field name="name">Fashion Page</field>
+    <field name="website_published">True</field>
+    <field name="url">/home-fashion</field>
+    <field name="type">qweb</field>
+    <field name="key">theme_impacto.fashion</field>
+    <field name="arch" type="xml">
+	<t t-name="theme_impacto.home_fashion_template">
+		<t t-call="website.layout">
+<div class="page-wrapper oe_structure">
+
+	<section class="as-animated-slider p-0">
+				<div id="banner-carousel-1" class="s_carousel s_carousel_default carousel slide banner indicators-right" data-ride="carousel" data-arrow="none" data-name="Slide">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#banner-carousel-1" data-slide-to="0" class="active"></li>
+                      <li data-target="#banner-carousel-1" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" style="background-image: url(/theme_impacto/static/src/img/fashion/banner-01.jpg);" data-name="Slide">
+                        <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" >
+                          <div class="slider-text">
+                            <div class="container">
+								<div class="row">
+									<div class="col-md-6">
+                                        <div class="shop-banner p-0">
+                                            <label class="shop-lable lable-theme size-xs text-uppercase l-space-6">New Collection</label>
+                                            <p class="l-space-6">FREE SHIPPING FOR ORDERS OVERS $199 </p>
+                                            <h2 class="text-light title-large text-uppercase l-space-10">Man's Fashion</h2>
+                                        </div>
+                                    </div>
+								</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item" style="background-image: url(/theme_impacto/static/src/img/fashion/banner-02.jpg);" data-name="Slide">
+                        <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" >
+                          <div class="slider-text">
+                            <div class="container">
+								<div class="row">
+									<div class="col-md-6">
+                                        <div class="shop-banner p-0">
+                                            <label class="shop-lable lable-theme size-xs text-uppercase l-space-6">New Collection</label>
+                                            <p class="l-space-6">FREE SHIPPING FOR ORDERS OVERS $199 </p>
+                                            <h1 class="text-light title-large text-uppercase l-space-10">Woman's Fashion</h1>
+                                        </div>
+                                    </div>
+								</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+</section> 
+
+<section class="section-sm category-section p-0"><div class="container-fluid"><div class="row no-gutter">
+    <div class="col-md-3"><div class="photobox style3">
+        <div class="photobox-img"><img src="/theme_impacto/static/src/img/fashion/category-img1.jpg" class="img-fluid" alt="" /></div>
+        <div class="photobox-content">
+            <h3>Menswear</h3>
+        </div>
+    </div></div>
+    <div class="col-md-3"><div class="photobox style3">
+        <div class="photobox-img"><img src="/theme_impacto/static/src/img/fashion/category-img2.jpg" class="img-fluid" alt="" /></div>
+        <div class="photobox-content">
+            <h3>Cosualwear</h3>
+        </div>
+    </div></div>
+    <div class="col-md-3"><div class="photobox style3">
+        <div class="photobox-img"><img src="/theme_impacto/static/src/img/fashion/category-img3.jpg" class="img-fluid" alt="" /></div>
+        <div class="photobox-content">
+            <h3>Fresh &#38; Rugged</h3>
+        </div>
+    </div></div>
+    <div class="col-md-3"><div class="photobox style3">
+        <div class="photobox-img"><img src="/theme_impacto/static/src/img/fashion/category-img4.jpg" class="img-fluid" alt="" /></div>
+        <div class="photobox-content">
+            <h3>Winter Apparel</h3>
+        </div>
+    </div></div>
+</div></div></section>
+
+<section class="section-sm category-section p-0"><div class="container-fluid"><div class="row no-gutter">
+    <div class="col-md-6"><img src="/theme_impacto/static/src/img/fashion/mans-img.jpg" class="img-fluid" alt="" /></div>
+    <div class="col-md-6">
+        <div class="shop-banner counter-banner align-m text-left pxy-5">
+            <div class="shop-banner-inner align-m">
+                <label class="shop-lable lable-theme size-sm">Discover The Latest Trends</label>
+                <h2 class="title-size-md text-uppercase f-weight-400" style="">Men's Collection</h2>
+                <h2 class="title-size-lg text-uppercase f-weight-200" style="font-size: 8em; color: #969696;">2018</h2>                           
+                <a class="link link-md fill squer l-space-2 f-weight-500" href="#">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
+</div></div></section>
+
+<section class="section-sm category-section p-0"><div class="container-fluid"><div class="row no-gutter">
+    <div class="col-md-6 order-md-2"><img src="/theme_impacto/static/src/img/fashion/womans-img.jpg" class="img-fluid" alt="" /></div>
+    <div class="col-md-6 order-md-1">
+        <div class="shop-banner counter-banner align-m text-left pxy-5">
+            <div class="shop-banner-inner align-m">
+                <label class="shop-lable lable-theme size-sm">Discover The Latest Trends</label>
+                <h2 class="title-size-md text-uppercase f-weight-400" style="">Woman's Collection</h2>
+                <h2 class="title-size-lg text-uppercase f-weight-200" style="font-size: 8em; color: #969696;">2018</h2>                           
+                <a class="link link-md fill squer l-space-2 f-weight-500" href="#">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
+</div></div></section>
+
+<section class="section-xs theme-bg"><div class="container"><div class="row">
+    <div class="col-md-12"><h2 class="text-light mb-2">Our Brand</h2></div>
+    <div class="col-md-12"><div class="row">
+        <div class="col-lg-2 col-md-4 col-xs-6"><img src="/theme_impacto/static/src/img/fashion/brand/brand-1.png" class="img-fluid" alt="" /></div>
+        <div class="col-lg-2 col-md-4 col-xs-6"><img src="/theme_impacto/static/src/img/fashion/brand/brand-2.png" class="img-fluid" alt="" /></div>
+        <div class="col-lg-2 col-md-4 col-xs-6"><img src="/theme_impacto/static/src/img/fashion/brand/brand-3.png" class="img-fluid" alt="" /></div>
+        <div class="col-lg-2 col-md-4 col-xs-6"><img src="/theme_impacto/static/src/img/fashion/brand/brand-4.png" class="img-fluid" alt="" /></div>
+        <div class="col-lg-2 col-md-4 col-xs-6"><img src="/theme_impacto/static/src/img/fashion/brand/brand-5.png" class="img-fluid" alt="" /></div>
+        <div class="col-lg-2 col-md-4 col-xs-6"><img src="/theme_impacto/static/src/img/fashion/brand/brand-6.png" class="img-fluid" alt="" /></div>
+    </div></div>    
+</div></div></section>
+</div>
+</t>
+</t>
+</field>
+</record>
+</odoo>

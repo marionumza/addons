@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="OrderlineCombo">
+        <t t-jquery="ul.info-list li:first" t-operation="append">
+            <t t-if="line.get_discount_amt() and line.get_discount_amt() > 0">
+                <li class="info">
+                    With a <t t-esc="line.get_discount_amt_str()"/> discount
+                </li>
+            </t>
+            <t t-if="line.get_promotion() and line.get_promotion().rule_name">
+                <li class="info">
+                    <span style="color: #6ec89b;font-size: 14px;"><t t-esc="line.get_promotion().rule_name"/> Rule Applied...</span>
+                </li>
+            </t>
+            <t t-if="line.get_buy_x_get_y_child_item().rule_name">
+                <li class="info">
+                    <span style="color: #6ec89b;font-size: 14px;"><t t-esc="line.get_buy_x_get_y_child_item().rule_name"/> Rule Applied...</span>
+                </li>
+            </t>
+            <t t-if="line.get_quantity_discount().rule_name">
+                <li class="info">
+                    <span style="color: #6ec89b;font-size: 14px;"><t t-esc="line.get_quantity_discount().rule_name"/> Rule Applied...</span>
+                </li>
+            </t>
+            <t t-if="line.get_discount_amt_rule()">
+                <li class="info">
+                    <span style="color: #6ec89b;font-size: 14px;"><t t-esc="line.get_discount_amt_rule()"/> Rule Applied...</span>
+                </li>
+            </t>
+            <t t-if="line.get_combinational_product_rule()">
+                <li class="info">
+                    <span style="color: #6ec89b;font-size: 14px;"><t t-esc="line.get_combinational_product_rule()"/> Rule Applied...</span>
+                </li>
+            </t>
+            <t t-if="line.get_multi_prod_categ_rule()">
+                <li class="info">
+                    <span style="color: #6ec89b;font-size: 14px;"><t t-esc="line.get_multi_prod_categ_rule()"/> Rule Applied...</span>
+                </li>
+            </t>
+        </t>
+    </t>
+
+    <t t-extend="OrderWidget">
+        <t t-jquery='.subentry' t-operation="after">
+            <div class='discount' style='font-size: 16px;font-weight: normal;text-align: center;'>Discount: <span class="value">0.00€</span></div>
+        </t>
+     </t>
+
+    <t t-extend="PosTicketCombo">
+        <t t-jquery="[t-foreach='orderlines']" t-operation="replace">
+            <tr t-foreach="orderlines" t-as="orderline">
+                    <td>
+                        <t t-esc="orderline.get_product().display_name"/>
+                        <t t-if="orderline.get_promotion() and orderline.get_promotion().rule_name">
+                            <div class="pos-disc-font">
+                                <t t-esc="orderline.get_promotion().rule_name"/> Rule Applied...
+                            </div>
+                        </t>
+                        <t t-if="orderline.get_buy_x_get_y_child_item().rule_name">
+                            <div class="pos-disc-font">
+                                <t t-esc="orderline.get_buy_x_get_y_child_item().rule_name"/> Rule Applied...
+                            </div>
+                        </t>
+                        <t t-if="orderline.get_quantity_discount().rule_name">
+                            <div class="pos-disc-font">
+                                <t t-esc="orderline.get_quantity_discount().rule_name"/> Rule Applied...
+                            </div>
+                        </t>
+                        <t t-if="orderline.get_discount_amt_rule()">
+                            <div class="pos-disc-font">
+                                <t t-esc="orderline.get_discount_amt_rule()"/> Rule Applied...
+                            </div>
+                            <div class="pos-disc-font">
+                                With a <t t-esc="orderline.get_discount_amt()"/>% discount
+                            </div>
+                        </t>
+                        <t t-if="orderline.get_combinational_product_rule()">
+                            <div class="pos-disc-font">
+                                <t t-esc="orderline.get_combinational_product_rule()"/> Rule Applied...
+                            </div>
+                        </t>
+                        <t t-if="orderline.get_multi_prod_categ_rule()">
+                            <div class="pos-disc-font">
+                                <t t-esc="orderline.get_multi_prod_categ_rule()"/> Rule Applied...
+                            </div>
+                        </t>
+                         <t t-if="orderline.get_discount() > 0">
+                            <div class="pos-disc-font">
+                                With a <t t-esc="orderline.get_discount()"/>% discount
+                            </div>
+                        </t>
+                    </td>
+                    <td class="pos-right-align">
+                        <t t-esc="orderline.get_quantity_str_with_unit()"/>
+                    </td>
+                    <td class="pos-right-align">
+                        <t t-esc="widget.format_currency(orderline.get_display_price())"/>
+                    </td>
+                </tr>
+        </t>
+        <t t-jquery="table.receipt-change" t-operation="after">
+            <t t-if="order.get_discount_price() and order.get_discount_price() > 0">
+                <br />
+                <div style='text-align:left'>
+                    <span>Total Discount:<t t-esc="widget.format_currency(order.get_discount_price(),0)"/></span>
+                </div>
+            </t>
+        </t>
+    </t>
+
+    <!-- <t t-extend="XmlReceipt">
+	    <t t-jquery="receipt" t-operation="append">
+	        <line>
+	            <left>Total Discount: </left>
+	        </line>
+	        <div font='b'>
+	            <div><t t-esc='receipt.discount_price'/></div>
+	        </div>
+	    </t>
+    </t> -->
+
+</templates>

@@ -1,0 +1,394 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* aspl_pos_combo
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-16 03:23+0000\n"
+"PO-Revision-Date: 2019-10-16 03:23+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:30
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:137
+#, python-format
+msgid "% discount"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:357
+#, python-format
+msgid "Cancel"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:109
+#, python-format
+msgid "Cashier:"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo__pos_category_id
+msgid "Categories"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:225
+#, python-format
+msgid "Change:"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:314
+#, python-format
+msgid "Choose Any"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model_terms:ir.ui.view,arch_db:aspl_pos_combo.package_product_template_only_form_view
+msgid "Combo"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:249
+#, python-format
+msgid "Combo Pack"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:259
+#, python-format
+msgid "Combo Product"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:114
+#, python-format
+msgid "Customer:"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:11
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:107
+#, python-format
+msgid "Date:"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model_terms:ir.ui.view,arch_db:aspl_pos_combo.report_saledetails
+msgid "Disc:"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:197
+#, python-format
+msgid "Discount:"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:57
+#, python-format
+msgid "Empty"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_pos_config__enable_combo
+msgid "Enable Combo"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_pos_config__hide_uom
+msgid "Hide UOM"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model_terms:ir.ui.view,arch_db:aspl_pos_combo.ace_view_pos_config_form
+msgid "Hide UOM for combo product"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:107
+#, python-format
+msgid "HÓA ĐƠN THANH TOÁN"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo__id
+msgid "ID"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_pos_order_line__in_combo
+msgid "In combo"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_product__is_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_template__is_combo
+msgid "Is Combo"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:483
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:511
+#, python-format
+msgid "NOTE"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: code:addons/aspl_pos_combo/models/point_of_sale.py:162
+#, python-format
+msgid "No Taxes"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo__no_of_items
+msgid "No. of Items"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:354
+#, python-format
+msgid "OK"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:296
+#, python-format
+msgid "Optional Products"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model_terms:ir.ui.view,arch_db:aspl_pos_combo.sci_view_pos_pos_form
+msgid "Order lines"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model,name:aspl_pos_combo.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model,name:aspl_pos_combo.model_report_point_of_sale_report_saledetails
+msgid "Point of Sale Details"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model,name:aspl_pos_combo.model_pos_order_line
+msgid "Point of Sale Order Lines"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model,name:aspl_pos_combo.model_pos_order
+msgid "Point of Sale Orders"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model_terms:ir.ui.view,arch_db:aspl_pos_combo.report_saledetails
+msgid "Price Unit"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:66
+#, python-format
+msgid "Print product ticket"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/js/pos.js:528
+#, python-format
+msgid "Printing is not supported on some android browsers"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/js/pos.js:529
+#, python-format
+msgid "Printing is not supported on some android browsers due to no default printing protocol is available. It is possible to print your tickets by making use of an IoT Box."
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model,name:aspl_pos_combo.model_product_product
+#: model_terms:ir.ui.view,arch_db:aspl_pos_combo.report_saledetails
+msgid "Product"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model,name:aspl_pos_combo.model_product_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_product__product_combo_ids
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_template__product_combo_ids
+msgid "Product Combo"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model,name:aspl_pos_combo.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo__product_tmpl_id
+msgid "Product Tmpl"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo__product_ids
+msgid "Products"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model_terms:ir.ui.view,arch_db:aspl_pos_combo.report_saledetails
+msgid "Quantity"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:12
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:108
+#, python-format
+msgid "Receipt:"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_product_combo__require
+msgid "Required"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:263
+#, python-format
+msgid "Required Products"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:129
+#, python-format
+msgid "SL"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:282
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:335
+#, python-format
+msgid "Selected"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model:ir.model.fields,field_description:aspl_pos_combo.field_pos_config__edit_combo
+msgid "Single Click for Edit Combo"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model_terms:ir.ui.view,arch_db:aspl_pos_combo.ace_view_pos_config_form
+msgid "Single click for edit combo"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:182
+#, python-format
+msgid "Subtotal:"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:130
+#, python-format
+msgid "T.TIỀN"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model_terms:ir.ui.view,arch_db:aspl_pos_combo.sci_view_pos_pos_form
+msgid "Taxes"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:176
+#, python-format
+msgid "Total Item:"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:204
+#, python-format
+msgid "Total:"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:128
+#, python-format
+msgid "TÊN HÀNG"
+msgstr ""
+
+#. module: aspl_pos_combo
+#: model_terms:ir.ui.view,arch_db:aspl_pos_combo.ace_view_pos_config_form
+msgid "Use combo feature in restaurant"
+msgstr ""
+
+#. module: aspl_pos_combo
+#. openerp-web
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:29
+#: code:addons/aspl_pos_combo/static/src/xml/pos.xml:136
+#, python-format
+msgid "With a"
+msgstr ""
+

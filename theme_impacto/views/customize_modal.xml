@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="assets_frontend" inherit_id="website.assets_frontend" name="Theme Default Assets Frontend">
+  <xpath expr="link[last()]" position="after">
+    <link rel="stylesheet" href="/theme_impacto/static/src/scss/customize_modal.scss"/>
+  </xpath>
+</template>
+
+<template id="customize_modal" inherit_id="website.theme_customize" name="theme_impacto modal">
+  <xpath expr="div" position="replace">
+
+          <div class="p-4">        
+                <h5 class="modal-h5">Header</h5>
+                <table name="layout">
+                    <tr>
+                        <td class=" text-center">
+                            <label class=" center-block">
+                               <div class="text-center head-box"><img class="img-responsive" src="/theme_impacto/static/src/img/customize/header-1.jpg" alt="" /></div>
+                                <input name="headervar" type="radio" data-xmlid="theme_impacto.option_header"/>
+                            </label>
+                        </td>
+                         <td class=" text-center">
+                            <label class=" center-block">
+                               <div class="text-center head-box"><img class="img-responsive" src="/theme_impacto/static/src/img/customize/header-2.jpg" alt="" /></div>
+                                <input name="headervar" type="radio" data-xmlid="theme_impacto.option_header2"/>
+                            </label>
+                        </td>
+                        <td class=" text-center">
+                            <label class=" center-block">
+                               <div class="text-center head-box"><img class="img-responsive" src="/theme_impacto/static/src/img/customize/header-3.jpg" alt="" /></div>
+                                <input name="headervar" type="radio" data-xmlid="theme_impacto.option_header3"/>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class=" text-center">
+                            <label class=" center-block">
+                               <div class="text-center head-box"><img class="img-responsive" src="/theme_impacto/static/src/img/customize/header-4.jpg" alt="" /></div>
+                                <input name="headervar" type="radio" data-xmlid="theme_impacto.option_header4"/>
+                            </label>
+                        </td>
+                         <td class=" text-center">
+                            <label class=" center-block">
+                               <div class="text-center head-box"><img class="img-responsive" src="/theme_impacto/static/src/img/customize/header-5.jpg" alt="" /></div>
+                                <input name="headervar" type="radio" data-xmlid="theme_impacto.option_header5"/>
+                            </label>
+                        </td>
+                        <td class=" text-center">
+                            <label class=" center-block">
+                               <div class="text-center head-box"><img class="img-responsive" src="/theme_impacto/static/src/img/customize/header-6.jpg" alt="" /></div>
+                                <input name="headervar" type="radio" data-xmlid="theme_impacto.option_header6"/>
+                            </label>
+                        </td>
+                    </tr>
+                  </table>
+                  <h5 class="modal-h5">FONTS COMBINATIONS</h5>
+                  <table name="font">
+                      <tr>
+                        <td width="33%">
+                            <div class="dropdown">
+                              <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Body
+                              <span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                <li><label><div><span>Poppins</span></div><input name="theme" type="radio" data-xmlid=""/></label></li>
+                                <li><label><div><span>Slabo 27px</span></div><input name="theme" type="radio" data-xmlid="theme_impacto.font_b_opt_1"/></label></li>
+                                <li><label><div><span>Work Sans</span></div><input name="theme" type="radio" data-xmlid="theme_impacto.font_b_opt_2"/></label></li>
+                                <li><label><div><span>Playfair Display</span></div><input name="theme" type="radio" data-xmlid="theme_impacto.font_b_opt_3"/></label></li>
+                                <li><label><div><span>PT Serif</span></div><input name="theme" type="radio" data-xmlid="theme_impacto.font_b_opt_4"/></label></li>
+                                <li><label><div><span>PT Sans</span></div><input name="theme" type="radio" data-xmlid="theme_impacto.font_b_opt_5"/></label></li>
+                                <li><label><div><span>Lato</span></div><input name="theme" type="radio" data-xmlid="theme_impacto.font_b_opt_6"/></label></li>
+                                <li><label><div><span>Open Sans</span></div><input name="theme" type="radio" data-xmlid="theme_impacto.font_b_opt_7"/></label></li>
+                              </ul>
+                            </div>                              
+                          </td>
+                          <td width="33%">
+                            <div class="dropdown">
+                              <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Heading
+                              <span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                <li><label><div><span>Poppins</span></div><input name="theme_font_heading" type="radio" data-xmlid=""/></label></li>
+                                <li><label><div><span>Slabo 27px</span></div><input name="theme_font_heading" type="radio" data-xmlid="theme_impacto.font_h_opt_1"/></label></li>
+                                <li><label><div><span>Work Sans</span></div><input name="theme_font_heading" type="radio" data-xmlid="theme_impacto.font_h_opt_2"/></label></li>
+                                <li><label><div><span>Playfair Display</span></div><input name="theme_font_heading" type="radio" data-xmlid="theme_impacto.font_h_opt_3"/></label></li>
+                                <li><label><div><span>PT Serif</span></div><input name="theme_font_heading" type="radio" data-xmlid="theme_impacto.font_h_opt_4"/></label></li>
+                                <li><label><div><span>PT Sans</span></div><input name="theme_font_heading" type="radio" data-xmlid="theme_impacto.font_h_opt_5"/></label></li>
+                                <li><label><div><span>Lato</span></div><input name="theme_font_heading" type="radio" data-xmlid="theme_impacto.font_h_opt_6"/></label></li>
+                                <li><label><div><span>Open Sans</span></div><input name="theme_font_heading" type="radio" data-xmlid="theme_impacto.font_h_opt_7"/></label></li>
+                              </ul>
+                            </div>                              
+                          </td>
+                          <td width="33%">
+                            <div class="dropdown">
+                              <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown">Tagline
+                              <span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                <li><label><div><span>Merriweather</span></div><input name="theme_font_tagline" type="radio" data-xmlid=""/></label></li>
+                                <li><label><div><span>Slabo 27px</span></div><input name="theme_font_tagline" type="radio" data-xmlid="theme_impacto.font_t_opt_1"/></label></li>
+                                <li><label><div><span>Work Sans</span></div><input name="theme_font_tagline" type="radio" data-xmlid="theme_impacto.font_t_opt_2"/></label></li>
+                                <li><label><div><span>Playfair Display</span></div><input name="theme_font_tagline" type="radio" data-xmlid="theme_impacto.font_t_opt_3"/></label></li>
+                                <li><label><div><span>PT Serif</span></div><input name="theme_font_tagline" type="radio" data-xmlid="theme_impacto.font_t_opt_4"/></label></li>
+                                <li><label><div><span>PT Sans</span></div><input name="theme_font_tagline" type="radio" data-xmlid="theme_impacto.font_t_opt_5"/></label></li>
+                                <li><label><div><span>Lato</span></div><input name="theme_font_tagline" type="radio" data-xmlid="theme_impacto.font_t_opt_6"/></label></li>
+                                <li><label><div><span>Open Sans</span></div><input name="theme_font_tagline" type="radio" data-xmlid="theme_impacto.font_t_opt_7"/></label></li>
+                              </ul>
+                            </div>                              
+                          </td>
+                      </tr>
+                  </table>
+                  <h5 class="modal-h5">MAIN COLOR</h5>
+                  <table name="color">
+                      <tr>
+                          <td>                              
+                              <label class="color-box">
+                                    <div class="color-div color1">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color1" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color2">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color2" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color3">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color3" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color4">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color4" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color5">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color5" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color6">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color6" />
+                               </label>
+                          </td>
+                          <td>                              
+                              <label class="color-box">
+                                    <div class="color-div color7">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color7" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color8">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color8" />
+                               </label>
+                          </td>
+                      </tr>
+                      <tr>                          
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color9">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color9" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color10">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color10" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color11">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color11" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color12">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color12" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color13">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color13" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color14">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color14" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color15">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color15" />
+                               </label>
+                          </td>
+                          <td>
+                              <label class="color-box">
+                                    <div class="color-div color16">                                           
+                                      </div>
+                                    <input name="colorvar" type="radio" data-xmlid="theme_impacto.option_color16" />
+                               </label>
+                          </td>
+                      </tr>
+                  </table>
+
+                  
+                  <h5 class="modal-h5">Footer</h5>
+                <table name="footer">
+                    <tr>
+                        <td class=" text-center">
+                            <label class=" center-block">
+                               <div class="text-center head-box"><img class="img-responsive" src="/theme_impacto/static/src/img/customize/footer-1.jpg" alt="" /></div>
+                                <input name="footervar" type="radio" data-xmlid="theme_impacto.option_footer"/>
+                            </label>
+                        </td>
+                         <td class=" text-center">
+                            <label class=" center-block">
+                               <div class="text-center head-box"><img class="img-responsive" src="/theme_impacto/static/src/img/customize/footer-2.jpg" alt="" /></div>
+                                <input name="footervar" type="radio" data-xmlid="theme_impacto.option_footer2"/>
+                            </label>
+                        </td>
+                        <td class=" text-center">
+                            <label class=" center-block">
+                               <div class="text-center head-box"><img class="img-responsive" src="/theme_impacto/static/src/img/customize/footer-3.jpg" alt="" /></div>
+                                <input name="footervar" type="radio" data-xmlid="theme_impacto.option_footer3"/>
+                            </label>
+                        </td>
+                    </tr>
+                  </table>
+             </div>
+  </xpath>
+</template>
+
+<template id="colors" name="Colors" inherit_id="website.assets_frontend">
+  <xpath expr="." position="inside">
+    <link rel="stylesheet" href='/theme_impacto/static/src/scss/colors.scss'/>
+  </xpath>
+</template>
+
+<!-- Option layout -->
+
+<!-- <template id="option_layout_boxed" name="option_layout_boxed" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+      <link href="/theme_impacto/static/src/scss/option_layout_boxed.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template> -->
+
+<!-- Option Header -->
+
+<template id="option_header" name="option_header" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+      <link href="/theme_impacto/static/src/scss/theme_option/header-option/header-1.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template> 
+
+<template id="option_header2" name="option_header2" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+      <link href="/theme_impacto/static/src/scss/theme_option/header-option/header-2.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template> 
+
+<template id="option_header3" name="option_header3" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+      <link href="/theme_impacto/static/src/scss/theme_option/header-option/header-3.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template> 
+
+<template id="option_header4" name="option_header4" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+      <link href="/theme_impacto/static/src/scss/theme_option/header-option/header-4.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template> 
+
+<template id="option_header5" name="option_header5" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+      <link href="/theme_impacto/static/src/scss/theme_option/header-option/header-5.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template> 
+
+<template id="option_header6" name="option_header6" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+      <link href="/theme_impacto/static/src/scss/theme_option/header-option/header-6.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template> 
+
+
+<!-- ===================== 
+COLOR OPTIONS 
+======================== -->
+
+
+
+    <template id="option_color1" name="option_color1" inherit_id="website._assets_primary_variables" active="True">
+       <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-1.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="option_color2" name="option_color2" inherit_id="website._assets_primary_variables" active="False">
+       <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-2.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="option_color3" name="option_color3" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-3.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="option_color4" name="option_color4" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-4.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="option_color5" name="option_color5" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-5.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="option_color6" name="option_color6" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-6.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="option_color7" name="option_color7" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-7.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="option_color8" name="option_color8" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-8.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="option_color9" name="option_color9" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-9.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="option_color10" name="option_color10" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-10.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="option_color11" name="option_color11" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-11.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+    <template id="option_color12" name="option_color12" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-12.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+     <template id="option_color13" name="option_color13" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-13.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+     <template id="option_color14" name="option_color14" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-14.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+     <template id="option_color15" name="option_color15" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-15.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+     <template id="option_color16" name="option_color16" inherit_id="website._assets_primary_variables" active="False">
+        <xpath expr="//link[last()]" position="after">
+            <link href="/theme_impacto/static/src/scss/theme_option/colors/color-16.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+
+
+<!-- Option font Heading-->
+
+<template id="font_h_opt_1" name="font_h_opt_1" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/heading/font_h_opt_1.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_h_opt_2" name="font_h_opt_2" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/heading/font_h_opt_2.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_h_opt_3" name="font_h_opt_3" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/heading/font_h_opt_3.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_h_opt_4" name="font_h_opt_4" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/heading/font_h_opt_4.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_h_opt_5" name="font_h_opt_5" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/heading/font_h_opt_5.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_h_opt_6" name="font_h_opt_6" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/heading/font_h_opt_6.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_h_opt_7" name="font_h_opt_7" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/heading/font_h_opt_7.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+
+<!-- Option font Body-->
+<template id="font_b_opt_1" name="font_b_opt_1" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/body/font_h_opt_1.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_b_opt_2" name="font_b_opt_2" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/body/font_h_opt_2.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_b_opt_3" name="font_b_opt_3" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/body/font_h_opt_3.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_b_opt_4" name="font_b_opt_4" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/body/font_h_opt_4.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_b_opt_5" name="font_b_opt_5" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/body/font_h_opt_5.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_b_opt_6" name="font_b_opt_6" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/body/font_h_opt_6.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_b_opt_7" name="font_b_opt_7" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/body/font_h_opt_7.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+
+<!-- Option font Tagline-->
+<template id="font_t_opt_1" name="font_t_opt_1" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/tagline/font_h_opt_1.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_t_opt_2" name="font_t_opt_2" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/tagline/font_h_opt_2.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_t_opt_3" name="font_t_opt_3" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/tagline/font_h_opt_3.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_t_opt_4" name="font_t_opt_4" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/tagline/font_h_opt_4.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_t_opt_5" name="font_t_opt_5" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/tagline/font_h_opt_5.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_t_opt_6" name="font_t_opt_6" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/tagline/font_h_opt_6.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<template id="font_t_opt_7" name="font_t_opt_7" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+    <link href="/theme_impacto/static/src/scss/theme_option/fonts-option/tagline/font_h_opt_7.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+<!-- Option Header -->
+
+<template id="option_footer" name="option_footer" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+      <link href="/theme_impacto/static/src/scss/theme_option/footer-option/footer-1.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template> 
+
+<template id="option_footer2" name="option_footer2" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+      <link href="/theme_impacto/static/src/scss/theme_option/footer-option/footer-2.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template> 
+
+<template id="option_footer3" name="option_footer3" inherit_id="website.assets_frontend" active="False" customize_show="False">
+  <xpath expr="." position="inside">
+      <link href="/theme_impacto/static/src/scss/theme_option/footer-option/footer-3.scss" rel="stylesheet" type="text/scss"/>
+  </xpath>
+</template>
+</odoo>

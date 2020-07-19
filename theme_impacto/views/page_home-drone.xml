@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<record id="home-drone" model="website.page">
+    <field name="name">Home Drone</field>
+    <field name="website_published">True</field>
+    <field name="url">/home-drone</field>
+    <field name="type">qweb</field>
+    <field name="key">theme_impacto.home-drone</field>
+    <field name="arch" type="xml">
+        <t t-name="theme_bootswatch.services_page_template">
+            <t t-call="website.layout">
+				<div class="page-wrapper oe_structure">
+<section class="as-animated-slider">
+				<div id="banner-carousel-1" class="s_carousel s_carousel_default carousel slide banner indicators-right" data-ride="carousel"  data-name="Slide" data-arrow="none" style="background-image: url('/theme_impacto/static/src/img/drone/banner-bg.jpg'); background-repeat: no-repeat; background-position: center bottom; background-size: cover;">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#banner-carousel-1" data-slide-to="0" class="active"></li>
+                      <li data-target="#banner-carousel-1" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" style="background-image: url(/theme_impacto/static/src/img/drone/banner-01.jpg);" data-name="Slide">
+                        <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" >
+                          <div class="slider-text">
+                            <div class="container">
+								<div class="row">
+									   <div class="col-md-6 my-5">
+											<h1 class="letter-space-1 title-large f-weight-600">Aerial Photography</h1>
+											<p class="letter-space-10 mb-2 dark-text">Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore orem ipsum dolor s it amet, conse ctetur adipisicing elit.</p>
+											<a href="#" class="btn btn-default btn-outline">Get in Touch</a>
+										</div>
+								</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item" style="background-image: url(/theme_impacto/static/src/img/drone/banner-02.jpg);" data-name="Slide">
+                        <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" >
+                          <div class="slider-text">
+                            <div class="container">
+								<div class="row">
+								  <div class="col-md-6 my-5">
+									<h1 class="letter-space-1 title-large f-weight-600">Aerial Photography</h1>
+									<p class="letter-space-10 mb-2 dark-text">Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore orem ipsum dolor s it amet, conse ctetur adipisicing elit.</p>
+									<a href="#" class="btn btn-default btn-outline">Get in Touch</a>
+								  </div>
+								</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+</section> 
+
+<section class="section-sm pb-0" style="background-image: url('/theme_impacto/static/src/img/drone/section-bg.png'); background-repeat: no-repeat; background-position: center bottom; background-size: cover;"><div class="container">
+      <div class="row"><div class="col-md-8 offset-md-2 text-center mb-4">
+      <div class="heading-block" style="margin-bottom: 15px;">
+          <h2>Welcome to Drones</h2>
+          <img class="img-fluid" style="display: inline;" src="/theme_impacto/static/src/img/drone/title-line.png" alt="" />
+      </div>
+      <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+      </div></div>
+
+    <div class="row"> 
+        <div class="col-md-4">              
+          <div class="feature text-center image-icon px-2">
+             <div class="feature-icon theme-text"><img src="/theme_impacto/static/src/img/drone/icon-1.png" alt="" /></div>
+             <div class="feature-info">
+                <h5>Intelligent Flight System</h5>
+                <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore quaerat voluptatem.</p>
+             </div>
+          </div>
+        </div>
+        <div class="col-md-4">              
+          <div class="feature text-center image-icon px-2">
+             <div class="feature-icon theme-text"><img src="/theme_impacto/static/src/img/drone/icon-2.png" alt="" /></div>
+             <div class="feature-info">
+                <h5>Live HD View</h5>
+                <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore quaerat voluptatem.</p>
+             </div>
+          </div>
+        </div>
+        <div class="col-md-4">              
+          <div class="feature text-center image-icon px-2">
+             <div class="feature-icon theme-text"><img src="/theme_impacto/static/src/img/drone/icon-3.png" alt="" /></div>
+             <div class="feature-info">
+                <h5>Remote Controller</h5>
+                <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore quaerat voluptatem.</p>
+             </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-10"><div class="col-md-12 text-center">
+          <div class="drone-image bounce-animation"><img class="img-fluid" style="display: inline;" src="/theme_impacto/static/src/img/drone/drone-img1.png" alt="" /></div>
+      </div></div>    
+</div></section>
+
+<section class="section-xs theme-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10">
+          <h2 class="text-uppercase">CONTACT US &amp; LEARN MORE ABOUT US</h2>
+          <h3 class="f-weight-300 mb-0">Buy Now Phantom 3 Professional offer an immersive, fun flying experience</h3>
+        </div>
+        <div class="col-md-2">
+            <a href="#" class="mt-1 btn btn-default btn-md btn-outline white">Contact Us</a>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section-md"><div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="heading-block">
+            <h2>We Are Drone Pilots</h2>
+            <img class="img-fluid" style="display: inline;" src="/theme_impacto/static/src/img/drone/title-line.png" alt="" />
+          </div>
+          <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+          <div class="skill mt-1" style="margin-bottom: 0;">
+            <div class="skill-bar">
+              <div class="progress-bar" data-percent="90" data-delay="0" data-type="%">
+                <div class="progress-title">Product Quality</div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="progress-bar" data-percent="80" data-delay="0" data-type="%">
+                <div class="progress-title">Camera Quality</div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="progress-bar" data-percent="66" data-delay="0" data-type="%">
+                <div class="progress-title">Speed</div>
+              </div>
+            </div>
+            <div class="skill-bar">
+              <div class="progress-bar" data-percent="95" data-delay="0" data-type="%">
+                <div class="progress-title">24/7 Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br/>
+        <div class="col-md-7">
+          <div id="drones-carousel" class="carousel slide inds-bottom dark-control" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#drones-carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#drones-carousel" data-slide-to="1"></li>
+              <li data-target="#drones-carousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <div><img class="img-fluid" style="display: inline;" src="/theme_impacto/static/src/img/drone/carousel-img1.png" alt="" /></div>
+              </div>
+              <div class="carousel-item">
+                  <div><img class="img-fluid" style="display: inline;" src="/theme_impacto/static/src/img/drone/carousel-img2.png" alt="" /></div>
+              </div>
+              <div class="carousel-item">
+                  <div><img class="img-fluid" style="display: inline;" src="/theme_impacto/static/src/img/drone/carousel-img3.png" alt="" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div></section>
+
+
+<section class="section-md dark-bg" style="background: url('/theme_impacto/static/src/img/drone/section-bg2.jpg') no-repeat 0 0; background-size: cover; padding-bottom: 150px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 offset-md-2  text-center">
+          <a class="video popup-vimeo" title="Vimeo" href="https://vimeo.com/121153916"><img src="/theme_impacto/static/src/img/drone/play-img.png" alt="" /></a>
+          <div class="heading-block mt-1">
+              <h2>Our Powerful and Smart Drones</h2>
+              <img class="img-fluid" style="display: inline;" src="/theme_impacto/static/src/img/drone/title-line.png" alt="" />
+          </div>
+          <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container box-top">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="photobox radius-4 o-hidden">
+            <div class="photobox-img">
+              <img src="/theme_impacto/static/src/img/drone/img-01.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="photobox-content pxy-2">
+              <h4>For Beginners</h4>
+              <p>Morbi nulla malesuada sem nunc consectetuer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photobox radius-4 o-hidden">
+            <div class="photobox-img">
+              <img src="/theme_impacto/static/src/img/drone/img-02.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="photobox-content pxy-2">
+              <h4>For Most</h4>
+              <p>Morbi nulla malesuada sem nunc consectetuer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photobox radius-4 o-hidden">
+            <div class="photobox-img">
+              <img src="/theme_impacto/static/src/img/drone/img-03.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="photobox-content pxy-2">
+              <h4>For Professionals</h4>
+              <p>Morbi nulla malesuada sem nunc consectetuer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section-sm pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="counter timer-lg mb-3">
+            <div class="counter-info">
+              <span class="timer theme-text" data-to="120" data-speed="1000">1200</span>
+              <label>
+                Questions Answered
+                <span>Sed do Eiusmod tempor labore</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="counter timer-lg mb-3">
+            <div class="counter-info">
+              <span class="timer theme-text" data-to="255" data-speed="1000">255</span>
+              <label>
+                Awords Wininng
+                <span>Sed do Eiusmod tempor labore</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="counter timer-lg mb-3">
+            <div class="counter-info">
+              <span class="timer theme-text" data-to="245" data-speed="1000">245</span>
+              <label>
+                Completed Projects
+                <span>Sed do Eiusmod tempor labore</span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="section-md grey-bg"><div class="container">
+    <div class="row"><div class="col-md-8 offset-md-2 text-center mb-3">
+        <div class="heading-block" style="margin-bottom: 15px;">
+            <h2>Latest Products</h2>
+            <img class="img-fluid" style="display: inline;" src="/theme_impacto/static/src/img/drone/title-line.png" alt="" />
+        </div>
+    </div></div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="photobox product-item style2 text-center">
+                <img src="/theme_impacto/static/src/img/drone/product-img1.jpg" class="img-fluid" alt="" />
+                <div class="product-info">
+                    <h5>Magnis dis Drone</h5>
+                    <span>$ 300.00</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="photobox product-item style2 text-center">
+                <img src="/theme_impacto/static/src/img/drone/product-img2.jpg" class="img-fluid" alt="" />
+                <div class="product-info">
+                    <h5>Nullam mollis</h5>
+                    <span>$ 249.99</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="photobox product-item style2 text-center">
+                <img src="/theme_impacto/static/src/img/drone/product-img3.jpg" class="img-fluid" alt="" />
+                <div class="product-info">
+                    <h5>Vivamus quis</h5>
+                    <span>$ 250.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></section>
+
+<section class="section-md dark-bg" style="background-image: url('/theme_impacto/static/src/img/drone/section-bg3.jpg'); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;"><div class="container">
+    <div class="row"><div class="col-md-8 offset-md-2 text-center mb-3">
+      <div class="heading-block" style="margin-bottom: 15px;">
+          <h2>What Our Clients Say</h2>
+          <img class="img-fluid" style="display: inline;" src="/theme_impacto/static/src/img/drone/title-line2.png" alt="" />
+        </div>
+        <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+      </div></div>
+    <div class="row">
+      <div class="col-md-12s">
+        <div id="testimonials" class="carousel slide inds-bottom dark-control" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#testimonials" data-slide-to="0" class="active"></li>
+            <li data-target="#testimonials" data-slide-to="1"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active"><div class="row">
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image1.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image3.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+            </div></div>
+            <div class="carousel-item"><div class="row">
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image1.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image3.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div></section>
+              
+
+<section class="section-md">
+  <div class="container">
+      <div class="row"><div class="col-md-8 offset-md-2 text-center mb-4">
+      <div class="heading-block" style="margin-bottom: 15px;">
+          <h2>Our Latest News</h2>
+          <img class="img-fluid" style="display: inline;" src="/theme_impacto/static/src/img/drone/title-line.png" alt="" />
+        </div>
+        <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+      </div></div>
+
+  </div>
+</section>
+ <script>
+  $(window.document).ready(function(){
+    $("body").addClass("home-drone");
+  });
+</script>
+</div>
+
+			</t>
+        </t>
+    </field>
+</record>
+</odoo>

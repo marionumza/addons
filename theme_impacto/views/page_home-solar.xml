@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<record id="home-solar" model="website.page">
+    <field name="name">Solar Page</field>
+    <field name="website_published">True</field>
+    <field name="url">/home-solar</field>
+    <field name="type">qweb</field>
+    <field name="key">theme_impacto.home_solar</field>
+    <field name="arch" type="xml">
+	<t t-name="theme_impacto.home_solar_template">
+		<t t-call="website.layout">
+			<div class="page-wrapper oe_structure">
+
+<section class="as-animated-slider">
+				<div id="banner-carousel-1" class="s_carousel s_carousel_default carousel slide banner indicators-right" data-ride="carousel" data-arrow="none" data-name="Slide">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#banner-carousel-1" data-slide-to="0" class="active"></li>
+                      <li data-target="#banner-carousel-1" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" style="background-image: url(/theme_impacto/static/src/img/solar/banner-01.jpg);" data-name="Slide">
+                        <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" >
+                          <div class="slider-text">
+                            <div class="container">
+								<div class="row">
+									 <div class="col-md-8">
+										<h1 class="white-text letter-space-1 title-large f-weight-400">Clean Safe Renewable</h1>
+										<p class="white-text letter-space-10 mb-2">Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore orem ipsum dolor s it amet, conse ctetur adipisicing elit.</p>
+										<a href="#" class="btn btn-default white mr-1">Read More</a>
+										<a href="#" class="btn btn-default btn-outline white">Contact Us</a>
+									  </div>
+								</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item" style="background-image: url(/theme_impacto/static/src/img/solar/banner-02.jpg);" data-name="Slide">
+                        <div class="slide-item overlay" data-overlay-color="dark" data-overlay="1" >
+                          <div class="slider-text">
+                            <div class="container">
+								<div class="row">
+								  <div class="col-md-8">
+									<h1 class="white-text letter-space-1 title-large f-weight-400">Clean Safe Renewable</h1>
+									<p class="white-text letter-space-10 mb-2">Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore orem ipsum dolor s it amet, conse ctetur adipisicing elit.</p>
+									<a href="#" class="btn btn-default white mr-1">Read More</a>
+									<a href="#" class="btn btn-default btn-outline white">Contact Us</a>
+								  </div>
+								</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+</section> 
+
+<section class="section-md" style="padding-bottom: 60px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="heading-block">
+            <div class="sub-heading">About Company</div>
+            <h2>Get full range of premium Industrial <span class="f-weight-300">Services for your business</span></h2>
+          </div>
+          <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+          <ul class="list round mt-2 mb-2">
+            <li>We provide free initial consultation and support.</li>
+            <li>We work with some of the most successful businesses.</li>
+            <li>We have the professional designers team.</li>
+            <li>We provide free initial consultation and support.</li>
+          </ul>
+          <a href="#" class="btn btn-default  btn-outline">About Company</a>
+        </div>
+        <br/>
+        <div class="col-md-6">
+          <img class="img-fluid" style="width: 100%" src="/theme_impacto/static/src/img/solar/about-img.png" alt="" />
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="section-md light-blue-bg2 pos-r">
+  <div class="container">
+      <div class="row"><div class="col-md-8 offset-md-2 text-center mb-4">
+      <div class="heading-block" style="margin-bottom: 15px;">
+        <div class="sub-heading">What We Offer</div>
+        <h2>Innovate <span class="f-weight-300">Energy Solutions</span></h2>
+        </div>
+        <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+      </div></div>
+
+    <div class="row"> 
+        <div class="col-md-4">              
+          <div class="feature icon-bg text-center icon-shadow image-icon px-2">
+             <div class="feature-icon theme-text"><img src="/theme_impacto/static/src/img/solar/icon-1.png" alt="" /></div>
+             <div class="feature-info">
+                <h5>Solar Panels</h5>
+                <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore quaerat voluptatem.</p>
+             </div>
+          </div>
+        </div>
+        <div class="col-md-4">              
+          <div class="feature icon-bg text-center icon-shadow image-icon px-2">
+             <div class="feature-icon theme-text"><img src="/theme_impacto/static/src/img/solar/icon-2.png" alt="" /></div>
+             <div class="feature-info">
+                <h5>Load Shifting</h5>
+                <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore quaerat voluptatem.</p>
+             </div>
+          </div>
+        </div>
+        <div class="col-md-4">              
+          <div class="feature icon-bg text-center icon-shadow image-icon px-2">
+             <div class="feature-icon theme-text"><img src="/theme_impacto/static/src/img/solar/icon-3.png" alt="" /></div>
+             <div class="feature-info">
+                <h5>Green Equipment</h5>
+                <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore quaerat voluptatem.</p>
+             </div>
+          </div>
+        </div>
+      </div>         
+  </div>
+</section>
+
+
+<section class="section-sm dark-bg" style="background-image: url('/theme_impacto/static/src/img/industry/bg-02.jpg'); background-size: cover;">
+    <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="counter style2">
+                    <div class="clearfix">
+                      <div class="counter-icon theme-text pull-left">
+                        <i class="fa fa-clock-o"></i>
+                      </div>
+                      <div class="pull-left">
+                        <span class="timer" data-to="700" data-speed="1000">700</span>
+                      </div>
+                    </div>
+                    <div class="counter-info">
+                      <label>Hours Of Work</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="counter style2">
+                    <div class="clearfix">
+                      <div class="counter-icon theme-text pull-left">
+                        <i class="fa fa-trophy"></i>
+                      </div>
+                      <div class="pull-left">
+                        <span class="timer" data-to="250" data-speed="1000">250</span>
+                      </div>
+                    </div>
+                    <div class="counter-info">
+                      <label>Awords Wininng</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="counter style2">
+                    <div class="clearfix">
+                      <div class="counter-icon theme-text pull-left">
+                        <i class="fa fa-briefcase"></i>
+                      </div>
+                      <div class="pull-left">
+                        <span class="timer" data-to="400" data-speed="1000">400</span>
+                      </div>
+                    </div>
+                    <div class="counter-info">
+                      <label>Completed Projects</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="counter style2">
+                    <div class="clearfix">
+                      <div class="counter-icon theme-text pull-left">
+                        <i class="fa fa-smile-o"></i>
+                      </div>
+                      <div class="pull-left">
+                        <span class="timer" data-to="355" data-speed="1000">355</span>
+                      </div>
+                    </div>
+                    <div class="counter-info">
+                      <label>Happy Clients</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+</div></section>
+
+<section class="section-md"><div class="container">
+      <div class="row"><div class="col-md-8 offset-md-2 text-center mb-3">
+      <div class="heading-block" style="margin-bottom: 15px;">
+        <div class="sub-heading">What We Do</div>
+        <h2>Our Incredible <span class="f-weight-300">Projects</span></h2>
+        </div>
+        <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+      </div></div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="photobox radius-4 o-hidden">
+            <div class="photobox-img">
+              <img src="/theme_impacto/static/src/img/solar/img-01.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="photobox-content pxy-2">
+              <h4>Eco Project Tunis</h4>
+              <p>Morbi nulla malesuada sem nunc consectetuer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photobox radius-4 o-hidden">
+            <div class="photobox-img">
+              <img src="/theme_impacto/static/src/img/solar/img-02.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="photobox-content pxy-2">
+              <h4>Wind Project Dewas</h4>
+              <p>Morbi nulla malesuada sem nunc consectetuer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="photobox radius-4 o-hidden">
+            <div class="photobox-img">
+              <img src="/theme_impacto/static/src/img/solar/img-03.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="photobox-content pxy-2">
+              <h4>Water Project Porto</h4>
+              <p>Morbi nulla malesuada sem nunc consectetuer.</p>
+            </div>
+          </div>
+        </div>
+        </div>
+</div></section>
+
+<section class="section-md light-blue-bg2 pos-r"><div class="container">
+    <div class="row"><div class="col-md-8 offset-md-2 text-center mb-3">
+      <div class="heading-block" style="margin-bottom: 15px;">
+        <div class="sub-heading">Our Testimonials</div>
+        <h2>What Our <span class="f-weight-300">Clients Say</span></h2>
+        </div>
+        <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+      </div></div>
+    <div class="row">
+      <div class="col-md-12s">
+        <div id="testimonials" class="carousel slide inds-bottom dark-control" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#testimonials" data-slide-to="0" class="active"></li>
+            <li data-target="#testimonials" data-slide-to="1"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active"><div class="row">
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image1.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image3.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+            </div></div>
+            <div class="carousel-item"><div class="row">
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image1.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image2.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="testimonials style-2">
+                  <div class="author-wrap">
+                    <div class="author-info">
+                      <span class="author-name">THIS IS AMAZING!</span>
+                      <label>Nicole Jones</label>
+                    </div>
+                    <div class="author-img">
+                      <img src="/theme_impacto/static/src/img/solar/image3.jpg" alt="" />
+                    </div>
+                  </div>
+                  <div class="author-description">The countries Vokalia and Consonantia there live the blind texts. Separated they live in Bookmar ksgrove right at the coast of the Semantics,a large language ocean.</div>
+                </div>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div></section>
+            
+<section class="section-md">
+  <div class="container">
+      <div class="row"><div class="col-md-8 offset-md-2 text-center mb-4">
+      <div class="heading-block" style="margin-bottom: 15px;">
+        <div class="sub-heading">What We Do</div>
+        <h2>Our <span class="f-weight-300">Latest News</span></h2>
+        </div>
+        <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+      </div></div>
+
+  </div>
+</section>
+   <script>
+  $(window.document).ready(function(){
+    $("body").addClass("home-solar");
+  });
+</script>
+</div>
+</t>
+	</t>
+</field>
+</record>
+</odoo>

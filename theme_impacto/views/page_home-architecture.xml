@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<record id="home-architecture" model="website.page">
+    <field name="name">Architecture Page</field>
+    <field name="website_published">True</field>
+    <field name="url">/home-architecture</field>
+    <field name="type">qweb</field>
+    <field name="key">theme_impacto.home_architecture</field>
+    <field name="arch" type="xml">
+	<t t-name="theme_impacto.home_architecture_template">
+		<t t-call="website.layout">
+    <div class="page-wrapper oe_structure">
+<section class="as-animated-slider">
+	<div id="architecture-carousel" class="s_carousel s_carousel_default carousel slide banner indicators-right" data-ride="carousel" data-arrow="none">
+  <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#architecture-carousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#architecture-carousel" data-slide-to="1"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" style="background-image: url(/theme_impacto/static/src/img/architecture/banner-01.jpg);" data-name="Slide">
+                        <div class="slide-item">
+                          <div class="slider-text">
+                            <div class="container">
+                              <div class="row">
+								<div class="col-md-6">
+									<span class="divider big"/>
+									<h2 class="text-uppercase white-text title-large f-weight-600">Design and <span class="theme-text">renovation</span> of Flat in</h2>
+									<p class="white-text letter-space-10 mb-2">Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore orem ipsum dolor s it amet, conse ctetur adipisicing elit.</p>
+									<a href="#" class="btn btn-default no-radius btn-outline white mt-1">Read More</a>
+								  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item" style="background-image: url(/theme_impacto/static/src/img/architecture/banner-02.jpg);" data-name="Slide">
+                        <div class="slide-item">
+                          <div class="slider-text">
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-md-6 offset-md-6">
+									<span class="divider big"/>
+									<h2 class="text-uppercase white-text title-large f-weight-600">Design and <span class="theme-text">renovation</span> of Flat in</h2>
+									<p class="white-text letter-space-10 mb-2">Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore orem ipsum dolor s it amet, conse ctetur adipisicing elit.</p>
+									<a href="#" class="btn btn-default no-radius btn-outline white mt-1">Read More</a>
+								  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+	</div>
+</section>
+      <section class="section-md dark-bg" style="background: #16191c;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 offset-md-2 text-center mb-4">
+              <div class="heading-block" style="margin-bottom: 15px;">
+                <span class="divider"/>
+                <h2 class="title text-uppercase">We Build Our Projects with Your Dreams and Ideas.</h2>
+              </div>
+              <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="feature text-center image-icon px-2">
+                <div class="feature-icon theme-text">
+                  <img src="/theme_impacto/static/src/img/architecture/icon-1.png" alt="" pagespeed_url_hash="4219164105" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+                </div>
+                <div class="feature-info">
+                  <div class="sub-heading theme-text mb-2">Your Imagination</div>
+                  <h4>Interior Design</h4>
+                  <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore quaerat voluptatem.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature text-center image-icon px-2">
+                <div class="feature-icon theme-text">
+                  <img src="/theme_impacto/static/src/img/architecture/icon-2.png" alt="" pagespeed_url_hash="218696730" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+                </div>
+                <div class="feature-info">
+                  <div class="sub-heading theme-text mb-2">Your Imagination</div>
+                  <h4>Planning</h4>
+                  <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore quaerat voluptatem.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature text-center image-icon px-2">
+                <div class="feature-icon theme-text">
+                  <img src="/theme_impacto/static/src/img/architecture/icon-3.png" alt="" pagespeed_url_hash="513196651" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+                </div>
+                <div class="feature-info">
+                  <div class="sub-heading theme-text mb-2">Your Imagination</div>
+                  <h4>Project Management</h4>
+                  <p>Sed quia non numquam eius modi tempora incidunt ut labore et dolore quaerat voluptatem.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="p-0">
+        <img class="img-responsive" src="/theme_impacto/static/src/img/architecture/section-bg.jpg" alt="" pagespeed_url_hash="2677164793" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+      </section>
+      <section class="p-0" style="background: #16191c;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12  text-center">
+              <div style="background: #ffffff;" class="box-top pt-7">
+                <div class="row">
+                  <div class="col-md-8 offset-md-2  text-center">
+                    <div class="heading-block mt-1">
+                      <span class="divider"/>
+                      <h2 class="text-uppercase">Touch modern concepts and Designs with Luxe Architecture.</h2>
+                    </div>
+                    <p class="m-0">We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12"><div class="pxy-5 ">
+                    <div class="isotope columns-3 popup-gallery clearfix" style="position: relative; height: 977.5px;">
+                      <div class="grid-item" style="position: absolute; left: 50px; top: 50px;">
+                        <div class="portfolio-item">
+                          <img src="/theme_impacto/static/src/img/architecture/gallery/1.jpg" alt="Design"/>
+                          <div class="portfolio-overlay">
+                            <h4>
+                              <a href="#">Somerset</a>
+                            </h4>
+                            <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+                          </div>
+                          <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/architecture/gallery/1.jpg">
+                            <i class="fa fa-arrow-right" aria-hidden="true"/>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item" style="position: absolute; left: 435px; top: 50px;">
+                        <div class="portfolio-item">
+                          <img src="/theme_impacto/static/src/img/architecture/gallery/2.jpg" alt="Design"/>
+                          <div class="portfolio-overlay">
+                            <h4>
+                              <a href="#">Wimbledon</a>
+                            </h4>
+                            <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+                          </div>
+                          <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/architecture/gallery/2.jpg">
+                            <i class="fa fa-arrow-right" aria-hidden="true"/>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item" style="position: absolute; left: 50px; top: 342px;">
+                        <div class="portfolio-item">
+                          <img src="/theme_impacto/static/src/img/architecture/gallery/3.jpg" alt="Design"/>
+                          <div class="portfolio-overlay">
+                            <h4>
+                              <a href="#">Holly</a>
+                            </h4>
+                            <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+                          </div>
+                          <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/architecture/gallery/3.jpg">
+                            <i class="fa fa-arrow-right" aria-hidden="true"/>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item" style="position: absolute; left: 435px; top: 342px;">
+                        <div class="portfolio-item">
+                          <img src="/theme_impacto/static/src/img/architecture/gallery/4.jpg" alt="Design"/>
+                          <div class="portfolio-overlay">
+                            <h4>
+                              <a href="#">Water</a>
+                            </h4>
+                            <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+                          </div>
+                          <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/architecture/gallery/4.jpg">
+                            <i class="fa fa-arrow-right" aria-hidden="true"/>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item" style="position: absolute; left: 50px; top: 635px;">
+                        <div class="portfolio-item">
+                          <img src="/theme_impacto/static/src/img/architecture/gallery/5.jpg" alt="Design"/>
+                          <div class="portfolio-overlay">
+                            <h4>
+                              <a href="#">Stefan</a>
+                            </h4>
+                            <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+                          </div>
+                          <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/architecture/gallery/5.jpg">
+                            <i class="fa fa-arrow-right" aria-hidden="true"/>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="grid-item" style="position: absolute; left: 435px; top: 635px;">
+                        <div class="portfolio-item">
+                          <img src="/theme_impacto/static/src/img/architecture/gallery/6.jpg" alt="Design"/>
+                          <div class="portfolio-overlay">
+                            <h4>
+                              <a href="#">Fairy</a>
+                            </h4>
+                            <span class="theme-text">Lorem ipsum dolor sit amet...</span>
+                          </div>
+                          <a class="popup popup-img" title="Project" href="/theme_impacto/static/src/img/architecture/gallery/6.jpg">
+                            <i class="fa fa-arrow-right" aria-hidden="true"/>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-md dark-bg" style="background: #16191c;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 pr-5">
+              <div class="heading-block">
+                <span class="divider"/>
+                <h2 class="text-uppercase">We make creative projects for awesome clients</h2>
+              </div>
+              <p class="mb-2 lead">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born.</p>
+              <p>Lorem ipsum dolor s it amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore orem ipsum dolor s it amet, conse ctetur adipisicing elit.</p>
+            </div>
+            <div class="col-md-6">
+              <div class="skill" style="margin-bottom: 0;">
+                <div class="skill-bar">
+                  <div class="progress-bar" data-percent="96" data-delay="0" data-type="%">
+                    <div class="progress-title">General Consulting</div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="progress-bar" data-percent="80" data-delay="0" data-type="%">
+                    <div class="progress-title">Construction Management</div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="progress-bar" data-percent="70" data-delay="0" data-type="%">
+                    <div class="progress-title">Maintenance Services</div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="progress-bar" data-percent="60" data-delay="0" data-type="%">
+                    <div class="progress-title">Design &amp; Build</div>
+                  </div>
+                </div>
+                <div class="skill-bar">
+                  <div class="progress-bar" data-percent="40" data-delay="0" data-type="%">
+                    <div class="progress-title">Special Projects</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s_latest_posts section-md dark-bg" style="background: #1d2023;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 offset-md-2 text-center mb-4">
+             <div class="heading-block" style="margin-bottom: 15px;">
+               	<span class="divider"/>
+               	<h2 class="text-uppercase">Our Latest News</h2>
+               </div>
+               <p>We make websites are the number one ranked design, build and marketing team. We build custom, unique, creative and beautiful websites that will make you more successful.</p>
+             </div>
+          </div>
+          <div class="js_get_posts" data-loading="true" data-template="theme_impacto.media_list_template"/>
+        </div>
+      </section>
+      <script>$(window.document).ready(function(){$("body").addClass("architecture-page");});</script>
+    </div>
+  </t>
+	</t>
+</field>
+</record>
+</odoo>
+
+
