@@ -9,7 +9,7 @@
 }
 
 .o_coa_level {
-    @include o_coa_lines($border-width: 1px,$font-weight: bold, $border-top-style: solid, $border-bottom-style: groove);
+    @include o_coa_lines($border-width: 1px, $color: $o-brand-odoo, $font-weight: bold, $border-top-style: solid, $border-bottom-style: groove);
 }
 .o_report_line_header {
     padding-left: 10px;

@@ -80,24 +80,23 @@ class AccountAccount(models.Model):
     debit = fields.Float(compute="compute_values",digits=dp.get_precision('Account'), string='Debit')
     parent_id = fields.Many2one('account.account','Parent Account',ondelete="set null")
     child_ids = fields.One2many('account.account','parent_id', 'Child Accounts')
-    parent_left = fields.Integer('Left Parent', index=1)
-    parent_right = fields.Integer('Right Parent', index=1)
-    parent_path = fields.Char(index=True) 
-
+#     parent_left = fields.Integer('Left Parent', index=1)
+#     parent_right = fields.Integer('Right Parent', index=1)
+    parent_path = fields.Char(index=True)
     
     
     _parent_name = "parent_id"
     _parent_store = True
     _parent_order = 'code, name'
-    _order = 'parent_left'
+    _order = 'code, id'
     
     
-    @api.model
-    def search(self, args, offset=0, limit=None, order=None, count=False):
-        context = self._context or {}
-        if not context.get('show_parent_account',False):
-            args += [('user_type_id.type', '!=', 'view')]
-        return super(AccountAccount, self).search(args, offset, limit, order, count=count)
+    # @api.model
+    # def search(self, args, offset=0, limit=None, order=None, count=False):
+    #     context = self._context or {}
+    #     if not context.get('show_parent_account',False):
+    #         args += [('user_type_id.type', '!=', 'view')]
+    #     return super(AccountAccount, self).search(args, offset, limit, order, count=count)
     
 class AccountJournal(models.Model):
     _inherit = "account.journal"

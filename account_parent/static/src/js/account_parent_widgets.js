@@ -3,7 +3,7 @@ odoo.define('account_parent.CoAWidget', function (require) {
 
 var core = require('web.core');
 var Widget = require('web.Widget');
-var pyeval = require('web.pyeval');
+var pyUtils = require('web.py_utils');
 
 var QWeb = core.qweb;
 
@@ -23,6 +23,7 @@ var CoAWidget = Widget.extend({
         return this._super.apply(this, arguments);
     },
     boundLink: function(e) {
+    	e.preventDefault();
     	var self = this
     	var account_id = $(e.currentTarget).data('id');
     	var wiz_id = $(e.currentTarget).data('wiz_id');
@@ -33,7 +34,7 @@ var CoAWidget = Widget.extend({
             args: [parseInt(wiz_id, 10), parseInt(account_id, 10)],
         })
             .then(function (result) {
-            	var results = pyeval.eval_domains_and_contexts({
+            	var results = pyUtils.eval_domains_and_contexts({
                     domains: [result],
                     contexts: [user_context],
                     group_by_seq: [],

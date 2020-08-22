@@ -26,7 +26,7 @@ This module will be very useful for those who are still using v7/v8 because of t
     'author': 'Steigend IT Solutions',
     'website': 'http://www.steigendit.com',
     'category': 'Accounting &amp; Finance',
-    'version': '11.0.1.6.0',
+    'version': '12.0.1.0.8',
     'depends': ['account'],
     'data': [
         'security/account_parent_security.xml',
@@ -44,4 +44,6 @@ This module will be very useful for those who are still using v7/v8 because of t
     'currency': 'EUR',
     'price': '50.0',
     'installable':True,
+    'auto_install': True,
+    'post_init_hook': '_assign_account_parent',
 }

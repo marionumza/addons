@@ -117,6 +117,19 @@ class AccountChartTemplate(models.Model):
             account = account_obj.search([('code','like',"%s%%"%company.cash_account_code_prefix),
                                                               ('id','!=',parent_account_id.id),('company_id','=',company.id)])
             account and account.write({'parent_id':parent_account_id.id})
+        if company.transfer_account_code_prefix:
+            if code_account_dict.get(company.transfer_account_code_prefix,False):
+                parent_account_id = code_account_dict.get(company.transfer_account_code_prefix,False)
+            else:
+                parent_account_id = account_obj.with_context({'show_parent_account':True}).search([
+                    ('code','=',company.transfer_account_code_prefix),
+                    ('user_type_id.type', '=', 'view'),
+                    ('company_id','=',company.id)], limit=1)
+            
+            account = account_obj.search([('code','like',"%s%%"%company.transfer_account_code_prefix),
+                                                              ('id','!=',parent_account_id.id),('company_id','=',company.id)])
+            account and account.write({'parent_id':parent_account_id.id})
+
 #         parent_account_id = account_obj.with_context({'show_parent_account':True}).search([('parent_id','=',False),
 #                                                              ('user_type_id','=',view_liquidity_type.id),('company_id','=',company.id)], limit=1)
 #         account = account_obj.search([('code','=',"999999"),('company_id','=',company.id)])
@@ -135,4 +148,9 @@ class AccountChartTemplate(models.Model):
             parent_account = self.env.ref(parent_account_xml_id, raise_if_not_found=False)
             account.write({'parent_id':parent_account.id})
         return True
+    
+    def load_for_current_company(self, sale_tax_rate, purchase_tax_rate):
+        res = super(AccountChartTemplate, self).load_for_current_company(sale_tax_rate=sale_tax_rate, purchase_tax_rate=purchase_tax_rate)
+        self.update_generated_account({},self.code_digits,self.env.user.company_id)
+        return res
     

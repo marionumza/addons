@@ -19,7 +19,7 @@ class CoAReportController(http.Controller):
 
     @http.route('/account_parent/<string:output_format>/<string:report_name>/<int:report_id>', type='http', auth='user')
     def report(self, output_format, report_name, token, report_id=False, **kw):
-        coa = request.env['account.open.chart'].sudo().browse(report_id)
+        coa = request.env['account.open.chart'].browse(report_id)
 #         line_data = json.loads(kw['data'])
         try:
             if output_format == 'pdf':
@@ -149,6 +149,6 @@ class ExcelExportView(ExcelExport):
             headers=[
                         ('Content-Type', self.content_type),
                         ('Content-Disposition', 'attachment; filename=coa_report.xls;')
-                    ],
+            ],
             cookies={'fileToken': token}
         )

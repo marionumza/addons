@@ -45,16 +45,17 @@
                     <span class="text-center"><h1>Chart Of Account Not Loaded.</h1></span>
                 </t>
                 <t t-if="heading">
-                    <table  class="o_list_view table table-condensed">
+                    <table  class="o_list_view table table-sm table-hover table-striped o_list_view_ungrouped">
                         <thead>
                             <tr>
                                 <th class="text-center">Code</th>
                                 <th class="text-center">Name</th>
                                 <th class="text-center">Type</th>
                                 <th class="text-center">Account Currency</th>
-                                <th class="text-center">Debit</th>
-                                <th class="text-center">Credit</th>
-                                <th class="text-center">Balance</th>
+<!--                                 <th class="o_report_line_header">Company</th> -->
+                                <th  style="text-align: right;">Debit</th>
+                                <th  style="text-align: right;">Credit</th>
+                                <th  style="text-align: right;">Balance</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -68,7 +69,7 @@
 
     <template id="assets_coa_print_report" inherit_id="web.assets_common" active="True">
         <xpath expr="." position="inside">
-            <link rel="stylesheet" href="/account_parent/static/src/less/coa_heirarchy.scss" />
+            <link rel="stylesheet" href="/account_parent/static/src/scss/coa_heirarchy.scss" />
         </xpath>
     </template>
 
@@ -82,25 +83,29 @@
 
     <template id="report_coa_body_pdf">
     	<t t-call="web.html_container">
+<!-- 	        <t t-set="data_report_margin_top" t-value="12"/> -->
+<!-- 	        <t t-set="data_report_header_spacing" t-value="9"/> -->
+<!-- 	        <t t-set="data_report_dpi" t-value="110"/> -->
+<!-- 	        <t t-call="web.internal_layout"> -->
             	<div class="page">
 	        		<span t-if="heading" class="text-center"><h2>Chart of Account</h2></span>
-	        		<div class="row mt32">
-	                    <div class="col-xs-4">
+	        		<div class="row mt32 mb32">
+	                    <div class="col-auto">
 	                        <strong>Company:</strong>
 	                          <p t-esc="heading"/>
 	                    </div>
-	                    <div class="col-xs-4">
+	                    <div class="col-auto">
 	                        <strong>Target Moves:</strong>
 	                        <p t-if="user_data['state'] == 'all'">All Entries</p>
 	                        <p t-if="user_data['state'] == 'posted'">All Posted Entries</p>
 	                    </div>
-	                    <div class="col-xs-4">
+	                    <div class="col-auto">
 	                        <t t-if="user_data['date_from']"><strong>Date from :</strong> <span t-esc="user_data['date_from']"/><br/></t>
 	                        <t t-if="user_data['date_to']"><strong>Date to :</strong> <span t-esc="user_data['date_to']"/></t>
 	                    </div>
 	                </div>
             
-                	<table class="table table-condensed">
+                	<table t-attf-class="table table-sm">
 	                    <thead>
 	                        <tr class="text-center">
 	                            <th class="text-center">Code</th>
@@ -148,8 +153,8 @@
 					        </t>
 	                    </tbody>
                 	</table>
-                	<p style="page-break-inside: avoid"/>
         		</div>
+<!--         	</t> -->
         </t>
     </template>
 </odoo>

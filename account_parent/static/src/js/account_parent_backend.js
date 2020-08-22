@@ -1,9 +1,10 @@
 odoo.define('account_parent.coa_heirarchy', function (require) {
 'use strict';
 
+var AbstractAction = require('web.AbstractAction');
 var core = require('web.core');
 var session = require('web.session');
-var Widget = require('web.Widget');
+//var Widget = require('web.Widget');
 var ControlPanelMixin = require('web.ControlPanelMixin');
 var session = require('web.session');
 var CoAWidget = require('account_parent.CoAWidget');
@@ -12,7 +13,7 @@ var crash_manager = require('web.crash_manager');
 
 var QWeb = core.qweb;
 
-var coa_heirarchy = Widget.extend(ControlPanelMixin, {
+var coa_heirarchy = AbstractAction.extend(ControlPanelMixin, {
     // Stores all the parameters of the action.
     init: function(parent, action) {
         this.actionManager = parent;
@@ -38,16 +39,15 @@ var coa_heirarchy = Widget.extend(ControlPanelMixin, {
             this.report_widget = new CoAWidget(this, this.given_context);
             def = this.report_widget.appendTo(this.$el);
         }
-        def.then(function () {
+        return def.then(function () {
             self.report_widget.$el.html(self.html);
-//            if(self.given_context['ttype'] == 'downstream'){
-//                self.report_widget.$el.find('.o_report_heading').html('<h1>Downstream Traceability</h1>');
-//            }
         });
     },
     start: function() {
-        this.set_html();
-        return this._super();
+    	var self = this;
+        return this._super.apply(this, arguments).then(function () {
+            self.set_html();
+        });
     },
     // Fetches the html and is previous report.context if any, else create it
     get_html: function() {
@@ -71,7 +71,7 @@ var coa_heirarchy = Widget.extend(ControlPanelMixin, {
             this.renderButtons();
         }
         var status = {
-            breadcrumbs: this.actionManager.get_breadcrumbs(),
+//            breadcrumbs: this.actionManager.get_breadcrumbs(),
             cp_content: {$buttons: this.$buttons},
         };
         return this.update_control_panel(status);
@@ -120,6 +120,7 @@ var coa_heirarchy = Widget.extend(ControlPanelMixin, {
         		// pdf output
                 var $element = $(parent_self.$el[0]).find('.table-responsive tbody tr');
                 var dict = [];
+
                 $element.each(function( index ) {
                     var $el = $($element[index]);
                     dict.push({
@@ -131,7 +132,7 @@ var coa_heirarchy = Widget.extend(ControlPanelMixin, {
                     });
                 });
                 framework.blockUI();
-                var url_data = parent_self.controller_url.replace('active_id', parent_self.given_context['active_id']);
+                var url_data = parent_self.controller_url.replace('active_id', parent_self.given_context['active_id']);//self.given_context.active_id
                 url_data = url_data.replace('output_format', 'pdf')
                 session.get_file({
                     url: url_data,

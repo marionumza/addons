@@ -100,25 +100,6 @@ class OpenAccountChart(models.TransientModel):
         return lines
 
     @api.model
-    def get_links(self, move_line):
-        res_model = ''
-        ref = ''
-        res_id = False
-        if move_line.picking_id:
-            res_model = 'stock.picking'
-            res_id = move_line.picking_id.id
-            ref = move_line.picking_id.name
-        elif move_line.move_id.inventory_id:
-            res_model = 'stock.inventory'
-            res_id = move_line.move_id.inventory_id.id
-            ref = 'Inv. Adj.: ' + move_line.move_id.inventory_id.name
-        elif move_line.move_id.scrapped and move_line.move_id.scrap_ids:
-            res_model = 'stock.scrap'
-            res_id = move_line.move_id.scrap_ids[0].id
-            ref = move_line.move_id.scrap_ids[0].name
-        return res_model, res_id, ref
-
-    @api.model
     def _amount_to_str(self, value, currency):
         """ workaround to apply the float rounding logic of t-esc on data prepared server side """
         return self.env['ir.qweb.field.monetary'].value_to_html(value, {'display_currency': currency})
@@ -127,15 +108,14 @@ class OpenAccountChart(models.TransientModel):
     def _m2o_to_str(self, value):
         return self.env['ir.qweb.field.many2one'].value_to_html(value,{}) or ''
 
-    
-    
     def make_dict_head(self, level, parent_id,wiz_id=False, account=False):
+        type_view_id = self.env.ref('account_parent.data_account_type_view')
         data = []
         data = [{
             'id': account.id,
             'wiz_id': wiz_id,
             'level': level,
-            'unfoldable': account.user_type_id.type == 'view' and True or False,
+            'unfoldable': account.user_type_id.id == type_view_id.id or account.user_type_id.type == 'view',
             'model_id': account.id,
             'parent_id': parent_id,
             'code': account.code,
@@ -151,12 +131,13 @@ class OpenAccountChart(models.TransientModel):
         return data
     
     def make_xls_dict_head(self, level, parent_id,wiz_id=False, account=False):
+        type_view_id = self.env.ref('account_parent.data_account_type_view')
         data = []
         data = [{
             'id': account.id,
             'wiz_id': wiz_id,
             'level': level,
-            'unfoldable': account.user_type_id.type == 'view' and True or False,
+            'unfoldable': account.user_type_id.id == type_view_id.id or account.user_type_id.type == 'view',
             'model_id': account.id,
             'parent_id': parent_id,
             'code': account.code,
@@ -194,7 +175,7 @@ class OpenAccountChart(models.TransientModel):
                 'unfoldable': data['unfoldable'],
             })
         return lines
-
+    
     @api.model
     def _lines(self, wiz_id=None, line_id=None, model_id=False, level=0, obj_ids=[], **kw):
         context = self._context
@@ -273,10 +254,11 @@ class OpenAccountChart(models.TransientModel):
 
 # class WizardMultiChartsAccounts(models.TransientModel):
 #     _inherit = 'wizard.multi.charts.accounts'
-
+# 
 #     @api.multi
 #     def execute(self):
 #         res = super(WizardMultiChartsAccounts, self).execute()
 #         self.chart_template_id.update_generated_account({},self.code_digits,self.company_id)
 #         return res
     
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

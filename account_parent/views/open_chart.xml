@@ -39,7 +39,7 @@
 	</record>
 
 	<menuitem action="action_account_chart"
-		id="menu_action_account_chart" parent="account.menu_finance_entries"
-		sequence="21" />
+		id="menu_action_account_chart" parent="account.menu_finance_reports"
+		sequence="1" />
 
 </odoo>
