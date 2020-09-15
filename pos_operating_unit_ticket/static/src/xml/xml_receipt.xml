@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="XmlReceipt">
+        <t t-jquery=".afip-info" t-operation="before">
+            <t t-if="widget.pos.config.show_operating_unit">
+                <t t-esc="widget.pos.config.operating_unit_id[1]"/><br />
+            </t>
+        </t>
+    </t>
+
+</templates>
+

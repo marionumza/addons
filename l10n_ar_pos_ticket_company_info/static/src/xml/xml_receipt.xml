@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="XmlReceipt">
+        <t t-jquery=".afip-info" t-operation="before">
+            <t t-if="widget.pos.config.show_report_header">
+                <t t-esc="order.report_header"/><br />
+            </t>
+            <t t-if="widget.pos.config.show_report_company_name">
+                <t t-esc="order.report_company_name"/><br />
+            </t>
+
+        </t>
+    </t>
+
+</templates>
+
