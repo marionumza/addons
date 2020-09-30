@@ -70,7 +70,7 @@ class ClearDataModel(models.Model):
         return True
     
     
-    @api.multi
+    #@api.multi
     def _do_clear_by_model_name(self,model_name):
         self.ensure_one()
         model_obj=self.env.get(model_name,None)
@@ -80,7 +80,7 @@ class ClearDataModel(models.Model):
         sql="delete from %s" % model_obj._table
         self._cr.execute(sql)
     
-    @api.multi
+    #@api.multi
     def _do_clear_ir_sequence(self):
         cr=self._cr
         
