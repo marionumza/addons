@@ -25,7 +25,7 @@ class ClearDataModel(models.Model):
     auto_clear_ir_sequence=fields.Boolean(string="Auto clear ir sequence",defualt=True)
     
     
-    @api.multi
+    #@api.multi
     def action_do_clear(self):
         self.ensure_one()
         self._do_clear_internal_model()
@@ -36,7 +36,7 @@ class ClearDataModel(models.Model):
         return True
     
     
-    @api.multi
+    #@api.multi
     def _do_clear_model_relation(self):
         
         self.ensure_one()
@@ -45,7 +45,7 @@ class ClearDataModel(models.Model):
             if model_id:
                self._do_clear_by_model_name(model_id.model)
         
-    @api.multi
+    #@api.multi
     def _do_clear_internal_model(self):
         
         self.ensure_one()
