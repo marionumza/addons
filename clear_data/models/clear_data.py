@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 
+'''
+Create Date:2017��9��1��
+
+Author     :Administrator
+'''
 import datetime
 import dateutil
 import logging
@@ -21,11 +26,11 @@ class ClearDataModel(models.Model):
     
     name=fields.Char(string="Model group")
     internal_model_list=fields.Char(string='Always clear',descripton="Model in this list do not need installed. style like this:[string,string,...]")
-    model_clear_ids=fields.Many2many("ir.model",'clear_data_ir_model_rel','group_id','model_id',domain=[('model','not in',['clear.data.model'])],ondelete="set null")
+    model_clear_ids=fields.Many2many("ir.model",'clear_data_ir_model_rel','group_id','model_id',domain=[('model','not in',['clear.data.model'])],ondelete="cascade")
     auto_clear_ir_sequence=fields.Boolean(string="Auto clear ir sequence",defualt=True)
     
     
-    #@api.multi
+    
     def action_do_clear(self):
         self.ensure_one()
         self._do_clear_internal_model()
@@ -36,7 +41,7 @@ class ClearDataModel(models.Model):
         return True
     
     
-    #@api.multi
+    
     def _do_clear_model_relation(self):
         
         self.ensure_one()
@@ -44,8 +49,8 @@ class ClearDataModel(models.Model):
         for model_id in self.model_clear_ids:            
             if model_id:
                self._do_clear_by_model_name(model_id.model)
-        
-    #@api.multi
+      
+    
     def _do_clear_internal_model(self):
         
         self.ensure_one()
@@ -70,7 +75,7 @@ class ClearDataModel(models.Model):
         return True
     
     
-    #@api.multi
+    
     def _do_clear_by_model_name(self,model_name):
         self.ensure_one()
         model_obj=self.env.get(model_name,None)
@@ -80,12 +85,14 @@ class ClearDataModel(models.Model):
         sql="delete from %s" % model_obj._table
         self._cr.execute(sql)
     
-    #@api.multi
+    
     def _do_clear_ir_sequence(self):
         cr=self._cr
         
+        #清除不标准
         cr.execute("update ir_sequence set number_next=1")
         cr.execute("update ir_sequence_date_range set number_next=1")
+        #清除标准
         seq_list=self.env['ir.sequence'].search([('implementation','=','standard')])
         if seq_list:
             for seq in seq_list:

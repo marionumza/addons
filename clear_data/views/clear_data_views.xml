@@ -68,7 +68,7 @@
    
     
     
-    <menuitem name="model group list" id="clear_data_model_list" parent="clear_data.menu_root" action="action_clear_data_list"  groups="base.group_no_one"/>
+    <menuitem name="model group list" id="clear_data_model_list" parent="clear_data.menu_root" action="action_clear_data_list"/>
    
     
     <!-- actions -->
