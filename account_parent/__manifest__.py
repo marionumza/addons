@@ -34,6 +34,7 @@ This module will be very useful for those who are still using v7/v8 because of t
         'views/open_chart.xml',
         'views/account_parent_template.xml',
         'views/report_coa_heirarchy.xml',
+        'data/account_type_data.xml'
     ],
     'demo': [
     ],
