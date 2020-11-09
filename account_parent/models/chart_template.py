@@ -31,7 +31,6 @@ class AccountChartTemplate(models.Model):
             account_pool.browse(account_id).write({'parent_id': account_parent_id})
         return account_template_account_dict
     
-    @api.multi
     def update_generated_account(self, tax_template_ref=[], code_digits=1, company=False,importing_parent=False):
         """ This method for generating parent accounts from templates.
 
