@@ -6,6 +6,7 @@
             <field name="name">View</field>
             <field name="type">view</field>
             <field name="note">Used only for parent accounts</field>
+            <field name="internal_group">Selection</field>
             <field name="include_initial_balance" eval="False" />
         </record>
     </data>
