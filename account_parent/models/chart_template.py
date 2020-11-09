@@ -17,7 +17,6 @@ class AccountAccountTemplate(models.Model):
 class AccountChartTemplate(models.Model):
     _inherit = "account.chart.template"
     
-    @api.multi
     def generate_account(self, tax_template_ref, acc_template_ref, code_digits, company):
         account_tmpl_pool = self.env['account.account.template']
         account_pool = self.env['account.account']
