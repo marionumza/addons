@@ -55,7 +55,6 @@ class AccountAccount(models.Model):
         return domain
     
     
-    @api.multi
     @api.depends('move_line_ids','move_line_ids.amount_currency','move_line_ids.debit','move_line_ids.credit')
     def compute_values(self):
         default_domain = self._move_domain_get()
