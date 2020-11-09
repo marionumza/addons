@@ -32,7 +32,6 @@ This module will be very useful for those who are still using v7/v8 because of t
         'security/account_parent_security.xml',
         'views/account_view.xml',
         'views/open_chart.xml',
-        'data/account_type_data.xml',
         'views/account_parent_template.xml',
         'views/report_coa_heirarchy.xml',
     ],
