@@ -39,7 +39,6 @@ class OpenAccountChart(models.TransientModel):
         result['active_id'] = self.id
         return result
     
-    @api.model
     def build_domain(self, wiz_id=None, account_id=None):
         result = []
         context = dict(self.env.context)
@@ -50,7 +49,6 @@ class OpenAccountChart(models.TransientModel):
             result.append(('account_id','child_of',[account_id]))
         return result
 
-    @api.multi
     def account_chart_open_window(self):
         """
         Opens chart of Accounts
@@ -71,7 +69,6 @@ class OpenAccountChart(models.TransientModel):
         result['context'] = str(used_context)
         return result
 
-    @api.model
     def get_all_lines(self, line_id=False, level=1):
         self.ensure_one()
         result = []
@@ -80,7 +77,6 @@ class OpenAccountChart(models.TransientModel):
             result.extend(self.get_all_lines(line_id=line['model_id'], level=line['level']+1))
         return result
 
-    @api.model
     def get_lines(self, wiz_id=None, line_id=None, **kw):
         context = dict(self.env.context)
         if wiz_id:
@@ -99,7 +95,6 @@ class OpenAccountChart(models.TransientModel):
         lines = self.final_vals_to_lines(final_vals, level)
         return lines
 
-    @api.model
     def _amount_to_str(self, value, currency):
         """ workaround to apply the float rounding logic of t-esc on data prepared server side """
         return self.env['ir.qweb.field.monetary'].value_to_html(value, {'display_currency': currency})
@@ -152,7 +147,6 @@ class OpenAccountChart(models.TransientModel):
             }]
         return data
 
-    @api.model
     def final_vals_to_lines(self, final_vals, level):
         lines = []
         for data in final_vals:
@@ -176,7 +170,6 @@ class OpenAccountChart(models.TransientModel):
             })
         return lines
     
-    @api.model
     def _lines(self, wiz_id=None, line_id=None, model_id=False, level=0, obj_ids=[], **kw):
         context = self._context
         final_vals = []
@@ -188,7 +181,6 @@ class OpenAccountChart(models.TransientModel):
                 final_vals += self.make_dict_head(level,wiz_id=wiz_id,  parent_id=line_id, account=account)
         return final_vals
 
-    @api.model
     def get_pdf_lines(self, wiz_id):
         lines = self.browse(wiz_id).get_all_lines()
         return lines
@@ -247,7 +239,6 @@ class OpenAccountChart(models.TransientModel):
         result['html'] = self.env.ref('account_parent.report_coa_heirarchy').render(rcontext)
         return result
 
-    @api.model
     def get_html(self, given_context=None):
         return self.with_context(given_context)._get_html()
 
