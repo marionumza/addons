@@ -447,7 +447,7 @@ class HtmlFormController(http.Controller):
         for field_name, field_value in kw.items():
                 values[field_name] = field_value
 
-        action = request.env['html.form.snippet.action'].browse(char(values['action_id']))
+        action = request.env['html.form.snippet.action'].browse(int(values['action_id']))
 
         my_model = request.env['ir.model'].search([('model', '=', action.action_model)])
         html_form = request.env['html.form'].create({'name': 'My New Form', 'model_id': my_model.id})
