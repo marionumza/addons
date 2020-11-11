@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_template_form_view_bom_button" model="ir.ui.view">
+        <field name="name">product.template.production.statement.line</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="groups_id" eval="[(4, ref('mrp.group_mrp_user'))]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_open_product_lot']" position="after">
+                <button class="oe_stat_button" name="action_open_production_statement_line" type="object"
+                    attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" icon="fa-cogs">
+                    <field string="Production Statements Lines" name="statement_line_count" widget="statinfo" />
+                </button>
+            </xpath>
+        </field>
+    </record>
+    <record id="product_product_form_view_bom_button" model="ir.ui.view">
+        <field name="name">product.product.production.statement.line</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="groups_id" eval="[(4, ref('mrp.group_mrp_user'))]"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='action_open_product_lot']" position="after">
+                <button class="oe_stat_button" name="action_open_production_statement_line" type="object"
+                    attrs="{'invisible':[('type', 'not in', ['product', 'consu'])]}" icon="fa-cogs">
+                    <field string="Production Statements Lines" name="statement_line_count" widget="statinfo" />
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

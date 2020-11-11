@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="seq_production_statement" model="ir.sequence">
+            <field name="name">seq_production_statement</field>
+            <field name="code">production.statement</field>
+            <field name="prefix">PS</field>
+            <field name="padding">4</field>
+        </record>
+
+</odoo>

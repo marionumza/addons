@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <record id="seq_sale_grant" model="ir.sequence">
+            <field name="name">seq_sale_grant</field>
+            <field name="code">sale.grant</field>
+            <field name="prefix">SUB</field>
+            <field name="padding">4</field>
+        </record>
+
+</odoo>

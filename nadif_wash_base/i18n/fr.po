@@ -1,0 +1,414 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nadif_wash_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-09 12:29+0000\n"
+"PO-Revision-Date: 2020-06-09 12:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nadif_wash_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_base.sale_grant_form_view
+msgid "<span>Deliveries</span>"
+msgstr "<span>Livraisons</span>"
+
+#. module: nadif_wash_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_base.sale_grant_form_view
+msgid "<span>Documents</span>"
+msgstr "<span>Documents</span>"
+
+#. module: nadif_wash_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_base.view_sale_order_inherit_sale_grant
+msgid "<span>Gants</span>"
+msgstr "<span>Subvention</span>"
+
+#. module: nadif_wash_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_base.sale_grant_form_view
+msgid "<span>Invoices</span>"
+msgstr "<span>Factures</span>"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__activity_ids
+msgid "Activities"
+msgstr "Activites"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__attachment_ids
+msgid "Attachments"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_hr_employee__category
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__company_id
+msgid "Company"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__partner_id
+msgid "Customer"
+msgstr "Client"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__date
+msgid "Date"
+msgstr "Date"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_hr_employee__date_departure
+msgid "Date Departure"
+msgstr "Date de sortie"
+
+#. module: nadif_wash_base
+#: model:ir.actions.act_window,name:nadif_wash_base.deliveries_tree_action
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__delivery_ids
+#: model_terms:ir.ui.view,arch_db:nadif_wash_base.sale_grant_form_view
+msgid "Deliveries"
+msgstr "Bon de Livraison"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.actions.act_window,name:nadif_wash_base.documents_tree_action
+msgid "Documents"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model,name:nadif_wash_base.model_hr_employee
+msgid "Employee"
+msgstr "Employé"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_account_move__grant_ids
+#: model:ir.model.fields,field_description:nadif_wash_base.field_stock_picking__grant_ids
+msgid "Grants"
+msgstr "Subvention"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__id
+msgid "ID"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__message_needaction
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__message_has_error
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: nadif_wash_base
+#: code:addons/nadif_wash_base/models/stock_move.py:0
+#, python-format
+msgid "Immediate Transfer?"
+msgstr "Transfert immédiat ?"
+
+#. module: nadif_wash_base
+#: model:ir.actions.act_window,name:nadif_wash_base.invoices_tree_action
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__invoice_ids
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__sale_order_invoice_ids
+#: model_terms:ir.ui.view,arch_db:nadif_wash_base.sale_grant_form_view
+msgid "Invoices"
+msgstr "Factures"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model,name:nadif_wash_base.model_account_move
+msgid "Journal Entries"
+msgstr "Pièces comptables"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_hr_employee__level_study
+msgid "Level Of Study"
+msgstr "Niveau scolaire"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_hr_employee__net_salary
+msgid "Net Salary"
+msgstr "Salaire Net"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: nadif_wash_base
+#: code:addons/nadif_wash_base/models/stock_move.py:0
+#, python-format
+msgid "Please add some items to move."
+msgstr "Ajoutez quelques objets à déplacer."
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model,name:nadif_wash_base.model_sale_grant
+msgid "Sale Grant"
+msgstr "Subvention"
+
+#. module: nadif_wash_base
+#: model:ir.actions.act_window,name:nadif_wash_base.sale_grant_action
+#: model_terms:ir.ui.view,arch_db:nadif_wash_base.sale_grant_form_view
+#: model_terms:ir.ui.view,arch_db:nadif_wash_base.sale_grant_tree_view
+msgid "Sale grant"
+msgstr "Subvention"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_order__sale_grant_ids
+msgid "Sale grants"
+msgstr "Subventions"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__sale_order_id
+msgid "Sale order"
+msgstr "Bon de commande"
+
+#. module: nadif_wash_base
+#: model:ir.model,name:nadif_wash_base.model_sale_order
+msgid "Sales Order"
+msgstr "Bon de commande"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__name
+msgid "Sequence"
+msgstr "Num du dossier"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_stock_move__snap_stock
+msgid "Snap stock"
+msgstr "Snap stock"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model,name:nadif_wash_base.model_stock_move
+msgid "Stock Move"
+msgstr "Stock déplacer"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__currency_id
+msgid "The company's currency"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__total_invoice
+msgid "Total invoice"
+msgstr "Total Facture"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__total_order
+msgid "Total order"
+msgstr "Total Commande"
+
+#. module: nadif_wash_base
+#: model:ir.model,name:nadif_wash_base.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__sale_order_delivery_ids
+msgid "Transfers"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,field_description:nadif_wash_base.field_sale_grant__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: nadif_wash_base
+#: model:ir.model.fields,help:nadif_wash_base.field_sale_grant__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: nadif_wash_base
+#: code:addons/nadif_wash_base/models/stock_move.py:0
+#, python-format
+msgid ""
+"You cannot validate a transfer if no quantites are reserved nor done. To "
+"force the transfer, switch in edit more and encode the done quantities."
+msgstr ""
+"Vous ne pouvez pas valider un transfert si aucune quantité n'est réservée ou"
+" livrée. Pour forcer le transfert, mettez-vous en mode \"modifier\" et "
+"introduisez les quantitées livrées."
+
+#. module: nadif_wash_base
+#: code:addons/nadif_wash_base/models/stock_move.py:0
+#, python-format
+msgid "You need to supply a Lot/Serial number for product %s."
+msgstr "Vous devez fournir un numéro de Lot/de Série pour l'article %s."

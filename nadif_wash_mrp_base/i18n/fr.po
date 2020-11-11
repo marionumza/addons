@@ -1,0 +1,561 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* nadif_wash_mrp_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-08 09:47+0000\n"
+"PO-Revision-Date: 2020-07-08 09:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__finished_product_count
+msgid "# Finished Products"
+msgstr "# Produits finis"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__production_count
+msgid "# Manufacturing Orders"
+msgstr "# Ordres de fabrication"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_product_product__statement_line_count
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_product_template__statement_line_count
+msgid "# Production Statement Lines"
+msgstr "# Lignes de déclaration de production"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__raw_product_count
+msgid "# Raw Products"
+msgstr "# Matières première"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_needaction
+msgid "Action Needed"
+msgstr "Action nécessaire"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.mrp_workcenter_block_wizard_form
+msgid "Add a description..."
+msgstr "Ajouter une description…"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter__product_ids
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.view_mrp_workcenter_inherit
+msgid "Authorized Products"
+msgstr "Produits autorisés"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product__bom_id
+msgid "Bill of Material"
+msgstr "Nomenclature"
+
+#. module: nadif_wash_mrp_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.mrp_workcenter_block_wizard_form
+msgid "Block"
+msgstr "Bloquer"
+
+#. module: nadif_wash_mrp_base
+#: code:addons/nadif_wash_mrp_base/models/production_statement.py:0
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.mrp_workcenter_block_wizard_form
+#, python-format
+msgid "Block Workcenter"
+msgstr "Bloquer le poste de charge"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields.selection,name:nadif_wash_mrp_base.selection__production_statement_line__working_state__blocked
+msgid "Blocked"
+msgstr "Bloqué"
+
+#. module: nadif_wash_mrp_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.mrp_workcenter_block_wizard_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product__create_uid
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__create_uid
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product__create_date
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__create_date
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__date
+msgid "Date"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__date_finished
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__date_finished
+msgid "Date Finished"
+msgstr "Date de fin"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__date_start
+msgid "Date Start"
+msgstr "Date de début"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product__display_name
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__display_name
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model,name:nadif_wash_mrp_base.model_hr_employee
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_productivity__employee_id
+msgid "Employee"
+msgstr "Employé"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter__employee_ids
+msgid "Employees"
+msgstr "Employés"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields.selection,name:nadif_wash_mrp_base.selection__mrp_workcenter__type__finished
+#: model:ir.model.fields.selection,name:nadif_wash_mrp_base.selection__production_statement__type__finished
+msgid "Finished Product"
+msgstr "Produit fini"
+
+#. module: nadif_wash_mrp_base
+#: code:addons/nadif_wash_mrp_base/models/production_statement.py:0
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_form_view
+#, python-format
+msgid "Finished Products"
+msgstr "Produits finis"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_form_view
+msgid "Generate"
+msgstr "Générer"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product__id
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__id
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__id
+msgid "ID"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,help:nadif_wash_mrp_base.field_production_statement__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,help:nadif_wash_mrp_base.field_production_statement__message_needaction
+#: model:ir.model.fields,help:nadif_wash_mrp_base.field_production_statement__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,help:nadif_wash_mrp_base.field_production_statement__message_has_error
+#: model:ir.model.fields,help:nadif_wash_mrp_base.field_production_statement__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields.selection,name:nadif_wash_mrp_base.selection__production_statement_line__working_state__done
+msgid "In Progress"
+msgstr "En cours"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: code:addons/nadif_wash_mrp_base/models/production_statement.py:0
+#, python-format
+msgid "It has already been unblocked."
+msgstr "Ceci a déjà été débloqué. "
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product____last_update
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement____last_update
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product__write_uid
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__write_uid
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product__write_date
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__write_date
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__line_range_id
+msgid "Line Range"
+msgstr "Heure"
+
+#. module: nadif_wash_mrp_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_form_view
+msgid "Lines"
+msgstr "Lignes"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__production_id
+msgid "Manufacturing Order"
+msgstr "Ordre de fabrication"
+
+#. module: nadif_wash_mrp_base
+#: code:addons/nadif_wash_mrp_base/models/production_statement.py:0
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_form_view
+#, python-format
+msgid "Manufacturing Orders"
+msgstr "Ordres de fabrication"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,help:nadif_wash_mrp_base.field_production_statement__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,help:nadif_wash_mrp_base.field_production_statement__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,help:nadif_wash_mrp_base.field_production_statement__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__employee_id
+msgid "Operator"
+msgstr "Opérateur"
+
+#. module: nadif_wash_mrp_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_form_view
+msgid "Planning"
+msgstr "Planification"
+
+#. module: nadif_wash_mrp_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_form_view
+msgid "Processus"
+msgstr "Processus"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model,name:nadif_wash_mrp_base.model_product_product
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product__product_id
+msgid "Product"
+msgstr "Article"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model,name:nadif_wash_mrp_base.model_product_template
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product__product_tmpl_id
+msgid "Product Template"
+msgstr "Modèle d'article"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model,name:nadif_wash_mrp_base.model_mrp_production
+msgid "Production Order"
+msgstr "Ordre de fabrication"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.actions.act_window,name:nadif_wash_mrp_base.production_statement_tree_action
+#: model:ir.model,name:nadif_wash_mrp_base.model_production_statement
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__statement_id
+#: model:ir.ui.menu,name:nadif_wash_mrp_base.menu_production_statement_tree_action
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_form_view
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_tree_view
+msgid "Production Statement"
+msgstr "Déclaration de production"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.actions.act_window,name:nadif_wash_mrp_base.production_statement_line_tree_action
+#: model:ir.model,name:nadif_wash_mrp_base.model_production_statement_line
+#: model:ir.ui.menu,name:nadif_wash_mrp_base.menu_production_statement_line_tree_action
+msgid "Production Statement Line"
+msgstr "Ligne de déclaration de production"
+
+#. module: nadif_wash_mrp_base
+#: code:addons/nadif_wash_mrp_base/models/product.py:0
+#: code:addons/nadif_wash_mrp_base/models/product.py:0
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__line_ids
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_line_tree_view
+#, python-format
+msgid "Production Statement Lines"
+msgstr "Lignes de déclaration de production"
+
+#. module: nadif_wash_mrp_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.view_production_statement_graph
+msgid "Production Statements"
+msgstr "Déclarations de production"
+
+#. module: nadif_wash_mrp_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.product_product_form_view_bom_button
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.product_template_form_view_bom_button
+msgid "Production Statements Lines"
+msgstr "Lignes de production"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__qty
+msgid "Quantity"
+msgstr "Quantité"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model,name:nadif_wash_mrp_base.model_stock_quant
+msgid "Quants"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: code:addons/nadif_wash_mrp_base/models/production_statement.py:0
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_form_view
+#, python-format
+msgid "Raw Products"
+msgstr "Matières premières"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__activity_user_id
+msgid "Responsible User"
+msgstr "Responsable"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__scrap
+msgid "Scrap"
+msgstr "Rebut"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__loss_time
+msgid "Loss time"
+msgstr "Temps perdu"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__loss_id
+msgid "Loss Reason"
+msgstr "Raison de la perte"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields.selection,name:nadif_wash_mrp_base.selection__mrp_workcenter__type__semi_finished
+#: model:ir.model.fields.selection,name:nadif_wash_mrp_base.selection__production_statement__type__semi_finished
+msgid "Semi Finished"
+msgstr "Semi-finis"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__name
+msgid "Sequence"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,help:nadif_wash_mrp_base.field_production_statement__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_form_view
+msgid "This will delete all the Production Statement Lines, are you sure?"
+msgstr "Cela supprimera toutes les lignes de déclaration de production, êtes-vous sûr?"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__hour_range_id
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__hour_range_id
+msgid "Time Range"
+msgstr "Shift"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__total_qty
+msgid "Total Quantity"
+msgstr "Quantité totale"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__total_scrap
+msgid "Total Scrap"
+msgstr "Total des rebuts"
+
+#. module: nadif_wash_mrp_base
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.production_statement_form_view
+msgid "Totals"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter__type
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__type
+msgid "Type"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,help:nadif_wash_mrp_base.field_production_statement__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,help:nadif_wash_mrp_base.field_production_statement__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model,name:nadif_wash_mrp_base.model_mrp_workcenter
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__workcenter_id
+msgid "Work Center"
+msgstr "Poste de Travail"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model,name:nadif_wash_mrp_base.model_mrp_workorder
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__workorder_id
+msgid "Work Order"
+msgstr "Ordre de travail"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_hr_employee__workcenter_id
+msgid "Workcenter"
+msgstr "Poste de travail"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__workcenter_product_id
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.mrp_workcenter_product_view_form
+#: model_terms:ir.ui.view,arch_db:nadif_wash_mrp_base.mrp_workcenter_product_view_tree
+msgid "Workcenter Product"
+msgstr "Produit de poste de travail"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model,name:nadif_wash_mrp_base.model_mrp_workcenter_productivity
+msgid "Workcenter Productivity Log"
+msgstr "Registre de productivité du poste de travail"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_production_statement_line__working_state
+msgid "Workcenter Status"
+msgstr "Statut du poste de charge"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model.fields,field_description:nadif_wash_mrp_base.field_mrp_workcenter_product__workcenter_ids
+msgid "Workcenters"
+msgstr "Postes de travail"
+
+#. module: nadif_wash_mrp_base
+#: model:ir.model,name:nadif_wash_mrp_base.model_mrp_workcenter_product
+msgid "mrp.workcenter.product"
+msgstr ""

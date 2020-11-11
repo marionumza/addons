@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+production_statement_all,production statement all,model_production_statement,,1,1,1,1
+production_statement_line_all,production statement line all,model_production_statement_line,,1,1,1,1
+mrp_workcente_rproduct_all,mrp workcenter product all,model_mrp_workcenter_product,,1,1,1,1

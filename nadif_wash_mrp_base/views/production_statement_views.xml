@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <!--production.statement tree view-->
+        <record id="production_statement_tree_view" model="ir.ui.view">
+            <field name="name">production.statement.tree</field>
+            <field name="model">production.statement</field>
+            <field name="arch" type="xml">
+                <tree string="Production Statement">
+                    <field name="name"/>
+                    <field name="type"/>
+                    <field name="date_start"/>
+                    <field name="hour_range_id"/>
+                    <field name="total_qty"/>
+                    <field name="total_scrap"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- production.statement form view -->
+        <record id="production_statement_form_view" model="ir.ui.view">
+            <field name="name">production.statement.form</field>
+            <field name="model">production.statement</field>
+            <field name="arch" type="xml">
+                <form string="Production Statement">
+                    <header>
+                        <button name="do_generate" type="object" string="Generate" confirm="This will delete all the Production Statement Lines, are you sure?"/>
+                        <button name="do_produce" type="object" string="Processus"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_stat_button" name="action_open_production" type="object" icon="fa-cogs">
+                                <field string="Manufacturing Orders" name="production_count" widget="statinfo" />
+                            </button>
+                            <button class="oe_stat_button" name="action_open_finished_product" type="object" icon="fa-cogs">
+                                <field string="Finished Products" name="finished_product_count" widget="statinfo" />
+                            </button>
+                            <button class="oe_stat_button" name="action_open_raw_product" type="object" icon="fa-cogs">
+                                <field string="Raw Products" name="raw_product_count" widget="statinfo" />
+                            </button>
+                        </div>
+                        <div class="oe_title pr-0" name="title">
+                            <h1 class="d-flex flex-row justify-content-between">
+                                <field name="name" required="1" class="text-truncate" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="type"/>
+                            </group>
+                            <group string="Planning">
+                                <field name="hour_range_id" required="1"/>
+                                <field name="line_range_id" domain="[('slot_id', '=', hour_range_id)]" required="1"/>
+                                <field name="date_start" required="1"/>
+                            </group>
+                            <group>
+                            </group>
+                            <group string="Totals">
+                                <field name="total_qty"/>
+                                <field name="total_scrap"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Lines">
+                                <field name="line_ids">
+                                    <tree editable="bottom">
+                                        <field name="workcenter_id" required="1"
+                                               attrs="{'readonly': [('production_id','!=',False)]}"/>
+                                        <field name="workcenter_product_id" required="1"
+                                               domain="[('workcenter_ids', 'in', workcenter_id)]"
+                                               attrs="{'readonly': [('production_id','!=',False)]}"/>
+                                        <field name="date" invisible="1"/>
+                                        <field name="production_id" invisible="1" readonly="1" force_save="1"/>
+                                        <field name="workorder_id" invisible="1" readonly="1" force_save="1"/>
+                                        <field name="hour_range_id" invisible="1" />
+                                        <field name="employee_id" required="1"
+                                               domain="[('workcenter_id', '=', workcenter_id)]"
+                                               attrs="{'readonly': [('production_id','!=',False)]}"/>
+                                        <field name="qty" required="1"
+                                               attrs="{'readonly': [('production_id','!=',False)]}"/>
+                                        <field name="scrap" required="1"
+                                               attrs="{'readonly': [('production_id','!=',False)]}"/>
+                                        <field name="loss_time" invisible="1" widget="float_time" attrs="{'readonly': [('production_id','!=',False)]}"/>
+                                        <field name="loss_id" invisible="1" attrs="{'readonly': [('production_id','!=',False)]}"/>
+                                        <field name="loss_description" invisible="1" attrs="{'readonly': [('production_id','!=',False)]}"/>
+                                        <field name="working_state" invisible="1" />
+                                        <button name="act_mrp_block_workcenter" type="object" class="o_status float-right"
+                                            attrs="{'invisible': [('working_state','in',('blocked','done'))]}"/>
+                                        <button name="unblock" type="object" class=" o_status o_status_red float-right"
+                                            attrs="{'invisible': [('working_state','in',('normal','done'))]}"/>
+                                        <button name="act_mrp_block_workcenter" type="object" class="o_status o_status_green float-right"
+                                            attrs="{'invisible': [('working_state','in',('normal','blocked'))]}"/>
+                                        <button name="do_produce" attrs="{'invisible': [('production_id','!=',False)]}"
+                                                string="Processus" type="object"
+                                                icon="fa-check text-success"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="mrp_workcenter_block_wizard_form" model="ir.ui.view">
+            <field name="name">production.statement.line.form</field>
+            <field name="model">production.statement.line</field>
+            <field name="arch" type="xml">
+                <form string="Block Workcenter">
+                    <group>
+                        <field name="loss_id" required="1" class="oe_inline" domain="[('manual','=',True)]"/>
+                        <field name="loss_time" required="1"  widget="float_time"/>
+                        <field name="loss_description" placeholder="Add a description..."/>
+                    </group>
+                    <footer>
+                        <button string="Block" class="btn-danger text-uppercase" special="save"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- production.statement graph -->
+        <record id="view_production_statement_graph" model="ir.ui.view">
+            <field name="name">production.statement.graph</field>
+            <field name="model">production.statement</field>
+            <field name="arch" type="xml">
+                <graph string="Production Statements" stacked="True">
+                    <field name="date_start" type="row" interval="month"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- production.statement action -->
+        <record model="ir.actions.act_window" id="production_statement_tree_action">
+            <field name="name">Production Statement</field>
+            <field name="res_model">production.statement</field>
+            <field name="view_mode">tree,form,graph,pivot,dashboard</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!--production.statement.line tree view-->
+        <record id="production_statement_line_tree_view" model="ir.ui.view">
+            <field name="name">production.statement.line.tree</field>
+            <field name="model">production.statement.line</field>
+            <field name="arch" type="xml">
+                <tree string="Production Statement Lines">
+                    <field name="workcenter_id"/>
+                    <field name="production_id"/>
+                    <field name="workorder_id"/>
+                    <field name="statement_id"/>
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="qty"/>
+                    <field name="scrap"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- production.statement.line action -->
+        <record model="ir.actions.act_window" id="production_statement_line_tree_action">
+            <field name="name">Production Statement Line</field>
+            <field name="res_model">production.statement.line</field>
+            <field name="view_mode">tree,form,graph,pivot,dashboard</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <menuitem
+           action="production_statement_tree_action" id="menu_production_statement_tree_action"
+           parent="mrp.menu_mrp_manufacturing" sequence="0"/>
+        <menuitem
+           action="production_statement_line_tree_action" id="menu_production_statement_line_tree_action"
+           parent="mrp.menu_mrp_manufacturing" sequence="0"/>
+
+</odoo>

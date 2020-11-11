@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_mrp_production_internal_transfer" model="ir.ui.view">
+        <field name="name">mrp.production.internal.transfer.view.form</field>
+        <field name="model">mrp.production.internal.transfer</field>
+        <field name="arch" type="xml">
+            <form string="Manage Stock">
+                <group>
+                    <group>
+                        <field name="production_id" invisible="1"/>
+                        <field name="workorder_id" invisible="1"/>
+                        <field name="product_id" readonly="1"/>
+                        <label for="product_qty"/>
+                        <div class="o_row">
+                            <field name="product_qty"/>
+                            <field name="product_uom_id" readonly="1" groups="uom.group_uom"/>
+                        </div>
+                    </group>
+                </group>
+                <group>
+                    <field name="produce_line_ids" nolabel="1">
+                        <tree editable="top" delete="0" create="0">
+                            <field name="product_id" force_save="1"/>
+                            <field name="qty_to_consume" readonly="1"/>
+                            <field name="qty_reserved" readonly="1"/>
+                            <field name="qty_done"/>
+                            <field name="product_uom_id" readonly="1" force_save="1" groups="uom.group_uom"/>
+                            <field name="location_id"/>
+                            <field name="location_dest_id"/>
+                            <field name="lot_id" invisible="0"/>
+                        </tree>
+                    </field>
+                </group>
+                
+                <span style="color:#FF0000;font-size: 16px;">Note: Use "Request Component" or "Complete Transfer" for product's whose tracking is set to "None" or "Lot". If tracking is set to unique serial number then you have to manually request the component using inventory adjustment.</span>
+               
+                <footer>
+                    <button name="do_produce" type="object" string="Request Component" class="btn-primary"/>
+                    OR
+                    <button name="do_complete_transfer" type="object" string="Complete Transfer" class="btn-primary"/>
+                    OR
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+     <record id="action_mrp_production_internal_transfer" model="ir.actions.act_window">
+        <field name="name">Manage Stock</field>
+        <field name="res_model">mrp.production.internal.transfer</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+     </record>
+         
+</odoo>

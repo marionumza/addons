@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_mrp_workcenter_inherit" model="ir.ui.view">
+        <field name="name">mrp.workcenter.inherit.form</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_workcenter_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='alternative_workcenter_ids']" position="after">
+                    <field name="type"/>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page string="Authorized Products">
+                        <field name="product_ids"/>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='resource_calendar_id']" position="after">
+                    <field name="employee_ids" widget="many2many_tags"/>
+                </xpath>
+            </field>
+    </record>
+
+    <record id="mrp_workcenter_product_view_tree" model="ir.ui.view">
+        <field name="name">mrp.workcenter.product.tree</field>
+        <field name="model">mrp.workcenter.product</field>
+        <field name="arch" type="xml">
+            <tree string="Workcenter Product">
+                <field name="sequence" widget="handle"/>
+                <field name="product_id"/>
+                <field name="bom_id"/>
+                <!--<field name="routing_id"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record id="mrp_workcenter_product_view_form" model="ir.ui.view">
+        <field name="name">mrp.workcenter.product.form</field>
+        <field name="model">mrp.workcenter.product</field>
+        <field name="arch" type="xml">
+            <form string="Workcenter Product">
+                <group>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="product_id"/>
+                    <field name="bom_id"/>
+                    <!--<field name="routing_id"/>-->
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

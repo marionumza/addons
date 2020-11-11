@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="bi_mrp_workorder_tablet_form_view_qty_change" model="ir.ui.view">
+            <field name="name">bi.mrp.workorder.tablet.form.view</field>
+            <field name="model">mrp.workorder</field>
+            <field name="inherit_id" ref="mrp_workorder.mrp_workorder_view_form_tablet" />
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='qty_producing']" position="replace">
+                    <field name="qty_producing" invisible="1"/>
+                    <field name="is_done_workorder" invisible="1"/>
+                    <field name="new_qty_producing" class="oe_inline text-left"
+                        attrs="{'readonly' : [('is_done_workorder','!=',True)]}"
+                        /> <span> &#160;&#160;&#160;&#160;&#160;&#160;|&#160;&#160;&#160;&#160;&#160;&#160;</span>
+                </xpath>
+
+            </field>
+    </record>
+
+    <record id="mrp_production_qty_change_form_view" model="ir.ui.view">
+            <field name="name">mrp.production.material.cost.form.view</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view" />
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='button_mark_done']" position="after">
+                	<field name="is_post_inventory" invisible="1"/> 
+                	
+                </xpath>
+            </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+        <!--sale grant tree view-->
+        <record id="sale_grant_tree_view" model="ir.ui.view">
+            <field name="name">sale.grant.tree</field>
+            <field name="model">sale.grant</field>
+            <field name="arch" type="xml">
+                <tree string="Sale grant">
+                    <field name="name"/>
+                    <field name="sale_order_id"/>
+                    <field name="partner_id"/>
+                    <field name="date"/>
+                    <field name="total_order"/>
+                    <field name="total_invoice"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- sale grant form view -->
+        <record id="sale_grant_form_view" model="ir.ui.view">
+            <field name="name">sale.grant.form</field>
+            <field name="model">sale.grant</field>
+            <field name="arch" type="xml">
+                <form string="Sale grant">
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button class="oe_inline oe_stat_button" name="invoices_tree_view_obj" type="object" icon="fa-pencil-square-o">
+                                <span>Invoices</span>
+                                <field string="Invoices" name="total_invoice" widget="statinfo"/>
+                            </button>
+                            <button class="oe_inline oe_stat_button" name="docs_tree_view_obj" type="object" icon="fa-pencil-square-o">
+                                <span>Documents</span>
+                            </button>
+                            <button class="oe_inline oe_stat_button" name="deliveries_tree_view_obj" type="object" icon="fa-pencil-square-o">
+                                <span>Deliveries</span>
+                            </button>
+                        </div>
+                        <div class="oe_title pr-0" name="title">
+                            <h1 class="d-flex flex-row justify-content-between">
+                                <field name="name" required="1" class="text-truncate" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="sale_order_id" invisible="1"/>
+                                <field name="sale_order_invoice_ids" invisible="1"/>
+                                <field name="sale_order_delivery_ids" invisible="1"/>
+                                <field name="partner_id"/>
+                                <field name="date"/>
+                            </group>
+                            <group>
+                                <field name="total_invoice"/>
+                                <field name="total_order" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Invoices">
+                                <field name="invoice_ids" widget="many2many" domain="[('id', 'in', sale_order_invoice_ids),('state', '=', 'posted')]"/>
+                            </page>
+                            <page string="Deliveries">
+                                <field name="delivery_ids" widget="many2many" domain="[('id', 'in', sale_order_delivery_ids)]"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- sale grant Action view-->
+        <record model="ir.actions.act_window" id="sale_grant_action">
+            <field name="name">Sale grant</field>
+            <field name="res_model">sale.grant</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="invoices_tree_action">
+            <field name="name">Invoices</field>
+            <field name="res_model">account.move</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="documents_tree_action">
+            <field name="name">Documents</field>
+            <field name="res_model">ir.attachment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="deliveries_tree_action">
+            <field name="name">Deliveries</field>
+            <field name="res_model">stock.picking</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+</odoo>

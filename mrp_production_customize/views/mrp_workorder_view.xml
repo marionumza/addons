@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="mrp_production_workorder_tree_view_inherit_extended" model="ir.ui.view">
+        <field name="name">mrp.workorder.tree.inherit</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workorder_tree_view_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='qty_production']" position="before">
+                <field name="qty_remaining_wo" string="Quantity To Be Produced"/>
+                <field name="qty_produced" string="Currently Produced Quantity"/>
+                <field name="qty_production_dup" string="Original Production Quantity"/>
+            </xpath>
+            <xpath expr="//field[@name='qty_production']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="mrp_production_workcenter_form_view_inherit_extended" model="ir.ui.view">
+        <field name="name">mrp.workorder.form.inherit</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workorder_form_view_inherit"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='qty_production']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='qty_production']" position="after">
+                <field name="qty_production_dup"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="mrp.workcenter_line_kanban">
+        <field name="name">mrp.production.work.order.kanban</field>
+        <field name="model">mrp.workorder</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column" create="0">
+                <field name="name"/>
+                <field name="production_id"/>
+                <field name="state"/>
+                <field name="is_user_working"/>
+                <field name="working_user_ids"/>
+                <field name="last_working_user_id"/>
+                <field name="working_state"/>
+                <field name="workcenter_id"/>
+                <field name="product_id"/>
+                <field name="qty_production_dup"/>
+                <field name="product_uom_id"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                            <div class="oe_kanban_content">
+                                <div>
+                                    <strong class="o_kanban_record_title">
+                                        <span><t t-esc="record.production_id.value"/></span> - <span><t t-esc="record.name.value"/></span>
+                                    </strong>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left">
+                                        <span><t t-esc="record.product_id.value"/></span> <span><t t-esc="record.qty_production_dup.value"/> <t t-esc="record.product_uom_id.value"/></span>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right" t-if="record.state.raw_value == 'progress'">
+                                        <span t-if="record.working_state.raw_value != 'blocked' and record.working_user_ids.raw_value.length > 0"><i class="fa fa-play" role="img" aria-label="Run" title="Run"/></span>
+                                        <span t-if="record.working_state.raw_value != 'blocked' and record.working_user_ids.raw_value.length == 0 and record.last_working_user_id.raw_value"><i class="fa fa-pause" role="img" aria-label="Pause" title="Pause"/></span>
+                                        <span t-if="record.working_state.raw_value == 'blocked' and (record.working_user_ids.raw_value.length == 0 or record.last_working_user_id.raw_value)"><i class="fa fa-stop" role="img" aria-label="Stop" title="Stop"/></span>
+                                        <t t-if="record.last_working_user_id.raw_value">
+                                            <img t-att-src="kanban_image('res.users', 'image_small', record.last_working_user_id.raw_value)" width="24" height="24" class="oe_kanban_avatar" alt="Avatar"/>
+                                        </t>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="mrp_workorder_view_form_tablet_extended" model="ir.ui.view">
+        <field name="name">mrp.workorder.view.form.inherit.quality.tablet.new.extended</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp_workorder.mrp_workorder_view_form_tablet"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('workorder_actions')]/div[2]/div/button[@name='record_production']" position="before">
+                <button name="%(action_mrp_production_internal_transfer)d" type="action" string="Request Component" class="btn-primary"
+                attrs="{'invisible': [('qty_producing', '=', 0.0)]}" />
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="mrp_workorder_view_form_inherit_quality" model="ir.ui.view">
+        <field name="name">mrp.workorder.view.form.inherit.tablet</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp_workorder.mrp_workorder_view_form_tablet"/>
+        <field name="arch" type="xml">
+        	
+        	<xpath expr="//button[@name='record_production']" position="replace">
+                 <button name="record_production" type="object" string="Record production" attrs="{'invisible': ['|', '|','|', ('is_user_working', '=', False),('is_last_lot', '=', True),('qty_producing', '=', 0.0)]}" barcode_trigger="record" class="btn-primary"/>
+        	</xpath>
+        	
+        	<xpath expr="//button[@name='do_finish']" position="replace">
+        		<button name="do_finish" type="object" string="Mark as Done" icon="fa-check" attrs="{'invisible': ['|', '|','|', ('is_user_working', '=', False),('is_last_lot', '=', False),('qty_producing', '=', 0.0)]}" class="btn-primary" barcode_trigger="cloWO"/>
+        	</xpath>
+        	
+        	<xpath expr="//div[@class='workorder_bar_center o_workorder_bar_content']//field[@name='finished_lot_id']" position="attributes">
+        		<attribute name="attrs">{'readonly': 1}</attribute>
+        	</xpath>
+        	
+        	<xpath expr="//div[@class='o_workorder_bar_content o_workorder_form']//field[@name='lot_id']" position="replace">
+        		<field name="lot_id" context="{'active_mo_id': production_id}" readonly="1" /> -
+        	</xpath>
+        	
+        	<xpath expr="//div[@class='o_workorder_data']//div[@class='o_workorder_field text-right']//field[@name='qty_done']" position="replace">
+        		<field name="qty_done" readonly="1" string="Quantity" class="oe_inline"/> /
+        	</xpath>
+        	
+<!--         	<xpath expr="//div[@class='workorder_actions']/div[@class='o_workorder_bar_content o_workorder_actions']/button[@name='action_previous']" position="replace"> -->
+<!--                 <button disabled="1" name="action_previous" type="object" class="btn-secondary" string="Previous" icon="fa-chevron-left o_workorder_btn_icon_small" attrs="{'invisible': [('is_first_step', '=', True)]}" barcode_trigger="prev"/> -->
+<!--         	</xpath> -->
+        	
+<!--         	<xpath expr="//div[@class='workorder_actions']/div[@class='o_workorder_bar_content o_workorder_bar_content_right']/div/button[2]" position="attributes"> -->
+<!--         		<attribute name="attrs">{'invisible': 1}</attribute> -->
+<!--         	</xpath> -->
+        	
+<!--         	<xpath expr="//div[@class='workorder_actions']/div[@class='o_workorder_bar_content o_workorder_bar_content_right']//button[@name='action_first_skipped_step']" position="attributes"> -->
+<!--         		<attribute name="attrs">{'invisible': 1}</attribute> -->
+<!--         	</xpath> -->
+        	
+        </field>
+    </record>
+
+</odoo>

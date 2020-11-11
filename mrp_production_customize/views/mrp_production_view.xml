@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- MRP Work Center Form View -->
+        <record id='view_mrp_workcenter_inherit_form' model='ir.ui.view'>
+            <field name="name">mrp.workcenter.form.inherit</field>
+            <field name="model">mrp.workcenter</field>
+            <field name="inherit_id" ref="mrp.mrp_workcenter_view"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="work_location_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="mrp_production_tree_view_inherit_partial" model="ir.ui.view">
+            <field name="name">mrp.production.tree.inherit</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="product_qty" position="replace">
+                    <field name="product_qty" sum="Qty To Produce" string="Qty To Produce"/>
+                    <field name="qty_produced" sum="Produced Qty" string="Produced Qty"/>
+                </field>
+            </field>
+        </record>
+    
+        <record id="mrp_production_form_view_inherit_partial" model="ir.ui.view">
+            <field name="name">mrp.production.form.inherit</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+            <field name="arch" type="xml">
+                <button name="open_produce_product" position="replace">
+                    <button name="open_produce_product"
+                            type="object" string="Process Partial Qty" class="oe_highlight"
+                            attrs="{'invisible': ['|', 
+                            ('reservation_state', 'not in', ('assigned')), '|',
+                            ('state', 'in', ('done', 'cancel')), ('routing_id', '=', False)]}"/>
+                </button>
+                <field name="location_dest_id" position="after">
+                    <field name="qty_produced" readonly="1"/>
+                </field>
+                
+                 <xpath expr="//header/button[@name='button_mark_done']" position = 'attributes'>
+            		<attribute name="context">{'active_model':'mrp.production'}</attribute>
+           		</xpath>
+           		
+           		<xpath expr="//header/button[@name='post_inventory']" position="attributes">
+           			<attribute name="context">{'active_model':'mrp.production'}</attribute>
+           		</xpath>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="mrp.action_mrp_production_moves">
+            <field name="name">Inventory Moves</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">stock.move.line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">['|','|', ('move_id.picking_move_production_id','=',active_id),('move_id.raw_material_production_id', '=', active_id), ('move_id.production_id', '=', active_id)]</field>
+        </record>
+    
+    </data>
+</odoo>
