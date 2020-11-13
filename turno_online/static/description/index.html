@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<section class="oe_container">
+    <div class="oe_row oe_spaced">
+        <h2 class="oe_slogan" style="color:#875A7B;">Turno On-Line</h2>
+        <h3 class="oe_slogan">Permita que los visitantes programen un turno en su sitio web</h3>        
+    </div>
+</section>
+
+<section class="oe_container oe_dark">
+    <div class="oe_row oe_spaced">        
+        <div class="oe_span6">
+			<p>Los visitantes pueden reservar un turno a través del sitio web. Aparece un calendario, los días marcados en verde están disponibles para su selección.
+Después de seleccionar una fecha, el visitante debe elegir un intervalo de tiempo y una opción de turno. En el backend de odoo usted define por
+usuario sus franjas horarias disponibles. El visitante solo puede seleccionar las franjas horarias cuando no hay ningún otro "calendario.evento" presente durante ese período de tiempo.
+Las opciones de turno se definen globalmente en el backend de odoo y tienen una duración. De esta manera se crea un "calendario.evento" con el inicio y el fin correctos. </p>
+<p> De forma predeterminada, solo los usuarios registrados pueden programar turnos. Si también desea que los usuarios públicos programen turnos, cree el parámetro 'turno_online' con el valor 'public' en su 'ir.config_parameter'.</p>
+			<p><b>¡Funciona en dispositivos móviles y de escritorio!</b></p>
+        </div>        
+		<div class="oe_span6">
+		    <h2>Capturas de pantalla</h2>
+			<p>Se accede a la página de turnos mediante: <b>/turno-online</b></p>
+			<h2>Los usuarios públicos recibirán un error si el parámetro de configuración 'turno_online' no está configurado.</h2>
+		    <div class="oe_demo oe_picture oe_screenshot">
+                <img src="turno_online-01.png">            
+			</div>
+		</div>	
+		<div class="oe_span6">
+		    <h2>Aparece un calendario, los días verdes tienen franjas horarias disponibles entre las que el visitante puede elegir:</h2>
+			<div class="oe_demo oe_picture oe_screenshot">
+                <img src="turno_online-02.png">            
+			</div>
+		</div>
+		<div class="oe_span6">
+		    <h2>Después de seleccionar un día, solo se pueden seleccionar los posibles intervalos de hora según el calendario interno de Odoo ya definidp:</h2>
+			<div class="oe_demo oe_picture oe_screenshot">
+                <img src="turno_online-03.png">            
+			</div>
+		</div>
+		<div class="oe_span6">
+		    <h2>Defina sus asuntos y espacios en la configuración del sitio web:</h2>
+			<div class="oe_demo oe_picture oe_screenshot">
+                <img src="turno_online-03a.png">            
+			</div>
+		</div>
+		<div class="oe_span6">
+		    <h2>Los turnos son visibles en el calendario de Odoo:</h2>
+			<div class="oe_demo oe_picture oe_screenshot">
+                <img src="turno_online-05.png">            
+			</div>
+		</div>
+		<div class="oe_span6">
+		    <h2>El intervalo de tiempo está bloqueado para otros visitantes cuando está programado:</h2>
+			<div class="oe_demo oe_picture oe_screenshot">
+                <img src="turno_online-04.png">            
+			</div>
+		</div>
+		<div class="oe_span6">
+		    <h2>Los turnos programados son visibles en el portal:</h2>
+			<div class="oe_demo oe_picture oe_screenshot">
+                <img src="turno_online-06.png">            
+			</div>
+		</div>
+		<div class="oe_span6">
+		    <h2>Y puede ser cancelado por el cliente:</h2>
+			<div class="oe_demo oe_picture oe_screenshot">
+                <img src="turno_online-07.png">            
+			</div>
+		</div>
+	
+    </div>
+</section>
+
+<section class="oe_container oe_separator">
+</section>
+
+<section class="oe_container">
+    <div class="oe_row oe_spaced" style="background: #eeeeee; padding:20px;">
+        <font style="color:red; font-weight:bold;">
+            <b>Nota: </b>Este módulo está probado y funciona en Odoo Community Edition pero no está probado en Enterprise Edition.
+        </font>
+    </div>
+</section>
+
+<section class="oe_container lead" style="background: #eeeeee;">
+    <div class="oe_row oe_spaced">
+        <div class="oe_span12">
+            <h2 class="oe_slogan">
+                <a href="https://pronexo.com" target="new">
+                    <img src="LogoOdooPronexo.png">
+                </a>
+            </h2>
+            <div class="oe_mt16 oe_mb16">
+                <h2 class="oe_slogan">Soporte &amp; Contacto</h2>
+                <h4 class="text-center" style="font-size:20px;">Si necesita soporte, solicitar personalización, cualquier ayuda o desea más funciones, contáctenos.</h4>
+            </div>
+            <div class="oe_slogan col-md-12" style="font-size:20px;">
+                <div class="col-md-4" style="float:left; padding:20px;">
+                    <h4><i class="fa fa-envelope"></i> Envíanos un correo electrónico</h4>
+                    <a href="mailto:soporte@pronexo.com">soporte@pronexo.com</a>
+                </div>
+                <div class="col-md-4" style="float:left; padding:20px;">
+                    <h4><i class="fa fa-telegram"></i> Telegram</h4>
+                    <a href="#">+543412271793</a>
+                </div>
+                <div class="col-md-4" style="float:left; padding:20px;">
+                    <h4><i class="fa fa-phone"></i> Contacta con nosotros </h4>
+                    <a href="https://www.pronexo.com/contacto/" target="_blank">www.pronexo.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
