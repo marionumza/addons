@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- QWeb Reports -->
+
+        <report
+            id="report_print_prescription"
+            model="medical.prescription.order"
+            report_type="qweb-pdf"
+            string="Prescription"
+            name="hospitalmanagment.prescription_demo_report"
+            file="hospitalmanagment.prescription_demo_report"
+            />
+
+        <report
+            id="report_print_appointment"
+            model="medical.appointment"
+            report_type="qweb-pdf"
+            string="Appointment Recipts New"
+            name="hospitalmanagment.appointment_recipts_report"
+            file="hospitalmanagment.appointment_recipts_report"
+            />
+
+
+        <report
+            id="report_print_patient_card"
+            model="medical.patient"
+            report_type="qweb-pdf"
+            string="Patient Card"
+            name="hospitalmanagment.report_patient_card"
+            file="hospitalmanagment.report_patient_card"
+            />
+
+<!--         <report -->
+<!--             id="report_print_newborn_card" -->
+<!--             model="medical.newborn" -->
+<!--             report_type="qweb-pdf" -->
+<!--             string="Newborn Card" -->
+<!--             name="basic_hms.report_newborn_card" -->
+<!--             file="basic_hms.report_newborn_card" -->
+<!--             /> -->
+
+        <report
+            id="report_print_patient_medications_document"
+            model="medical.patient"
+            report_type="qweb-pdf"
+            string="Medication History New"
+            name="hospitalmanagment.patient_medications_document"
+            file="hospitalmanagment.patient_medications_document"
+            />
+        <report
+            id="report_print_patient_vaccinations_document"
+            model="medical.patient"
+            report_type="qweb-pdf"
+            string="Vaccinations History New"
+            name="hospitalmanagment.patient_vaccinations"
+            file="hospitalmanagment.patient_vaccinations"
+            />
+        <report
+            id="report_print_patient_diseases_document"
+            model="medical.patient"
+            report_type="qweb-pdf"
+            string="Diseases Report New"
+            name="hospitalmanagment.patient_diseases_document"
+            file="hospitalmanagment.patient_diseases_document"
+            />
+        <report
+            id="report_print_lab_result_demo"
+            model="medical.lab"
+            report_type="qweb-pdf"
+            string="Lab Record"
+            name="hospitalmanagment.lab_result_demo"
+            file="hospitalmanagment.lab_result_demo"
+            />
+        <!-- <report
+            id="report_print_lab_test_demo"
+            model="medical.patient"
+            report_type="qweb-pdf"
+            string="Lab Test"
+            name="basic_hms.lab_test_demo"
+            file="basic_hms.lab_test_demo"
+            /> -->
+    </data>
+</openerp>
