@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<template id="contact_us_v_1" name="Contact Us Type 1">
-        <section class="contact_us_v_1">
+	<template id="contact_us_v_1" name="Contact Us Snippet 1">
+        <section class="contact_us_v_1" data-disp='contact_us'>
             <div class='container'>
                 <div class="row">
                     <div class='col-md-4 col-sm-6 sct_base_class'>
@@ -39,8 +39,8 @@
             </div>
         </section>
     </template>
-    <template id="contact_us_v_2" name="Contact Us Type 2">
-        <section class="contact_us_v_2 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);">
+    <template id="contact_us_v_2" name="Contact Us Snippet 2">
+        <section class="contact_us_v_2 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);" data-disp='contact_us'>
             <div class='container'>
                 <div class="row">
                     <div class='col-md-12'>
@@ -59,8 +59,8 @@
             </div>
         </section>
     </template>
-    <template id="contact_us_v_3" name="Contact Us Type 3">
-        <section class="contact_us_v_3 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);">
+    <template id="contact_us_v_3" name="Contact Us Snippet 3">
+        <section class="contact_us_v_3 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);" data-disp='contact_us'>
             <div class='container'>
                 <div class="row">
                 	<div class='col-md-6 sct_base_class'>
@@ -95,8 +95,8 @@
             </div>
         </section>
     </template>
-    <template id="contact_us_v_4" name="Contact Us Type 4">
-        <section class="contact_us_v_4" >
+    <template id="contact_us_v_4" name="Contact Us Snippet 4">
+        <section class="contact_us_v_4" data-disp='contact_us'>
             <div class='container'>
                 <div class="row">
                     <div class='col-md-12'>

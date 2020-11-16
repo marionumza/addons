@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<template id="it_letstalk" name="Contact Us Type 6">
-        <section class="it_letstalk">
+	<template id="it_letstalk" name="Contact Us Snippet 6">
+        <section class="it_letstalk" data-disp='contact_us'>
             <div class='container'>
                 <div class='row sct_base_class'>
                     <div class="col-md-6">
@@ -15,8 +15,8 @@
             </div>
         </section>
     </template>
-    <template id="letstalk_v2" name="Contact Us Type 5">
-        <section class="letstalk_v2 oe_img_bg" style="background-image:url('/theme_scita/static/src/img/service-snippet-img.jpg')">
+    <template id="letstalk_v2" name="Contact Us Snippet 5">
+        <section class="letstalk_v2 oe_img_bg" style="background-image:url('/theme_scita/static/src/img/service-snippet-img.jpg')" data-disp='contact_us'>
             <div class='container'>
                 <div class='row sct_base_class'>
                     <div class="col-md-12">

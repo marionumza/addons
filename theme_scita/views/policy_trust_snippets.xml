@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
 	<!--  Retail Trust Snippet -->
-    <template id="retial_trust_snippet_1" name="Trust Icons Type 1">
-        <section class="retial_trust_snippet_1">
+    <template id="retial_trust_snippet_1" name="Trust Icons Snippet 1">
+        <section class="retial_trust_snippet_1" data-disp="trust_icon">
             <div class='container'>
                 <div class="row">
                     <div class='col-md-4 col-sm-6'>
@@ -37,8 +37,8 @@
         </section>
     </template>
     <!--  Fashion Trust Snippet -->
-    <template id="fashion_trust_snippet_1" name="Trust Icons Type 2">
-        <section class="fashion_trust_snippet_1">
+    <template id="fashion_trust_snippet_1" name="Trust Icons Snippet 2">
+        <section class="fashion_trust_snippet_1" data-disp="trust_icon">
             <div class='container'>
                 <div class="row">
                     <div class='col-md-4 col-sm-6 sct_test_box'>
@@ -72,8 +72,8 @@
             </div>
         </section>
     </template>
-    <template id="policy_trust_snippet_v_3" name="Trust Icons Type 3">
-        <section class="policy_trust_snippet_v_3">
+    <template id="policy_trust_snippet_v_3" name="Trust Icons Snippet 3">
+        <section class="policy_trust_snippet_v_3" data-disp="trust_icon">
             <div class='container'>
                 <div class="row">
                     <div class='col-md-4 col-sm-6 sct_thumb'>
@@ -131,8 +131,8 @@
             </div>
         </section>
     </template>
-    <template id="policy_trust_snippet_v_4" name="Trust Icons Type 4">
-        <section class="policy_trust_snippet_v_4">
+    <template id="policy_trust_snippet_v_4" name="Trust Icons Snippet 4">
+        <section class="policy_trust_snippet_v_4" data-disp="trust_icon">
             <div class='container-fluid'>
                 <div class="row sct_btm_row">
                     <div class='col-md-4 col-sm-4 sct_base_class'>

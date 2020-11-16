@@ -69,6 +69,10 @@ odoo.define('theme_scita.front_js',function(require){
                         self.$target.addClass("time_out");
     					self.$target.append("<div class='time_over_msg'><p>"+self.$target.data("msg")+"</p></div>");
     				}
+                    else
+                    {   
+                        self.$target.removeClass("time_out");
+                    }
     				 
     				
     				if(self.$target.find(".counter_timer_div"))

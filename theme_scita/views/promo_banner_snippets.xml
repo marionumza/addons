@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Health Promotional Services Banner -->
-    <template id="health_advertisement_banner" name="Advertisement Banner 3">
-        <section class="health_adv_banner_1 oe_img_bg"  style="background-image: url(/theme_scita/static/src/img/health/health-adv-bg.png);">
+    <template id="health_advertisement_banner" name="Advertisement Snippet 3">
+        <section class="health_adv_banner_1 oe_img_bg"  style="background-image: url(/theme_scita/static/src/img/health/health-adv-bg.png);" data-disp='advbanner'>
             <div class='container'>
                 <div class="row">
                     <div class='col-md-12 sct_adv_banner'>
@@ -30,8 +30,8 @@
     </template>
     
 	<!-- Fashion Advertisement Banner-->
-    <template id="fashion_advertisement_banner_1" name="Advertisement Banner 2">
-        <section class="fashion_advertisement_banner_1" id='adv_banner'>
+    <template id="fashion_advertisement_banner_1" name="Advertisement Snippet 2">
+        <section class="fashion_advertisement_banner_1" id='adv_banner' data-disp='advbanner'>
             <div class='container'>
                 <div class="row">
                     <div class="col-md-4">
@@ -60,8 +60,8 @@
         </section>
     </template>
     <!-- Retail Advertisement Banner-->
-    <template id="retial_advertisement_banner_1" name="Advertisement Banner 1">
-        <section class="retial_advertisement_banner_1">
+    <template id="retial_advertisement_banner_1" name="Advertisement Snippet 1">
+        <section class="retial_advertisement_banner_1" data-disp='advbanner'>
             <div class='container'>
                 <div class='row'>
                     <div class='col-md-1 sct_vertical_text'>
@@ -97,8 +97,8 @@
         </section>
     </template>
     <!-- Fashion Promo Banner snippet -->
-    <template id="fashion_promo_banner_1" name="Promotion Banner 2">
-        <section class="fashion_promo_snippet_1">
+    <template id="fashion_promo_banner_1" name="Promotion Snippet 2">
+        <section class="fashion_promo_snippet_1" data-disp='advbanner'>
             <div class='container'>
                 <div class="row sct_top_row">
                     <div class='col-md-12 sct_promo_line'>
@@ -148,8 +148,8 @@
         </section>
     </template>
     <!--  Retail promo  Snippet -->
-    <template id="retial_promo_banner_snippet_1" name="Promotion Banner 1">
-        <section class="retial_promo_banner_snippet_1">
+    <template id="retial_promo_banner_snippet_1" name="Promotion Snippet 1">
+        <section class="retial_promo_banner_snippet_1" data-disp='advbanner'>
             <div class='container'>
                 <div class="row">
                     <div class='col-md-4'>

@@ -25,20 +25,59 @@
                     </more>
                 </content>
                 <content id="theme_customize_content_colors" string="Colors" title="Choose Theme Color">
-                    <!-- <opt data-xmlid="" data-color-palette="user" string="Choose your colors" id="cust_color_palate"/> -->
-                    <opt data-widget="color" data-color-type="theme" data-color="theme" string="Choose your colors" id="cust_color_palate"/>
+                    <opt data-widget="color" data-color-type="theme" data-color="theme" string="Choose your theme color" id="cust_color_palate"/>
                 </content>
                 <content id="theme_customize_Header" string="Headers" title="Choose your Header Style">
                     <list id="theme_customize_option_header" string="Headers">
-                        <opt data-xmlid="" string='Default Header' data-reload="/"/>
-                        <opt string=' ' data-xmlid="theme_scita.header_style_assets_1,theme_scita.option_header_1,theme_scita.option_header_cart" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/header-1.png"/>
+                        <opt data-xmlid="" string="Default Header" data-reload="/"/>
+                        <opt string=' ' data-xmlid="theme_scita.option_header_1,theme_scita.header_style_assets_1" data-icon="/theme_scita/static/src/img/snippet_icon/header-1.png" data-reload="/"/>
                         <opt string=' ' data-xmlid="theme_scita.option_header_2,theme_scita.header_style_assets_2" data-icon="/theme_scita/static/src/img/snippet_icon/header-2.png" data-reload="/"/>
                         <opt string=' ' data-xmlid="theme_scita.option_header_3,theme_scita.header_style_assets_3" data-icon="/theme_scita/static/src/img/snippet_icon/header-3.png" data-reload="/"/>
                         <opt string=' ' data-xmlid="theme_scita.option_header_4,theme_scita.pricelist_add_icon,theme_scita.header_style_assets_4" data-icon="/theme_scita/static/src/img/snippet_icon/header-4.png" data-reload="/"/>
                         <opt string=' ' data-xmlid="theme_scita.option_header_5,theme_scita.header_style_assets_5" data-icon="/theme_scita/static/src/img/snippet_icon/header-5.png" data-reload="/"/>
-                        <opt string=' ' data-xmlid="theme_scita.option_service_header_1,theme_scita.header_service_style_assets_6" data-icon="/theme_scita/static/src/img/snippet_icon/service_header.png" data-reload="/"/>
-
                         
+                        <opt string=' ' data-xmlid="theme_scita.option_header_6,theme_scita.header_style_assets_6" data-icon="/theme_scita/static/src/img/snippet_icon/header-6.png" data-reload="/"/>
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_7,theme_scita.header_style_assets_7" data-icon="/theme_scita/static/src/img/snippet_icon/header-7.png"  data-reload="/"/>
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_8,theme_scita.header_style_assets_8" data-icon="/theme_scita/static/src/img/snippet_icon/header-8.png"  data-reload="/"/>
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_9,theme_scita.header_style_assets_9" data-icon="/theme_scita/static/src/img/snippet_icon/header-9.png"  data-reload="/"/>
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_10,theme_scita.header_style_assets_10" data-icon="/theme_scita/static/src/img/snippet_icon/header-10.png" data-reload="/"/>
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_11,theme_scita.header_style_assets_11,theme_scita.website_sale_cstm_price_list" data-icon="/theme_scita/static/src/img/snippet_icon/header-11.png"  data-reload="/"/>
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_12,theme_scita.header_style_assets_12" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/header-12.png" />
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_13,theme_scita.header_style_assets_13,theme_scita.website_sale_cstm_price_list" data-reload="/"  data-icon="/theme_scita/static/src/img/snippet_icon/header-13.png" />
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_14,theme_scita.header_style_assets_14" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/header-14.png" />
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_15,theme_scita.header_style_assets_15" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/header-15.png" />
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_16,theme_scita.header_style_assets_16" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/header-16.png" />
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_17,theme_scita.header_style_assets_17" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/header-17.png" />
+                        
+                        <opt string=' ' data-xmlid="theme_scita.option_header_18,theme_scita.header_style_assets_18,theme_scita.website_sale_cstm_price_list" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/header-18.png" />
+
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_19,theme_scita.header_style_assets_19,theme_scita.website_sale_cstm_price_list" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/header-19.png" />
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_20,theme_scita.header_style_assets_20" data-reload="/"  data-icon="/theme_scita/static/src/img/snippet_icon/header-20.png" />
+
+                        <opt string=' ' data-xmlid="theme_scita.option_header_21,theme_scita.header_style_assets_21" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/header-21.png" />
+
+                        <opt string=' ' data-xmlid="theme_scita.option_service_header_1,theme_scita.header_service_style_assets_1" data-icon="/theme_scita/static/src/img/snippet_icon/service_header.png" data-reload="/"/>
+
+                        <opt string=' ' data-xmlid="theme_scita.option_service_header_2,theme_scita.header_service_style_assets_2" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/service-header-2.png" />
+
+                        <opt string=' ' data-xmlid="theme_scita.option_service_header_3,theme_scita.header_service_style_assets_3" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/service-header-3.png"/>
+                        
+                        <opt string=' ' data-xmlid="theme_scita.option_service_header_4,theme_scita.header_service_style_assets_4" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/service-header-4.png"/>
+
+                        <opt string=' ' data-xmlid="theme_scita.option_service_header_5,theme_scita.header_service_style_assets_5" data-reload="/" data-icon="/theme_scita/static/src/img/snippet_icon/service-header-5.png"/>
                     </list>
                 </content>
                 <content id="theme_customize_footer" string="Footers" title="Choose your Footer Style">
@@ -50,6 +89,46 @@
                         <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_3,theme_scita.theme_scita_footer_option_3" data-icon="/theme_scita/static/src/img/snippet_icon/Footer-3.png"/>
                         <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_4,theme_scita.theme_scita_footer_option_4" data-icon="/theme_scita/static/src/img/snippet_icon/Footer-4.png"/>
                         <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_5,theme_scita.theme_scita_footer_option_5" data-icon="/theme_scita/static/src/img/snippet_icon/Footer-5.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_6,theme_scita.theme_scita_footer_option_6"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-6.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_7,theme_scita.theme_scita_footer_option_7"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-7.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_8,theme_scita.theme_scita_footer_option_8"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-8.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_9,theme_scita.theme_scita_footer_option_9"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-9.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_10,theme_scita.theme_scita_footer_option_10"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-10.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_11,theme_scita.theme_scita_footer_option_11"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-11.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_12,theme_scita.theme_scita_footer_option_12"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-12.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_13,theme_scita.theme_scita_footer_option_13"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-13.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_14,theme_scita.theme_scita_footer_option_14"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-14.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_15,theme_scita.theme_scita_footer_option_15"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-15.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_16,theme_scita.theme_scita_footer_option_16"
+                         data-icon="/theme_scita/static/src/img/snippet_icon/Footer-16.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_17,theme_scita.theme_scita_footer_option_17"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-17.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_18,theme_scita.theme_scita_footer_option_18"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-18.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_19,theme_scita.theme_scita_footer_option_19"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-19.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_20,theme_scita.theme_scita_footer_option_20" data-icon="/theme_scita/static/src/img/snippet_icon/Footer-20.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_21,theme_scita.theme_scita_footer_option_21" data-icon="/theme_scita/static/src/img/snippet_icon/Footer-21.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_22,theme_scita.theme_scita_footer_option_22"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-22.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_23,theme_scita.theme_scita_footer_option_23"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-23.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_24,theme_scita.theme_scita_footer_option_24"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-24.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_25,theme_scita.theme_scita_footer_option_25"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-25.png"/>
+                        <opt string=' ' data-reload="/" data-xmlid="theme_scita.option_footer_26,theme_scita.theme_scita_footer_option_26"
+                        data-icon="/theme_scita/static/src/img/snippet_icon/Footer-26.png"/>
                     </list>
                 </content>
                  <!-- Font options -->

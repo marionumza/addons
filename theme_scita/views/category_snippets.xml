@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 <!-- Category Slider Snippet -->
-        <template id="s_theme_scita_category_slider" name="Category Slider 1">
-            <section id="theme_scita_custom_category_slider" class="oe_cat_slider categ_slider s_theme_scita_category_slider" contentEditable="false" data-cat-slider-id="">
+        <template id="s_theme_scita_category_slider" name="Category Snippet 3">
+            <section id="theme_scita_custom_category_slider" class="oe_cat_slider categ_slider s_theme_scita_category_slider" contentEditable="false" data-cat-slider-id=""  data-disp='category_snippet'>
                 <div class="container">
                     <div class="block-title">
-                        <h3 class="fancy">Category Slider</h3>
+                        <h3 class="fancy">Category Snippet</h3>
                     </div>
                 </div>
             </section>
         </template>
         <template id="theme_scita_category_slider_option" inherit_id="website.snippet_options" name="Modify Options">
-            <xpath expr="//div[@data-js='ProductsRecentlyViewed']" position="after">
+            <xpath expr="//div" position="after">
                 <div data-js="oe_cat_slider" data-selector=".oe_cat_slider">
                     <li data-cat_slider="">
                         <we-button class="dropdown-item oe_cat_slider" tabindex="-1" href="#" data-cat_slider="">Modify</we-button>
@@ -48,11 +48,11 @@
             </div>
         </template>
 <!-- Category Slider Snippet -->
-        <template id="second_theme_scita_category_slider" name="Category Slider 2">
-            <section id="second_custom_category_slider" class="second_cat_slider categ_slider second_theme_scita_category_slider" contentEditable="false" data-cat-slider-id="">
+        <template id="second_theme_scita_category_slider" name="Category Snippet 4">
+            <section id="second_custom_category_slider" class="second_cat_slider categ_slider second_theme_scita_category_slider" contentEditable="false" data-cat-slider-id="" data-disp='category_snippet'>
                 <div class="container">
                     <div class="block-title">
-                        <h3 class="fancy">Category Slider</h3>
+                        <h3 class="fancy">Category Snippet</h3>
                     </div>
                 </div>
             </section>
@@ -95,8 +95,8 @@
             </div>
         </template>
     <!-- Fashion category snippet -->
-    <template id="fashion_category_snippet_1" name="Category Banner 2">
-        <section class="fashion_category_snippet_1">
+    <template id="fashion_category_snippet_1" name="Category Snippet 2">
+        <section class="fashion_category_snippet_1"  data-disp='category_snippet'>
             <div class='container-fluid'>
                 <div class="row">
                     <div class='col-md-12'>
@@ -156,8 +156,8 @@
         </section>
     </template>
     <!--  Retail category banner snippet-->
-    <template id="retial_category_snippet_1" name="Category Banner 1">
-        <section class="retial_category_snippet_1">
+    <template id="retial_category_snippet_1" name="Category Snippet 1">
+        <section class="retial_category_snippet_1" data-disp='category_snippet'>
             <div class='container'>
                 <div class="row">
                     <h2 class="section-title">Categories</h2>
@@ -217,5 +217,102 @@
                 </div>
             </div>
         </section>
+    </template>
+    <!--  Retail category slider snippet-->
+    <template id="theme_scita_category_slider_3" name="Category Slider 1">
+        <section id="theme_scita_custom_category_slider_3" class="cat_slider_3 categ_slider scita_category_slider_3" contentEditable="false" data-cat-slider-id=""  data-disp='category_snippet'>
+            <div class="container">
+                <div class="block-title">
+                    <h3 class="fancy">Category Slider</h3>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="theme_scita_category_slider_3_option" inherit_id="website.snippet_options" name="Modify Options">
+        <xpath expr="//div" position="after">
+            <div data-js="cat_slider_3" data-selector=".cat_slider_3">
+                <li data-cat_slider="">
+                    <we-button class="dropdown-item cat_slider_3" tabindex="-1" href="#" data-cat_slider="">Modify</we-button>
+                </li>
+            </div>
+        </xpath>
+    </template>
+    <template id="theme_scita_category_slider_3_view" name="Category">
+        <div class="container">
+            <div class="row top-row title-block">
+                <h2 class="col-md-12 section-title" t-if="not slider_header">
+                    Category Slider
+                </h2>
+                <h2 class="col-md-12 section-title" t-if="slider_header">
+                    <t t-esc="slider_header.name"/>
+                </h2>
+            </div>
+            <div class="row bottom-row categories">
+                <div id="carousel_category" class="col-md-12 category-slider owl-carousel">
+                    <t t-as="slide" t-foreach="slider_details">
+                        <div class="item cs-cat">
+                            <a t-att-href=" '/shop/category/%s' % slug(slide)">
+                                <div class="cs-img">
+                                    <img t-att-alt="slide.name" t-att-src="website.image_url(slide, 'image_1920')" t-att-title="slide.name"/>
+                                </div>
+                                <div class='sct_cat_content'>
+                                    <p class="pwpi-title">
+                                        <t t-esc="slide.name"/>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="theme_scita_category_slider_4" name="Category Slider 2">
+        <section id="theme_scita_custom_category_slider_4" class="cat_slider_4 categ_slider scita_category_slider_4" contentEditable="false" data-cat-slider-id=""  data-disp='category_snippet'>
+            <div class="container">
+                <div class="block-title">
+                    <h3 class="fancy">Category Slider</h3>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="theme_scita_category_slider_4_option" inherit_id="website.snippet_options" name="Modify Options">
+        <xpath expr="//div" position="after">
+            <div data-js="cat_slider_4" data-selector=".cat_slider_4">
+                <li data-cat_slider="">
+                    <we-button class="dropdown-item cat_slider_4" tabindex="-1" href="#" data-cat_slider="">Modify</we-button>
+                </li>
+            </div>
+        </xpath>
+    </template>
+    <template id="theme_scita_category_slider_4_view" name="Category">
+        <div class="container-fluid">
+            <div class="row top-row title-block">
+                <h2 class="col-md-12 section-title" t-if="not slider_header">
+                    Category Slider
+                </h2>
+                <h2 class="col-md-12 section-title" t-if="slider_header">
+                    <t t-esc="slider_header.name"/>
+                </h2>
+            </div>
+            <div class="row bottom-row categories">
+                <div id="cat_slider_4_owl" class="col-md-12 category-slider owl-carousel">
+                    <t t-as="slide" t-foreach="slider_details">
+                        <div class="item cs-cat">
+                            <a t-att-href=" '/shop/category/%s' % slug(slide)">
+                                <div class="cs-img">
+                                    <img t-att-alt="slide.name" t-att-src="website.image_url(slide, 'image_1920')" t-att-title="slide.name"/>
+                                </div>
+                                <div class='sct_cat_content'>
+                                    <p class="pwpi-title">
+                                        <t t-esc="slide.name"/>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    </t>
+                </div>
+            </div>
+        </div>
     </template>
 </odoo>

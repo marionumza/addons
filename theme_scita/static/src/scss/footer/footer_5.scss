@@ -1,6 +1,10 @@
 .footer-content {
 	text-align: center;
 	background: $light-color;
+	margin-top: 50px;
+	@media (max-width: 767px){
+		margin-top: 30px;
+	}
 	.sct-social-pty {
 		margin-bottom: 45px;
 		@media (max-width: 991px){
@@ -22,7 +26,6 @@
 	.sct-footer-logo {
 		position: relative;
 		margin-bottom: 45px;
-		margin-top: 50px;
 		margin-left: -15px;
 		margin-right: -15px;
 		@media (max-width: 767px){
@@ -162,5 +165,10 @@
 				margin-top: 5px;
 			}
 		}
+	}
+}
+footer {
+	&.o_footer {
+		background-color: $light-color !important;
 	}
 }

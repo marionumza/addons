@@ -1,0 +1,101 @@
+footer {
+	.footer-content {
+		background-color: $dark-color;
+		padding: 50px 0 30px;
+		@media (max-width: 767px){
+			padding: 30px 0;
+		}
+		.sct-top-row {
+			.sct-foot-logo {
+				max-width: 150px;
+				margin-bottom: 30px;
+			}
+			.sct-fot-address {
+				ul {
+					li {
+						position: relative;
+						padding-left: 30px;
+						color: $light-grey-color;
+						font-size: $font-body;
+						.fa {
+							position: absolute;
+							left: 0;
+							top: 2px;
+							font-size: 16PX;
+							color: $light-grey-color;
+						}
+						+ li {
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+			.sct-fot-about {
+				margin-bottom: 30px;
+				@media (max-width: 767px){
+					margin-top: 20px;
+				}
+				p {
+					margin-bottom: 0;
+					color: $light-grey-color;
+				}
+			}
+			.sct-links {
+				h4 {
+					color: $light-grey-color;
+					text-transform: uppercase;
+					margin-bottom: 20px;
+				}
+				ul {
+					li {
+						font-size: $font-body;
+						display: inline-block;
+						margin-bottom: 5px;
+						margin-right: 10px;
+						&:last-child{
+							margin-right:0;
+						}
+						a {
+							color: $light-grey-color;
+							&:hover {
+								color:$theme;
+							}
+						}
+					}
+				}
+				+ .sct-links {
+					margin-top: 20px;
+				}
+			}
+			.sct-scocial-icon-footer {
+				margin-top: 30px;
+				a {
+					margin-top: 0;
+					margin-bottom: 5px;
+				}
+			}
+		}
+		.sct-bottom-row {
+			border-top: 1px solid $light-grey-color;
+			padding-top: 25px;
+			margin-top: 25px;
+			.sct-copyright {
+				color: $light-grey-color;
+				font-size: $font-body;
+				@media (max-width: 767px){
+					text-align: center;
+					-webkit-box-ordinal-group: 2;
+					-ms-flex-order: 1;
+					order: 1;
+				}
+			}
+			.sct-payment-icons {
+				text-align: right;
+				@media (max-width: 767px){
+					text-align: center;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}

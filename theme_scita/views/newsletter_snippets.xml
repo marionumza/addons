@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
 	<!-- Newsletter -->
-    <template id="scita_sign_up_newsletter" name="Newsletter 2">
-        <section class="container s_text_block_image_fw oe_img_bg oe_custom_bg retial_newsletter1 sign-up-container" style="background-image: url(/theme_scita/static/src/img/retail/nl-bg.jpg);">
+    <template id="scita_sign_up_newsletter" name="Newsletter Snippet 2">
+        <section class="container s_text_block_image_fw oe_img_bg oe_custom_bg retial_newsletter1 sign-up-container" style="background-image: url(/theme_scita/static/src/img/retail/nl-bg.jpg);" data-disp="newsletter">
             <div class='row'>
                 <div class="col-md-12">
                     <div class='newsletter_title'>
@@ -25,8 +25,8 @@
         </section>
     </template>
     <!-- retail Newsletter -->
-    <template id="retail_sign_up_newsletter" name="Newsletter 3">
-        <section class="s_text_block_image_fw oe_img_bg oe_custom_bg retial_newsletter_2 sign-up-container" style="background-image: url(/theme_scita/static/src/img/retail/nwesletter-bg.png);">
+    <template id="retail_sign_up_newsletter" name="Newsletter Snippet 3">
+        <section class="s_text_block_image_fw oe_img_bg oe_custom_bg retial_newsletter_2 sign-up-container" style="background-image: url(/theme_scita/static/src/img/retail/nwesletter-bg.png);" data-disp="newsletter">
             <div class='container'>
                 <div class='row'>
                     <div class="col-md-12">
@@ -51,8 +51,8 @@
         </section>
     </template>
     <!-- It Newslatter -->
-    <template id="it_sign_up_newsletter" name="Newsletter 1">
-        <section class="it_sign_up_newsletter">
+    <template id="it_sign_up_newsletter" name="Newsletter Snippet 1">
+        <section class="it_sign_up_newsletter" data-disp="newsletter">
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -79,8 +79,8 @@
         </section>
     </template>
     <!-- Fashion Newslatter -->
-    <template id="fashion_sign_up_newsletter" name="Newsletter 4">
-        <section class="fashion_sign_up_newsletter" style="background-image: url(/theme_scita/static/src/img/fashion/fashion-nl-bg.jpg);">
+    <template id="fashion_sign_up_newsletter" name="Newsletter Snippet 4">
+        <section class="fashion_sign_up_newsletter" style="background-image: url(/theme_scita/static/src/img/fashion/fashion-nl-bg.jpg);" data-disp="newsletter">
             <div class="container">
                 <div class='row'>
                     <div class="col-md-12 sct_news_border">
@@ -104,8 +104,8 @@
             </div>
         </section>
     </template>
-	<template id="newsletter_varient_5" name="Newsletter 5">
-        <section class="newsletter_varient_5">
+	<template id="newsletter_varient_5" name="Newsletter Snippet 5">
+        <section class="newsletter_varient_5" data-disp="newsletter">
             <div class="container-fluid">
                 <div class='row sct_btm_row'>
                 	<div class="col-md-6 sct_news_box">

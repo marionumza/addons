@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
 	<!-- Pricing Table 1 - 4 column-->
-    <template id="s_theme_scita_pricing_table_1_4column_v1" name="Pricing Variant 1">
-        <section class="pricing_table_v1">
+    <template id="s_theme_scita_pricing_table_1_4column_v1" name="Pricing Snippet 1">
+        <section class="pricing_table_v1" data-disp="pricing_table">
             <div class="container">
             	<div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -145,8 +145,8 @@
             </div>
         </section>
     </template>
-    <template id="s_theme_scita_pricing_table_1_4column_v2" name="Pricing Variant 2">
-        <section class="pricing_table_v2">
+    <template id="s_theme_scita_pricing_table_1_4column_v2" name="Pricing Snippet 2">
+        <section class="pricing_table_v2" data-disp="pricing_table">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -396,8 +396,8 @@
             </div>
         </section>
     </template>
-    <template id="s_theme_scita_pricing_table_1_3column_v3" name="Pricing Variant 3">
-        <section class="pricing_table_v3">
+    <template id="s_theme_scita_pricing_table_1_3column_v3" name="Pricing Snippet 3">
+        <section class="pricing_table_v3" data-disp="pricing_table">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -533,8 +533,8 @@
         </section>
     </template>
     
-    <template id="s_theme_scita_pricing_table_1_4column_v4" name="Pricing Variant 4">
-        <section class="pricing_table_v4">
+    <template id="s_theme_scita_pricing_table_1_4column_v4" name="Pricing Snippet 4">
+        <section class="pricing_table_v4" data-disp="pricing_table">
             <div class="container">
                 <div class="row sct_btm_row">
                     <div class="col-lg-3 col-md-6 col-sm-6 sct_pri_thumb">
@@ -681,8 +681,8 @@
             </div>
         </section>
     </template>
-    <template id="s_theme_scita_pricing_table_1_3column_v5" name="Pricing Variant 5">
-        <section class="pricing_table_v5">
+    <template id="s_theme_scita_pricing_table_1_3column_v5" name="Pricing Snippet 5">
+        <section class="pricing_table_v5" data-disp="pricing_table">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>

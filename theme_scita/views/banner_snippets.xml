@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<template id="sct_banner_1" name="Banner Type 1">
-        <div id="myCarousel" class="s_carousel s_carousel_default sct_banner_1 carousel slide" data-interval="10000">
+	<template id="sct_banner_1" name="Banner Slider 1">
+        <div id="myCarousel" class="s_carousel s_carousel_default sct_banner_1 carousel slide" data-interval="10000" data-disp='banner'>
             <div class="carousel-inner">
                 <!-- #01 -->
                 <div class="carousel-item active oe_custom_bg oe_img_bg pt96 pb96" style="background-image:url('/theme_scita/static/src/img/header-1-slide-1.jpg')" data-name="Slide">
@@ -70,8 +70,8 @@
             </div>
         </div>
     </template>
-    <template id="sct_banner_2" name="Banner Type 2">
-        <div id="myCarousel" class="s_carousel s_carousel_default sct_banner_2 carousel slide" data-interval="10000">
+    <template id="sct_banner_2" name="Banner Slider 2">
+        <div id="myCarousel" class="s_carousel s_carousel_default sct_banner_2 carousel slide" data-interval="10000" data-disp='banner'>
             <div class="carousel-inner">
                 <!-- #01 -->
                 <div class="carousel-item active oe_custom_bg oe_img_bg pt96 pb96" style="background-image:url('/theme_scita/static/src/img/header-2-slide-1.jpg')" data-name="Slide">
@@ -149,8 +149,8 @@
             </div>
         </div>
     </template>
-    <template id="sct_banner_3" name="Banner Type 3">
-        <div id="myCarousel" class="s_carousel s_carousel_default sct_banner_3 carousel slide" data-interval="10000">
+    <template id="sct_banner_3" name="Banner Slider 3">
+        <div id="myCarousel" class="s_carousel s_carousel_default sct_banner_3 carousel slide" data-interval="10000" data-disp='banner'>
             <div class="carousel-inner">
                 <!-- #01 -->
                 <div class="carousel-item active oe_custom_bg oe_img_bg pt96 pb96" style="background-image:url('/theme_scita/static/src/img/header-3-slide-1.jpg')" data-name="Slide">
@@ -224,8 +224,8 @@
             </div>
         </div>
     </template>
-    <template id="sct_banner_4" name="Banner Type 4">
-        <div id="myCarousel" class="s_carousel s_carousel_default sct_banner_4 carousel slide" data-interval="10000">
+    <template id="sct_banner_4" name="Banner Slider 4">
+        <div id="myCarousel" class="s_carousel s_carousel_default sct_banner_4 carousel slide" data-interval="10000" data-disp='banner'>
             <div class="carousel-inner">
                 <!-- #01 -->
                 <div class="carousel-item active oe_custom_bg oe_img_bg pt96 pb96" style="background-image:url('/theme_scita/static/src/img/header-4-slide-1.jpg')" data-name="Slide">
@@ -302,9 +302,8 @@
             </div>
         </div>
     </template>
-
-    <template id="sct_banner_5" name="Banner Type 5">
-        <div id="myCarousel" class="s_carousel s_carousel_default sct_banner_5 carousel slide" data-interval="10000">
+    <template id="sct_banner_5" name="Banner Slider 5">
+        <div id="myCarousel" class="s_carousel s_carousel_default sct_banner_5 carousel slide" data-interval="10000" data-disp='banner'>
             <div class="carousel-inner">
                 <!-- #01 -->
                 <div class="carousel-item active oe_custom_bg oe_img_bg pt0 pb0" data-name="Slide">
@@ -427,8 +426,8 @@
         </div>
     </template>
     <!-- Retial main banner snippet -->
-    <template id="retail_sct_banner_slider_1" name="Banner Type 6">
-        <div id="myCarousel" class="s_carousel s_carousel_default retail_sct_banner_1 carousel slide" data-interval="10000">
+    <template id="retail_sct_banner_slider_1" name="Banner Slider 6">
+        <div id="myCarousel" class="s_carousel s_carousel_default retail_sct_banner_1 carousel slide" data-interval="10000" data-disp='banner'>
             <div class="carousel-inner">
                 <!-- #01 -->
                 <div class="carousel-item active oe_custom_bg oe_img_bg pt96 pb96" style="background-image:url('/theme_scita/static/src/img/retail/retail-banner-1.jpg')" data-name="Slide">
@@ -507,8 +506,8 @@
         </div>
     </template>
     <!-- fashion_main_banner_slider -->
-    <template id="fashion_main_banner_slider" name="Banner Type 7">
-        <div id="myNumCarousel" class="s_carousel  myNumCarousel s_carousel_default fashion_main_banner_slider carousel  carousel-fade slide" data-interval="0">
+    <template id="fashion_main_banner_slider" name="Banner Slider 7">
+        <div id="myNumCarousel" class="s_carousel  myNumCarousel s_carousel_default fashion_main_banner_slider carousel  carousel-fade slide" data-interval="0" data-disp='banner'>
             <div class="carousel-inner"  style="background-image:url('/theme_scita/static/src/img/fashion/home-banner.jpg')">
                 <div class="carousel-item active oe_custom_bg oe_img_bg" data-name="Slide">
                     <div class="container">
@@ -598,8 +597,8 @@
     </template>
     
     <!-- IT Promotional Services Banner -->
-    <template id="it_main_banner" name="Banner Type 8">
-        <section class="it_main_banner"  style="background-image: url(/theme_scita/static/src/img/it/home-banner_1.jpg);">
+    <template id="it_main_banner" name="Banner Snippet 1">
+        <section class="it_main_banner"  style="background-image: url(/theme_scita/static/src/img/it/home-banner_1.jpg);" data-disp='banner'>
             <div class='container'>
                 <div class="row">
                     <div class='col-md-12 sct_main_banner'>
@@ -615,9 +614,24 @@
         </section>
     </template>
 
+    <template id="banner_snippet_2" name="Hero Image Snippet">
+        <section class="sct_banner_snippet"  data-disp='banner'>
+            <div class='container-fluid'>
+                <div class="row">
+                    <div class='col-md-12 sct_hero_banner text-center p-0'>
+                        <a href="/shop">
+                            <img src="/theme_scita/static/src/img/hero_img.jpg" class="img img-fluid"/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
     <!-- Service industry start -->
-    <template id="helth_banner_1" name="Banner Type 9">
-        <div id="myCarousel" class="s_carousel s_carousel_default helth_banner_1 carousel slide" data-interval="10000">
+    <template id="helth_banner_1" name="Banner Slider 8">
+        <div id="myCarousel" class="s_carousel s_carousel_default helth_banner_1 carousel slide" data-interval="10000" data-disp='banner'>
             <div class="carousel-inner">
                 <!-- #01 -->
                 <div class="carousel-item active oe_custom_bg oe_img_bg" style="background-image:url('/theme_scita/static/src/img/health/health-home-banner.jpg')" data-name="Slide">
@@ -687,4 +701,37 @@
             </div>
         </div>
     </template>
+    <!-- for Dynamic Video Banner snippets -->
+    <template id="dynamic_video_banner" name="Dynamic Video Banner 1">
+        <section class="dynamic_video_banner" data-video-url=''  data-disp='banner'>
+            <div class="container" >
+                <div class="row sct-video-row">
+                    <div class="col-md-12">
+                        <h3 class="section-title style1">
+                            <span>Video banner</span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+    <template id="dynamic_video_option" inherit_id="website.snippet_options" name="Video Modify Options">
+        <xpath expr="//div" position="after">
+            <div data-js="dynamic_video_banner" data-selector=".dynamic_video_banner" data-snippet-option-id="dynamic_video_banner">
+                <li data-option_video_banner="">
+                    <we-button class="dropdown-item dynamic_video_banner" tabindex="-1" href="#" data-dynamic_video_banner="">Modify</we-button>
+                </li>
+            </div>
+        </xpath>
+    </template>
+    <template id="sct_dynamic_banner_video_1" name="Video Banner 11">
+        <section class="dynamic_video_banner">
+            <t t-if="video_url">
+                <video width="100%" height="100%" autoplay="true" loop="infinite" muted="true">
+                    <source t-att-src="video_url"/>
+                </video>
+            </t>
+        </section>
+    </template>
+    <!-- for Dynamic Video Banner snippets end -->
 </odoo>

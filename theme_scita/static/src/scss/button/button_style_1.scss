@@ -1,7 +1,7 @@
 .btn-primary {
 	background: $dark-color;
 	color: $light-color;
-	line-height: 35px;
+	line-height: 45px;
 	font-size: $head-label;
 	height: auto;
 	padding: 0 15px;
@@ -17,5 +17,8 @@
 		border:1px solid $dark-color;
 		@include transition(all, 0.3s, ease);
 		outline: none;
+	}
+	@media (max-width: 1023px){
+		line-height: 40px;
 	}
 }

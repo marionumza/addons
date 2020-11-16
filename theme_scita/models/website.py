@@ -103,7 +103,7 @@ class website(models.Model):
 
     header_logo = fields.Binary('Header Logo')
     footer_logo = fields.Binary('Footer Logo')
-    is_cookie = fields.Boolean(string="Eanble cookie in your site")
+    is_cookie = fields.Boolean(string="Enable cookie in your site")
     msg_cookie = fields.Text(string='Cookie message', translate=True, default='''
         We use cookies in this website. Read about them in our privacy policy. To disable them, configure your browser properly. If you keep using this website, you are accepting those.''')
     msg_button = fields.Char(string='Cookie button name', default='ok')
@@ -112,6 +112,21 @@ class website(models.Model):
                                     default='top',
                                     string="Message Position")
     # For Multi image
+    no_extra_options = fields.Boolean(string='Want to customize multi-image slider',
+                                      default=False,
+                                      help="Slider with all options for next, previous, play, pause, fullscreen, hide/show thumbnail panel.")
+    interval_play = fields.Char(string='slideshow interval', default='5000',
+                                help='With this field you can set the interval play time between two images.')
+    enable_disable_text = fields.Boolean(string='Enable text panel',
+                                         default=True,
+                                         help='Enable/Disable text which is visible on the image in multi image.')
+    color_opt_thumbnail = fields.Selection([
+        ('default', 'Default'),
+        ('b_n_w', 'B/W'),
+        ('sepia', 'Sepia'),
+        ('blur', 'Blur'), ],
+        default='default',
+        string="Thumbnail overlay effects")
     thumbnail_panel_position = fields.Selection([
         ('left', 'Left'),
         ('right', 'Right'),
@@ -137,6 +152,9 @@ class website(models.Model):
     # For social setting
     is_social_display = fields.Boolean(
         string="Social share is display in product page", default=False)
+    is_amp_enable = fields.Boolean(
+        string="Enable AMP", default=True)
+    
 
     @api.model
     def theme_scita_payment_icons(self):

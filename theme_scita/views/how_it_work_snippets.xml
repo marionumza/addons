@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<template id="how_it_work_v_1" name="How it Works Variant 1">
-        <section class="how_it_work_v_1">
+	<template id="how_it_work_v_1" name="How it Works Snippet 1">
+        <section class="how_it_work_v_1" data-disp='how_it_works'>
             <div class='container'>
                 <div class="row sct_btm_row">
                     <div class='col-md-6 sct_img_div'>
@@ -28,8 +28,8 @@
             </div>
         </section>
     </template>
-    <template id="how_it_work_v_2" name="How it Works Variant 2">
-        <section class="how_it_work_v_2 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/fashion/fashion-nl-bg.jpg);">
+    <template id="how_it_work_v_2" name="How it Works Snippet 2">
+        <section class="how_it_work_v_2 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/fashion/fashion-nl-bg.jpg);" data-disp='how_it_works'>
             <div class='container'>
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -87,8 +87,8 @@
             </div>
         </section>
     </template>
-    <template id="how_it_work_v_3" name="How it Works Variant 3">
-        <section class="how_it_work_v_3">
+    <template id="how_it_work_v_3" name="How it Works Snippet 3">
+        <section class="how_it_work_v_3" data-disp='how_it_works'>
             <div class='container'>
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -135,8 +135,8 @@
             </div>
         </section>
     </template>
-    <template id="how_it_work_v_4" name="How it Works Variant 4">
-        <section class="how_it_work_v_4">
+    <template id="how_it_work_v_4" name="How it Works Snippet 4">
+        <section class="how_it_work_v_4" data-disp='how_it_works'>
             <div class='container'>
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -193,8 +193,8 @@
             </div>
         </section>
     </template>
-    <template id="how_it_work_v_5" name="How it Works Variant 5">
-        <section class="how_it_work_v_5">
+    <template id="how_it_work_v_5" name="How it Works Snippet 5">
+        <section class="how_it_work_v_5" data-disp='how_it_works'>
             <div class='container'>
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -250,8 +250,8 @@
             </div>
         </section>
     </template>
-    <template id="how_it_work_v_6" name="How it Works Variant 6">
-        <section class="how_it_work_v_6">
+    <template id="how_it_work_v_6" name="How it Works Snippet 6">
+        <section class="how_it_work_v_6" data-disp='how_it_works'>
             <div class='container'>
                 <div class='row sct_top_row'>
                     <div class="col-md-12">

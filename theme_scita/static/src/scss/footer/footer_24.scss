@@ -1,0 +1,88 @@
+footer {
+	.footer-content {
+		background-color: $dark-color;
+		padding:50px 0 30px;
+		@media (max-width: 991px){
+			padding: 30px 0 20px;
+		}
+		.sct-top-row {
+			margin-bottom: 20px;
+			.nav {
+				background-color: $light-grey-color;
+				-ms-flex-pack: distribute;
+				justify-content: space-around;
+				padding: 20px 10px;
+				@media (max-width: 575px){
+					padding-bottom: 5px;
+				}
+				.text-icons {
+					text-align: center;
+					font-size: $font-body;
+					width: 25%;
+					@media (max-width: 767px){
+						width: 33%;
+					}
+					@media (max-width: 575px){
+						width: 100%;
+						margin-bottom:15px;
+					}
+					.fa {
+						display: block;
+						margin: auto;
+						text-align: center;
+						margin-bottom: 10px;
+					}
+					&.sct-mail {
+						word-break: break-all;
+						word-wrap: break-word;
+					}
+				}
+			}
+		}
+		.sct-middle-row {
+			text-align: center;
+			ul {
+				li {
+					display: inline-block;
+					padding: 10px;
+					a {
+						color: $light-grey-color;
+						&:hover{
+							color:$theme;
+						}
+					}
+				}
+			}
+			.sct-scocial-icon-footer {
+				text-align: left;
+				margin-top: 10px;
+				@media (max-width: 767px){
+					text-align: center;
+				}
+				a {
+					margin-top: 0;
+					margin-bottom: 5px;
+				}
+			}
+			.sct-payment-icons {
+				text-align: right;
+				margin-top: 10px;
+				@media (max-width: 767px){
+					text-align: center;
+				}
+			}
+		}
+		.sct-bottom-row {
+			text-align: center;
+			.sct-copyright {
+				p {
+					border-top: 1px solid $light-grey-color;
+					margin-top: 20px;
+					padding-top: 20px;
+					margin-bottom: 0;
+					color: $light-grey-color;
+				}
+			}
+		}
+	}
+}

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <odoo>
     <!-- Experts details snippets -->
-    <template id="helth_experts_tabs_snippets" name="Our Team Variant 8">
-        <section class="helth_experts_tabs oe_img_bg" style="background-image: url(/theme_scita/static/src/img/health/health-exp-bg.jpg);">
+    <template id="helth_experts_tabs_snippets" name="Our Team Snippet 1">
+        <section class="helth_experts_tabs oe_img_bg" style="background-image: url(/theme_scita/static/src/img/health/health-exp-bg.jpg);" data-disp="our_team">
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -165,8 +165,8 @@
             </div>
         </section>
     </template>
-    <template id="it_our_team" name="Our Team Variant 1">
-        <section class="it_our_team our_team_varient_1">
+    <template id="it_our_team" name="Our Team Slider 1">
+        <section class="it_our_team our_team_varient_1" data-disp="our_team">
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -215,8 +215,8 @@
             </div>
         </div>
     </template>
-    <template id="our_team_varient_2" name="Our Team Variant 2">
-        <section class="our_team_varient_2">
+    <template id="our_team_varient_2" name="Our Team Slider 2">
+        <section class="our_team_varient_2" data-disp="our_team">
             <div class='container'>
                 <div class='row sct_btm_row'>
                     <div class='col-md-12'>
@@ -258,8 +258,8 @@
             </t>
         </div>
     </template>
-    <template id="our_team_varient_3" name="Our Team Variant 3">
-        <section class="our_team_varient_3">
+    <template id="our_team_varient_3" name="Our Team Slider 3">
+        <section class="our_team_varient_3" data-disp="our_team">
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -298,8 +298,8 @@
             </t>
         </div>
     </template>
-    <template id="our_team_varient_4" name="Our Team Variant 4">
-        <section class="our_team_varient_4">
+    <template id="our_team_varient_4" name="Our Team Slider 4">
+        <section class="our_team_varient_4" data-disp="our_team">
             <div class="container">
             <div class='row sct_btm_row'>
                 <div class='col-md-12'>
@@ -349,8 +349,8 @@
             </t>
         </div>  
     </template>
-    <template id="our_team_varient_5" name="Our Team Variant 5">
-        <section class="our_team_varient_5">
+    <template id="our_team_varient_5" name="Our Team Slider 5">
+        <section class="our_team_varient_5" data-disp="our_team">
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -400,8 +400,8 @@
             </t>
         </div>
     </template>
-    <template id="our_team_varient_6" name="Our Team Variant 6">
-        <section class="our_team_varient_6" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);">
+    <template id="our_team_varient_6" name="Our Team Slider 6">
+        <section class="our_team_varient_6" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);" data-disp="our_team">
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -436,8 +436,8 @@
             </t>
         </div>
     </template>
-    <template id="our_team_varient_7" name="Our Team Variant 7">
-        <section  class="our_team_varient_7">
+    <template id="our_team_varient_7" name="Our Team Slider 7">
+        <section  class="our_team_varient_7" data-disp="our_team">
             <div class="container">
             <div class='row sct_top_row'>
                 <div class="col-md-12">

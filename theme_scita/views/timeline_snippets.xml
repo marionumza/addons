@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<template id="timeline_snippet_1" name="Timeline Variant 1">
-        <section class="timeline_snippet_1">
+	<template id="timeline_snippet_1" name="Timeline Snippet 1">
+        <section class="timeline_snippet_1" data-disp="timeline">
             <div class='container'>
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -71,8 +71,8 @@
             </div>
         </section>
     </template>
-    <template id="timeline_snippet_2" name="Timeline Variant 2">
-        <section class="timeline_snippet_2">
+    <template id="timeline_snippet_2" name="Timeline Snippet 2">
+        <section class="timeline_snippet_2" data-disp="timeline">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -194,8 +194,8 @@
             </div>
         </section>
     </template>
-    <template id="timeline_snippet_3" name="Timeline Variant 3">
-        <section class="timeline_snippet_3">
+    <template id="timeline_snippet_3" name="Timeline Snippet 3">
+        <section class="timeline_snippet_3" data-disp="timeline">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>

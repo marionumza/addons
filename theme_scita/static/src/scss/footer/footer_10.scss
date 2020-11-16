@@ -1,0 +1,113 @@
+footer {
+	.footer-content {
+		padding: 30px 0;
+		background-color: $dark-color;
+		.sct-top-row {
+			.sct-foot-logo {
+				max-width: 150px;
+			}
+			.sct-static-link {
+				padding-top: 20px;
+				ul {
+					li {
+						display: inline-block;
+						vertical-align: middle;
+						padding-top: 7px;
+						padding-right: 10px;
+						a {
+							color: $light-grey-color;
+							&:hover{
+								color:$theme;
+							}
+						}
+					}
+				}
+			}
+			.sct-fot-address {
+				@media (max-width: 767px){
+					margin-top: 20px;
+				}
+				ul {
+					li {
+						position: relative;
+						padding-left: 30px;
+						color: $light-grey-color;
+						font-size: $font-body;
+						.fa {
+							position: absolute;
+							left: 0;
+							top: 2px;
+							font-size: 16PX;
+							color: $light-grey-color;
+						}
+						+ li {
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+		}
+		.sct-bottom-row {
+			border-top: 1px solid $light-grey-color;
+			padding-top: 20px;
+			margin-top: 20px;
+			@media (max-width: 767px){
+				text-align: center;
+			}
+			.sct-left-side {
+				@media (max-width: 767px){
+					margin-top: 10px;
+					-webkit-box-ordinal-group: 2;
+					-ms-flex-order: 1;
+					order: 1;
+				}
+				.links {
+					ul {
+						li {
+							display: inline-block;
+							vertical-align: middle;
+							padding-bottom: 7px;
+							padding-right: 10px;
+							@media (max-width: 767px){
+								padding: 5px;
+							}
+							a {
+								color: $light-grey-color;
+								&:hover{
+									color:$theme;
+								}
+							}
+						}
+					}
+				}
+				.sct-copyright {
+					p {
+						color: $light-grey-color;
+						margin-bottom: 0;
+						margin-top: 10px;
+					}
+				}
+			}
+			.sct-scocial-icon-footer {
+				text-align: right;
+				@media (max-width: 767px){
+					text-align: center;
+				}
+				a {
+					margin-top: 0;
+					margin-bottom: 5px;
+					width: 25px;
+					height: 25px;
+					font-size: $font-body;
+				}
+			}
+			.sct-payment-icons {
+				margin-top: 10px;
+				text-align: right;
+				@media (max-width: 767px){
+					text-align: center;
+				}
+			}
+		}
+	}
+}

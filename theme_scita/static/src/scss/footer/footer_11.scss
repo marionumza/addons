@@ -1,0 +1,56 @@
+footer {
+	.footer-content {
+		background-color: $dark-color;
+		padding: 30px 0;
+		.sct-top-row {
+			.sct-foot-logo {
+				max-width: 150px;
+    			margin: 0 auto 30px;
+			}
+			.sct-scocial-icon-footer {
+				text-align: center;
+				a {
+					margin: 0 5px;
+				}
+			}
+			.links {
+				text-align: center;
+				margin-top: 30px;
+				margin-bottom: 25px;
+				ul {
+					li {
+						display: inline-block;
+						vertical-align: middle;
+						padding: 7px 5px;
+						a {
+							color: $light-grey-color;
+						}
+					}
+				}
+			}
+		}
+		.sct-bottom-row {
+			border-top: 1px solid $light-grey-color;
+			padding-top: 25px;
+			.sct-copyright {
+				@media (max-width: 767px){
+					-webkit-box-ordinal-group: 2;
+					-ms-flex-order: 1;
+					order: 1;
+					text-align: center;
+				}
+			}
+			p {
+				margin-bottom: 0;
+				color: $light-grey-color;
+			}
+			.sct-payment-icons {
+				text-align: right;
+				@media (max-width: 767px){
+					text-align: center;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}

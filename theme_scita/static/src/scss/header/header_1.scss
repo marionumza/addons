@@ -124,7 +124,10 @@ header {
 				}
 			}
 			@media (max-width:767px){
-				max-height: 300px;
+				border-top:1px solid $light-grey-color;
+				margin-top:15px;
+				padding-top:10px;
+				max-height: 450px;
     			overflow-y: auto;
 			}
 			@media (min-width:768px) and (max-width: 991px){
@@ -155,6 +158,23 @@ header {
 						margin-top: 0;
 						@media (max-width: 767px){
 							top: auto;
+						}
+					}
+				}
+				.mega-dropdown-menu {
+					a {
+						color: $dark-color;
+						&:hover{
+							color:$theme;
+						}
+					}
+				}
+				.s_mega_menu_multi_menus {
+					.mega-dropdown-menu {
+						padding: 0;
+						background-color: transparent;
+						.nav-link {
+							color: $dark-color;
 						}
 					}
 				}

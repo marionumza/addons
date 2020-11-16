@@ -26,13 +26,45 @@
                         </div>
                     </div>
                 </div>
-                <h2>Multiple Product Image</h2>
+                <h2>Multiple Product Image customizations</h2>
                 <div class="row mt16 o_settings_container">
                     <div class="col-xs-12 col-md-12 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="no_extra_options"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="no_extra_options"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 o_setting_box" attrs="{'invisible': [('no_extra_options', '=', False)]}">
+                        <div class="o_setting_left_pane">
+                            <field name="enable_disable_text"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="enable_disable_text"/>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 o_setting_box" attrs="{'invisible': [('no_extra_options', '=', False)]}">
+                        <div class="o_setting_right_pane">
+                            <label for="interval_play"/>
+                            <div class="text-muted">
+                                <field name="interval_play"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 o_setting_box" attrs="{'invisible': [('no_extra_options', '=', False)]}">
                         <div class="o_setting_right_pane">
                             <label for="thumbnail_panel_position"/>
                             <div class="text-muted">
                                 <field name="thumbnail_panel_position"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 o_setting_box" attrs="{'invisible': [('no_extra_options', '=', False)]}">
+                        <div class="o_setting_right_pane">
+                            <label for="color_opt_thumbnail"/>
+                            <div class="text-muted">
+                                <field name="color_opt_thumbnail"/>
                             </div>
                         </div>
                     </div>
@@ -126,6 +158,17 @@
                             </div>
                         </div>
                         
+                    </div>
+                </div>
+                <h2>AMP Settings</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-12 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="is_amp_enable"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="is_amp_enable"/>
+                        </div>
                     </div>
                 </div>
             </div>

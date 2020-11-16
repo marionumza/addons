@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="it_portfolio_tabs_snippets" name="Portfolio Block 3">
-        <section class="it_portfolio_tabs" style="background-image: url(/theme_scita/static/src/img/it/portfolio-bg.jpg);">
+    <template id="it_portfolio_tabs_snippets" name="Portfolio Snippet 3">
+        <section class="it_portfolio_tabs" style="background-image: url(/theme_scita/static/src/img/it/portfolio-bg.jpg);" data-disp="portfolio">
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -134,8 +134,8 @@
             </div>
         </section>
     </template>
-	<template id="portfolio_snippet_1" name="Portfolio Block 1">
-        <section class="portfolio_snippet_1">
+	<template id="portfolio_snippet_1" name="Portfolio Snippet 1">
+        <section class="portfolio_snippet_1" data-disp="portfolio">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -315,8 +315,8 @@
             </div>
         </section>
     </template>
-    <template id="portfolio_snippet_2" name="Portfolio Block 2">
-        <section class="portfolio_snippet_2">
+    <template id="portfolio_snippet_2" name="Portfolio Snippet 2">
+        <section class="portfolio_snippet_2" data-disp="portfolio">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>

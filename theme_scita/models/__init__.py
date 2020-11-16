@@ -8,3 +8,4 @@ from . import sliders
 from . import product_category
 from . import theme_ir_ui
 from . import res_partner
+from . import res_company

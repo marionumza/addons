@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Testimonial varient snippet  -->
-    <template id="fashion_testimonials_slider_1" name="Testimonial Variant 8">
-        <section class="fashion_testimonials_slider_1" style="background-image: url(/theme_scita/static/src/img/fashion/testimonial-bg.png);">
+    <template id="fashion_testimonials_slider_1" name="Testimonial Slider 3">
+        <section class="fashion_testimonials_slider_1" style="background-image: url(/theme_scita/static/src/img/fashion/testimonial-bg.png);" data-disp="testimonial">
             <div class="container">
                 <div class="row">
                     <div class='col-md-12 test_box'>
@@ -67,8 +67,8 @@
         </section>
     </template>
     <!-- Tetimonial snippet-->
-    <template id="it_testimonials_slider_1" name="Testimonial Variant 9">
-        <section class="it_testimonials_slider_1" style="background-image: url(/theme_scita/static/src/img/it/testimonial-bg.jpg);">
+    <template id="it_testimonials_slider_1" name="Testimonial Slider 4">
+        <section class="it_testimonials_slider_1" style="background-image: url(/theme_scita/static/src/img/it/testimonial-bg.jpg);" data-disp="testimonial">
             <div class="container">
                 <div class="row">
                     <div class='col-md-12 test_box'>
@@ -142,8 +142,8 @@
             </div>
         </section>
     </template>
-    <template id="health_testimonials_slider_1" name="Testimonial Variant 1">
-        <section class="health_testimonials_slider_1">
+    <template id="health_testimonials_slider_1" name="Testimonial Slider 1">
+        <section class="health_testimonials_slider_1" data-disp="testimonial">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12 test_box'>
@@ -285,8 +285,8 @@
             </div>
         </section>
     </template>
-    <template id="testinomial_varient_1" name="Testimonial Variant 2">
-        <section class="testinomial_varient_1">
+    <template id="testinomial_varient_1" name="Testimonial Snippet 1">
+        <section class="testinomial_varient_1" data-disp="testimonial">
             <div class='container-fluid'>
                 <div class='row'>
                     <div class='col-md-3 test_box'>
@@ -333,8 +333,8 @@
             </div>
         </section>
     </template>
-    <template id="testinomial_varient_2" name="Testimonial Variant 3">
-        <section class="testinomial_varient_2">
+    <template id="testinomial_varient_2" name="Testimonial Slider 2">
+        <section class="testinomial_varient_2" data-disp="testimonial">
             <div class="container">
                 <div class="row">
                     <div class='col-md-12 test_box'>
@@ -434,8 +434,8 @@
             </div>
         </section>
     </template>
-    <template id="testinomial_varient_3" name="Testimonial Variant 4">
-        <section class="testinomial_varient_3">
+    <template id="testinomial_varient_3" name="Testimonial Snippet 2">
+        <section class="testinomial_varient_3" data-disp="testimonial">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -478,8 +478,8 @@
             </div>
         </section>
     </template>
-    <template id="testinomial_varient_4" name="Testimonial Variant 5">
-        <section class="testinomial_varient_4">
+    <template id="testinomial_varient_4" name="Testimonial Snippet 3">
+        <section class="testinomial_varient_4" data-disp="testimonial">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 sct_light_blue sct_thumb">
@@ -526,8 +526,8 @@
             </div>
         </section>
     </template>
-    <template id="testinomial_varient_5" name="Testimonial Variant 6">
-        <section class="testinomial_varient_5">
+    <template id="testinomial_varient_5" name="Testimonial Snippet 4">
+        <section class="testinomial_varient_5" data-disp="testimonial">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -593,8 +593,8 @@
             </div>
         </section>
     </template>
-    <template id="testinomial_varient_6" name="Testimonial Variant 7">
-        <section class="testinomial_varient_6">
+    <template id="testinomial_varient_6" name="Testimonial Snippet 5">
+        <section class="testinomial_varient_6" data-disp="testimonial">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>

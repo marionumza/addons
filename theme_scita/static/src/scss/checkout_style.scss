@@ -82,9 +82,9 @@
 	.oe_cart {
 		> .row {
 			> .col-lg-12 {
-				@media (max-width: 359px){
+				@media (max-width: 410px){
 					overflow: auto;
-					width: 95%;
+					width: 96%;
 				}
 			}
 		}
@@ -199,3 +199,162 @@ header {
   }
 }
 /*checkout breadcrumb end*/
+
+/*My Account Page Style*/
+body #wrapwrap.o_portal {
+	background-color: transparent !important;
+	.o_portal_navbar {
+		padding: 0.5rem !important;
+		.btn-secondary {
+			background-color: $theme;
+			color: $light-color;
+			line-height: 30px;
+			border:none;
+			padding: 0 10px;
+		}
+		.o_portal_search_panel {
+			input.form-control {
+				height: auto;
+			}
+		}
+		.dropdown-item {
+			&.active {
+				background-color: $theme;
+			}
+		}
+	}
+	.breadcrumb-item {
+		a {
+			color: $theme;
+		}
+	}
+	.o_portal_wrap {
+		.o_portal_sale_sidebar {
+			.card {
+				.bs-sidenav, .sale_tbody {
+					a {
+						color: $theme;
+					}
+				}
+
+			}
+		}
+		.o_portal_my_doc_table {
+			td {
+				padding-top: 0.50rem;
+    			padding-bottom: 0.50rem;
+				a {
+					color: $theme;
+				}
+			}
+		}
+	}
+	.o_portal_my_home {
+		.sct_main_title {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+		.o_portal_docs {
+			.sct_portal_div {
+				flex:0 0 33.333%;
+				max-width: 33.333%;
+				padding: 0 1.5%;
+				margin-bottom: 2rem;
+				@media (max-width: 991px){
+					flex: 0 0 50%;
+					max-width: 50%;
+				}
+				@media (max-width: 767px){
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
+				.sct_content {
+					background-color: fade-out($theme, 0.7);
+					padding: 1.5rem;
+					.sct_portal_info {
+						margin-bottom: 1.5rem;
+						.sct_portal_title {
+							margin-bottom: 0;
+							font-weight: bold;
+							font-size: 18px;
+						}
+					}
+					.sct_btn_cnt_div {
+						.sct_portal_cnt {
+							.sct_total_count {
+								font-size: 24px;
+								color: $theme;
+								font-weight: bold;
+							}
+						}
+						a {
+							width: auto;
+							background-color: $light-color;
+							padding: 0 35px;
+							line-height: 35px;
+							font-size: 16px;
+							font-weight: bold;
+							color: $theme;
+							&:hover{
+								color:$light-color;
+								background-color: $theme;
+							}
+							&:focus{
+								box-shadow: none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.o_my_sidebar {
+		.o_portal_my_details {
+			padding: 0 1.5%;
+			.sct_detail_title {
+				a {
+					display: inline-block;
+					font-weight: bold;
+					color: $theme;
+					font-size: 15px;
+				}
+			}
+			.sct_cmp_portal_details {
+				margin: 0 -1.5%;
+				padding-top: 1rem;
+				.sct_info_main_div {
+					flex:0 0 33.333%;
+					max-width: 33.333%;
+					padding: 0 1.5%;
+					margin-bottom: 1.5rem;
+					@media (max-width: 991px){
+						flex: 0 0 50%;
+						max-width: 50%;
+					}
+					@media (max-width: 767px){
+						flex: 0 0 100%;
+						max-width: 100%;
+					}
+					.sct_info {
+						span {
+							display: block;
+							font-size: $font-body;
+							&.name_desc {
+								margin-bottom: 5px;
+							}
+							&.sct_detail_ans {
+								border:1px solid $light-grey-color;
+								padding: 0 10px;
+								line-height: 35px;
+								background-color: fade-out($theme, 0.9);
+								color: $theme;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+/*My Account Page Style end*/

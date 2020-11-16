@@ -1,8 +1,10 @@
 odoo.define('theme_scita.scita_product_js', function(require) {
     "use strict";
 // Multi image gallery
-    var api;
     var ajax = require('web.ajax');
+    var VariantMixin = require('sale.VariantMixin');
+    var sAnimations = require('website.content.snippets.animation');
+    var api;
     function check()
     {   
         if (chkObject('gallery')==true)
@@ -17,11 +19,27 @@ odoo.define('theme_scita.scita_product_js', function(require) {
             dynamic_data['gallery_skin'] = "alexis"
             dynamic_data['gallery_height'] = 850
             dynamic_data['slider_scale_mode']='fit'
+            dynamic_data['slider_enable_arrows'] = true
+            
+            dynamic_data['strippanel_enable_handle'] = true
             if (res.theme_panel_position != false) {
                 dynamic_data['theme_panel_position'] = res.theme_panel_position
             }
             else{
              dynamic_data['theme_panel_position'] = "left"   
+            }
+            if (res.color_opt_thumbnail != false && res.color_opt_thumbnail != 'default') {
+                dynamic_data['thumb_image_overlay_effect'] = true
+                if (res.color_opt_thumbnail == 'b_n_w') {}
+                if (res.color_opt_thumbnail == 'blur') {
+                    dynamic_data['thumb_image_overlay_type'] = "blur"
+                }
+                if (res.color_opt_thumbnail == 'sepia') {
+                    dynamic_data['thumb_image_overlay_type'] = "sepia"
+                }
+            }
+            if (res.enable_disable_text == true) {
+                dynamic_data['slider_enable_text_panel'] = true
             }
             if (res.change_thumbnail_size == true) {
                 dynamic_data['thumb_height'] = res.thumb_height
@@ -31,6 +49,19 @@ odoo.define('theme_scita.scita_product_js', function(require) {
                 dynamic_data['thumb_width'] = 66          
                 dynamic_data['thumb_height'] = 86
 
+            }
+            if (res.interval_play != false) {
+                dynamic_data['gallery_play_interval'] = res.interval_play
+            }
+            if (res.no_extra_options == false) {
+                dynamic_data['slider_enable_progress_indicator'] = false
+                dynamic_data['slider_enable_play_button'] = false
+                dynamic_data['slider_enable_fullscreen_button'] = false
+                dynamic_data['slider_enable_zoom_panel'] = false
+                dynamic_data['slider_enable_text_panel'] = false
+                dynamic_data['gridpanel_enable_handle'] = false
+                dynamic_data['theme_panel_position'] = 'left'
+                dynamic_data['thumb_image_overlay_effect'] = false
             }
             api = $('#gallery').unitegallery(dynamic_data);
             api.on("item_change", function(num, data) {
@@ -56,8 +87,20 @@ odoo.define('theme_scita.scita_product_js', function(require) {
     {  
        return ($('#'+elemClass).length==1)? true : false;
     }
+    // multi image for product id get and vraint image change start
+    VariantMixin._onChangeCombinationProd = function (ev, $parent, combination) {
+        var product_id = 0;
 
-
+        // needed for list view of variants
+        if ($parent.find('input.product_id:checked').length) {
+            product_id = $parent.find('input.product_id:checked').val();
+        } else {
+            product_id = $parent.find('.product_id').val();
+        }
+        update_gallery_product_variant_image($parent, product_id);
+        
+    };
+    
     function update_gallery_product_variant_image(event_source, product_id) {
         var $imgs = $(event_source).closest('.oe_website_sale').find('.ug-slide-wrapper');
         var $img = $imgs.find('img');
@@ -87,22 +130,7 @@ odoo.define('theme_scita.scita_product_js', function(require) {
         
     }
 
-    setTimeout(function() {
-        $('.oe_website_sale').on('change', 'ul[data-attribute_exclusions]', function(ev) {
-            var self = this
-            setTimeout(function() {
-                var product_id = $('input.product_id').val();
-                if (product_id) {
-                    if (chkObject('gallery')==true)
-                    {  
-                        update_gallery_product_variant_image(self, product_id);
-                    }
-                }
-            }, 500)
-        });
-   } ,500)
-
-   function update_gallery_product_image() {
+    function update_gallery_product_image() {
         var $container = $('.oe_website_sale').find('.ug-slide-wrapper');
         var $img = $container.find('img');
         var $product_container = $('.oe_website_sale').find('.js_product').first();
@@ -127,4 +155,55 @@ odoo.define('theme_scita.scita_product_js', function(require) {
             });
         }
     }
+    sAnimations.registry.WebsiteSale.include({
+        _onChangeCombination: function (){
+            this._super.apply(this, arguments);
+            VariantMixin._onChangeCombinationProd.apply(this, arguments);
+        }
+    });
+    // multi image for product id get and vraint image change end
+
+    
+    $(document).ready(function () {
+        //product detail page cart fix
+        if ($('div').hasClass("sct-add-to-cart-mob")){
+            $('#wrapwrap').addClass("sct-mobile-pro-detail-list");
+        }
+        if ($('#product_detail').length != 0) {
+            $('body').addClass('sct-cst-pro-page');
+        }
+        // Product delivery location available checking start
+        $('.checker').on('click', function(){
+            var zip =  $('input.value-zip').val();
+            ajax.jsonRpc("/shop/zipcode", 'call', {
+                'zip_code':zip
+            }).then(function (data){
+                if (data.status == true){
+                    $('.get_status').removeClass("fail");
+                    $('.get_status').addClass("success");
+                    $('#fail_msg').addClass("o_hidden");
+                    $('#success_msg').removeClass("o_hidden");
+                    $('#blank_msg').addClass("o_hidden");
+                    $('input.value-zip').val(zip);
+                }
+                if (data.status == false) {
+                    $('input.value-zip').val(zip);
+                    $('.get_status').removeClass("success");
+                    $('.get_status').addClass("fail");
+                    $('#fail_msg').removeClass("o_hidden");
+                    $('#success_msg').addClass("o_hidden");
+                    $('#blank_msg').addClass("o_hidden");
+                }
+                if(data.zip == "notavailable"){
+                    $('input.value-zip').val(zip);
+                    $('.get_status').removeClass("success");
+                    $('.get_status').addClass("fail");
+                    $('#fail_msg').addClass("o_hidden");
+                    $('#success_msg').addClass("o_hidden");
+                    $('#blank_msg').removeClass("o_hidden");
+                }
+             });
+        });
+        // Product delivery location available checking end
+    });
 });

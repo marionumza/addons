@@ -1,0 +1,110 @@
+footer {
+	.footer-content {
+		background-color: $dark-color;
+		padding: 50px 0 30px;
+		@media (max-width: 991px){
+			padding: 40px 0 20px;
+		}
+		.sct-top-row {
+			.sec-logo {
+				@media (max-width: 991px){
+					margin-bottom: 20px;
+				}
+			}
+			.sct-foot-logo {
+				max-width: 150px;
+			}
+			.sct-fot-about {
+				margin-top: 30px;
+				p {
+					color: $light-grey-color;
+					margin-bottom: 0;
+				}
+			}
+			h4 {
+				text-transform: uppercase;
+				margin-bottom: 20px;					
+				color: $light-grey-color;
+			}
+			ul {
+				li {
+					font-size: $font-body;
+					a {
+						color: $light-grey-color;
+						&:hover {
+							color:$theme;
+						}
+					}
+					+ li {
+						margin-top: 15px;
+					}
+				}
+			}
+			.sct-links {
+				@media (max-width: 991px){
+					margin-bottom: 20px;
+				}
+			}
+			.contact_us {
+				margin-top: 20px;
+			}
+			.pay {
+				@media (max-width: 991px){
+					margin-bottom: 20px;
+				}
+				.sct-payment-icons {
+					margin-bottom: 20px;
+				}
+				ul {
+					li {
+						position: relative;
+						padding-left: 30px;
+						color: $light-grey-color;
+						font-size: $font-body;
+						.fa {
+							position: absolute;
+							left: 0;
+							top: 2px;
+							font-size: 16PX;
+							color: $light-grey-color;
+						}
+						+ li {
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+		}
+		.sct-bottom-row {
+			border-top: 1px solid $light-grey-color;
+			margin-top: 30px;
+			padding-top: 15px;
+			@media (max-width: 991px){
+				margin-top: 10px;
+			}
+			.sct-scocial-icon-footer {
+				a {
+					margin-top: 0;
+					margin-bottom: 5px;
+					width: auto;
+					height: auto;
+					background-color: transparent;
+					&:hover{
+						color:$theme;
+					}
+				}
+				@media (max-width: 767px){
+					text-align:center;
+				}
+			}
+			.sct-copyright {
+				text-align: right;
+				color: $light-grey-color;
+				font-size: $font-body;
+				@media (max-width: 767px){
+					text-align:center;
+				}
+			}
+		}
+	}
+}

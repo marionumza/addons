@@ -1,0 +1,88 @@
+footer {
+	.footer-content {
+		.sct-top-row {
+			padding-bottom: 30px;
+			background-color: #f0f0f0;
+			.sct-top {
+				padding-top: 30px;
+				padding-bottom: 30px;
+				border-bottom: 1px solid $dark-color;
+			}
+			.sct-foot-logo {
+				a {
+					max-width: 200px;
+					display: block;
+					@media (max-width: 575px){
+						margin: auto;
+					}
+				}
+			}
+			.sct-payment-icons {
+				-ms-flex-item-align: center;
+				-ms-grid-row-align: center;
+				align-self: center;
+				text-align: right;
+				@media (max-width: 575px){
+					text-align: center;
+					margin-top: 10px;
+				}
+			}
+			.sct-bottom {
+				.sct-links {
+					margin-top: 30px;
+					h4 {
+						text-transform: uppercase;
+						margin-bottom: 20px;
+					}
+					ul {
+						li {
+							+ li {
+								margin-top: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+		.sct-bottom-row {
+			background-color: $dark-color;
+			padding:30px 0;
+			.sct-fot-address {
+				@media (max-width: 767px){
+					text-align: center;
+					-webkit-box-ordinal-group: 2;
+					-ms-flex-order: 1;
+					order: 1;
+					margin: 10px 0;
+				}
+				ul {
+					li {
+						font-size: $font-body;
+						color: $light-grey-color;
+					}
+				}
+			}
+			.sct-copyright {
+				text-align: center;
+				font-size: $font-body;
+				color: $light-grey-color;
+				@media (max-width: 767px){
+					text-align: center;
+					-webkit-box-ordinal-group: 3;
+					-ms-flex-order: 2;
+					order: 2;
+				}
+			}
+			.sct-scocial-icon-footer {
+				text-align: right;
+				@media (max-width: 767px){
+					text-align: center;
+				}
+				a {
+					margin-top: 0;
+					margin-bottom: 5px;
+				}
+			}
+		}
+	}
+}

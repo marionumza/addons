@@ -1,0 +1,102 @@
+footer {
+	.footer-content {
+		background-color: $dark-color;
+		.top-row {
+			padding: 25px 0;
+			border-bottom:1px solid $light-grey-color;
+			@media (max-width: 575px){
+				padding: 15px 0;
+			}
+			.sct-footer-logo {
+				a{
+					max-width: 150px;
+					display: block;
+					span {
+						display: block;
+					}
+				}
+			}
+			.sct-scocial-icon-footer {
+				text-align: right;
+				.btn-link {
+					width:30px;
+					height: 30px;
+					font-size: 16px;
+					@media (max-width: 575px){
+						width: 25px;
+						height: 25px;
+						margin-top: 0;
+					}
+				}
+			}
+		}
+		.sct-middle-row {
+			padding: 30px 0;
+			h4 {
+				color: $light-color;
+				margin-bottom: 20px;
+				text-transform: uppercase;
+			}
+			p {
+				color: $light-color;
+			}
+			ul {
+				li {
+					color: $light-color;
+					font-size: 15px;
+					a {
+						color: $light-color;
+						&:hover {
+							color:$theme;
+						}
+					}
+					span {
+						color: $light-color;
+					}
+					+ li {
+						margin-top: 15px;
+					}
+				}
+			}
+			.address {
+				@media (max-width: 991px){
+					margin-top: 20px;
+				}
+				li {
+					position: relative;
+					padding-left: 30px;
+					.fa {
+						position: absolute;
+						left: 0;
+						top: 2px;
+						font-size: 20px;
+						color: $light-grey-color;
+					}
+				}
+			}
+			.company {
+				@media (max-width: 991px){
+					margin-top: 20px;
+				}
+			}
+		}
+		.bottom-row {
+			padding: 20px 0;
+			border-top: 1px solid $light-grey-color;
+			p {
+				color: $light-color;
+				margin-bottom: 0;
+				@media (max-width: 767px){
+					text-align: center;
+				}
+			}
+			.sct-payment-icons{
+				text-align: right;
+				@media (max-width: 767px){
+					text-align: center;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}

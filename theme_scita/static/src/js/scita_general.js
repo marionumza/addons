@@ -19,6 +19,17 @@ odoo.define('theme_scita.scita_general_js', function(require) {
     });
     //End megamemu
      $(document).ready(function(){
+        
+        //mobile filter overlay script
+        $('.sct_btm_mobile .btn-link').on("click",function() {
+            $('.sct_shop_box').addClass("sct_shop_box_overlay");
+        });
+        $('.sct_filter_close').on("click",function() {
+            $('.sct_shop_box').removeClass("sct_shop_box_overlay");
+        });
+        if ($('button').hasClass("sct_btm_mobile_btn")){
+            $('#wrapwrap').addClass("sct-mobile-pro-list");
+        }
 
         $('li.position-static').mouseenter(
             function(){ 
@@ -94,6 +105,7 @@ odoo.define('theme_scita.scita_general_js', function(require) {
             $('#products_grid').addClass("list-view-box");
             $('.oe_website_sale .oe_subdescription').removeClass('o_hidden');
             localStorage.setItem("product_view", "list");
+            pimgheight();
         });
 
         $(".oe_website_sale .shift_grid_view").click(function(e) {
@@ -107,6 +119,7 @@ odoo.define('theme_scita.scita_general_js', function(require) {
             $('#products_grid').removeClass("list-view-box");
             $('.oe_website_sale .oe_subdescription').addClass('o_hidden');
             localStorage.setItem("product_view", "grid");
+            pimgheight();
         });
         $(".oe_website_sale .shift_2_col_grid_view").click(function(e) {
             $(".oe_website_sale .shift_list_view").removeClass('active');
@@ -119,6 +132,7 @@ odoo.define('theme_scita.scita_general_js', function(require) {
             $('#products_grid').removeClass("list-view-box");
             $('.oe_website_sale .oe_subdescription').addClass('o_hidden');
             localStorage.setItem("product_view", "2-grid");
+            pimgheight();
         });
         $(".oe_website_sale .shift_4_col_grid_view").click(function(e) {
             $(".oe_website_sale .shift_list_view").removeClass('active');
@@ -131,6 +145,7 @@ odoo.define('theme_scita.scita_general_js', function(require) {
             $('#products_grid').removeClass("list-view-box");
             $('.oe_website_sale .oe_subdescription').addClass('o_hidden');
             localStorage.setItem("product_view", "4-grid");
+            pimgheight();
         });
         
 
@@ -378,6 +393,805 @@ odoo.define('theme_scita.scita_general_js', function(require) {
         }
         return truncated;
     }
-//You can then call the function with something like what i have below.
+    
+    // product equal size thumb
+    $(document).ready(pimgheight);
+    $(window).on('resize',pimgheight);
+    function pimgheight() {
+        var divWidth = $('.cs-product .pwp-img a').width(); 
+        $('.cs-product .pwp-img a').height(divWidth);
+    }
+     $("li#edit-page-menu").on('click',function(){
+        waitForElementToDisplay("div#scita_snippets",1000);
+    });
+    function waitForElementToDisplay(selector, time) {
+        if(document.querySelector(selector)!=null) {
+            $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+            $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
 
+            $("select#selSnippetCat").on('change',function(){
+                if($("select#selSnippetCat").val()=='banner')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='newsletter')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='deal_days')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='blog')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='our_team')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='testimonial')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='service')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='portfolio')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='advbanner')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='pricing_table')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='trust_icon')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='contact_us')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='how_it_works')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='statistics')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='content_block')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='client_snippet')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='category_snippet')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='case_study')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='brand')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='about_us')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='accordion')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='timeline')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='timeline')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='multi_product')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp1=multi_product]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+
+                }
+                else if($("select#selSnippetCat").val()=='google_map_snippet')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().removeClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().addClass("o_hidden");
+                }
+                else if($("select#selSnippetCat").val()=='html_builder')
+                {
+                    $("#scita_snippets [data-disp=banner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=newsletter]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=deal_days]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=blog]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=our_team]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=testimonial]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=service]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=portfolio]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=advbanner]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=pricing_table]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=trust_icon]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=contact_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=how_it_works]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=statistics]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=content_block]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=client_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=category_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=case_study]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=brand]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=about_us]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=accordion]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=timeline]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=multi_product]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=google_map_snippet]").parent().addClass("o_hidden");
+                    $("#scita_snippets [data-disp=html_builder]").parent().removeClass("o_hidden");
+                }
+            });
+            return;
+        }
+        else {
+            setTimeout(function() {
+                waitForElementToDisplay(selector, time);
+            }, time);
+        }
+    }
 });

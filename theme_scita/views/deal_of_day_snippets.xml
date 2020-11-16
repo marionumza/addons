@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<!--  Retail Offer Snippet -->
-    <template id="retial_deal_of_day_banner_snippet_1" name="Deal of the Day 1">
-        <section class="retial_deal_of_day_banner_snippet_1">
+    <template id="retial_deal_of_day_banner_snippet_1" name="Deal of the Day Snippet 1">
+        <section class="retial_deal_of_day_banner_snippet_1" data-disp="deal_days">
             <div class='container'>
                 <div class="row">
                     <div class='col-md-12 sct_promo_banner'>
@@ -42,8 +42,8 @@
         </section>
     </template>
     <!-- Fashion deal of the day -->
-    <template id="fashion_deal_of_day_banner_snippet_1" name="Deal of the Day 2">
-        <section class="fashion_deal_of_day_banner_snippet_1" style="background-image: url(/theme_scita/static/src/img/fashion/fashion-deal-of-day.jpg);">
+    <template id="fashion_deal_of_day_banner_snippet_1" name="Deal of the Day Snippet 2">
+        <section class="fashion_deal_of_day_banner_snippet_1" style="background-image: url(/theme_scita/static/src/img/fashion/fashion-deal-of-day.jpg);" data-disp="deal_days">
             <div class="container">
                 <div class='row'>
                     <div class="col-md-12">
@@ -62,8 +62,8 @@
             </div>
         </section>
     </template>
-    <template id="deal_of_day_banner_2" name="Deal of the Day 3">
-        <section class="deal_of_day_banner_2">
+    <template id="deal_of_day_banner_2" name="Deal of the Day Snippet 3">
+        <section class="deal_of_day_banner_2" data-disp="deal_days">
             <div class="container">
                 <div class='row'>
                 	<div class="col-md-6 sct_img_box">
@@ -92,8 +92,8 @@
         </section>
     </template>
      <!-- Fashion deal of the day -->
-    <template id="deal_of_day_banner_3" name="Deal of the Day 4">
-        <section class="deal_of_day_banner_3 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/deal-bg-light.jpg);">
+    <template id="deal_of_day_banner_3" name="Deal of the Day Snippet 4">
+        <section class="deal_of_day_banner_3 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/deal-bg-light.jpg);" data-disp="deal_days">
             <div class="container">
                 <div class='row'>
                     <div class="col-lg-6 col-md-8 sct_text_left">
@@ -114,5 +114,26 @@
             </div>
         </section>
     </template>
-
+    <template id="deal_of_day_banner_5" name="Deal of the Day Snippet 5">
+        <section class="deal_of_day_banner_5" data-disp="deal_days">
+            <div class="container">
+                <div class='row deals_day'>
+                    <div class="col-md-6 sct_img_box">
+                        <a href="/shop">
+                            <img src="/theme_scita/static/src/img/shues.png" class="img img-fluid" alt="For Men Offer"/>
+                        </a>
+                    </div>
+                    <div class="col-md-6 sct_content_box">
+                        <div class='sct_text_content'>
+                            <h2 class="sct_title">Deal of the day</h2>
+                        </div>
+                        <div class="timer_counter_div"></div>
+                        <div class='sct_button'>
+                            <a href="/deals-of-the-day" class="btn btn-primary">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
 </odoo>

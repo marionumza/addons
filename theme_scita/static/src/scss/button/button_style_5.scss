@@ -49,3 +49,25 @@
 		}
 	}
 }
+.oe_menu_editor{
+	.btn-primary {
+		&:before{
+			position:static;
+			z-index: 1;
+			background-color: transparent;
+			content: "\f044";
+		}
+		&:after{
+			position: static;
+			border: none;
+		}
+	}
+}
+.oe_seo_configuration, .o_portal_wrap {
+	.btn-primary {
+		&:after{
+			position: static;
+			border: none;
+		}
+	}
+}

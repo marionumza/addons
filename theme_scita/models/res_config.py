@@ -19,6 +19,23 @@ class CustomResConfiguration(models.TransientModel):
                                     default='top',
                                     string="Message Position", readonly=False)
     # For multi image
+    no_extra_options = fields.Boolean(string='Slider effects',
+                                      related='website_id.no_extra_options',
+                                      help="Slider with all options for next, previous, play, pause, fullscreen, hide/show thumbnail panel.", readonly=False)
+    interval_play = fields.Char(string='slideshow interval',
+                                related='website_id.interval_play',
+                                help='With this field you can set the interval play time between two images.', readonly=False)
+    enable_disable_text = fields.Boolean(string='Enable text panel',
+                                         related='website_id.enable_disable_text',
+                                         help='Enable/Disable text which is visible on the image in multi image.', readonly=False)
+    color_opt_thumbnail = fields.Selection([
+        ('default', 'Default'),
+        ('b_n_w', 'B/W'),
+        ('sepia', 'Sepia'),
+        ('blur', 'Blur')],
+        related='website_id.color_opt_thumbnail',
+        string="Thumbnail overlay effects", readonly=False)
+    
     thumbnail_panel_position = fields.Selection([
         ('left', 'Left'),
         ('right', 'Right'),
@@ -49,3 +66,5 @@ class CustomResConfiguration(models.TransientModel):
     # For social setting
     is_social_display = fields.Boolean(
         string="Social share is display in product page", related="website_id.is_social_display", readonly=False)
+    is_amp_enable = fields.Boolean(
+        string="Enable AMP", related="website_id.is_amp_enable", readonly=False)

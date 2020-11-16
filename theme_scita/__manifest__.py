@@ -4,14 +4,15 @@
 {
     'name': 'Theme Scita',
     'summary': '''Mobile-first & most versatile Odoo theme. 
-Perfect for e-commerce, fashion, IT and other 30+ industries.''',
+Perfect for E-Commerce, Fashion, IT, Furniture and other 35+ industries.''',
     'author': 'AppJetty',
     'website': 'https://www.appjetty.com/',
     'category': 'Theme/Ecommerce',
-    'version': '13.0.1.0.1',
+    'version': '13.0.1.1.7',
     'license': 'OPL-1',
     'description': '''Theme Scita
 Business theme
+Furniture theme
 Hardware theme
 Hardware and tools theme
 Single Page theme
@@ -59,6 +60,9 @@ customize odoo theme
 ecommerce store theme
 theme for business
 theme for ecommerce store
+Shop by category
+publish unpublish product
+AMP Support
     ''',
     'depends': [
         'website_theme_install',
@@ -72,7 +76,9 @@ theme for ecommerce store
     'data': [
         'security/ir.model.access.csv',
         'views/assets.xml',
+        'data/menu_data.xml',
         'data/theme_scita_data.xml',
+        'data/extra_pages_data.xml',
         'views/theme_cusomization.xml',
         'views/theme.xml',
         'views/cusomization_template.xml',
@@ -80,6 +86,7 @@ theme for ecommerce store
         'views/header_option.xml',
         'views/res_config_view.xml',
         'views/views.xml',
+        'views/res_company_view.xml',
         'data/data.xml',
         'views/sliders_view.xml',
         'views/website_view.xml',
@@ -105,11 +112,15 @@ theme for ecommerce store
         'views/category_snippets.xml',
         'views/timeline_snippets.xml',
         'views/protflio_snippets.xml',
+        'views/snippet_google_map.xml',
         'views/snippets.xml',
         'views/product_details_template.xml',
+        'views/shop_page_amp_template.xml',
+        'views/shop_by_category.xml',
+        'views/deal_of_day_page.xml',
     ],
     'support': 'support@appjetty.com',
-    'live_test_url': 'https://theme-scita.appjetty.com/',
+    'live_test_url': 'http://theme-scita-v13.appjetty.com/',
     'images': [
         'static/description/splash-screen.png',
         'static/description/splash-screen_screenshot.gif',

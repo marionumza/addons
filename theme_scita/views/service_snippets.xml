@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!--  Services varient snippet -->
-    <template id="it_grids_service" name="Service Variant 1">
-        <section class="it_grids_service" style="background-image: url(/theme_scita/static/src/img/it/service-bg.png);">
+    <template id="it_grids_service" name="Service Snippet 1">
+        <section class="it_grids_service" style="background-image: url(/theme_scita/static/src/img/it/service-bg.png);" data-disp="service">
             <div class='container'>
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -66,8 +66,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_1" name="Service Variant 2">
-        <section class="service_varient_1">
+    <template id="service_varient_1" name="Service Snippet 2">
+        <section class="service_varient_1" data-disp="service">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -109,8 +109,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_2" name="Service Variant 3">
-        <section class="service_varient_2">
+    <template id="service_varient_2" name="Service Snippet 3">
+        <section class="service_varient_2" data-disp="service">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -167,8 +167,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_3" name="Service Variant 4">
-        <section class="service_varient_3">
+    <template id="service_varient_3" name="Service Snippet 4">
+        <section class="service_varient_3" data-disp="service">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -225,8 +225,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_4" name="Service Variant 5">
-        <section class="service_varient_4">
+    <template id="service_varient_4" name="Service Snippet 5">
+        <section class="service_varient_4" data-disp="service">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-4 sct_sers_box'>
@@ -307,8 +307,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_5" name="Service Variant 6">
-        <section class="service_varient_5">
+    <template id="service_varient_5" name="Service Snippet 6">
+        <section class="service_varient_5" data-disp="service">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -421,8 +421,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_6" name="Service Variant 7">
-        <section class="service_varient_6">
+    <template id="service_varient_6" name="Service Snippet 7">
+        <section class="service_varient_6" data-disp="service">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -505,8 +505,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_7" name="Service Variant 8">
-        <section class="service_varient_7 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);">
+    <template id="service_varient_7" name="Service Snippet 8">
+        <section class="service_varient_7 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);" data-disp="service">
             
             <div class="container">
                 <div class="row sct_top_row">
@@ -590,8 +590,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_11" name="Service Variant 10">
-        <section class="service_varient_11">
+    <template id="service_varient_11" name="Service Snippet 10">
+        <section class="service_varient_11" data-disp="service">
             <div class="container">
                 <div class="row">
                     <div class='col-lg-3 col-md-6 sct_thumb'>
@@ -642,8 +642,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_14" name="Service Variant 13">
-        <section class="service_varient_14">
+    <template id="service_varient_14" name="Service Snippet 13">
+        <section class="service_varient_14" data-disp="service">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -725,8 +725,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_13" name="Service Variant 12">
-        <section class="service_varient_13">
+    <template id="service_varient_13" name="Service Snippet 12">
+        <section class="service_varient_13" data-disp="service">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -808,8 +808,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_10" name="Service Variant 9">
-        <section class="service_varient_10">
+    <template id="service_varient_10" name="Service Snippet 9">
+        <section class="service_varient_10" data-disp="service">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -1057,8 +1057,8 @@
             </div>
         </section>
     </template>
-    <template id="service_varient_12" name="Service Variant 11">
-        <section class="service_varient_12">
+    <template id="service_varient_12" name="Service Snippet 11">
+        <section class="service_varient_12"  data-disp="service">
             <div class="container">
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -1170,8 +1170,8 @@
             </div>
         </section>
     </template>
-    <template id="helth_portfolio_tabs_snippets" name="Service Variant 14">
-        <section class="helth_service_tabs oe_img_bg" style="background-image: url(/theme_scita/static/src/img/health/health-service-bg.jpg);">
+    <template id="helth_portfolio_tabs_snippets" name="Service Snippet 14">
+        <section class="helth_service_tabs oe_img_bg" style="background-image: url(/theme_scita/static/src/img/health/health-service-bg.jpg);" data-disp="service">
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -1310,9 +1310,9 @@
             </div>
         </section>
     </template>
-    <template id="health_department_snippets" name="Service Variant 15">
+    <template id="health_department_snippets" name="Service Snippet 15">
         <!-- Tab style 2 -->
-        <section class="health_dept_snippet_1 tab-right-vertical oe_img_bg" style="background-image: url(/theme_scita/static/src/img/health/health-department-bg.jpg);">
+        <section class="health_dept_snippet_1 tab-right-vertical oe_img_bg" style="background-image: url(/theme_scita/static/src/img/health/health-department-bg.jpg);" data-disp="service">
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">

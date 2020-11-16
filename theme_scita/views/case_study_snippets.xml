@@ -2,8 +2,8 @@
 <odoo>
 
     <!--  Use Cases varient snippet -->
-     <template id="health_cash_study_snippet" name="Case Study Variant 1">
-        <section class='health_cash_study_snippet'>
+     <template id="health_cash_study_snippet" name="Case Study Snippet 1">
+        <section class='health_cash_study_snippet' data-disp='case_study'>
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -64,8 +64,8 @@
             </div>
         </section>
     </template>
-    <template id="case_study_varient_1" name="Case Study Variant 2">
-        <section class="case_study_varient_1">
+    <template id="case_study_varient_1" name="Case Study Snippet 2">
+        <section class="case_study_varient_1" data-disp='case_study'>
             <div class='container-fluid'>
                 <div class="row sct_top_row">
                     <div class='col-md-12'>
@@ -94,8 +94,8 @@
             </div>
         </section>
     </template>
-    <template id="case_study_varient_2" name="Case Study Variant 3">
-        <section class="case_study_varient_2">
+    <template id="case_study_varient_2" name="Case Study Snippet 3">
+        <section class="case_study_varient_2" data-disp='case_study'>
             <div class='container'>
                 <div class='row'>
                     <div class='col-md-3 col-sm-6'>

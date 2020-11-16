@@ -70,7 +70,30 @@ class ProductTemplate(models.Model):
     )
     biz_images = fields.One2many('scita.product.images', 'biz_product_tmpl_id',
                                  string='Product Images')
+    deal_product = fields.Boolean(string='Available for deal of the day')
 
+    def quick_publish_product(self):
+        self.ensure_one()
+        self.is_published = not(self.is_published)
+
+    def action_product_publish(self):
+        self.is_published = True
+
+    def action_product_unpublish(self):
+        self.is_published = False
+        
+class ProductProduct(models.Model):
+    _inherit = 'product.product'
+    
+    def quick_publish_product(self):
+        self.ensure_one()
+        self.is_published = not(self.is_published)
+
+    def action_product_publish(self):
+        self.is_published = True
+
+    def action_product_unpublish(self):
+        self.is_published = False
 
 class Brands(models.Model):
     _name = 'product.brands'
@@ -205,3 +228,9 @@ class ScitaMultiProductImages(models.Model):
     sequence = fields.Integer(string='Sort Order')
     biz_product_tmpl_id = fields.Many2one('product.template', string='Product')
     more_view_exclude = fields.Boolean(string="More View Exclude")
+
+class Zipcodes(models.Model):
+    _name = 'delivery.zipcode'
+    _description = "Delivery Area Zipcode Configuration"
+    
+    name = fields.Char(string='Zipcode', required=True)

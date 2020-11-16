@@ -33,7 +33,7 @@
     </record>
     <!-- Blog Slider Action -->
     <record id="scita_dynamic_blog_slider_action" model="ir.actions.act_window">
-        <field name="name">Blog Slider Configration</field>
+        <field name="name">Blog Snippet Configuration</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">blog.slider.config</field>
         <field name="view_mode">tree,form</field>
@@ -44,7 +44,7 @@
         </field>
     </record>
     <!-- Blog slider main menu in config -->
-    <menuitem action="scita_dynamic_blog_slider_action" id="scita_dynamic_blog_slider_menu" name="Blog Slider Configuration" parent="theme_scita.scita_menu_slider_config" sequence="60"/>
+    <menuitem action="scita_dynamic_blog_slider_action" id="scita_dynamic_blog_slider_menu" name="Blog Snippet Configuration" parent="theme_scita.scita_menu_slider_config" sequence="60"/>
 
 
     <!-- Category Slider -->
@@ -76,7 +76,7 @@
     </record>
     <!-- Category Slider Action -->
     <record id="cat_slider_action" model="ir.actions.act_window">
-        <field name="name">Category Slider</field>
+        <field name="name">Category Snippet Configuration</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">category.slider.config</field>
         <field name="view_mode">tree,form</field>
@@ -87,14 +87,14 @@
         </field>
     </record>
     <!-- Category menu in slider config -->
-    <menuitem action="cat_slider_action" id="cat_slider_menu" name="Category Slider Configuration" parent="theme_scita.scita_menu_slider_config" sequence="60"/>
+    <menuitem action="cat_slider_action" id="cat_slider_menu" name="Category Snippet Configuration" parent="theme_scita.scita_menu_slider_config" sequence="60"/>
 
     <!-- Multi Product Slider Form View-->
     <record id="multi_slider_form_view" model="ir.ui.view">
         <field name="name">multi.slider.form.view</field>
         <field name="model">multi.slider.config</field>
         <field name="arch" type="xml">
-            <form string="Multi Product Slider Configration">
+            <form string="Multi Product Slider Configuration">
                 <sheet>
                     <group>
                         <field name="name"/>
@@ -114,7 +114,6 @@
                         <field name="collection_1_ids"
                             attrs="{'invisible': [('no_of_collection', '=', False)]}"
                             widget='many2many_tags'/>
-
                         <field name="label_collection_2"
                                attrs="{'invisible': [('no_of_collection', '=', False)]}" />
                         <field name="collection_2_ids"
@@ -172,7 +171,7 @@
 
     <!-- Multi Product Slider Action -->
     <record id="multi_slider_action" model="ir.actions.act_window">
-        <field name="name">Multi Product Slider Configration</field>
+        <field name="name">Multi Product Snippet Configuration</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">multi.slider.config</field>
         <field name="view_mode">tree,form</field>
@@ -198,6 +197,7 @@
             </field>
             <field name="website_style_ids" position="after">
                 <field name="product_style_tag_id"/>
+                <field name="deal_product"/>
             </field>
         </field>
     </record>
@@ -318,7 +318,7 @@
 
     <!-- Main menu in config -->
     <menuitem id="multi_slider_menu"
-              name="Multi Product Slider Configuration"
+              name="Multi Product Snippet Configuration"
               action="multi_slider_action"
               parent="theme_scita.scita_menu_slider_config"
               sequence="70"/>
@@ -390,4 +390,143 @@
             </xpath>
         </field>
     </record>
+    <!-- Brand snippet view configuration -->
+    <record id="brand_snippet_form_view" model="ir.ui.view">
+        <field name="name">brand.snippet.config.form.view</field>
+        <field name="model">brand.snippet.config</field>
+        <field name="arch" type="xml">
+            <form string="Brand Snippet">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="collections_brands"
+                               widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="brand_snippet_list_view" model="ir.ui.view">
+        <field name="name">brand.snippet.config.list.view</field>
+        <field name="model">brand.snippet.config</field>
+        <field name="arch" type="xml">
+            <tree string="Brand Snippet">
+                <field name="name"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="brand_snippet_config_action" model="ir.actions.act_window">
+        <field name="name">Brand Configuration</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">brand.snippet.config</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" eval="False"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to define a new slider.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="brand_config_menu_slider"
+              name="Brand Snippet Configuration"
+              action="brand_snippet_config_action"
+              parent="theme_scita.scita_menu_slider_config"
+              sequence="80"/>
+    <!-- product -->
+    <record id="pro_cat_img_slider_form_view" model="ir.ui.view">
+        <field name="name">category.img.slider.form</field>
+        <field name="model">product.category.img.slider.config</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <form string="Product Category Image Snippet">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="no_of_column"/>
+                        <field name="img_banner" options="{'preview_image':'img_banner'}" widget="image" width="64"/>
+                        <field name="img_link"/>
+                        <field name="links" widget='html'/>
+                        <field name="prod_cat_type"/>
+                        <field name="collections_product"
+                               attrs="{'invisible': [('prod_cat_type', '=', 'category')],
+                                       'required': [('prod_cat_type', '=', 'product')]}"
+                               widget="many2many_tags"/>
+                        <field name="collections_category"
+                               attrs="{'invisible': [('prod_cat_type', '=', 'product')],
+                                       'required': [('prod_cat_type', '=', 'category')]}"
+                               widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="pro_cat_img_slider_tree_view" model="ir.ui.view">
+        <field name="name">product.category.slider.tree.view</field>
+        <field name="model">product.category.img.slider.config</field>
+        <field name="arch" type="xml">
+            <tree string="Product Category Image Snippet">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    <record id="pro_cat_img_slider_action" model="ir.actions.act_window">
+        <field name="name">Product Category Image Snippet</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.category.img.slider.config</field>
+        <field name="view_mode">tree,form</field>
+        <field eval="False" name="view_id"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click to define a new slider.
+            </p>
+        </field>
+    </record>
+    <menuitem action="pro_cat_img_slider_action" id="pro_cat_img_slider_menu" name="Product Category Image Snippet Configuration" parent="theme_scita.scita_menu_slider_config" sequence="79"/>
+    <!-- Product snippet configuration start -->
+    <record id="view_product_snippet_configuration_form_view" model="ir.ui.view">
+        <field name="name">product.snippet.configuration.form</field>
+        <field name="model">product.snippet.configuration</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+             <form string="Product Snippet">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="sub_title"/>
+                        <field name="active"/>
+                        <field name="collection_of_products" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_product_snippet_configuration_tree_view" model="ir.ui.view">
+        <field name="name">product.snippet.configuration.tree</field>
+        <field name="model">product.snippet.configuration</field>
+        <field name="arch" type="xml">
+            <tree string="Product Snippet">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_product_snippet_configuration" model="ir.actions.act_window">
+        <field name="name">Product Snippet</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.snippet.configuration</field>
+        <field name="view_mode">tree,form</field>
+        <field eval="False" name="view_id"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click to select a Product.
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="action_product_snippet_configuration" id="product_snippet_configuration" name="Product Snippet Configuration" parent="theme_scita.scita_menu_slider_config" sequence="80"/>
+    <!-- Product snippet configuration end -->    
 </odoo>

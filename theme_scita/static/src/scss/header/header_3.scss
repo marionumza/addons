@@ -39,7 +39,10 @@ header {
 				}
 			}
 			@media (max-width:767px){
-				max-height: 300px;
+				border-top:1px solid $light-grey-color;
+				margin-top:15px;
+				padding-top:10px;
+				max-height: 450px;
     			overflow-y: auto;
 			}
 			@media (min-width:768px) and (max-width: 991px){
@@ -96,6 +99,16 @@ header {
 							a {
 								padding: 0 !important;
 							}
+						}
+					}
+				}
+				.s_mega_menu_multi_menus, .s_mega_menu_menu_image_menu {
+					.mega-dropdown-menu {
+						padding: 0;
+						background-color: transparent;
+						.nav-link {
+							color: $dark-color;
+							padding: 0.5rem 1rem;
 						}
 					}
 				}
@@ -223,7 +236,8 @@ header {
 						.btn-group.show{
 							ul.dropdown-menu {
 								display: block;
-								width: 100px;
+								min-width: 100px;
+								width: auto;
 								left: 0;
     							top: 100%;
     							margin-top: 0;

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<!-- Client Slider Snippet -->
-        <template id="s_theme_scita_client_slider_snippet" name="Client Variant 1">
-            <section id="theme_scita_custom_client_slider" class="our-clients our-client-slider">
+        <template id="s_theme_scita_client_slider_snippet" name="Client Slider 1">
+            <section id="theme_scita_custom_client_slider" class="our-clients our-client-slider" data-disp='client_snippet'>
                 <div class="container">
                     <div class="block-title">
                         <h3 class="fancy">Client slider</h3>
@@ -33,8 +33,8 @@
             </div>
         </template>
         <!-- second Client Slider Snippet -->
-        <template id="second_client_slider_snippet" name="Client Variant 2">
-            <section class="our-clients second-client-slider">
+        <template id="second_client_slider_snippet" name="Client Snippet 1">
+            <section class="our-clients second-client-slider" data-disp='client_snippet'>
                 <div class='container'>
                     <div class='row sct_top_row'>
                         <div class='col-md-12'>
@@ -63,8 +63,8 @@
                 </div>No clients added into slider. For configuring, please goto admin section Sales menu than goto Customers and select the customer/client open that specific record and you will see a checkbox 'Add to client slider' enable that option and that record will be visible in slider.</div>
         </template>
 
-        <template id="third_client_slider_snippet" name="Client Variant 3">
-            <section id="third_custom_client_slider" class="our-clients third-client-slider">
+        <template id="third_client_slider_snippet" name="Client Snippet 2">
+            <section id="third_custom_client_slider" class="our-clients third-client-slider" data-disp='client_snippet'>
                 <div class='container'>
                     <div class='row sct_top_row'>
                         <div class='col-md-6'>

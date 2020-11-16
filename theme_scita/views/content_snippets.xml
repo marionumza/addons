@@ -2,8 +2,8 @@
 <odoo>
 	
 	
-     <template id="it_work_snippet" name="How it Works Variant 7">
-        <section class="it_work_snippet" style="background-image: url(/theme_scita/static/src/img/it/howwork-bg.png);">
+     <template id="it_work_snippet" name="How it Works Snippet 7">
+        <section class="it_work_snippet" style="background-image: url(/theme_scita/static/src/img/it/howwork-bg.png);" data-disp='how_it_works'>
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -64,8 +64,8 @@
         </section>
     </template>
     <!-- content_snippets_v_4 -->
-    <template id="content_snippets_v_4" name="Content Block 1">
-        <section class="content_snippets_v_4">
+    <template id="content_snippets_v_4" name="Content Snippet 1">
+        <section class="content_snippets_v_4" data-disp="content_block">
             <div class='container'>
                 <div class="row">
                     <div class='col-md-12 sct_content_info'>
@@ -80,8 +80,8 @@
         </section>
     </template>
     <!-- content_snippets_v_5 -->
-    <template id="content_snippets_v_5" name="Content Block 2">
-        <section class="content_snippets_v_5">
+    <template id="content_snippets_v_5" name="Content Snippet 2">
+        <section class="content_snippets_v_5" data-disp="content_block">
             <div class='container'>
                 <div class="row">
                     <div class='col-md-12 sct_content_info'>
@@ -103,8 +103,8 @@
         </section>
     </template>
     <!-- content_snippets_v_6 -->
-    <template id="content_snippets_v_6" name="Content Block 3">
-        <section class="content_snippets_v_6">
+    <template id="content_snippets_v_6" name="Content Snippet 3">
+        <section class="content_snippets_v_6" data-disp="content_block">
             <div class='container'>
             	<div class='row sct_top_row'>
             		<div class="col-md-12">
@@ -129,8 +129,8 @@
         </section>
     </template>
     <!-- content_snippets_v_9 -->
-    <template id="content_snippets_v_9" name="Content Block 4">
-        <section class="content_snippets_v_9">
+    <template id="content_snippets_v_9" name="Content Snippet 4">
+        <section class="content_snippets_v_9" data-disp="content_block">
             <div class='container'>
             	<div class='row sct_top_row'>
             		<div class="col-md-12">
@@ -184,8 +184,8 @@
         </section>
     </template>
     <!-- content_snippets_v_10 -->
-    <template id="content_snippets_v_10" name="Content Block 5">
-        <section class="content_snippets_v_10 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);">
+    <template id="content_snippets_v_10" name="Content Snippet 5">
+        <section class="content_snippets_v_10 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);" data-disp="content_block">
             <div class='container'>
                 <div class="row sct_btm_row">
                     <div class='col-md-6 sct_content_img'>
@@ -209,8 +209,8 @@
         </section>
     </template>
     <!-- content_snippets_v_11 -->
-    <template id="content_snippets_v_11" name="Content Block 6">
-        <section class="content_snippets_v_11 s_faq_collapse">
+    <template id="content_snippets_v_11" name="Content Snippet 6">
+        <section class="content_snippets_v_11 s_faq_collapse" data-disp="content_block">
             <div class='container'>
                 <div class="row sct_btm_row">
                     <div class='col-md-6 sct_content_info'>

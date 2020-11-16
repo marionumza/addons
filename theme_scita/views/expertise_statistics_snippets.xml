@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-	<template id="it_fact_sheet" name="Statistics Variant 1">
-        <section class="it_fact_sheet" style="background-image: url(/theme_scita/static/src/img/it/statics-bg.jpg);">
+	<template id="it_fact_sheet" name="Statistics Snippet 1">
+        <section class="it_fact_sheet" style="background-image: url(/theme_scita/static/src/img/it/statics-bg.jpg);" data-disp='statistics'>
             <div class="container">
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -29,8 +29,8 @@
             </div>
         </section>
     </template>
-    <template id="health_fact_sheet" name="Statistics Variant 2">
-        <section class="health_fact_sheet">
+    <template id="health_fact_sheet" name="Statistics Snippet 2">
+        <section class="health_fact_sheet" data-disp='statistics'>
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 prog_statics">
@@ -65,8 +65,8 @@
             </div>
         </section>
     </template>
-    <template id="expertise_statistics_4" name="Statistics Variant 3">
-        <section class="expertise_statistics_4">
+    <template id="expertise_statistics_4" name="Statistics Snippet 3">
+        <section class="expertise_statistics_4" data-disp='statistics'>
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 prog_statics">
@@ -109,8 +109,8 @@
             </div>
         </section>
     </template>
-    <template id="expertise_statistics_5" name="Statistics Variant 4">
-        <section class="expertise_statistics_5">
+    <template id="expertise_statistics_5" name="Statistics Snippet 4">
+        <section class="expertise_statistics_5" data-disp='statistics'>
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 prog_statics">
@@ -161,8 +161,8 @@
             </div>
         </section>
     </template>
-    <template id="expertise_statistics_6" name="Statistics Variant 5">
-        <section class="expertise_statistics_6 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);">
+    <template id="expertise_statistics_6" name="Statistics Snippet 5">
+        <section class="expertise_statistics_6 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);" data-disp='statistics'>
             <div class="container">
                 <div class="row">
                 	<div class='col-lg-7 col-md-12'>
@@ -210,8 +210,8 @@
             </div>
         </section>
     </template>
-    <template id="expertise_statistics_7" name="Statistics Variant 6">
-        <section class="expertise_statistics_7">
+    <template id="expertise_statistics_7" name="Statistics Snippet 6">
+        <section class="expertise_statistics_7" data-disp='statistics'>
             <div class='container'>
                 <div class='row sct_top_row'>
                     <div class="col-md-12">
@@ -257,8 +257,8 @@
             </div>
         </section>
     </template>
-    <template id="expertise_statistics_8" name="Statistics Variant 7">
-        <section class="expertise_statistics_8">
+    <template id="expertise_statistics_8" name="Statistics Snippet 7">
+        <section class="expertise_statistics_8" data-disp='statistics'>
             <div class='container'>
                 <div class="row sct_btm_row">
                     <div class='col-md-4 oe_img_bg' style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);">
@@ -310,8 +310,8 @@
             </div>
         </section>
     </template>
-    <template id="expertise_statistics_9" name="Statistics Variant 8">
-        <section class="expertise_statistics_9">
+    <template id="expertise_statistics_9" name="Statistics Snippet 8">
+        <section class="expertise_statistics_9" data-disp='statistics'>
             <div class='container'>
                 <div class="row sct_btm_row">
                     <div class='col-md-3 sct_pra_info'>
@@ -364,8 +364,8 @@
             </div>
         </section>
     </template>
-    <template id="expertise_statistics_10" name="Statistics Variant 9">
-        <section class="expertise_statistics_10">
+    <template id="expertise_statistics_10" name="Statistics Snippet 9">
+        <section class="expertise_statistics_10" data-disp='statistics'>
             <div class="container">
                 <div class="row">
                 	<div class='col-md-12'>
@@ -420,8 +420,8 @@
             </div>
         </section>
     </template>
-    <template id="expertise_statistics_11" name="Statistics Variant 10">
-        <section class="expertise_statistics_11">
+    <template id="expertise_statistics_11" name="Statistics Snippet 10">
+        <section class="expertise_statistics_11" data-disp='statistics'>
             <div class='container'>
                 <div class="row sct_btm_row">
                     <div class='col-md-4 sct_pra_info'>
@@ -483,8 +483,8 @@
             </div>
         </section>
     </template>
-    <template id="expertise_statistics_12" name="Statistics Variant 11">
-        <section class="expertise_statistics_12 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);">
+    <template id="expertise_statistics_12" name="Statistics Snippet 11">
+        <section class="expertise_statistics_12 oe_img_bg" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);" data-disp='statistics'>
             <div class='container'>
                 <div class="row sct_btm_row">
                     <div class='col-md-5 sct_pra_info'>

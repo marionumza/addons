@@ -43,3 +43,13 @@
 		padding:0 20px;
 	}
 }
+.oe_menu_editor{
+	.btn-primary {
+		&:before{
+			position:static;
+			z-index: 1;
+			background-color: transparent;
+			content: "\f044";
+		}
+	}
+}

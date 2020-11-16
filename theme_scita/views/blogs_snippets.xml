@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 	<!-- Blog Slider Snippet -->
-    <template id="health_blog_custom_snippet" name="Blogs Slider 2">
-        <section id="health_custom_blog_snippet" class="health_blog_slider oe_img_bg" data-blog-slider-id="" data-blog-slider-type="" style="background-image: url(/theme_scita/static/src/img/health/health-article-bj.jpg);">    
+    <template id="health_blog_custom_snippet" name="Blog Snippet 2">
+        <section id="health_custom_blog_snippet" class="health_blog_slider oe_img_bg" data-blog-slider-id="" data-blog-slider-type="" style="background-image: url(/theme_scita/static/src/img/health/health-article-bj.jpg);" data-disp="blog">    
             <div class="container">
                 <div class="block-title">
                     <h3 class="fancy">Blog post slider</h3>
@@ -77,8 +77,8 @@
     </template>
 
     <!-- It Blog Slider Snippet -->
-    <template id="theme_scita_blog_custom_snippet" name="Blogs Slider 1">
-        <section id="theme_scita_custom_blog_snippet" class="blog scita_blog_slider" data-blog-slider-id="" data-blog-slider-type="">
+    <template id="theme_scita_blog_custom_snippet" name="Blog Snippet 1">
+        <section id="theme_scita_custom_blog_snippet" class="blog scita_blog_slider" data-blog-slider-id="" data-blog-slider-type="" data-disp="blog">
             <div class="container">
                 <div class="block-title">
                     <h3 class="fancy">Blog post slider</h3>
@@ -155,8 +155,8 @@
         </div>
     </template>
     <!-- Blog 2 sliders -->
-    	<template id="blog_2_custom_snippet" name="Blogs Slider 3">
-            <section id="blog_custom_2_snippet" class="blog blog_2_custom oe_img_bg" data-blog-slider-id="" data-blog-slider-type="" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);">
+    	<template id="blog_2_custom_snippet" name="Blog Slider 1">
+            <section id="blog_custom_2_snippet" class="blog blog_2_custom oe_img_bg" data-blog-slider-id="" data-blog-slider-type="" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);" data-disp="blog">
                 <div class="container">
                     <div class="block-title">
                         <h2 class="fancy">Blog post slider</h2>
@@ -202,8 +202,8 @@
             </div>
         </template>
     <!-- Blog 3 sliders -->
-    	<template id="blog_3_custom_snippet" name="Blogs Slider 4">
-            <section id="blog_custom_3_snippet" class="blog blog_3_custom" data-blog-slider-id="" data-blog-slider-type="">
+    	<template id="blog_3_custom_snippet" name="Blog Slider 2">
+            <section id="blog_custom_3_snippet" class="blog blog_3_custom" data-blog-slider-id="" data-blog-slider-type="" data-disp="blog">
                 <div class="container">
                     <div class="block-title">
                         <h2 class="fancy">Blog post slider</h2>
@@ -255,8 +255,8 @@
             </div>
         </template>
         <!-- Blog 8 sliders -->
-    	<template id="blog_8_custom_snippet" name="Blog Slider 7">
-            <section id="blog_custom_8_snippet" class="blog blog_8_custom oe_img_bg" data-blog-slider-id="" data-blog-slider-type="" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);">
+    	<template id="blog_8_custom_snippet" name="Blog Slider 4">
+            <section id="blog_custom_8_snippet" class="blog blog_8_custom oe_img_bg" data-blog-slider-id="" data-blog-slider-type="" style="background-image: url(/theme_scita/static/src/img/service-snippet-img.jpg);" data-disp="blog">
                 <div class="container">
                     <div class="block-title">
                         <h2 class="fancy">Blog post slider</h2>
@@ -315,8 +315,8 @@
             </div>
         </template>
         <!-- Blog 5 sliders -->
-    	<template id="blog_5_custom_snippet" name="Blogs Slider 5">
-            <section id="blog_custom_5_snippet" class="blog blog_5_custom" data-blog-slider-id="" data-blog-slider-type="">
+    	<template id="blog_5_custom_snippet" name="Blog Slider 3">
+            <section id="blog_custom_5_snippet" class="blog blog_5_custom" data-blog-slider-id="" data-blog-slider-type="" data-disp="blog">
                 <div class="container">
                     <div class="block-title">
                         <h2 class="fancy">Blog post slider</h2>
@@ -363,8 +363,8 @@
             </div>
         </template>
         <!-- Blog 4 sliders -->
-    	<template id="blog_4_custom_snippet" name="Blogs Slider 8">
-            <section id="blog_custom_4_snippet" class="blog blog_4_custom" data-blog-slider-id="" data-blog-slider-type="">
+    	<template id="blog_4_custom_snippet" name="Blog Snippet 4">
+            <section id="blog_custom_4_snippet" class="blog blog_4_custom" data-blog-slider-id="" data-blog-slider-type="" data-disp="blog">
                 <div class="container">
                     <div class="block-title">
                         <h2 class="fancy">Blog post slider</h2>
@@ -450,8 +450,8 @@
 	        </div>
         </template>
        	<!-- Blog 4 sliders -->
-    	<template id="blog_6_custom_snippet" name="Blogs Slider 6">
-            <section id="blog_custom_6_snippet" class="blog blog_6_custom" data-blog-slider-id="" data-blog-slider-type="">
+    	<template id="blog_6_custom_snippet" name="Blog Snippet 3">
+            <section id="blog_custom_6_snippet" class="blog blog_6_custom" data-blog-slider-id="" data-blog-slider-type="" data-disp="blog">
                 <div class="container">
                     <div class="block-title">
                         <h2 class="fancy">Blog post slider</h2>

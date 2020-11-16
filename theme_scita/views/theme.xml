@@ -30,7 +30,7 @@
         <xpath expr="//t[@t-call='http_routing.404']" position="replace">
             <t t-call='website.layout'>
                 <div class='main_404'>
-                    <img src="/theme_scita/static/src/img/404-bg.jpg" class="img-fluid"/>
+                    <img src="/theme_scita/static/src/img/404-bg.jpg" alt="Page not found" class="img-fluid"/>
                     <div class="container">
                         <div class="row section-404 well">
                             <div class="col-md-12 text-center">
@@ -58,12 +58,8 @@
         <xpath expr="//div[@id='products_grid_before']" position="before">
             <t t-set="enable_left_column" t-value="True"/>
         </xpath>
-        <xpath expr="//div[@id='products_grid_before']" position="inside">
-            <button type="button" class="btn btn-link d-lg-none"
-                data-target="#wsale_products_attributes_collapse" data-toggle="collapse">
-                Show options
-            </button>
-            <div class="collapse d-lg-block" id="wsale_products_attributes_collapse">
+        <xpath expr="//div[@id='sct_shop_product_filter']" position="inside">
+            <div id="wsale_products_attributes_collapse">
                 <div class="shop-by mt16">
                     <div class="left-title" t-if='len(attributes) &gt; 0'>
                         <h4 class='attrb_title'>Product Attributes</h4>
@@ -131,7 +127,7 @@
         <xpath expr="//div[@id='products_grid_before']" position="before">
             <t t-set="enable_left_column" t-value="True"/>
         </xpath>
-        <xpath expr="//div[@id='products_grid_before']" position="inside">
+        <xpath expr="//div[@id='sct_shop_product_filter']" position="inside">
             <div class="price">
                 <div class="left-title">
                     <h4 class='attrb_title'>Price</h4>
@@ -150,10 +146,10 @@
             </div>
         </xpath>
         <xpath expr="//div[@id='products_grid_before']" position="attributes">
-            <attribute name="class">col-md-3 col-sm-4 hidden-xs</attribute>
+            <attribute name="class">col-md-3 hidden-xs</attribute>
         </xpath>
         <xpath expr="//div[@id='products_grid']" position="attributes">
-            <attribute name="class">col-md-9 col-sm-8</attribute>
+            <attribute name="class">col-md-9</attribute>
         </xpath>
     </template>
 
@@ -940,7 +936,7 @@
                                         <ul class='pro_thumb_bg'>
                                             <li class="prod_img">
                                                 <a t-att-href="'/shop/product/%s' % slug(product)">
-                                                   <img t-att-src="website.image_url(product,'image_1920','80x80')"/>
+                                                   <img t-att-alt="product.name"  t-att-src="website.image_url(product,'image_1920','80x80')"/>
                                                 </a>
                                             </li>
                                            
@@ -1084,9 +1080,48 @@
                 </div>
             </section>
         </xpath>
+        <xpath expr="//div[@id='products_grid_before']" position="attributes">
+            <attribute name="class">col-md-3 hidden-xs</attribute>
+        </xpath>
+        <xpath expr="//div[@id='products_grid_before']" position="before">
+            <div class='sct_btm_mobile d-md-none'>
+                <button class="sct_btm_mobile_btn sortbybtn_filter sct-btn" data-target="#sort_by_mobile" data-toggle="collapse" t-if='request.website.viewref("theme_scita.theme_scita_sort").active'>
+                    <span class="fa fa-sort"></span>
+                    <span class='btn_name'>Sort By</span>
+                </button>
+                <button type="button" class="btn sct_btm_mobile_btn btn-link sct-btn"
+                    data-target="#sct_shop_product_filter" data-toggle="collapse" t-if='request.website.viewref("theme_scita.theme_scita_product_category").active or request.website.viewref("theme_scita.theme_scita_products_attributes").active or request.website.viewref("theme_scita.scita_price_slider_layout").active'>
+                    <span class="fa fa-filter"></span>
+                    <span class='btn_name'>Filters</span>
+                </button>
+                <div id='sort_by_mobile' class='collapse d-md-block' t-if='request.website.viewref("theme_scita.theme_scita_sort").active'>
+                    <t t-set="list_price_desc_label_mob">Catalog price: High to Low</t>
+                    <t t-set="list_price_asc_label_mob">Catalog price: Low to High</t>
+                    <t t-set="name_asc_label_mob">Name - A to Z</t>
+                    <t t-set="name_desc_label_mob">Name - Z to A</t>
+                    <t t-set="website_sale_sortable_mob" t-value="[
+                        (list_price_desc_label_mob, 'list_price desc'),
+                        (list_price_asc_label_mob, 'list_price asc'),
+                        (name_asc_label_mob, 'name asc'),
+                        (name_desc_label_mob, 'name desc')
+                    ]"/>
+                    <div class="sct-box">
+                        <t t-foreach="website_sale_sortable_mob" t-as="sortby">
+                            <a role="menuitem" t-att-href="keep('/shop', order=sortby[1])" class="sort-links">
+                                <span t-raw="sortby[0]"/>
+                            </a>
+                        </t>
+                        <button class="sct-close" data-target="#sort_by_mobile" data-toggle="collapse">X</button>
+                    </div>
+                </div>
+            </div>
+        </xpath>
         <xpath expr="//div[@id='products_grid_before']" position="inside">
-            <div class='prod_filter'>
-                <h3 class='prod_filer_title'>Product Filters</h3>
+            <div class='collapse d-md-block sct_shop_page_filter' id='sct_shop_product_filter'>
+                <div class='prod_filter'>
+                    <h3 class='prod_filer_title'>Product Filters</h3>
+                    <span class='d-md-none sct_filter_close' data-toggle="collapse" data-target="#sct_shop_product_filter">X</span>
+                </div>
             </div>
         </xpath>
         <xpath expr="//div[@id='products_grid']//table" position="before">
@@ -1221,25 +1256,27 @@
         <xpath expr="//div[@id='products_grid_before']" position="before">
             <t t-set="enable_left_column" t-value="True"/>
         </xpath>
-        <xpath expr="//div[@id='products_grid_before']" position="inside">
-            <ul class="nav nav-pills nav-stacked category_nav">
-                <li t-att-class=" '' if category else 'active' ">
-                    <h4 class='attrb_title'><a t-att-href="keep('/shop',category=0)">All Products</a></h4>
-                </li>
-                <t t-as="c" t-foreach="categories">
-                    <t t-call="website_sale.categories_recursive"/>
-                </t>
-            </ul>
+        <xpath expr="//div[@id='sct_shop_product_filter']" position="inside">
+            <div id="wsale_products_categories_collapse">
+                <ul class="nav nav-pills nav-stacked category_nav">
+                    <li t-att-class=" '' if category else 'active' ">
+                        <h4 class='attrb_title'><a t-att-href="keep('/shop',category=0)">All Products</a></h4>
+                    </li>
+                    <t t-as="c" t-foreach="categories">
+                        <t t-call="website_sale.categories_recursive"/>
+                    </t>
+                </ul>
+            </div>
         </xpath>
         <xpath expr="//div[@id='products_grid_before']" position="attributes">
-            <attribute name="class">col-md-3 col-sm-4 hidden-xs</attribute>
+            <attribute name="class">col-md-3 hidden-xs</attribute>
         </xpath>
         <xpath expr="//div[@id='products_grid']" position="attributes">
-            <attribute name="class">col-md-9 col-sm-8</attribute>
+            <attribute name="class">col-md-9</attribute>
         </xpath>
     </template>
     <template id="scita_option_collapse_products_categories" name="Collapsible Category List" inherit_id="theme_scita.theme_scita_product_category" active="False" customize_show="True">
-        <xpath expr="//div[@id='products_grid_before']/ul" position="replace">
+        <xpath expr="//div[@id='products_grid_before']//ul" position="replace">
             <ul class="nav nav-pills flex-column mt16" id="o_shop_collapse_category">
                 <li>
                     <h4 class='attrb_title'><a t-att-href="keep('/shop',category=0)" t-attf-class="nav-link#{'' if category else ' active'} o_not_editable">All Products</a></h4>
@@ -1296,6 +1333,12 @@
         <xpath expr="//div[hasclass('col','flex-grow-0','pr-2')]" position="attributes">
             <attribute name='class'>col flex-grow-0 pr-2 flex_grow_rmv</attribute>
         </xpath>
+        <xpath expr="//t[@t-if='sale_order.has_to_be_signed(True)']//div[hasclass('col-sm-auto','mt8')]//a[@href='#discussion']" position="attributes">
+            <attribute name='class'>btn btn-primary</attribute>
+        </xpath>
+        <xpath expr="//t[@t-if='sale_order.has_to_be_signed(True)']//div[hasclass('col-sm-auto','mt8')]//a[@data-target='#modaldecline']" position="attributes">
+            <attribute name='class'>btn btn-primary</attribute>
+        </xpath>
     </template>
     <!-- for Invoice Tempalte -->
     <template id="scita_invoice_temp" inherit_id="account.portal_invoice_page">
@@ -1303,4 +1346,180 @@
             <attribute name='class'>col flex-grow-0 pr-2 flex_grow_rmv</attribute>
         </xpath>
     </template>
+    <!-- QuickView Enable Disable option -->
+    <template id="quick_view_option" inherit_id="theme_scita.theme_scita_products_item" active="True" customize_show="True" name="Quick View" priority="22">
+        <xpath expr="//form" position="before">
+            <t t-call='theme_scita.quick_view_model'/>
+        </xpath>
+        <xpath expr="//div[hasclass('sct-hover-info')]" position="inside">
+            <t t-if="product.product_variant_ids">
+                <button type="button" class="btn scita_cstm_btn  qbtn" data-toggle="modal" t-att-data-target="'#myQuickViewModal-%s' %(product.id)" title="Quick View">
+                    <span class="fa fa-eye"/>
+                </button>
+            </t>
+        </xpath>
+    </template>
+    <!-- Cart page btn class adeed -->
+    <template id="scita_cart_page_btn_class_add" inherit_id="website_sale.cart" name='Cart btn class change'>
+        <xpath expr="//div[@id='o_cart_summary']//a[hasclass('btn','btn-secondary','mb32')]" position="attributes">
+            <attribute name='class'>btn btn-primary mb32</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('col-12','col-xl-8','oe_cart')]//a[hasclass('btn','btn-secondary','mb32','d-none','d-xl-inline-block')]" position="attributes">
+            <attribute name='class'>btn btn-primary mb32 d-none d-xl-inline-block</attribute>
+        </xpath>
+    </template>
+    <!-- Cart summary page btn class adeed -->
+    <template id="scita_cart_summary_page_btn_class_add" inherit_id="website_sale.short_cart_summary" name='Cart summary btn class change'>
+        <xpath expr="//div[hasclass('card','js_cart_summary')]//a[hasclass('btn','btn-secondary','float-right','d-none','d-xl-inline-block')]" position="attributes">
+            <attribute name='class'>btn btn-primary float-right d-none d-xl-inline-block</attribute>
+        </xpath>
+    </template>
+    <!-- payment page btn class adeed -->
+    <template id="scita_payment_page_btn_class_add" inherit_id="website_sale.payment" name='Payment btn class change'>
+         <xpath expr="//div[@id='payment_method']//t[@t-set='back_button_class']" position="replace">
+            <t t-set="back_button_class" t-value="'btn btn-primary'"/>
+        </xpath>
+    </template>
+    <!-- checkout page btn class adeed -->
+    <template id="scita_checkout_page_btn_class_add" inherit_id="website_sale.checkout" name='checkout btn class change'>
+         <xpath expr="//div[hasclass('d-flex','justify-content-between')]//a[hasclass('btn','btn-secondary','mb32')]" position="attributes">
+            <attribute name='class'>btn btn-primary mb32</attribute>
+        </xpath>
+    </template>
+    <!-- Address page btn class adeed -->
+    <template id="scita_address_page_btn_class_add" inherit_id="website_sale.address" name='address btn class change'>
+         <xpath expr="//div[hasclass('d-flex','justify-content-between')]//a[hasclass('btn','btn-secondary','mb32')]" position="attributes">
+            <attribute name='class'>btn btn-primary mb32</attribute>
+        </xpath>
+    </template>
+    <!-- My Account page changes -->
+    <template id="portal_page_design_change" inherit_id="portal.portal_docs_entry" name='portal Design change'>
+        <xpath expr="//a" position="replace">
+            <div class="sct_portal_div">
+                <div class='sct_content'>
+                    <div class='sct_portal_info d-flex justify-content-between align-items-center'>
+                        <h3 class='sct_portal_title'><t t-esc="title"/></h3>
+                        <div class='sct_portal_icon'>
+                            <t t-if="url=='/my/quotes'">
+                                <span class='fa fa-2x fa-file-text-o'/>
+                            </t>
+                            <t t-if="url=='/my/orders'">
+                                <span class='fa fa-2x fa-line-chart'/>
+                            </t>
+                            <t t-if="url=='/my/invoices'">
+                                <span class='fa fa-2x fa-money'/>
+                            </t>
+                            <t t-if="url=='/my/opportunities'">
+                                <span class='fa fa-2x fa-handshake-o'/>
+                            </t>
+                            <t t-if="url=='/my/projects'">
+                                <span class='fa fa-2x fa-object-group'/>
+                            </t>
+                            <t t-if="url=='/my/purchase'">
+                                <span class='fa fa-2x fa-shopping-cart'/>
+                            </t>
+                            <t t-if="url=='/my/tasks'">
+                                <span class='fa fa-2x fa-tasks'/>
+                            </t>
+                            <t t-if="url=='/my/timesheets'">
+                                <span class='fa fa-2x fa-calendar-times-o'/>
+                            </t>
+                        </div>
+                    </div>
+                    <div class='sct_btn_cnt_div d-flex justify-content-between align-items-center'>
+                        <div class='sct_portal_cnt'>
+                            <span class="sct_total_count" t-esc="count"/>
+                        </div>
+                        <a t-att-href="url" t-att-title="title" class="btn sct_btn_view">View
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+    <template id="portal_main_page_design_change" inherit_id="portal.portal_layout" name='portal main design change'>
+        <xpath expr="//t[@t-if='my_details']//div[@t-attf-class='col-12 col-md col-lg-6']" position="attributes">
+            <attribute name='t-attf-class'>col-12</attribute>
+        </xpath>
+        <xpath expr="//t[@t-if='my_details']//div[@id='o_my_sidebar']" position="attributes">
+            <attribute name='t-attf-class'>col-12 o_my_sidebar</attribute>
+        </xpath>
+        <xpath expr="//t[@t-if='my_details']//div[@id='o_my_sidebar']//div[hasclass('o_portal_my_details')]/h4" position="attributes">
+            <attribute name='class'>d-flex flex-wrap justify-content-between align-items-center sct_detail_title</attribute>
+        </xpath>
+        <xpath expr="//div[@id='o_my_sidebar']//div[@t-field='user_id.partner_id']" position="replace">
+            <div class='sct_cmp_portal_details d-flex flex-wrap justify-content-center'>
+                <div class='sct_info_main_div'>
+                    <div class='sct_info' t-if='user_id.partner_id.name'>
+                        <span class='name_desc'>Name</span>
+                        <span class='sct_detail_ans' contentEditable="False" t-field="user_id.partner_id.name"/>
+                    </div>
+                </div>
+                <div class='sct_info_main_div'>
+                    <div class='sct_info' t-if='user_id.partner_id.email'>
+                        <span class='name_desc'>Email</span>
+                        <span class='sct_detail_ans' contentEditable="False" t-field="user_id.partner_id.email"/>
+                    </div>
+                </div>
+                <div class='sct_info_main_div'>
+                    <div class='sct_info' t-if='user_id.partner_id.company_name'>
+                        <span class='name_desc'>Company Name</span>
+                        <span class='sct_detail_ans' contentEditable="False" t-field="user_id.partner_id.company_name"/>
+                    </div>
+                </div>
+                <div class='sct_info_main_div'>
+                    <div class='sct_info' t-if='user_id.partner_id.phone'>
+                        <span class='name_desc'>Phone</span>
+                        <span class='sct_detail_ans' contentEditable="False" t-field="user_id.partner_id.phone"/>
+                    </div>
+                </div>
+                <div class='sct_info_main_div'>
+                    <div class='sct_info' t-if='user_id.partner_id.street'>
+                        <span class='name_desc'>Street</span>
+                        <span class='sct_detail_ans' contentEditable="False" t-field="user_id.partner_id.street"/>
+                    </div>
+                </div>
+                <div class='sct_info_main_div'>
+                    <div class='sct_info' t-if='user_id.partner_id.city'>
+                        <span class='name_desc'>City</span>
+                        <span class='sct_detail_ans' contentEditable="False" t-field="user_id.partner_id.city"/>
+                    </div>
+                </div>
+                <div class='sct_info_main_div'>
+                    <div class='sct_info' t-if='user_id.partner_id.zip'>
+                        <span class='name_desc'>Zip / Postal Code</span>
+                        <span class='sct_detail_ans' contentEditable="False" t-field="user_id.partner_id.zip"/>
+                    </div>
+                </div>
+                <div class='sct_info_main_div'>
+                    <div class='sct_info' t-if='user_id.partner_id.state_id.name'>
+                        <span class='name_desc'>State / Province</span>
+                        <span class='sct_detail_ans' contentEditable="False" t-field="user_id.partner_id.state_id.name"/>
+                    </div>
+                </div>
+                <div class='sct_info_main_div'>
+                    <div class='sct_info' t-if='user_id.partner_id.country_id.name'>
+                        <span class='name_desc'>Country</span>
+                        <span class='sct_detail_ans' contentEditable="False" t-field="user_id.partner_id.country_id.name"/>
+                    </div>
+                </div>
+            </div>
+        </xpath>
+    </template>
+    <template id="portal_dashboard_text_change" inherit_id="portal.portal_my_home" name='portal Title Tax change'>
+        <xpath expr="//div[hasclass('o_portal_my_home')]/h3" position="replace">
+            <h2 class="sct_main_title">Dashboard</h2>
+        </xpath>
+        <xpath expr="//div[hasclass('o_portal_my_home')]/div[hasclass(
+        'o_portal_docs','list-group')]" position="attributes">
+            <attribute name='class'>o_portal_docs d-flex flex-wrap justify-content-center</attribute>
+        </xpath>
+    </template>
+    <template id="portal_details_edit_mode_change" inherit_id="portal.portal_my_details" name='portal Edit mode class Add'>
+        <xpath expr="//div[hasclass('row','o_portal_details')]" position="attributes">
+            <attribute name='class'>row o_portal_details justify-content-center</attribute>
+        </xpath>
+    </template>
+    
+    <!-- My Account page changes End -->
 </odoo>

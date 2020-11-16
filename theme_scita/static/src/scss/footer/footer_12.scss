@@ -1,0 +1,132 @@
+footer {
+	.footer-content {
+		background-color: $dark-color;
+		padding: 50px 0;
+		@media (max-width: 991px){
+			padding: 30px 0;
+		}
+		.sct-top-row {
+			h4 {
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				color: $light-grey-color;
+			}
+			.contact_us {
+				@media (max-width: 991px){
+					margin-bottom: 20px;
+				}
+				ul {
+					li {
+						position: relative;
+						padding-left: 30px;
+						color: $light-grey-color;
+						font-size: $font-body;
+						.fa {
+							position: absolute;
+							left: 0;
+							top: 2px;
+							font-size: 16PX;
+							color: $light-grey-color;
+						}
+						+ li {
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+			.sct-links {
+				@media (max-width: 991px){
+					margin-bottom: 20px;
+				}
+				ul {
+					li {
+						font-size: $font-body;
+						a {
+							color: $light-grey-color;
+							&:hover {
+								color:$theme;
+							}
+						}
+						+ li {
+							margin-top: 15px;
+						}
+					}
+				}
+			}
+		}
+		.sct-middle-row {
+			padding: 20px 0;
+		    border-top: 1px solid $light-grey-color;
+		    border-bottom: 1px solid $light-grey-color;
+		    margin-top: 30px;
+		    margin-bottom: 30px;
+		    @media (max-width: 991px){
+				margin-top: 10px;
+		    	margin-bottom: 20px;
+			}
+			.sct-scocial-icon-footer {
+				@media (max-width: 767px){
+					text-align: center;
+					margin-bottom: 10px;
+				}
+				a {
+					margin-top: 0;
+					margin-bottom: 5px;
+					background-color: transparent;
+					border:none;
+					width: auto;
+					height: auto;
+					&:hover{
+						color:$theme;
+					}
+				}
+			}
+			.sct-payment-icons {
+				text-align: right;
+				@media (max-width: 767px){
+					text-align: center;
+				}
+			}
+		}
+		.sct-bottom-row {
+			.sct-copyrig {
+				text-align: right;
+				font-size: $font-body;
+				color: $light-grey-color;
+				@media (max-width: 767px){
+					text-align: center;
+					-webkit-box-ordinal-group: 4;
+					-ms-flex-order: 3;
+					order: 3;
+				}
+			}
+			.sct-foot-logo {
+				@media (max-width: 767px){
+					-webkit-box-ordinal-group: 2;
+					-ms-flex-order: 1;
+					order: 1;
+				}
+				a {
+					max-width: 150px;
+					display: block;
+					margin: auto;
+				}
+			}
+			.sct-fot-about {
+				@media (max-width: 767px){
+					-webkit-box-ordinal-group: 3;
+					-ms-flex-order: 2;
+					order: 2;
+					margin: 15px 0;
+				}
+				p {
+					margin-bottom: 0;
+					color: $light-grey-color;
+					@media (max-width: 767px){
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+}

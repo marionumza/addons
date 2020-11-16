@@ -215,6 +215,18 @@ class ScitaSliderSettings(http.Controller):
             values = self.get_categories_data(post.get('slider-id'))
             return request.render("theme_scita.second_cat_slider_view", values)
 
+    @http.route(['/theme_scita/category_slider_3'], type='http', auth='public', website=True)
+    def category_slider_value(self, **post):
+        if post.get('slider-id'):
+            values = self.get_categories_data(post.get('slider-id'))
+            return request.render("theme_scita.theme_scita_category_slider_3_view", values)
+
+    @http.route(['/theme_scita/category_slider_4'], type='http', auth='public', website=True)
+    def category_slider_four(self, **post):
+        if post.get('slider-id'):
+            values = self.get_categories_data(post.get('slider-id'))
+            return request.render("theme_scita.theme_scita_category_slider_4_view", values)
+    
     @http.route(['/theme_scita/scita_image_effect_config'], type='json', auth='public', website=True)
     def category_image_dynamic_slider(self, **post):
         slider_data = request.env['category.slider.config'].search(
@@ -349,12 +361,150 @@ class ScitaSliderSettings(http.Controller):
 
         cur_website = request.website
         values = {
+            'no_extra_options': cur_website.no_extra_options,
+            'interval_play': cur_website.interval_play,
+            'enable_disable_text': cur_website.enable_disable_text,
+            'color_opt_thumbnail': cur_website.color_opt_thumbnail,
             'theme_panel_position': cur_website.thumbnail_panel_position,
             'change_thumbnail_size': cur_website.change_thumbnail_size,
             'thumb_height': cur_website.thumb_height,
             'thumb_width': cur_website.thumb_width,
         }
         return values
+    # For new brand snippet and product and category snippet 
+    @http.route(['/theme_scita/brand_get_options'], type='json', auth="public", website=True)
+    def custom_brand_get_options(self):
+        slider_options = []
+        option = request.env['brand.snippet.config'].sudo().search(
+            [('active', '=', True)], order="name asc")
+        for record in option:
+            slider_options.append({'id': record.id,
+                                   'name': record.name})
+        return slider_options
+
+    @http.route(['/theme_scita/custom_pro_get_dynamic_slider'], type='http', auth='public', website=True)
+    def custom_pro_get_dynamic_slider(self, **post):
+        if post.get('slider-type'):
+            slider_header = request.env['product.category.img.slider.config'].sudo().search(
+                [('id', '=', int(post.get('slider-type')))])
+            values = {
+                'slider_header': slider_header
+            }
+            if slider_header.prod_cat_type == 'product':
+                values.update(
+                    {'slider_details': slider_header.collections_product})
+            if slider_header.prod_cat_type == 'category':
+                values.update(
+                    {'slider_details': slider_header.collections_category})
+            values.update({'slider_type': slider_header.prod_cat_type})
+            return request.render("theme_scita.custom_scita_cat_slider_view", values)
+
+    @http.route(['/theme_scita/custom_get_brand_slider'], type='http', auth='public', website=True)
+    def custom_get_brand_slider(self, **post):
+        keep = QueryURL('/theme_scita/custom_get_brand_slider', brand_id=[])
+        if post.get('slider-type'):
+            slider_header = request.env['brand.snippet.config'].sudo().search(
+                [('id', '=', int(post.get('slider-type')))])
+            values = {
+                'slider_header': slider_header,
+                'website_brands':slider_header.collections_brands
+            }
+        return request.render("theme_scita.custom_scita_brand_slider_view", values)
+
+    @http.route(['/theme_scita/pro_get_options'], type='json', auth="public", website=True)
+    def get_slider_options(self):
+        slider_options = []
+        option = request.env['product.category.img.slider.config'].sudo().search(
+            [('active', '=', True)], order="name asc")
+        for record in option:
+            slider_options.append({'id': record.id,
+                                   'name': record.name})
+        return slider_options
+
+    # Zipcode delivery status
+    @http.route(['/shop/zipcode'], type='json', auth="public", website=True)
+    def scita_get_delivery_zipcode(self,zip_code,**post):
+        if zip_code:
+            zip_obj = request.env['delivery.zipcode'].search(
+            [('name', '=', zip_code)])
+            if zip_obj.id:
+                return {'status' : True}
+            else:
+                return {'status' : False}
+        else:
+            return {'zip': 'notavailable'}
+
+    @http.route(['/product_column_five'], type='http', auth='public', website=True)
+    def get_product_column_five(self, **post):
+        context, pool = dict(request.context), request.env
+        if post.get('slider-type'):
+            slider_header = request.env['product.snippet.configuration'].sudo().search(
+                [('id', '=', int(post.get('slider-type')))])
+            if not context.get('pricelist'):
+                pricelist = request.website.get_current_pricelist()
+                context = dict(request.context, pricelist=int(pricelist))
+            else:
+                pricelist = pool.get('product.pricelist').browse(
+                    context['pricelist'])
+
+            context.update({'pricelist': pricelist.id})
+            from_currency = pool['res.users'].sudo().browse(
+                SUPERUSER_ID).company_id.currency_id
+            to_currency = pricelist.currency_id
+
+            def compute_currency(price): return pool['res.currency']._convert(
+                price, from_currency, to_currency, fields.Date.today())
+            values = {
+                'slider_details': slider_header,
+                'slider_header': slider_header,
+                'compute_currency': compute_currency,
+                'products' : slider_header.collection_of_products
+            }
+            return request.render("theme_scita.sct_product_snippet_1_view", values)
+    
+    @http.route(['/product/product_snippet_data_two'], type='http', auth='public', website=True)
+    def product_snippet_data_two(self, **post):
+        context, pool = dict(request.context), request.env
+        if post.get('slider-type'):
+            slider_header = request.env['product.snippet.configuration'].sudo().search(
+                [('id', '=', int(post.get('slider-type')))])
+            if not context.get('pricelist'):
+                pricelist = request.website.get_current_pricelist()
+                context = dict(request.context, pricelist=int(pricelist))
+            else:
+                pricelist = pool.get('product.pricelist').browse(
+                    context['pricelist'])
+
+            context.update({'pricelist': pricelist.id})
+            from_currency = pool['res.users'].sudo().browse(
+                SUPERUSER_ID).company_id.currency_id
+            to_currency = pricelist.currency_id
+
+            def compute_currency(price): return pool['res.currency']._convert(
+                price, from_currency, to_currency, fields.Date.today())
+            values = {
+                'slider_details': slider_header,
+                'slider_header': slider_header,
+                'compute_currency': compute_currency,
+                'products' : slider_header.collection_of_products
+            }
+            return request.render("theme_scita.sct_product_snippet_2_view", values)
+
+    @http.route(['/theme_scita/product_configuration'], type='json', auth="public", website=True)
+    def snippet_get_product_configuration(self):
+        slider_options = []
+        option = request.env['product.snippet.configuration'].sudo().search(
+            [('active', '=', True)], order="name asc")
+        for record in option:
+            slider_options.append({'id': record.id,
+                                   'name': record.name})
+        return slider_options
+        
+    @http.route(['/deals-of-the-day'],type="http", auth="public", website=True)
+    def products(self, **post):
+        product = request.env['product.template'].search([('deal_product', '=', True)])
+        values = {'deal_products' : product}
+        return request.render("theme_scita.biz_deal_page",values)
 
 
 class ScitaShop(WebsiteSale):
@@ -416,203 +566,224 @@ class ScitaShop(WebsiteSale):
         '''/shop/brands'''
     ], type='http', auth="public", website=True, sitemap=WebsiteSale.sitemap_shop)
     def shop(self, page=0, category=None, search='', ppg=False, brands=None, **post):
-        add_qty = int(post.get('add_qty', 1))
-        Category = request.env['product.public.category']
-        if category:
-            category = Category.search([('id', '=', int(category))], limit=1)
-            if not category or not category.can_access_from_current_website():
-                raise NotFound()
-        else:
-            category = Category
-        if brands:
-            req_ctx = request.context.copy()
-            req_ctx.setdefault('brand_id', int(brands))
-            request.context = req_ctx
-        result = super(ScitaShop, self).shop(
-            page=page, category=category, search=search, ppg=ppg, **post)
-        page_no = request.env['product.per.page.no'].sudo().search(
-            [('set_default_check', '=', True)])
-        if page_no:
-            ppg = int(page_no.name)
-        else:
-            ppg = result.qcontext['ppg']
-
-        ppr = request.env['website'].get_current_website().shop_ppr or 4
-
-        attrib_list = request.httprequest.args.getlist('attrib')
-        attrib_values = [[int(x) for x in v.split("-")]
-                         for v in attrib_list if v]
-        attributes_ids = {v[0] for v in attrib_values}
-        attrib_set = {v[1] for v in attrib_values}
-
-        domain = self._get_search_domain(search, category, attrib_values)
-
-        url = "/shop"
-        if search:
-            post["search"] = search
-        if attrib_list:
-            post['attrib'] = attrib_list
-        if post:
-            request.session.update(post)
-
-        Product = request.env['product.template'].with_context(bin_size=True)
-        session = request.session
-        cate_for_price = None
-        search_product = Product.search(domain)
-        website_domain = request.website.website_domain()
-        pricelist_context, pricelist = self._get_pricelist_context()
-        categs_domain = [('parent_id', '=', False)] + website_domain
-        if search:
-            search_categories = Category.search(
-                [('product_tmpl_ids', 'in', search_product.ids)] + website_domain).parents_and_self
-            categs_domain.append(('id', 'in', search_categories.ids))
-        else:
-            search_categories = Category
-        categs = Category.search(categs_domain)
-
-        if category:
-            url = "/shop/category/%s" % slug(category)
-            cate_for_price = int(category)
-        prevurl = request.httprequest.referrer
-        if prevurl:
-            if not re.search('/shop', prevurl, re.IGNORECASE):
-                request.session['pricerange'] = ""
-                request.session['min1'] = ""
-                request.session['max1'] = ""
-                request.session['curr_category'] = ""
-        brand_list = request.httprequest.args.getlist('brand')
-        brand_set = set([int(v) for v in brand_list])
-        if brand_list:
-            brandlistdomain = list(map(int, brand_list))
-            domain += [('product_brand_id', 'in', brandlistdomain)]
-            bran = []
-            brand_obj = request.env['product.brands'].sudo().search(
-                [('id', 'in', brandlistdomain)])
-            if brand_obj:
-                for vals in brand_obj:
-                    if vals.name not in bran:
-                        bran.append((vals.name, vals.id))
-                if bran:
-                    request.session["brand_name"] = bran
-        if not brand_list:
-            request.session["brand_name"] = ''
-        product_count = len(search_product)
-        is_price_slider = request.website.viewref(
-            'theme_scita.scita_price_slider_layout').active
-        if is_price_slider:
-            # For Price slider
-            is_discount_hide = True if request.website.get_current_pricelist(
-            ).discount_policy == 'with_discount' or request.website.get_current_pricelist(
-            ).discount_policy == 'without_discount' else False
-            product_slider_ids = []
-            if is_discount_hide:
-                price_list = Product.search(domain).mapped('price')
-                if price_list:
-                    product_slider_ids.append(min(price_list))
-                    product_slider_ids.append(max(price_list))
-
+        if request.env['website'].sudo().get_current_website().theme_id.name == 'theme_scita':
+            add_qty = int(post.get('add_qty', 1))
+            Category = request.env['product.public.category']
+            if category:
+                category = Category.search(
+                    [('id', '=', int(category))], limit=1)
+                if not category or not category.can_access_from_current_website():
+                    raise NotFound()
             else:
-                asc_product_slider_ids = Product.search(
-                    domain, limit=1, order='list_price')
-                desc_product_slider_ids = Product.search(
-                    domain, limit=1, order='list_price desc')
-                if asc_product_slider_ids:
-                    product_slider_ids.append(
-                        asc_product_slider_ids.price if is_discount_hide else asc_product_slider_ids.list_price)
-                if desc_product_slider_ids:
-                    product_slider_ids.append(
-                        desc_product_slider_ids.price if is_discount_hide else desc_product_slider_ids.list_price)
-            if product_slider_ids:
-                if post.get("range1") or post.get("range2") or not post.get("range1") or not post.get("range2"):
-                    range1 = min(product_slider_ids)
-                    range2 = max(product_slider_ids)
-                    result.qcontext['range1'] = math.floor(range1)
-                    result.qcontext['range2'] = math.ceil(range2)
-                if request.session.get('pricerange'):
-                    if cate_for_price and request.session.get('curr_category') and request.session.get('curr_category') != float(cate_for_price):
-                        request.session["min1"] = math.floor(range1)
-                        request.session["max1"] = math.ceil(range2)
+                category = Category
+            if brands:
+                req_ctx = request.context.copy()
+                req_ctx.setdefault('brand_id', int(brands))
+                request.context = req_ctx
+            result = super(ScitaShop, self).shop(
+                page=page, category=category, search=search, ppg=ppg, **post)
+            page_no = request.env['product.per.page.no'].sudo().search(
+                [('set_default_check', '=', True)])
+            if page_no:
+                ppg = int(page_no.name)
+            else:
+                ppg = result.qcontext['ppg']
 
-                if session.get("min1") and session["min1"]:
-                    post["min1"] = session["min1"]
-                if session.get("max1") and session["max1"]:
-                    post["max1"] = session["max1"]
-                if range1:
-                    post["range1"] = range1
-                if range2:
-                    post["range2"] = range2
-                if range1 == range2:
-                    post['range1'] = 0.0
+            ppr = request.env['website'].get_current_website().shop_ppr or 4
 
-                if request.session.get('min1') or request.session.get('max1'):
-                    if is_discount_hide:
-                        price_product_list = []
-                        product_withprice = Product.search(domain)
-                        for prod_id in product_withprice:
-                            if prod_id.price >= float(request.session['min1']) and prod_id.price <= float(request.session['max1']):
-                                price_product_list.append(prod_id.id)
+            attrib_list = request.httprequest.args.getlist('attrib')
+            attrib_values = [[int(x) for x in v.split("-")]
+                             for v in attrib_list if v]
+            attributes_ids = {v[0] for v in attrib_values}
+            attrib_set = {v[1] for v in attrib_values}
 
-                        if price_product_list:
-                            domain += [('id', 'in',
-                                        price_product_list)]
+            domain = self._get_search_domain(search, category, attrib_values)
+
+            url = "/shop"
+            if search:
+                post["search"] = search
+            if attrib_list:
+                post['attrib'] = attrib_list
+            if post:
+                request.session.update(post)
+
+            Product = request.env['product.template'].with_context(
+                bin_size=True)
+            session = request.session
+            cate_for_price = None
+            search_product = Product.search(domain)
+            website_domain = request.website.website_domain()
+            pricelist_context, pricelist = self._get_pricelist_context()
+            categs_domain = [('parent_id', '=', False)] + website_domain
+            if search:
+                search_categories = Category.search(
+                    [('product_tmpl_ids', 'in', search_product.ids)] + website_domain).parents_and_self
+                categs_domain.append(('id', 'in', search_categories.ids))
+            else:
+                search_categories = Category
+            categs = Category.search(categs_domain)
+
+            if category:
+                url = "/shop/category/%s" % slug(category)
+                cate_for_price = int(category)
+            prevurl = request.httprequest.referrer
+            if prevurl:
+                if not re.search('/shop', prevurl, re.IGNORECASE):
+                    request.session['pricerange'] = ""
+                    request.session['min1'] = ""
+                    request.session['max1'] = ""
+                    request.session['curr_category'] = ""
+            brand_list = request.httprequest.args.getlist('brand')
+            brand_set = set([int(v) for v in brand_list])
+            if brand_list:
+                brandlistdomain = list(map(int, brand_list))
+                domain += [('product_brand_id', 'in', brandlistdomain)]
+                bran = []
+                brand_obj = request.env['product.brands'].sudo().search(
+                    [('id', 'in', brandlistdomain)])
+                if brand_obj:
+                    for vals in brand_obj:
+                        if vals.name not in bran:
+                            bran.append((vals.name, vals.id))
+                    if bran:
+                        request.session["brand_name"] = bran
+            if not brand_list:
+                request.session["brand_name"] = ''
+            product_count = len(search_product)
+            is_price_slider = request.website.viewref(
+                'theme_scita.scita_price_slider_layout').active
+            if is_price_slider:
+                # For Price slider
+                is_discount_hide = True if request.website.get_current_pricelist(
+                ).discount_policy == 'with_discount' or request.website.get_current_pricelist(
+                ).discount_policy == 'without_discount' else False
+                product_slider_ids = []
+                if is_discount_hide:
+                    price_list = Product.search(domain).mapped('price')
+                    if price_list:
+                        product_slider_ids.append(min(price_list))
+                        product_slider_ids.append(max(price_list))
+
+                else:
+                    asc_product_slider_ids = Product.search(
+                        domain, limit=1, order='list_price')
+                    desc_product_slider_ids = Product.search(
+                        domain, limit=1, order='list_price desc')
+                    if asc_product_slider_ids:
+                        product_slider_ids.append(
+                            asc_product_slider_ids.price if is_discount_hide else asc_product_slider_ids.list_price)
+                    if desc_product_slider_ids:
+                        product_slider_ids.append(
+                            desc_product_slider_ids.price if is_discount_hide else desc_product_slider_ids.list_price)
+                if product_slider_ids:
+                    if post.get("range1") or post.get("range2") or not post.get("range1") or not post.get("range2"):
+                        range1 = min(product_slider_ids)
+                        range2 = max(product_slider_ids)
+                        result.qcontext['range1'] = math.floor(range1)
+                        result.qcontext['range2'] = math.ceil(range2)
+                    if request.session.get('pricerange'):
+                        if cate_for_price and request.session.get('curr_category') and request.session.get('curr_category') != float(cate_for_price):
+                            request.session["min1"] = math.floor(range1)
+                            request.session["max1"] = math.ceil(range2)
+
+                    if session.get("min1") and session["min1"]:
+                        post["min1"] = session["min1"]
+                    if session.get("max1") and session["max1"]:
+                        post["max1"] = session["max1"]
+                    if range1:
+                        post["range1"] = range1
+                    if range2:
+                        post["range2"] = range2
+                    if range1 == range2:
+                        post['range1'] = 0.0
+
+                    if request.session.get('min1') or request.session.get('max1'):
+                        if is_discount_hide:
+                            price_product_list = []
+                            product_withprice = Product.search(domain)
+                            for prod_id in product_withprice:
+                                if prod_id.price >= float(request.session['min1']) and prod_id.price <= float(request.session['max1']):
+                                    price_product_list.append(prod_id.id)
+
+                            if price_product_list:
+                                domain += [('id', 'in',
+                                            price_product_list)]
+                            else:
+                                domain += [('id', 'in', [])]
                         else:
-                            domain += [('id', 'in', [])]
-                    else:
-                        domain += [('list_price', '>=', float(request.session.get('min1'))),
-                                   ('list_price', '<=', float(request.session.get('max1')))]
-                    request.session["pricerange"] = str(
-                        request.session['min1']) + "-To-" + str(request.session['max1'])
+                            domain += [('list_price', '>=', float(request.session.get('min1'))),
+                                       ('list_price', '<=', float(request.session.get('max1')))]
+                        request.session["pricerange"] = str(
+                            request.session['min1']) + "-To-" + str(request.session['max1'])
 
-                if session.get('min1') and session['min1']:
-                    result.qcontext['min1'] = session["min1"]
-                    result.qcontext['max1'] = session["max1"]
-        if cate_for_price:
-            request.session['curr_category'] = float(cate_for_price)
-        if request.session.get('default_paging_no'):
-            ppg = int(request.session.get('default_paging_no'))
-        keep = QueryURL('/shop', category=category and int(category),
-                        search=search, attrib=attrib_list, order=post.get('order'))
-        product_count = Product.search_count(domain)
-        pager = request.website.pager(
-            url=url, total=product_count, page=page, step=ppg, scope=7, url_args=post)
-        products = Product.search(
-            domain, limit=ppg, offset=pager['offset'], order=self._get_search_order(post))
+                    if session.get('min1') and session['min1']:
+                        result.qcontext['min1'] = session["min1"]
+                        result.qcontext['max1'] = session["max1"]
+            if cate_for_price:
+                request.session['curr_category'] = float(cate_for_price)
+            if request.session.get('default_paging_no'):
+                ppg = int(request.session.get('default_paging_no'))
+            keep = QueryURL('/shop', category=category and int(category),
+                            search=search, attrib=attrib_list, order=post.get('order'))
+            product_count = Product.search_count(domain)
+            pager = request.website.pager(
+                url=url, total=product_count, page=page, step=ppg, scope=7, url_args=post)
+            products = Product.search(
+                domain, limit=ppg, offset=pager['offset'], order=self._get_search_order(post))
 
-        ProductAttribute = request.env['product.attribute']
-        if products:
-            # get all products without limit
-            attributes = ProductAttribute.search(
-                [('product_tmpl_ids', 'in', search_product.ids)])
-        else:
-            attributes = ProductAttribute.browse(attributes_ids)
-
-        layout_mode = request.session.get('website_sale_shop_layout_mode')
-        if not layout_mode:
-            if request.website.viewref('website_sale.products_list_view').active:
-                layout_mode = 'list'
+            ProductAttribute = request.env['product.attribute']
+            if products:
+                # get all products without limit
+                attributes = ProductAttribute.search(
+                    [('product_tmpl_ids', 'in', search_product.ids)])
             else:
-                layout_mode = 'grid'
-        result.qcontext.update({
-            'search': search,
-            'category': category,
-            'attrib_values': attrib_values,
-            'attrib_set': attrib_set,
-            'pager': pager,
-            'pricelist': pricelist,
-            'add_qty': add_qty,
-            'products': products,
-            'search_count': product_count,  # common for all searchbox
-            'bins': TableCompute().process(products, ppg, ppr),
-            'ppg': ppg,
-            'ppr': ppr,
-            'categories': categs,
-            'attributes': attributes,
-            'keep': keep,
-            'search_categories_ids': search_categories.ids,
-            'layout_mode': layout_mode,
-            'brand_set': brand_set,
-        })
-        return result
+                attributes = ProductAttribute.browse(attributes_ids)
+
+            layout_mode = request.session.get('website_sale_shop_layout_mode')
+            if not layout_mode:
+                if request.website.viewref('website_sale.products_list_view').active:
+                    layout_mode = 'list'
+                else:
+                    layout_mode = 'grid'
+            result.qcontext.update({
+                'search': search,
+                'category': category,
+                'attrib_values': attrib_values,
+                'attrib_set': attrib_set,
+                'pager': pager,
+                'pricelist': pricelist,
+                'add_qty': add_qty,
+                'products': products,
+                'search_count': product_count,  # common for all searchbox
+                'bins': TableCompute().process(products, ppg, ppr),
+                'ppg': ppg,
+                'ppr': ppr,
+                'categories': categs,
+                'attributes': attributes,
+                'keep': keep,
+                'search_categories_ids': search_categories.ids,
+                'layout_mode': layout_mode,
+                'brand_set': brand_set,
+            })
+            return result
+        else:
+            return super(ScitaShop, self).shop(page=page, category=category, search=search, ppg=ppg, **post)
+    
+    @http.route(['''/allcategories''',
+    '''/allcategories/category/<model("product.public.category"):category>'''
+    ],type='http', auth="public", website=True)
+    def shop_by_get_category(self,category=None,**post):
+        cat = {}
+        shop_category = None
+        if category:
+            if category.child_id:
+                child = category.child_id
+                cat.update({'pro' : child})
+        else:
+            shop_category = child_cat_ids = request.env['product.public.category'].sudo().search(
+                [('parent_id', '=', None)], order='name asc')
+            cat.update({'pro' : shop_category})
+        return request.render("theme_scita.shop_by_category", cat)
 
     def get_brands_data(self, product_count, product_label):
         keep = QueryURL('/shop/get_it_brand', brand_id=[])
@@ -634,25 +805,37 @@ class ScitaShop(WebsiteSale):
     @http.route(['/shop/get_brand_slider'],
                 type='http', auth='public', website=True)
     def get_brand_slider(self, **post):
-        values = self.get_brands_data(
-            post.get('product_count'), post.get('product_label'))
-        return request.render(
+        if post.get('slider-type'):
+            slider_header = request.env['brand.snippet.config'].sudo().search([('id', '=', int(post.get('slider-type')))])
+            values = {
+                'slider_header': slider_header,
+                'website_brands':slider_header.collections_brands
+            }
+            return request.render(
             "theme_scita.retial_brand_snippet_1", values)
 
     @http.route(['/shop/get_box_brand_slider'],
                 type='http', auth='public', website=True)
     def get_box_brand_slider(self, **post):
-        values = self.get_brands_data(
-            post.get('product_count'), post.get('product_label'))
-        return request.render(
+        if post.get('slider-type'):
+            slider_header = request.env['brand.snippet.config'].sudo().search([('id', '=', int(post.get('slider-type')))])
+            values = {
+                'slider_header': slider_header,
+                'website_brands':slider_header.collections_brands
+            }
+            return request.render(
             "theme_scita.box_brand_snippet_4", values)
 
     @http.route(['/shop/get_it_brand'],
                 type='http', auth='public', website=True)
     def get_it_brand(self, **post):
-        values = self.get_brands_data(
-            post.get('product_count'), post.get('product_label'))
-        return request.render(
+        if post.get('slider-type'):
+            slider_header = request.env['brand.snippet.config'].sudo().search([('id', '=', int(post.get('slider-type')))])
+            values = {
+                'slider_header': slider_header,
+                'website_brands':slider_header.collections_brands
+            }
+            return request.render(
             "theme_scita.it_brand_snippet_1", values)
 
     @http.route('/update_my_wishlist', type="http", auth="public", website=True)
@@ -660,3 +843,59 @@ class ScitaShop(WebsiteSale):
         if kw['prod_id']:
             self.add_to_wishlist(product_id=int(kw['prod_id']))
         return
+    @http.route(['/product_category_img_slider'], type='http', auth='public', website=True)
+    def config_cat_product(self, **post):
+        context, pool = dict(request.context), request.env
+        if post.get('slider-type'):
+            slider_header = request.env['product.category.img.slider.config'].sudo().search(
+                [('id', '=', int(post.get('slider-type')))])
+            if not context.get('pricelist'):
+                pricelist = request.website.get_current_pricelist()
+                context = dict(request.context, pricelist=int(pricelist))
+            else:
+                pricelist = pool.get('product.pricelist').browse(
+                    context['pricelist'])
+        context.update({'pricelist': pricelist.id})
+        from_currency = pool['res.users'].sudo().browse(
+            SUPERUSER_ID).company_id.currency_id
+        to_currency = pricelist.currency_id
+
+        def compute_currency(price): return pool['res.currency']._convert(
+            price, from_currency, to_currency, fields.Date.today())
+        values = {
+            'slider_header': slider_header,
+            'slider_details': slider_header,
+            'slider_header': slider_header,
+            'compute_currency': compute_currency,
+        }
+        if slider_header.prod_cat_type == 'product':
+            values.update({'slider_details': slider_header.collections_product})
+        if slider_header.prod_cat_type == 'category':
+            values.update({'slider_details': slider_header.collections_category})
+        values.update({'slider_type': slider_header.prod_cat_type})
+        return request.render("theme_scita.product_category_img_slider_config_view", values)
+
+    @http.route(['/theme_scita/product_category_slider'], type='json', auth="public", website=True)
+    def get_product_category(self):
+        slider_options = []
+        option = request.env['product.category.img.slider.config'].sudo().search(
+            [('active', '=', True)], order="name asc")
+        for record in option:
+            slider_options.append({'id': record.id,
+                                   'name': record.name})
+        return slider_options
+        
+    @http.route(['/theme_scita/get_current_wishlist'], type='json', auth="public", website=True)
+    def get_current_wishlist(self):
+        values = request.env['product.wishlist'].with_context(display_default_code=False).current()
+        return request.env['ir.ui.view'].render_template("theme_scita.wishlist_products",dict(wishes=values))
+    # Dynamic video banner url get start
+    @http.route(['/video/video_url_get'],
+                type='http', auth='public', website=True)
+    def get_video_banner_url(self, **post):
+        values = {
+        "video_url": post.get('video_url')
+        }
+        return request.render(
+            "theme_scita.sct_dynamic_banner_video_1", values)
+    # Dynamic video banner url get End

@@ -135,4 +135,111 @@
             </field>
         </field>
     </record>
+     <!-- publish and unpublish -->
+    <record model="ir.ui.view" id="inherit_product_template_form_view">
+        <field name="name">inherit.product.template.product.website.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="website_sale.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button class="oe_stat_button" string="Instant Publish" name="quick_publish_product"
+                    type="object" icon="fa-globe" attrs="{'invisible': ['|',('sale_ok','=',False),('is_published','=',True)]}"/>
+                <button class="oe_stat_button" string="Instant Unpublish" name="quick_publish_product"
+                    type="object" icon="fa-globe" attrs="{'invisible': ['|',('sale_ok','=',False),('is_published','=',False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="ir_actions_publish_product_template" model="ir.actions.server">
+        <field name="name">Instant Publish</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_product_template"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                for record in records:
+                    action = record.action_product_publish()
+        </field>
+        <field name="binding_model_id" ref="theme_scita.model_product_template"/>
+    </record>
+
+    <record id="ir_actions_unpublish_product_template" model="ir.actions.server">
+        <field name="name">Instant UnPublish</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_product_template"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                for record in records:
+                    action = record.action_product_unpublish()
+        </field>
+        <field name="binding_model_id" ref="theme_scita.model_product_template"/>
+    </record>
+
+    <record id="ir_actions_publish_product_product" model="ir.actions.server">
+        <field name="name">Instant Publish</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_product_product"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                for record in records:
+                    action = record.action_product_publish()
+        </field>
+        <field name="binding_model_id" ref="theme_scita.model_product_product"/>
+    </record>
+
+    <record id="ir_actions_unpublish_product_product" model="ir.actions.server">
+        <field name="name">Instant UnPublish</field>
+        <field name="type">ir.actions.server</field>
+        <field name="model_id" ref="model_product_product"/>
+        <field name="state">code</field>
+        <field name="code">
+            if records:
+                for record in records:
+                    action = record.action_product_unpublish()
+        </field>
+        <field name="binding_model_id" ref="theme_scita.model_product_product"/>
+    </record>
+    <!-- Zipcode model View start -->
+    <record id="view_delivery_zip_config_form_view" model="ir.ui.view">
+        <field name="name">delivery.zipcode.form</field>
+        <field name="model">delivery.zipcode</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+             <form string="Zipcodes">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_delivery_zip_config_tree_view" model="ir.ui.view">
+        <field name="name">delivery.zipcodee.tree</field>
+        <field name="model">delivery.zipcode</field>
+        <field name="arch" type="xml">
+            <tree string="Zipcodes">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_delivery_zip_config" model="ir.actions.act_window">
+        <field name="name">Delivery Zipcode</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">delivery.zipcode</field>
+        <field name="view_mode">tree,form</field>
+        <field eval="False" name="view_id"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click to Create a Zipcode.
+            </p>
+        </field>
+    </record>
+
+    <menuitem action="action_delivery_zip_config" id="delivery_zipcodes" name="Delivery Zipcode Configuration" parent="theme_scita.scita_menu_slider_config" sequence="4"/>
+    <!-- Zipcode model View end -->
+
 </odoo>

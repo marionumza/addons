@@ -338,6 +338,18 @@ header {
 						top: 100% !important;
 					}
 				}
+				.s_mega_menu_multi_menus {
+					.mega-dropdown-menu {
+						padding: 0;
+						background-color: transparent;
+						.nav-link {
+							@media (max-width: 767px){
+								padding: 5px;
+								text-align: center;
+							}
+						}
+					}
+				}
 			}
 		}
 		.navbar-collapse {
@@ -352,7 +364,7 @@ header {
 				}
 			}
 			@media (max-width:767px){
-				max-height: 300px;
+				max-height: 450px;
     			overflow-y: auto;
     			border-bottom:1px solid #d0d0d0;
 			}

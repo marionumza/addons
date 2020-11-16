@@ -1,0 +1,45 @@
+footer {
+	.footer-content {
+		padding: 50px 0 30px;
+		@media (max-width: 991px){
+			padding: 30px 0 20px;
+		}
+		.sct-top-row {
+			.sct-foot-logo {
+				a {
+					display: block;
+					max-width: 150px;
+					@media (max-width: 767px){
+						margin-left: auto;
+						margin-right: auto;
+					}
+				}
+			}
+			.sct-links {
+				@media (max-width: 767px){
+					margin-top: 15px;
+					text-align: center;
+				}
+				ul {
+					li {
+						display: inline-block;
+						padding: 10px;
+						@media (max-width: 991px){
+							padding: 5px;
+						}
+					}
+				}
+			}
+		}
+		.sct-bottom-row {
+			p {
+				border-top: 1px solid $dark-color;
+				text-align: center;
+				margin-bottom: 0;
+				color: $dark-color;
+				margin-top: 20px;
+				padding-top: 20px;
+			}
+		}
+	}
+}

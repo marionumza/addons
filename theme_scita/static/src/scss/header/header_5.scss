@@ -80,7 +80,7 @@ header {
 							+ li{
 								a {
 									margin-left: 0;
-									border-top: 1px solid #d0d0d0;
+									border-top: 1px solid #202020;
 								}
 							}
 						}
@@ -304,6 +304,16 @@ header {
 						top: 100% !important;
 					}
 				}
+				.s_mega_menu_multi_menus {
+					.mega-dropdown-menu {
+						.nav-link {
+							@media (max-width: 767px){
+								padding: 5px;
+								text-align: center;
+							}
+						}
+					}
+				}
 			}
 		}
 		.navbar-collapse {
@@ -326,7 +336,7 @@ header {
 				}
 			}
 			@media (max-width:767px){
-				max-height: 300px;
+				max-height: 450px;
     			overflow-y: auto;
     			border-bottom:1px solid #d0d0d0;
 			}

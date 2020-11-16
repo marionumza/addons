@@ -122,6 +122,7 @@ odoo.define('theme_scita.scita_frontend_js', function(require) {
                                     },
                                 },
                             });
+                            
                         });
                     }
                 });
@@ -188,6 +189,10 @@ odoo.define('theme_scita.scita_frontend_js', function(require) {
                                 
                                 },
                             });
+                            setTimeout(function(){
+                                var divWidth = $('.retail_featured_product_1 .cs-product .pwp-img a').width(); 
+                                $('.retail_featured_product_1 .cs-product .pwp-img a').height(divWidth);
+                            },400);
                         });
 
                     }
@@ -258,7 +263,10 @@ odoo.define('theme_scita.scita_frontend_js', function(require) {
                                 },
                             });
                         });
-
+                        setTimeout(function(){
+                            var divWidth = $('.fashion_featured_product_1 .cs-product .pwp-img a').width(); 
+                            $('.fashion_featured_product_1 .cs-product .pwp-img a').height(divWidth);
+                        },400);
                     }
                 });
             }
@@ -271,24 +279,22 @@ odoo.define('theme_scita.scita_frontend_js', function(require) {
         start: function() {
             var self = this;
             if (this.editableMode) {
-                // $('.oe_brand_slider .owl-carousel').empty();
+                $('.oe_brand_slider .owl-carousel').empty();
                 var $brand_snip = $('#wrapwrap').find('.oe_brand_slider .owl-carousel');
                 _.each($brand_snip, function(single) {
                     $(single).empty();
                 });
-                
-
             }
             if (!this.editableMode) {
-                
+                var slider_type = self.$target.attr('data-brand-config-type');
                 $.get("/shop/get_brand_slider", {
-                    'product_count': self.$target.attr('data-product-count') || 0,
-                    'product_label': self.$target.attr('data-product-label') || '',
+                    'slider-type': slider_type || '',
                 }).then(function(data) {
                     if (data) {
-                        self.$target.empty().append(data);
+                        self.$target.empty();
+                        self.$target.append(data);
                         $(".oe_brand_slider").removeClass('o_hidden');
-                        $('#website_brands_slider').owlCarousel({
+                        $('.sct-brand-snip').owlCarousel({
                             margin: 10,
                             items:6,
                             loop:false,
@@ -326,7 +332,7 @@ odoo.define('theme_scita.scita_frontend_js', function(require) {
         start: function() {
             var self = this;
             if (this.editableMode) {
-                // $('.oe_brand_slider .owl-carousel').empty();
+                $('.oe_brand_slider .owl-carousel').empty();
                 var $brand_snip = $('#wrapwrap').find('.box_brand_slider .owl-carousel');
                 var brand_name = _t("Brand Slider");
                 _.each($brand_snip, function(single) {
@@ -339,14 +345,14 @@ odoo.define('theme_scita.scita_frontend_js', function(require) {
 
             }
             if (!this.editableMode) {
+                var slider_type = self.$target.attr('data-brand-config-type');
                 $.get("/shop/get_box_brand_slider", {
-                    'product_count': self.$target.attr('data-product-count') || 0,
-                    'product_label': self.$target.attr('data-product-label') || '',
+                    'slider-type': slider_type || '',
                 }).then(function(data) {
                     if (data) {
                         self.$target.empty().append(data);
                         $(".box_brand_slider").removeClass('o_hidden');
-                        $('#box_brands_slider_owl').owlCarousel({
+                        $('.sct-brand-slider-2').owlCarousel({
                             margin: 10,
                             items:6,
                             loop:false,
@@ -385,7 +391,7 @@ odoo.define('theme_scita.scita_frontend_js', function(require) {
         start: function() {
             var self = this;
             if (this.editableMode) {
-                // $('.oe_brand_slider .owl-carousel').empty();
+                $('.oe_brand_slider .owl-carousel').empty();
                 var $brand_snip = $('#wrapwrap').find('.it_brand_slider .our-brands');
                 _.each($brand_snip, function(single) {
                     $(single).empty();
@@ -393,11 +399,12 @@ odoo.define('theme_scita.scita_frontend_js', function(require) {
 
             }
             if (!this.editableMode) {
+                var slider_type = self.$target.attr('data-brand-config-type');
                 $.get("/shop/get_it_brand", {
-                    'product_count': self.$target.attr('data-product-count') || 0,
-                    'product_label': self.$target.attr('data-product-label') || '',
+                    'slider-type': slider_type || '',
                 }).then(function(data) {
                     if (data) {
+                        self.$target.empty();
                         self.$target.empty().append(data);
                         $(".it_brand_slider").removeClass('o_hidden');
                     }
@@ -1220,4 +1227,339 @@ odoo.define('theme_scita.scita_frontend_js', function(require) {
             }
         }
     });
+    animation.registry.cat_slider_3 = animation.Class.extend({
+        selector: ".cat_slider_3",
+        disabledInEditableMode: false,
+        start: function() {
+            var self = this;
+            if (this.editableMode) {
+                var $cate_slider = $('#wrapwrap').find('#theme_scita_custom_category_slider_3');
+                var cat_name = _t("Category Slider")
+                _.each($cate_slider, function (single){
+                    $(single).empty().append('<div class="container">\
+                                                    <div class="block-title">\
+                                                        <h3 class="fancy">' + cat_name + '</h3>\
+                                                    </div>\
+                                                </div>')
+                });
+            }
+            if (!this.editableMode) {
+                var slider_id = self.$target.attr('data-cat-slider-id');
+                $.get("/theme_scita/category_slider_3", {
+                    'slider-id': self.$target.attr('data-cat-slider-id') || '',
+                }).then(function(data) {
+                    if (data) {
+                        self.$target.empty();
+                        self.$target.append(data);
+                        $(".cat_slider_3").removeClass('o_hidden');
+                        $('div#carousel_category').owlCarousel({
+                            loop:false,
+                            margin:20,
+                            nav:false,
+                            autoplay:true,
+                            rewind:true,
+                            dots:false,
+                            autoplayTimeout:2500,
+                            autoplayHoverPause:true,
+                            responsive:{
+                                0:{
+                                    items:1
+                                },
+                                400:{
+                                    items:2
+                                },
+                                767:{
+                                    items:3
+                                },
+                                992:{
+                                    items:4
+                                }
+                            }
+                        })
+                    }
+                });
+            }
+        }
+    });
+    animation.registry.cat_slider_4 = animation.Class.extend({
+        selector: ".cat_slider_4",
+        disabledInEditableMode: false,
+        start: function() {
+            var self = this;
+            if (this.editableMode) {
+                var $cate_slider = $('#wrapwrap').find('#theme_scita_custom_category_slider_4');
+                var cat_name = _t("Category Slider")
+                _.each($cate_slider, function (single){
+                    $(single).empty().append('<div class="container">\
+                                                    <div class="block-title">\
+                                                        <h3 class="fancy">' + cat_name + '</h3>\
+                                                    </div>\
+                                                </div>')
+                });
+            }
+            if (!this.editableMode) {
+                var slider_id = self.$target.attr('data-cat-slider-id');
+                $.get("/theme_scita/category_slider_4", {
+                    'slider-id': self.$target.attr('data-cat-slider-id') || '',
+                }).then(function(data) {
+                    if (data) {
+                        self.$target.empty();
+                        self.$target.append(data);
+                        $(".cat_slider_4").removeClass('o_hidden');
+                        $('div#cat_slider_4_owl').owlCarousel({
+                            loop:false,
+                            margin:20,
+                            nav:false,
+                            autoplay:true,
+                            rewind:true,
+                            dots:false,
+                            autoplayTimeout:2500,
+                            autoplayHoverPause:true,
+                            responsive:{
+                                0:{
+                                    items:1
+                                },
+                                400:{
+                                    items:2
+                                },
+                                767:{
+                                    items:3
+                                },
+                                992:{
+                                    items:4
+                                }
+                            }
+                        })
+                    }
+                });
+            }
+        }
+    });
+    // new brand and product/category snippet
+    animation.registry.custom_scita_product_category_slider = animation.Class.extend({
+
+        selector: ".custom_oe_pro_cat_slider",
+        disabledInEditableMode: false,
+        start: function() {
+            var self = this;
+            if (this.editableMode) {
+                var $cat_slider = $('#wrapwrap').find('.custom_oe_pro_cat_slider');
+                var cat_name = _t("Product/Category Slider")
+                _.each($cat_slider, function (single){
+                    $(single).empty().append('<div class="container">\
+                                                <div class="row oe_our_slider">\
+                                                    <div class="col-md-12">\
+                                                        <div class="title-block">\
+                                                            <h4 id="snippet-title" class="section-title style1">\
+                                                                <span>'+ cat_name+'</span>\
+                                                            </h4>\
+                                                        </div>\
+                                                    </div>\
+                                                </div>\
+                                            </div>')
+                });
+
+            }
+            if (!this.editableMode) {
+                var slider_type = self.$target.attr('data-prod-cat-slider-type');
+                $.get("/theme_scita/custom_pro_get_dynamic_slider", {
+                    'slider-type': self.$target.attr('data-prod-cat-slider-type') || '',
+                }).then(function(data) {
+                    if (data) {
+                        self.$target.empty();
+                        self.$target.append(data);
+                        $(".custom_oe_pro_cat_slider").removeClass('o_hidden');
+                    }
+                });
+            }
+        }
+    });
+    animation.registry.custom_scita_brand_custom_slider = animation.Class.extend({
+
+        selector: ".custom_scita_pro_brand_slider",
+        disabledInEditableMode: false,
+        start: function() {
+            var self = this;
+            if (this.editableMode) {
+                var $brand_slider = $('#wrapwrap').find('.custom_scita_pro_brand_slider');
+                var brand_name = _t("Our Brands")
+                _.each($brand_slider, function (single){
+                    $(single).empty().append('<div class="container">\
+                                                <div class="row our-brands">\
+                                                    <div class="col-md-12">\
+                                                        <div class="title-block">\
+                                                            <h4 class="section-title style1" id="snippet-title">\
+                                                                <span>'+ brand_name +'</span>\
+                                                            </h4>\
+                                                        </div>\
+                                                    </div>\
+                                                </div>\
+                                            </div>')
+                });
+
+            }
+            if (!this.editableMode) {
+                var slider_type = self.$target.attr('data-brand-config-type');
+                $.get("/theme_scita/custom_get_brand_slider", {
+                    'slider-type': slider_type || '',
+                }).then(function(data) {
+                    if (data) {
+                        self.$target.empty();
+                        self.$target.append(data);
+                        $(".custom_scita_pro_brand_slider").removeClass('o_hidden');
+                    }
+                });
+            }
+        }
+    });
+    // brand and product/category snippet end
+    animation.registry.product_category_img_slider_config = animation.Class.extend({
+        selector: ".multi_product_and_category_slider",
+        disabledInEditableMode: false,
+        start: function() {
+            var self = this;
+            if (this.editableMode) {
+                var $multi_cat_slider = $('#wrapwrap').find('.multi_product_and_category_slider');
+                var multi_cat_name = _t("Image Product/Category Snippet")
+
+                _.each($multi_cat_slider, function (single){
+                    $(single).empty().append('<div class="container">\
+                                                <div class="row our-categories">\
+                                                    <div class="col-md-12">\
+                                                        <div class="title-block">\
+                                                            <h4 id="snippet-title" class="section-title style1"><span>'+ multi_cat_name+'</span></h4>\
+                                                        </div>\
+                                                    </div>\
+                                                </div>\
+                                            </div>')
+                });
+
+            }
+            if (!this.editableMode) {
+                var slider_type = self.$target.attr('data-multi-cat-slider-type');
+                $.get("/product_category_img_slider", {
+                    'slider-type': self.$target.attr('data-multi-cat-slider-type') || '',
+                }).then(function(data) {
+                    if (data) {
+                        self.$target.empty();
+                        self.$target.append(data);
+                        $(".multi_product_and_category_slider").removeClass('hidden');
+                    }
+                });
+            }
+        }
+    });
+    animation.registry.sct_product_snippet_1 = animation.Class.extend({
+        selector: ".sct_product_snippet_1",
+        disabledInEditableMode: false,
+        start: function() {
+            var self = this;
+            if (this.editableMode) {
+                var $multi_cat_slider = $('#wrapwrap').find('.sct_product_snippet_1');
+                var multi_cat_name = _t("Multi Product")
+
+                _.each($multi_cat_slider, function (single){
+                    $(single).empty().append('<div class="container">\
+                                                <div class="row our-categories">\
+                                                    <div class="col-md-12">\
+                                                        <div class="title-block">\
+                                                            <h4 id="snippet-title" class="section-title style1"><span>'+ multi_cat_name+'</span></h4>\
+                                                        </div>\
+                                                    </div>\
+                                                </div>\
+                                            </div>')
+                });
+
+            }
+            if (!this.editableMode) {
+                var slider_type = self.$target.attr('data-multi-cat-slider-type');
+                $.get("/product_column_five", {
+                    'slider-type': self.$target.attr('data-multi-cat-slider-type') || '',
+                }).then(function(data) {
+                    if (data) {
+                        self.$target.empty();
+                        self.$target.append(data);
+                        $(".sct_product_snippet_1").removeClass('hidden');
+                        setTimeout(function(){
+                            var divWidth = $('.sct_product_snippet_1 .cs-product .pwp-img a').width(); 
+                            $('.sct_product_snippet_1 .cs-product .pwp-img a').height(divWidth);
+                        },400);
+                    }
+                });
+            }
+        }
+    });
+    animation.registry.sct_product_snippet_2 = animation.Class.extend({
+        selector: ".sct_product_snippet_2",
+        disabledInEditableMode: false,
+        start: function() {
+            var self = this;
+            if (this.editableMode) {
+                var $multi_cat_slider = $('#wrapwrap').find('.sct_product_snippet_2');
+                var multi_cat_name = _t("Multi Product")
+
+                _.each($multi_cat_slider, function (single){
+                    $(single).empty().append('<div class="container">\
+                                                <div class="row our-categories">\
+                                                    <div class="col-md-12">\
+                                                        <div class="title-block">\
+                                                            <h4 id="snippet-title" class="section-title style1"><span>'+ multi_cat_name+'</span></h4>\
+                                                        </div>\
+                                                    </div>\
+                                                </div>\
+                                            </div>')
+                });
+
+            }
+            if (!this.editableMode) {
+                var slider_type = self.$target.attr('data-multi-cat-slider-type');
+                $.get("/product/product_snippet_data_two", {
+                    'slider-type': self.$target.attr('data-multi-cat-slider-type') || '',
+                }).then(function(data) {
+                    if (data) {
+                        self.$target.empty();
+                        self.$target.append(data);
+                        $(".sct_product_snippet_2").removeClass('hidden');
+                        setTimeout(function(){
+                            var divWidth = $('.sct_product_snippet_2 .cs-product .pwp-img a').width(); 
+                            $('.sct_product_snippet_2 .cs-product .pwp-img a').height(divWidth);
+                        },400);
+                    }
+                });
+            }
+        }
+    });
+    
+    // Dynamic Video banner js start
+    animation.registry.dynamic_video_banner = animation.Class.extend({
+        selector: ".dynamic_video_banner",
+        disabledInEditableMode: false,
+        start: function() {
+            var self = this;
+            if (this.editableMode) {
+                var $vid_snip = $('#wrapwrap').find('.dynamic_video_banner');
+                var video_title = _t("Video Banner")
+                _.each($vid_snip, function(single) {
+                    $(single).empty().append('<div class="container">\
+                                                    <div class="block-title">\
+                                                        <h3 class="fancy">' + video_title + '</h3>\
+                                                    </div>\
+                                                </div>');
+                });
+                
+
+            }
+            if (!this.editableMode) {
+                $.get("/video/video_url_get", {
+                    'video_url': self.$target.attr('data-video-url'),
+                }).then(function(data) {
+                    if (data) {
+                        self.$target.empty().append(data);
+                        $(".dynamic_video_banner").removeClass('o_hidden');
+                    }
+                });
+            }
+        }
+    });
+    // Dynamic Video banner js End
 });

@@ -7,6 +7,12 @@ header {
 			display: none !important;
 		}
 	}
+	.navbar-collapse {
+		@media (max-width: 767px){
+			max-height: 300px;
+			overflow-y: auto;
+		}
+	}
 	ul.navbar-nav {
 		list-style-type: none;
 		.li-mega-menu {
@@ -387,6 +393,37 @@ header {
 		}
 	}
 	ul.navbar-nav .li-mega-menu {
+		.mega-dropdown-menu {
+			a {
+				color: $dark-color !important;
+				padding: 0;
+				@media (max-width: 767px){
+					padding: 0;
+					border-top: none;
+				}
+				&:hover{
+					color:$theme !important;
+				}
+			}
+		}
+		.s_mega_menu_multi_menus, .s_mega_menu_menu_image_menu {
+			.mega-dropdown-menu {
+				padding: 0;
+				background-color: transparent;
+				.nav-link {
+					color: $dark-color !important;
+					padding: 0.5rem !important;
+					margin: 0 !important;
+					@media (max-width: 767px){
+						text-align: center;
+						border-top: none;
+					}
+					&:hover{
+						color:$theme !important;
+					}
+				}
+			}
+		}
 		&.menu_service_2 {
 			.letter-spacing {
 				.link-thumb {
@@ -489,3 +526,67 @@ header {
 		}
 	}
 }
+
+/*Mega menu hover img effect*/
+header .menu_style_3 .mega-dropdown-menu {
+	.letter-spacing .inline-block {
+		.pro_thumb_bg .prod_img img {
+			@include transition(all, 0.5s, ease);
+		}
+		&:hover {
+			.pro_thumb_bg .prod_img img {
+				-webkit-transform: scale(1.2);
+				-ms-transform: scale(1.2);
+				transform: scale(1.2);
+			}
+		}
+	}
+	.img_banner_div {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		&:before{
+			position:absolute;
+			content: '';
+			background-color: fade-out($light-grey-color, 0.9);
+			width: 150px;
+			height: 100%;
+			z-index: 1;
+			left: -100%;
+			top: 0;
+			-webkit-transform: skew(45deg);
+			-ms-transform: skew(45deg);
+			transform: skew(45deg);
+			@include transition(all, 0.5s, ease);
+		}
+		&:hover{
+			&:before{
+				-webkit-animation: flash_mline 1s;
+				animation: flash_mline 1s;
+			}
+		}
+		@keyframes flash_mline {
+			100% {
+				left: 200%;
+			}
+		}
+		@-webkit-keyframes flash_mline {
+			100% {
+				left: 200%;
+			}
+		}
+	}
+}
+header .menu_style_2 .mega-dropdown-menu .inline-block .cat_img {
+	overflow: hidden;
+	img {
+		@include transition(all, 0.75s, ease);
+	}
+	&:hover{
+		img {
+			-webkit-transform: rotateY(180deg);
+			transform: rotateY(180deg);
+		}
+	}
+}
+/*Mega menu hover img effect end*/

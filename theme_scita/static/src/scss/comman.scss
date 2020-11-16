@@ -26,12 +26,9 @@ body .modal.o_technical_modal .modal-content .modal-header {
     outline: none;
 }
 h2 {
-	font-size: $subtitle;
+	font-size: $subtitle - 8;
 	color: $dark-color;
 	font-weight: bold;
-	@media (max-width: 1439px){
-		font-size: $subtitle - 6;
-	}
 	@media (max-width: 767px){
 		font-size: $subtitle - 10;
 	}
@@ -123,6 +120,9 @@ input.form-control {
 	text-align: center;
 	padding: 0 20px;
 	color: $light-color;
+	@media (max-width: 1023px){
+		line-height: 40px;
+	}
 	&:hover{
 		background: $dark-color;
 	}
@@ -133,6 +133,11 @@ header{
 	.logo {
 		span {
 			display: block;
+			@media (max-width: 767px){
+				img {
+					height: min-content !important;
+				}
+			}
 		}
 	}
 	&.o_header_affix {
@@ -302,7 +307,6 @@ header{
 		}
 		.configuration {
 			.language-bar {
-				text-transform: uppercase;
 				label {
 					text-transform: none;
 				}
@@ -311,7 +315,6 @@ header{
 					background:$dark-color;
 					color: $light-color; 
 					border-radius: 0;
-					text-transform: uppercase;
 					&:hover, &:focus, &:active {
 						border:1px solid $dark-color !important;
 						outline: none;
@@ -553,6 +556,10 @@ header{
 		padding-left: 10px;
 		line-height: 35px;
 		color: $light-color;
+		z-index: 999999;
+		@media (max-width: 767px){
+			bottom: 80px;
+		}
 		.fa {
 			@include transition(all, 1s, ease);
 			-webkit-transform: rotate(0deg);
@@ -683,6 +690,11 @@ body {
 			}
 			.modal-body {
 				background: transparent !important;
+				.tab-content {
+					max-height: 500px;
+					overflow-y: auto;
+					overflow-x: hidden;
+				}
 				.tab-pane {
 					h5, h6 {
 						color: $light-color;
@@ -1014,3 +1026,284 @@ body .fashion_main_banner_slider .carousel-control .carousel-control-next-icon:b
 	background-image: url(../img/white-arrow-big.png) #{"/*rtl:url(../img/white-arrow-big-rtl.png)*/"};
 }
 /*Rtl arrow styling end*/
+
+/*optional product cart popup*/
+.oe_optional_products_modal {
+	.table {
+		.js_add {
+			padding: 5px 5px;
+			font-size: 13px;
+			line-height: normal;
+		}
+	}
+}
+/*optional product cart popup end*/
+
+/*editor view snippet style*/
+#scita_snippets {
+	.o_panel_header {
+		@include flexwrap;
+		.scita_snippet_sort {
+			flex: 0 0 90%;
+			max-width: 90%;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			padding: 5px;
+			border: none;
+			font-weight: bold;
+			background: #84f4ff;
+		}
+	}
+	.o_panel_body {
+		.oe_snippet {
+			float: none !important;
+			display: inline-block;
+			vertical-align: top;
+			&:nth-child(2n + 1) {
+				clear: unset !important;
+			}
+		}
+	}
+}
+/*editor view snippet style end*/
+
+/*my account side sticky*/
+.o_portal_wrap .sticky-top {
+	z-index: 8;
+}
+/*my account side sticky*/
+
+/*editer sidebar overlay hide*/
+body.editor_enable {
+	&.show-scita-cstm-menu {
+		overflow: unset;
+		#wrapwrap {
+			&:before{
+				display:none;
+			}
+		}
+	}
+}
+/*editer sidebar overlay hide end*/
+
+/*img hover effect*/
+.sct_img_effect1 {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	&:before{
+		position:absolute;
+		content: '';
+		background-color: fade-out($light-grey-color, 0.9);
+		width: 150px;
+		height: 100%;
+		z-index: 1;
+		left: -100%;
+		top: 0;
+		-webkit-transform: skew(45deg);
+		-ms-transform: skew(45deg);
+		transform: skew(45deg);
+		@include transition(all, 0.5s, ease);
+	}
+	&:hover{
+		&:before{
+			-webkit-animation: flash_line 1s;
+			animation: flash_line 1s;
+		}
+	}
+}
+@keyframes flash_line {
+	100% {
+		left: 200%;
+	}
+}
+@-webkit-keyframes flash_line {
+	100% {
+		left: 200%;
+	}
+}
+.sct_img_effect2 {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	&:before{
+		position:absolute;
+		content: '';
+		background-color: fade-out($light-grey-color, 0.9);
+		z-index: 1;
+		left: 50%;
+	    right: 50%;
+	    top: 0;
+	    bottom: 0;
+		@include transition(all, 0.5s, ease);
+	}
+	&:hover{
+		&:before{
+			-webkit-animation: flash_lr 0.5s;
+			animation: flash_lr 0.5s;
+		}
+	}
+}
+@keyframes flash_lr {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	80% {
+		opacity: 0.3;
+	}
+	100% {
+		left: 0;
+    	right: 0;
+    	opacity: 0;
+	}
+}
+@-webkit-keyframes flash_lr {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	80% {
+		opacity: 0.3;
+	}
+	100% {
+		left: 0;
+    	right: 0;
+    	opacity: 0;
+	}
+}
+.sct_img_effect3 {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	&:before{
+		position:absolute;
+		content: '';
+		background-color: fade-out($light-grey-color, 0.9);
+		z-index: 1;
+		left: 50%;
+	    right: 50%;
+	    top: 50%;
+	    bottom: 50%;
+		@include transition(all, 0.5s, ease);
+	}
+	&:hover{
+		&:before{
+			-webkit-animation: flash_square 0.5s;
+			animation: flash_square 0.5s;
+		}
+	}
+}
+@keyframes flash_square {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	80% {
+		opacity: 0.3;
+	}
+	100% {
+		left: 0;
+    	right: 0;
+    	top: 0;
+    	bottom: 0;
+    	opacity: 0;
+	}
+}
+@-webkit-keyframes flash_square {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	80% {
+		opacity: 0.3;
+	}
+	100% {
+		left: 0;
+    	right: 0;
+    	top: 0;
+    	bottom: 0;
+    	opacity: 0;
+	}
+}
+.sct_img_effect4 {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	img {
+		@include transition(all, 0.5s, ease);
+		&:hover{
+			-webkit-transform:scale(1.06);
+			-ms-transform:scale(1.06);
+			transform:scale(1.06);
+		}
+	}
+}
+.sct_img_effect5 {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	&:before{
+		position:absolute;
+		content: '';
+		background-color: fade-out($light-grey-color, 0.8);
+		z-index: 1;
+		left: 50%;
+	    right: 50%;
+	    top: 50%;
+	    bottom: 50%;
+		@include transition(all, 0.5s, ease);
+		border-radius: 100%;
+	}
+	&:hover{
+		&:before{
+			-webkit-animation: flash_circle 0.5s;
+			animation: flash_circle 0.5s;
+		}
+	}
+}
+@keyframes flash_circle {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	80% {
+		opacity: 0.3;
+	}
+	100% {
+		left: 0;
+    	right: 0;
+    	top: 0;
+    	bottom: 0;
+    	opacity: 0;
+	}
+}
+@-webkit-keyframes flash_circle {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	80% {
+		opacity: 0.3;
+	}
+	100% {
+		left: 0;
+    	right: 0;
+    	top: 0;
+    	bottom: 0;
+    	opacity: 0;
+	}
+}
+/*img hover effect end*/ 
