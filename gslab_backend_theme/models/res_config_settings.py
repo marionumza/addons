@@ -14,7 +14,6 @@ class ResConfigSettings(models.TransientModel):
     theme_color_primary = fields.Char(
         string="Primary (#01A29D)", default='#01A29D')
 
-    @api.multi
     def set_values(self):
         if not self.theme_color_brand:
             self.theme_color_brand = '#7E4861'
@@ -30,7 +29,6 @@ class ResConfigSettings(models.TransientModel):
         res = super(ResConfigSettings, self).set_values()
         return res
 
-    @api.multi
     def get_values(self):
         res = super(ResConfigSettings, self).get_values()
         colors = self._get_colors()
