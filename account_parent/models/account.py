@@ -2,117 +2,159 @@
 ##############################################################################
 #
 #    ODOO, Open Source Management Solution
-#    Copyright (C) 2016 Steigend IT Solutions
+#    Copyright (C) 2016 - 2020 Steigend IT Solutions (Omal Bastin)
+#    Copyright (C) 2020 - Today O4ODOO (Omal Bastin)
 #    For more details, check COPYRIGHT and LICENSE files
 #
 ##############################################################################
-from odoo import api, fields, models, _
-import odoo.addons.decimal_precision as dp
+from odoo import api, fields, models
+from odoo.osv import expression
+
+class AccountAccountTemplate(models.Model):
+	_inherit = "account.account.template"
+	
+	parent_id = fields.Many2one('account.account.template','Parent Account', ondelete="set null")
+	
+	@api.model
+	def _search(self, args, offset=0, limit=None, order=None, count=False, access_rights_uid=None):
+		context = self._context or {}
+		#updated to search the code too
+		new_args = []
+		if args:
+			for arg in args:
+				if isinstance(arg, (list, tuple)) and arg[0] == 'name' and isinstance(arg[2], str):
+					new_args.append('|')
+					new_args.append(arg)
+					new_args.append(['code', arg[1], arg[2]])
+				else:
+					new_args.append(arg)
+		# one Customer informed an issue that the same args is updated to company causing error
+		# So to avoid that args was copied to new variable and it solved the issue.
+		if not context.get('show_parent_account',False):
+			new_args = expression.AND([[('user_type_id.type', '!=', 'view')], new_args])
+		return super(AccountAccountTemplate, self)._search(new_args, offset=offset,
+						limit=limit, order=order, count=count,access_rights_uid=access_rights_uid)
+
 
 class AccountAccountType(models.Model):
-    _inherit = "account.account.type"
-    
-    type = fields.Selection(selection_add=[('view','View')])
-    
+	_inherit = "account.account.type"
+	
+	type = fields.Selection(selection_add=[('view', 'View')])
+	
+	@api.model
+	def _search(self, args, offset=0, limit=None, order=None, count=False, access_rights_uid=None):
+		context = self._context or {}
+		new_args = args.copy()
+		# one Customer informed an issue that the same args is updated to company causing error
+		# So to avoid that args was copied to new variable and it solved the issue.
+		if not context.get('show_parent_account', False):
+			new_args = expression.AND([[('type', '!=', 'view')], args])
+		return super(AccountAccountType, self)._search(new_args, offset=offset,
+						limit=limit, order=order, count=count,access_rights_uid=access_rights_uid)
+
 
 class AccountAccount(models.Model):
-    _inherit = "account.account"
-    
-    @api.model
-    def _move_domain_get(self, domain=None):
-        context = dict(self._context or {})
-        domain = domain and safe_eval(str(domain)) or []
-        
-        date_field = 'date'
-        if context.get('aged_balance'):
-            date_field = 'date_maturity'
-        if context.get('date_to'):
-            domain += [(date_field, '<=', context['date_to'])]
-        if context.get('date_from'):
-            if not context.get('strict_range'):
-                domain += ['|', (date_field, '>=', context['date_from']), ('account_id.user_type_id.include_initial_balance', '=', True)]
-            elif context.get('initial_bal'):
-                domain += [(date_field, '<', context['date_from'])]
-            else:
-                domain += [(date_field, '>=', context['date_from'])]
+	_inherit = "account.account"
+	
+	@api.depends('code')
+	def _compute_account_root(self):
+		# this computes the first 2 digits of the account.
+		# This field should have been a char, but the aim is to use it in a side panel view with hierarchy, and it's only supported by many2one fields so far.
+		# So instead, we make it a many2one to a psql view with what we need as records.
+		#TODO now view accounts is not listed under the root view
+		for record in self:
+			if record.user_type_id.type != 'view':
+				record.root_id = record.code and (ord(record.code[0]) * 1000 + ord(record.code[1])) or False
+			else:
+				record.root_id = False
 
-        if context.get('journal_ids'):
-            domain += [('journal_id', 'in', context['journal_ids'])]
+	@api.depends('move_line_ids','move_line_ids.amount_currency','move_line_ids.debit','move_line_ids.credit')
+	def compute_values(self):
+		for account in self:
+			sub_accounts = self.with_context({'show_parent_account':True}).search([('id','child_of',[account.id])])
+			balance = 0.0
+			credit = 0.0
+			debit = 0.0
+			initial_balance = 0.0
+			initial_deb = 0.0
+			initial_cre = 0.0
+			context = self._context.copy()
+			context.update({'account_ids':sub_accounts})
+			tables, where_clause, where_params = self.env['account.move.line'].with_context(context)._query_get()
+			query1 = 'SELECT account_move_line.debit,account_move_line.credit FROM ' + tables + 'WHERE' + where_clause 
+			self.env.cr.execute(query1,tuple(where_params))
+			for deb,cre in self.env.cr.fetchall():
+				balance += deb - cre
+				credit += cre
+				debit += deb
+			account.balance = balance
+			account.credit = credit
+			account.debit = debit
+			if context.get('show_initial_balance'):
+				context.update({'initial_bal': True})
+				tables, where_clause, where_params = self.env['account.move.line'].with_context(context)._query_get()
+				query2 = 'SELECT account_move_line.debit,account_move_line.credit FROM ' + tables + 'WHERE' + where_clause 
+				self.env.cr.execute(query2,tuple(where_params))
+				for deb,cre in self.env.cr.fetchall():
+					initial_cre += cre
+					initial_deb += deb
+				initial_balance += initial_deb - initial_cre
+				account.initial_balance = initial_balance
+			else:
+				account.initial_balance = 0
+	move_line_ids = fields.One2many('account.move.line','account_id','Journal Entry Lines')
+	balance = fields.Float(compute="compute_values", digits=(16, 4), string='Balance')
+	credit = fields.Float(compute="compute_values", digits=(16, 4), string='Credit')
+	debit = fields.Float(compute="compute_values", digits=(16, 4), string='Debit')
+	parent_id = fields.Many2one('account.account','Parent Account', ondelete="set null")
+	child_ids = fields.One2many('account.account','parent_id', 'Child Accounts')
+	parent_path = fields.Char(index=True)
+	initial_balance = fields.Float(compute="compute_values", digits=(16, 4), string='Initial Balance')
+	
+	
+	_parent_name = "parent_id"
+	_parent_store = True
+	_parent_order = 'code, name'
+	_order = 'code, id'
+	
+	@api.model
+	def _search(self, args, offset=0, limit=None, order=None, count=False, access_rights_uid=None):
+		context = self._context or {}
+		# updated to search the code too
+		new_args = []
+		if args:
+			for arg in args:
+				if isinstance(arg, (list, tuple)) and arg[0] == 'name' and isinstance(arg[2], str):
+					new_args.append('|')
+					new_args.append(arg)
+					new_args.append(['code', arg[1], arg[2]])
+				else:
+					new_args.append(arg)
+		# one Customer informed an issue that the same args is updated to company causing error
+		# So to avoid that args was copied to new variable and it solved the issue.
+		if not context.get('show_parent_account', False):
+			new_args = expression.AND([[('user_type_id.type', '!=', 'view')], new_args])
+		return super(AccountAccount, self)._search(new_args, offset=offset,
+						limit=limit, order=order, count=count,access_rights_uid=access_rights_uid)
 
-        state = context.get('state')
-        if state and state.lower() != 'all':
-            domain += [('move_id.state', '=', state)]
-
-        if context.get('company_id'):
-            domain += [('company_id', '=', context['company_id'])]
-
-        if 'company_ids' in context:
-            domain += [('company_id', 'in', context['company_ids'])]
-
-        if context.get('reconcile_date'):
-            domain += ['|', ('reconciled', '=', False), '|', ('matched_debit_ids.create_date', '>', context['reconcile_date']), ('matched_credit_ids.create_date', '>', context['reconcile_date'])]
-
-        return domain
-    
-    
-    @api.depends('move_line_ids','move_line_ids.amount_currency','move_line_ids.debit','move_line_ids.credit')
-    def compute_values(self):
-        default_domain = self._move_domain_get()
-        for account in self:
-            sub_accounts = self.with_context({'show_parent_account':True}).search([('id','child_of',[account.id])])
-            balance = 0.0
-            credit = 0.0
-            debit = 0.0
-            search_domain = default_domain[:]
-            search_domain.insert(0,('account_id','in',sub_accounts.ids))
-            for aml in self.env['account.move.line'].search(search_domain):
-                balance += aml.debit - aml.credit
-                credit += aml.credit
-                debit += aml.debit
-            account.balance = balance
-            account.credit = credit
-            account.debit = debit
-    
-    move_line_ids = fields.One2many('account.move.line','account_id','Journal Entry Lines')
-    balance = fields.Float(compute="compute_values", digits=dp.get_precision('Account'), string='Balance')
-    credit = fields.Float(compute="compute_values",digits=dp.get_precision('Account'), string='Credit')
-    debit = fields.Float(compute="compute_values",digits=dp.get_precision('Account'), string='Debit')
-    parent_id = fields.Many2one('account.account','Parent Account',ondelete="set null")
-    child_ids = fields.One2many('account.account','parent_id', 'Child Accounts')
-#     parent_left = fields.Integer('Left Parent', index=1)
-#     parent_right = fields.Integer('Right Parent', index=1)
-    parent_path = fields.Char(index=True)
-    
-    
-    _parent_name = "parent_id"
-    _parent_store = True
-    _parent_order = 'code, name'
-    _order = 'code, id'
-    
-    
-    # @api.model
-    # def search(self, args, offset=0, limit=None, order=None, count=False):
-    #     context = self._context or {}
-    #     if not context.get('show_parent_account',False):
-    #         args += [('user_type_id.type', '!=', 'view')]
-    #     return super(AccountAccount, self).search(args, offset, limit, order, count=count)
-    
+	
 class AccountJournal(models.Model):
-    _inherit = "account.journal"
-    
-    @api.model
-    def _prepare_liquidity_account(self, name, company, currency_id, type):
-        res = super(AccountJournal, self)._prepare_liquidity_account(name, company, currency_id, type)
-        if type == 'bank':
-            account_code_prefix = company.bank_account_code_prefix or ''
-        else:
-            account_code_prefix = company.cash_account_code_prefix or company.bank_account_code_prefix or ''
+	_inherit = "account.journal"
+	
+	@api.model
+	def _prepare_liquidity_account(self, name, company, currency_id, type):
+		res = super(AccountJournal, self)._prepare_liquidity_account(name, company, currency_id, type)
+		if type == 'bank':
+			account_code_prefix = company.bank_account_code_prefix or ''
+		else:
+			account_code_prefix = company.cash_account_code_prefix or company.bank_account_code_prefix or ''
 
-        liquidity_type = self.env.ref('account_parent.data_account_type_view')
-        parent_id = self.env['account.account'].search([('code','=',account_code_prefix),
-                                                        ('company_id','=',company.id),('user_type_id','=',liquidity_type.id)], limit=1)
-        
-        if parent_id:
-            res.update({'parent_id':parent_id.id})
-        return res
+		parent_id = self.env['account.account'].with_context({'show_parent_account':True}).search([
+														('code','=',account_code_prefix),
+														('company_id','=',company.id),
+														('user_type_id.type','=','view')], limit=1)
+		
+		if parent_id:
+			res.update({'parent_id':parent_id.id})
+		return res
 

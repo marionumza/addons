@@ -1,46 +1,47 @@
-odoo.define('account_parent.coa_heirarchy', function (require) {
+odoo.define('account_parent.coa_hierarchy', function (require) {
 'use strict';
 
 var AbstractAction = require('web.AbstractAction');
 var core = require('web.core');
 var session = require('web.session');
-//var Widget = require('web.Widget');
-var ControlPanelMixin = require('web.ControlPanelMixin');
-var session = require('web.session');
 var CoAWidget = require('account_parent.CoAWidget');
 var framework = require('web.framework');
-var crash_manager = require('web.crash_manager');
+// var crash_manager = require('web.crash_manager');
 
 var QWeb = core.qweb;
 
-var coa_heirarchy = AbstractAction.extend(ControlPanelMixin, {
+var coa_hierarchy = AbstractAction.extend({
+    hasControlPanel: true,
     // Stores all the parameters of the action.
     init: function(parent, action) {
+    	this._super.apply(this, arguments);
         this.actionManager = parent;
-        this.given_context = action.context;
+        this.given_context = action.context;//session.user_context;
         
         this.controller_url = action.context.url;
         if (action.context.context) {
             this.given_context = action.context.context;
         }
         
-//        this.given_context.active_id = action.context.active_id || action.params.active_id;
-//        this.given_context.model = action.context.active_model || false;
-//        this.given_context.ttype = action.context.ttype || false;
-        return this._super.apply(this, arguments);
     },
     willStart: function() {
-        return this.get_html();
+    	return Promise.all([this._super.apply(this, arguments), this.get_html()]);
     },
     set_html: function() {
         var self = this;
-        var def = $.when();
+        var def = Promise.resolve();
         if (!this.report_widget) {
             this.report_widget = new CoAWidget(this, this.given_context);
-            def = this.report_widget.appendTo(this.$el);
+//            def = this.report_widget.appendTo(this.$el);
+            def = this.report_widget.appendTo(this.$('.o_content'));
         }
         return def.then(function () {
             self.report_widget.$el.html(self.html);
+            if (self.given_context.auto_unfold) {
+                _.each(self.$el.find('.fa-caret-right'), function (line) {
+                    self.report_widget.autounfold(line);
+                });
+            }
         });
     },
     start: function() {
@@ -62,7 +63,7 @@ var coa_heirarchy = AbstractAction.extend(ControlPanelMixin, {
                 self.html = result.html;
                 self.renderButtons();
                 defs.push(self.update_cp());
-                return $.when.apply($, defs);
+                return Promise.all(defs);
             });
     },
     // Updates the control panel and render the elements that have yet to be rendered
@@ -71,10 +72,10 @@ var coa_heirarchy = AbstractAction.extend(ControlPanelMixin, {
             this.renderButtons();
         }
         var status = {
-//            breadcrumbs: this.actionManager.get_breadcrumbs(),
+            // breadcrumbs: this.actionManager.get_breadcrumbs(),
             cp_content: {$buttons: this.$buttons},
         };
-        return this.update_control_panel(status);
+        return this.updateControlPanel(status);
     },
     renderButtons: function() {
         var self = this;
@@ -86,7 +87,7 @@ var coa_heirarchy = AbstractAction.extend(ControlPanelMixin, {
                 var self = parent_self,
                     view = parent_self.getParent(),
                     children = view.getChildren();
-                var c = crash_manager;
+                // var c = crash_manager;
                 var $element = $(parent_self.$el[0]).find('.table-responsive tbody tr');
                 var dict = [];
 
@@ -94,13 +95,14 @@ var coa_heirarchy = AbstractAction.extend(ControlPanelMixin, {
                     var $el = $($element[index]);
                     dict.push({
                             'id': $el.data('id'),
+                            'name': $el.data('name'),
                             'wiz_id': $el.data('wiz_id'),
                             'model_id': $el.data('model_id'),
                             'unfoldable': $el.data('unfold'),
                             'level': $el.find('td:first').data('level') || 1
                     });
                 });
-                $.blockUI();
+                framework.blockUI();
                 var url_data = parent_self.controller_url.replace('active_id', parent_self.given_context['active_id']);
                 url_data = url_data.replace('account_parent', 'account_parent_xls')
                 url_data = url_data.replace('output_format', 'xls')
@@ -112,34 +114,37 @@ var coa_heirarchy = AbstractAction.extend(ControlPanelMixin, {
                         report_data: JSON.stringify(dict), 
                     })},
                     complete: $.unblockUI,
-                    error: c.rpc_error.bind(c)
+                    // error: c.rpc_error.bind(c)
+                    error: (error) => self.call('crash_manager', 'rpc_error', error),
                 });
         		
         	}	
         	else{
-        		// pdf output
-                var $element = $(parent_self.$el[0]).find('.table-responsive tbody tr');
-                var dict = [];
-
-                $element.each(function( index ) {
-                    var $el = $($element[index]);
-                    dict.push({
-                            'id': $el.data('id'),
-                            'wiz_id': $el.data('wiz_id'),
-                            'model_id': $el.data('model_id'),
-                            'unfoldable': $el.data('unfold'),
-                            'level': $el.find('td:first').data('level') || 1
-                    });
-                });
-                framework.blockUI();
-                var url_data = parent_self.controller_url.replace('active_id', parent_self.given_context['active_id']);//self.given_context.active_id
-                url_data = url_data.replace('output_format', 'pdf')
-                session.get_file({
-                    url: url_data,
-                    data: {data: JSON.stringify(dict)},
-                    complete: framework.unblockUI,
-                    error: crash_manager.rpc_error.bind(crash_manager),
-                });
+	    		// pdf output
+	            var $element = $(parent_self.$el[0]).find('.table-responsive tbody tr');
+	            var dict = [];
+	
+	            $element.each(function( index ) {
+	                var $el = $($element[index]);
+	                dict.push({
+	                        'id': $el.data('id'),
+	                        'name': $el.data('name'),
+	                        'wiz_id': $el.data('wiz_id'),
+	                        'model_id': $el.data('model_id'),
+	                        'unfoldable': $el.data('unfold'),
+	                        'level': $el.find('td:first').data('level') || 1
+	                });
+	            });
+	            framework.blockUI();
+	            var url_data = parent_self.controller_url.replace('active_id', parent_self.given_context.active_id);//self.given_context.active_id
+	//            url_data = url_data.replace('output_format', 'pdf')
+	            session.get_file({
+	                url: url_data.replace('output_format', 'pdf'),
+	                data: {data: JSON.stringify(dict)},
+	                complete: framework.unblockUI,
+	                // error: crash_manager.rpc_error.bind(crash_manager),
+	                error: (error) => parent_self.call('crash_manager', 'rpc_error', error),
+	            });
         	}
         });
         return this.$buttons;
@@ -150,6 +155,6 @@ var coa_heirarchy = AbstractAction.extend(ControlPanelMixin, {
     },
 });
 
-core.action_registry.add("coa_heirarchy", coa_heirarchy);
-return coa_heirarchy;
+core.action_registry.add("coa_hierarchy", coa_hierarchy);
+return coa_hierarchy;
 });

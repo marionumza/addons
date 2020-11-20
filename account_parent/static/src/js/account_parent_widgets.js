@@ -13,7 +13,7 @@ var CoAWidget = Widget.extend({
     events: {
         'click span.o_coa_foldable': 'fold',
         'click span.o_coa_unfoldable': 'unfold',
-        'click span.o_coa_action': 'boundLink',
+        'click td.o_coa_action': 'boundLink',
     },
     init: function(parent) {
         this._super.apply(this, arguments);
@@ -23,24 +23,30 @@ var CoAWidget = Widget.extend({
         return this._super.apply(this, arguments);
     },
     boundLink: function(e) {
-    	e.preventDefault();
-    	var self = this
-    	var account_id = $(e.currentTarget).data('id');
-    	var wiz_id = $(e.currentTarget).data('wiz_id');
-    	var user_context = this.getSession().user_context;
-    	return self._rpc({
+        e.preventDefault();
+        var self = this
+        var account_id = $(e.currentTarget).data('id');
+        var account_name = $(e.currentTarget).data('name');
+        var wiz_id = $(e.currentTarget).data('wiz_id');
+        return self._rpc({
             model: 'account.open.chart',
-            method: 'build_domain',
+            method: 'build_domain_context',
             args: [parseInt(wiz_id, 10), parseInt(account_id, 10)],
         })
             .then(function (result) {
-            	var results = pyUtils.eval_domains_and_contexts({
-                    domains: [result],
-                    contexts: [user_context],
+            	if (!result[1].hasOwnProperty('company_id')) {
+                    self.do_warn(_t("Journal items is not available for current report") );
+                    return;
+                }
+                else {
+                var results = pyUtils.eval_domains_and_contexts({
+                    domains: [result[0]],
+                    contexts: [result[1]],
                     group_by_seq: [],
                 });
-            	return self.do_action({
-                	name: 'Journal Items',
+                
+                return self.do_action({
+                    name: 'Journal Items ('+ account_name + ')',
                     type: 'ir.actions.act_window',
                     res_model: 'account.move.line',
                     domain: results.domain,
@@ -50,6 +56,7 @@ var CoAWidget = Widget.extend({
                     view_mode: "form",
                     target: 'current'
                 });
+                }
             });
         
     },
@@ -79,14 +86,15 @@ var CoAWidget = Widget.extend({
         $(e.target).parents('tr').find('span.o_coa_foldable').replaceWith(QWeb.render("unfoldable", {lineId: active_id}));
         $(e.target).parents('tr').toggleClass('o_coa_unfolded');
     },
-    unfold: function(e) {
+    autounfold: function(target) {
+    	var self = this;
         var $CurretElement;
-        $CurretElement = $(e.target).parents('tr').find('td.treeview-td');
+        $CurretElement = $(target).parents('tr').find('td.treeview-td');
         var active_id = $CurretElement.data('id');
         var wiz_id = $CurretElement.data('wiz_id');
         var active_model_id = $CurretElement.data('model_id');
         var row_level = $CurretElement.data('level');
-        var $cursor = $(e.target).parents('tr');
+        var $cursor = $(target).parents('tr');
         this._rpc({
                 model: 'account.open.chart',
                 method: 'get_lines',
@@ -97,15 +105,24 @@ var CoAWidget = Widget.extend({
                 },
             })
             .then(function (lines) {// After loading the line
-                var line;
-                for (line in lines) { // Render each line
-                    $cursor.after(QWeb.render("report_coa_lines", {l: lines[line]}));
+            	_.each(lines, function (line) { // Render each line
+                    $cursor.after(QWeb.render("report_coa_lines", {l: line}));
                     $cursor = $cursor.next();
-                }
+                    if (line["auto_unfold"]) {
+                       if ($cursor && line.unfoldable) {
+                           self.autounfold($cursor.find(".fa-caret-right"));
+                       }
+                    }
+            	});
+
+                
             });
 //        $CurretElement.attr('class', 'o_coa_foldable ' + active_id); // Change the class, and rendering of the unfolded line
-        $(e.target).parents('tr').find('span.o_coa_unfoldable').replaceWith(QWeb.render("foldable", {lineId: active_id}));
-        $(e.target).parents('tr').toggleClass('o_coa_unfolded');
+        $(target).parents('tr').find('span.o_coa_unfoldable').replaceWith(QWeb.render("foldable", {lineId: active_id}));
+        $(target).parents('tr').toggleClass('o_coa_unfolded');
+    },
+    unfold: function(e) {
+        this.autounfold($(e.target));
     },
 
 });
