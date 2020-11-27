@@ -13,20 +13,16 @@ class SaleOrderLine(models.Model):
         store=True,
         string="Ignore Exceptions")
 
-    @api.multi
     def _get_main_records(self):
         return self.mapped('order_id')
 
-    @api.model
     def _reverse_field(self):
         return 'sale_ids'
 
-    @api.multi
     def _detect_exceptions(self, rule):
         records = super(SaleOrderLine, self)._detect_exceptions(rule)
         return records.mapped('order_id')
 
-    @api.model
     def _exception_rule_eval_context(self, rec):
         # We keep this only for backward compatibility, because some existing
         # rules may use the variable "sale_line". But we should remove this
